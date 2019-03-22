@@ -1,0 +1,40 @@
+<!-- We recommend you keep this page and add your links to it -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- Set the page title inside this block -->
+{% block pageTitle %}
+  Prototype kit
+{% endblock %}
+<!-- Breadcrumb goes inside this block -->
+<!-- See the NHS digital service manual for code examples -->
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <!-- See the NHS digital service manual for examples of the grid -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <h1>
+        <!-- Your page title goes here -->
+        e-Referral service prototypes
+      </h1>
+      <h2>All prototypes for the e-Referral service are listed here as of March 2019</h2>
+      <!-- See the NHS digital service manual for examples styles, components and patterns -->
+
+      <!-- Content goes here -->
+
+<h3>Service search</h3>
+      <ul>
+        <li><a href="/search/index">Service search</a>
+        </li>
+      </ul>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK prototype kit - Install
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/docs",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+          Installing the kit
+      </h1>
+
+      <h2 class="nhsuk-heading-m">1. Download the kit</h2>
+
+      <p><a href="https://github.com/nhsuk/nhsuk-prototype-kit/archive/master.zip" data-link="download">Download (zip)</a></p>
+
+      <h2 class="nhsuk-heading-m">2. Install the kit</h2>
+
+      <p>For users new to Node.js, Git or the terminal:</p>
+
+      <ul>
+        <li><a href="/docs/install/simple">Simple install guide</a></li>
+        <ol>
+          <li><a href="/docs/install/requirements">Kit requirements</a>
+          <li><a href="/docs/install/download">Install the kit</a>
+          <li><a href="/docs/install/run">Run the kit</a>
+        </ol>
+      </ul>
+
+      </ul>
+
+      <p class="nhsuk-u-padding-top-3">For users familiar with Node.js, Git and the terminal:</p>
+
+      <ul>
+        <li><a href="/docs/install/advanced">Advanced install guide</a> (developer friendly)</li>
+      </ul>
+
+      {{ backLink({
+        "href": "/docs",
+        "text": "Back to Home",
+        "classes": "nhsuk-u-margin-top-7"
+      }) }}
+
+    </div>
+
+  </div>
+{% endblock %}

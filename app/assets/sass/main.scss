@@ -1,0 +1,207 @@
+// Import NHS.UK frontend library
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+
+// Patterns that are not in the NHS.UK frontend library
+@import 'patterns/check-your-answers';
+
+// Components that are not in the NHS.UK frontend library
+@import 'components/panel-confirmation';
+@import 'components/related-nav';
+
+// Add your extra styles here...
+
+@mixin nhsuk-width-container-fluid {
+  margin: 0 $nhsuk-gutter-half;
+  max-width: 100%; /* [5] */
+}
+
+.nhsuk-width-container-fluid {
+  @include nhsuk-width-container-fluid;
+}
+
+.nhsuk-white-background{
+  background-color: $color_nhsuk-white;
+}
+
+.nhsuk-grey-background{
+  background-color: $color_nhsuk-grey-5;
+
+}
+.grey-border {
+  border-color: $color_nhsuk-black;
+}
+.full-width {
+  width: 100%;
+}
+
+div input[type=checkbox]::before, input[type=radio]::before{
+  width: 25px;
+  height:25px;
+  border: 2px solid red;
+}
+
+.nhsuk-sub-menu{
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+
+.nhsuk-tag {
+  background-color: $color_nhsuk-aqua-green;
+  color: $color_nhsuk-white;
+  display: inline-block;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+// ==========================================================================
+// COMPONENTS / AUTOSEARCH
+// ==========================================================================
+
+.autocomplete__wrapper {
+  position: relative;
+}
+
+.autocomplete__hint,
+.autocomplete__input {
+  @extend .nhsuk-input;
+}
+
+.autocomplete__input {
+  // background-color: transparent;
+  position: relative;
+}
+
+.autocomplete__hint {
+  color: #BFC1C3;
+  position: absolute;
+}
+
+.autocomplete__input--default{
+  padding: 4px;
+}
+
+.autocomplete__input--focused {
+  outline-offset: 0;
+  outline: 3px solid #ffbf47;
+}
+
+.autocomplete__input--show-all-values {
+  padding: 4px 34px 4px 4px;
+  cursor: pointer;
+}
+
+.autocomplete__dropdown-arrow-down{
+  z-index: 0;
+  display: inline-block;
+  position: absolute;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+}
+
+.autocomplete__menu {
+  background-color: #fff;
+  //border: 1px solid $color_nhsuk-grey-5;
+  border-top: 0;
+  color: #34384B;
+  margin: 0;
+  max-height: 342px;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
+  width: calc(100%);
+  border-radius: 0;
+}
+
+.autocomplete__menu--visible {
+  display: block;
+}
+
+.autocomplete__menu--hidden {
+  display: none;
+}
+
+.autocomplete__menu--overlay {
+  box-shadow: rgba(0, 0, 0, 0.256863) 0px 2px 6px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+}
+
+.autocomplete__menu--inline {
+  position: relative;
+}
+
+.autocomplete__option {
+  border-bottom: solid #BFC1C3;
+  border-width: 1px 0;
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+.autocomplete__option > * {
+  pointer-events: none;
+}
+
+.autocomplete__option:first-of-type {
+  border-top-width: 0;
+}
+
+.autocomplete__option:last-of-type {
+  border-bottom-width: 0;
+}
+
+.autocomplete__option--odd {
+  background-color: #FAFAFA;
+}
+
+.autocomplete__option--focused,
+.autocomplete__option:hover {
+  background-color: $color_nhsuk-blue;
+  border-color: $color_nhsuk-blue;
+  color: white;
+  outline: none;
+}
+
+.autocomplete__option--no-results {
+  background-color: #FAFAFA;
+  color: #646b6f;
+  cursor: not-allowed;
+}
+
+.autocomplete__hint,
+.autocomplete__input,
+.autocomplete__option {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.autocomplete__hint,
+.autocomplete__option {
+  padding: 4px;
+}
+
+@media (min-width: 641px) {
+  .autocomplete__hint,
+  .autocomplete__input,
+  .autocomplete__option {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+.autocomplete__input:focus {
+      border: 2px solid $nhsuk-form-border-color;
+      }
+
+
+.autocomplete__dropdown-arrow-down {
+  @include mq($until: tablet) {
+    display: none;
+  }
+}

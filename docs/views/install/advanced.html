@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK prototype kit - Advanced install
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/docs",
+        text: "Home"
+      }
+    ],
+    href: "/docs/install",
+    text: "Install"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>Advanced install guide</h1>
+
+      <p class="nhsuk-body-l">The prototype kit is built on the <a href="http://expressjs.com/" target="_blank">Express<span class="nhsuk-u-visually-hidden">opens in new window</span></a></a> framework, and uses the <a href="https://github.com/nhsuk/nhsuk-frontend" target="_blank">NHS.UK frontend<span class="nhsuk-u-visually-hidden">opens in new window</span></a>.</p>
+
+      <h2>GitHub</h2>
+
+      <p>Clone or download the kit from the <a href="https://github.com/nhsuk/nhsuk-prototype-kit" target="_blank">NHS.UK prototype kit GitHub repo<span class="nhsuk-u-visually-hidden">opens in new window</span>.</a>
+      
+      <h2>Requirements</h2>
+
+      <p>node.js - version 8.x.x</p>
+
+      <h2>Install dependencies</h2>
+
+      <pre class="app-pre"><code class="app-code">npm install</code></pre>
+
+      <h2 class="nhsuk-u-margin-top-7">Run the kit</h2>
+
+      <pre class="app-pre"><code class="app-code">npm run watch</code></pre>
+
+      <p>Go to <a href="http://localhost:3000">localhost:3000</a> in your browser.</p>
+
+      <hr>
+
+      <h2>How to guides</h2>
+
+      <p>These guides will show you how to use the prototype kit, from creating a simple page to building complex user journeys.</p>
+
+      <ul>
+        <li><a href="/docs/how-tos/making-pages">How to make pages</a></li>
+        <li><a href="/docs/how-tos/page-elements">How to style page elements</a></li>
+        <li><a href="/docs/how-tos/components">How to use components</a></li>
+      </ul>
+
+      <p><a href="/docs/how-tos">See all how to guides</a></p>
+
+      <hr>
+
+      {{ backLink({
+        "href": "/docs/install",
+        "text": "Back to Installing the kit"
+      }) }}
+
+    </div>
+
+  </div>
+{% endblock %}
