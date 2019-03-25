@@ -50,10 +50,15 @@ width: 100%;
   background-color: $color_nhsuk-aqua-green;
   color: $color_nhsuk-white;
   display: inline-block;
-  font-family: 'nta', Arial, sans-serif;
-  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
   padding: 4px 8px;
   border-radius: 4px;
+
+}
+.nhsuk-tag__warning{
+  @extend .nhsuk-tag;
+  background-color: $color_nhsuk-red;
 }
 // ==========================================================================
 // COMPONENTS / AUTOSEARCH
