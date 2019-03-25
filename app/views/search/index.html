@@ -58,17 +58,18 @@
   <div class="nhsuk-grid-column-three-quarters">
   <ul class="nhsuk-u-padding-2 nhsuk-u-margin-left-0 nhsuk-header__navigation-list" role="navigation">
     <li><span style="padding:16px;background-color:#425563;color:#f0f4f5;margin-left:-16px;"><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="Patient name">Dave Evans</a></li>
-    <li>Male 30yrs (4 Jun 1998)</li>
-    <li><strong>NHS No:</strong> 000 007 4563</li>
+    <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
+    <li><strong>Gender: </strong> Male</li>
+    <li>30 years (4 June 1988)</li>
   </ul>
 </div>
   </div>
 {% endblock %}
 {% block content %}
 <div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4" style="border-bottom:1px solid #AEB7BD">
-  <div class="nhsuk-grid-column-one-half">
-    <form class="nhsuk-form" action="index.html" method="post">
+  <form class="nhsuk-form" action="search-results">
+  <div class="nhsuk-grid-column-one-third">
+
       <div class="nhsuk-form-group">
       <label class="nhsuk-label--s" for="autoselect">
         Search term(s)
@@ -158,10 +159,11 @@
 </select>
       </div>
 
-    </form>
+
   </div>
 
-  <div class="nhsuk-grid-column-one-half>
+<!-- COLUMN -->
+  <div class="nhsuk-grid-column-one-third">
     <div class="nhsuk-form-group">
 
   <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
@@ -170,18 +172,34 @@
     </legend>
 
     <div class="nhsuk-radios nhsuk-radios--inline">
+
       <div class="nhsuk-radios__item">
         <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral">
         <label class="nhsuk-label nhsuk-radios__label" for="example-1">
           Referral
         </label>
       </div>
+
       <div class="nhsuk-radios__item">
         <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice" checked>
         <label class="nhsuk-label nhsuk-radios__label" for="example-2">
         Advice
         </label>
       </div>
+
+      </div>
+        </fieldset>
+      </div>
+      </div>
+
+
+<!-- COLUMN -->
+      <div class="nhsuk-grid-column-one-third">
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+            <legend class="nhsuk-fieldset__legend--s">
+            Priority
+            </legend>
 
       <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:200px;">
         <option value="1">5 days</option>
@@ -192,18 +210,15 @@
     Search
   </button>
     </div>
+    </div>
 
-
-  </fieldset>
-
+</form>
 </div>
 
-
-    </div>
-    <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
   <div class="nhsuk-grid-column-three-quarters">
-<h1>There are no results to display</h1>
-<p>Try searching for a speciality, or clinic type</p>
+<h1 class="nhsuk-heading-s">Service selection</h1>
+<p>You have no results to view yet. Try searching for a speciality, or clinic type</p>
 </div>
 
 

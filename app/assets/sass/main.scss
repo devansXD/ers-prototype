@@ -74,7 +74,7 @@ width: 100%;
 }
 
 .autocomplete__hint {
-  color: #BFC1C3;
+  color: $color_nhsuk-grey-5;
   position: absolute;
 }
 
@@ -103,10 +103,10 @@ width: 100%;
 }
 
 .autocomplete__menu {
-  background-color: #fff;
+  background-color: $color_nhsuk-white;
   //border: 1px solid $color_nhsuk-grey-5;
   border-top: 0;
-  color: #34384B;
+  color: $color_nhsuk-black;
   margin: 0;
   max-height: 342px;
   overflow-x: hidden;

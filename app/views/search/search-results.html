@@ -56,12 +56,11 @@
 <!-- SUB MENU PATIENT INFO -->
 <div class="nhsuk-grid-row nhsuk-grey-background" style="border-bottom:1px solid #AEB7BD">
   <div class="nhsuk-grid-column-three-quarters">
-
   <ul class="nhsuk-u-padding-2 nhsuk-u-margin-left-0 nhsuk-header__navigation-list" role="navigation">
     <li><span style="padding:16px;background-color:#425563;color:#f0f4f5;margin-left:-16px;"><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="Patient name">Dave Evans</a></li>
-    <li>Male 30yrs (4 Jun 1998)</li>
-    <li><strong>NHS No:</strong> 000 007 4563</li>
+    <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
+    <li><strong>Gender: </strong> Male</li>
+    <li>30 years (4 June 1988)</li>
   </ul>
 </div>
   </div>
@@ -206,6 +205,27 @@
     <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-top-4">
     <!-- Filters go here --><h3>Filters</h3>
+
+      <div class="nhsuk-form-group">
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend--s">
+      Distance
+      </legend>
+      <div class="nhsuk-form-group">
+
+        <input class="nhsuk-input nhsuk-u-margin-bottom-2" type="text" name="" placeholder="LS11" value="" style="max-width:200px">
+        <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:200px">
+          <option value="1">+ 5 miles</option>
+          <option value="2" selected>+ 10 miles</option>
+          <option value="3">+ 25 miles</option>
+          <option value="4">+ 35 miles</option>
+        </select>
+      </div>
+
+    </fieldset>
+
+
+    </div>
   <div class="nhsuk-form-group">
 
 <fieldset class="nhsuk-fieldset">
@@ -215,15 +235,15 @@ Comissioned level
 <div class="nhsuk-checkboxes">
 
 <div class="nhsuk-checkboxes__item">
-  <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="email">
-  <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+  <input class="nhsuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+  <label class="nhsuk-label nhsuk-checkboxes__label" for="1">
     Local
   </label>
 </div>
 
 <div class="nhsuk-checkboxes__item">
-  <input class="nhsuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="phone">
-  <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-2">
+  <input class="nhsuk-checkboxes__input" id="2" name="2" type="checkbox" value="">
+  <label class="nhsuk-label nhsuk-checkboxes__label" for="2">
     National
   </label>
 </div>
@@ -231,28 +251,26 @@ Comissioned level
 
 </div>
 </fieldset>
-
-
 </div>
+
 <div class="nhsuk-form-group">
 
 <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
 <legend class="nhsuk-fieldset__legend--s">
-Comissioned level
+Speciality
 </legend>
 <div class="nhsuk-checkboxes">
-
 <div class="nhsuk-checkboxes__item">
-<input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="email">
-<label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
-  Local
+<input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+  GI and liver (medicine and surgery)
 </label>
 </div>
 
 <div class="nhsuk-checkboxes__item">
-<input class="nhsuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="phone">
-<label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-2">
-  National
+<input class="nhsuk-checkboxes__input" id="4" name=""4 type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="4">
+Surgery (not otherwise specified)
 </label>
 </div>
 
@@ -271,16 +289,51 @@ Clinic type
 <div class="nhsuk-checkboxes">
 
 <div class="nhsuk-checkboxes__item">
-<input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="email">
-<label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
-  Local
+<input class="nhsuk-checkboxes__input" id="5" name="5" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="5">
+Colorectal Surgery
 </label>
 </div>
 
 <div class="nhsuk-checkboxes__item">
-<input class="nhsuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="phone">
-<label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-2">
-  National
+<input class="nhsuk-checkboxes__input" id="6" name="6" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="6">
+Gallstones
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="7" name="7" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="7">
+Hernias
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="8" name="8" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="8">
+Inflammatory Bowel Disease (IBD)
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="9" name="9" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="9">
+Lower GI (medical) excl IBD
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="10" name="10" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="10">
+Lumps and Bumps
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="11" name="11" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="11">
+Upper GI incl Dyspepsia
 </label>
 </div>
 
@@ -290,70 +343,143 @@ Clinic type
 
 
 </div>
-<div class="nhsuk-form-group">
 
-<fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
-<legend class="nhsuk-fieldset__legend--s">
-  Speciality
-</legend>
-<div class="nhsuk-checkboxes">
-
-<div class="nhsuk-checkboxes__item">
-<input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="email">
-<label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
-  GI and Liver
-</label>
-</div>
-
-<div class="nhsuk-checkboxes__item">
-<input class="nhsuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="phone">
-<label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-2">
-  Surgery
-</label>
-</div>
-
-
-</div>
-</fieldset>
-
-
-</div>
-<div class="nhsuk-form-group">
-
-<fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
-<legend class="nhsuk-fieldset__legend--s">
-Clinic type
-</legend>
-<div class="nhsuk-checkboxes">
-
-<div class="nhsuk-checkboxes__item">
-<input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="email">
-<label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
-  Osteopathic
-</label>
-</div>
-
-<div class="nhsuk-checkboxes__item">
-<input class="nhsuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="phone">
-<label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-2">
-  Rhumatology
-</label>
-</div>
-
-
-</div>
-</fieldset>
-</div>
 <div class="nhsuk-form-group">
   <label class="nhsuk-label--s" for="select-1">
     Appointments within
   </label>
-  <select class="nhsuk-select" id="select-1" name="select-1">
+  <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:200px">
     <option value="1">5 days</option>
     <option value="2" selected>10 days</option>
     <option value="3" disabled>2 weeks</option>
   </select>
 </div>
+
+<div class="nhsuk-form-group">
+
+<fieldset class="nhsuk-fieldset">
+<legend class="nhsuk-fieldset__legend--s">
+Service type
+</legend>
+<div class="nhsuk-checkboxes">
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="12" name="12" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="12">
+  Directly bookable
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="12" name="12" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="12">
+  Indirectly bookable
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="13" name="13" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="13">
+  Indirectly bookable
+</label>
+</div>
+
+
+</div>
+</fieldset>
+</div>
+
+
+<div class="nhsuk-form-group">
+
+<fieldset class="nhsuk-fieldset">
+<legend class="nhsuk-fieldset__legend--s">
+Service location
+</legend>
+<div class="nhsuk-checkboxes">
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="">
+  DEWSBURY & DISTRICT HOSPITAL
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="">
+HARROGATE DISTRICT HOSPITAL
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="">
+HUDDERSFIELD ROYAL INFIRMARY
+</label>
+</div>
+
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="">
+NUFFIELD HEALTH, LEEDS HOSPITAL
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="">
+SPIRE LEEDS HOSPITAL
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="">
+ST JAMES'S UNIVERSITY HOSPITAL
+</label>
+</div>
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="">
+THE YORKSHIRE CLINIC
+</label>
+</div>
+
+
+<div class="nhsuk-checkboxes__item">
+<input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="">
+WESTCLIFFE HEALTH - SHIPLEY MP
+</label>
+</div>
+
+
+
+
+
+</div>
+</fieldset>
+</div>
+
+<div class="nhsuk-form-group">
+<fieldset class=nhsuk-fieldset"">
+
+  <div class="nhsuk-checkboxes__item">
+  <input class="nhsuk-radios__input" id="14" name="14" type="checkbox" value="">
+  <label class="nhsuk-label nhsuk-radios__label" for="14">
+  Age / gender appropriate only
+  </label>
+  </div>
+
+
+</fieldset>
+</div>
+
+
+
 
   </div>
   <div class="nhsuk-grid-column-three-quarters">
@@ -389,19 +515,18 @@ Clinic type
 
           <tbody class="nhsuk-table__body">
 
-          <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</td>
-          <td class="nhsuk-table__cell">15 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">7 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Adult NHS Hernia Repair Clinic - The Huddersfield - BMI - NT4</td><td class="nhsuk-table__cell">15 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">11 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Adult NHS General Surgery - Hernia Clinic - One Health Group - Holmfirth (NTX26)</td><td class="nhsuk-table__cell">5 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">16 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Adult NHS Hernia RAS | Nuffield Health Leeds hospital | NT225 </td><td class="nhsuk-table__cell">16 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">2 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Hernia-Not Otherwise Specified-Leeds TH(St James's Hosp)-RR8 </td><td class="nhsuk-table__cell">Limited Capacity</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">3 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Hernias - Surgery (Not Otherwise Specified) - Spire Leeds Hospital - NT332 </td><td class="nhsuk-table__cell">15 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">5 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Hernia-Surgery Not Otherwise Specified-Dewsbury Hospital-RXF</td><td class="nhsuk-table__cell">Limited Capacity</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">5 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">GENERAL SURGERY OUTPATIENTS SHIPLEY</td><td class="nhsuk-table__cell">12 weeks</td><td class="nhsuk-table__cell">GI and Liver (Medicine and Surgery) </td><td class="nhsuk-table__cell">8 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</td><td class="nhsuk-table__cell">14 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">9 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">CHFT - MSK Hernia - Calderdale Royal Hospital- RWY</td><td class="nhsuk-table__cell">17 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">12 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">General Surgery RAS - Huddersfield Royal Infirmary RWY</td><td class="nhsuk-table__cell">23 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">12 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">General Surgery-Harrogate District Hospital (Harrogate Trust)-RCD</td><td class="nhsuk-table__cell">21 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">15 miles</td></tr>
+          <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</td><td class="nhsuk-table__cell">15 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">7 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Adult NHS Hernia Repair Clinic - The Huddersfield - BMI - NT4</td><td class="nhsuk-table__cell">15 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">11 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Adult NHS General Surgery - Hernia Clinic - One Health Group - Holmfirth (NTX26)</td><td class="nhsuk-table__cell">5 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">16 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Adult NHS Hernia RAS | Nuffield Health Leeds hospital | NT225 </td><td class="nhsuk-table__cell">16 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">2 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Hernia-Not Otherwise Specified-Leeds TH(St James's Hosp)-RR8 </td><td class="nhsuk-table__cell">Limited Capacity</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">3 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Hernias - Surgery (Not Otherwise Specified) - Spire Leeds Hospital - NT332 </td><td class="nhsuk-table__cell">15 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">5 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Hernia-Surgery Not Otherwise Specified-Dewsbury Hospital-RXF</td><td class="nhsuk-table__cell">Limited Capacity</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">5 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">GENERAL SURGERY OUTPATIENTS SHIPLEY</td><td class="nhsuk-table__cell">12 weeks</td><td class="nhsuk-table__cell">GI and Liver (Medicine and Surgery) </td><td class="nhsuk-table__cell">8 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</td><td class="nhsuk-table__cell">14 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">9 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">CHFT - MSK Hernia - Calderdale Royal Hospital- RWY</td><td class="nhsuk-table__cell">17 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">12 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">General Surgery RAS - Huddersfield Royal Infirmary RWY</td><td class="nhsuk-table__cell">23 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">12 miles</td><td><a href="#">Book now</a></td></tr>
+         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell">General Surgery-Harrogate District Hospital (Harrogate Trust)-RCD</td><td class="nhsuk-table__cell">21 weeks</td><td class="nhsuk-table__cell">Surgery - Not Otherwise Specified </td><td class="nhsuk-table__cell">15 miles</td><td><a href="#">Book now</a></td></tr>
 
 
         </tbody>
