@@ -1,4 +1,6 @@
 // Import NHS.UK frontend library
+
+
 @import 'node_modules/nhsuk-frontend/packages/nhsuk';
 
 // Patterns that are not in the NHS.UK frontend library
@@ -212,7 +214,46 @@ width: 100%;
 }
 
 
-// TABLES
+// TABLE CHECKBOXES
+
+.multiple-choice--hod {
+  .multiple-choice {
+    padding-top: 1px;
+    padding-bottom: 2px;
+  }
+  .nhsuk-checkboxes__label {
+    padding: 3px 2px 5px;
+  }
+
+  .nhsuk-checkboxes__item {
+    margin-bottom: 0;
+  }
+}
+
+.multiple-choice--hod [type=checkbox] + label::before {
+  width: 25px;
+  height: 25px;
+}
+
+.multiple-choice--hod [type=checkbox] + label::after {
+  border-width: 0 0 3px 3px;
+  width: 11px;
+  height: 4px;
+  top: 8px;
+  left: 6px;
+}
+
+@media screen and (max-width: 640px) {
+  .multiple-choice--hod {
+    .multiple-choice {
+      margin-bottom: 15px;
+      padding-top: 4px;
+    }
+  }
+  .govuk-checkboxes__label {
+    padding: 7px 6px 3px;
+  }
+}
 
 .nhsuk-table-clickable tbody tr:hover {
   background-color: #F8F8F8;
@@ -229,11 +270,7 @@ $selected-colour: #FFECC7;
   background-color: darken(#FFECC7, 5%);
 }
 
-.nhsuk-table-clickable {
-
-  .multiple-choice--hod {
+.nhsuk-table-clickable .multiple-choice--hod {
   padding: 0.9em 0 0 1.05263em;
   margin: 0;
-
-  }
 }
