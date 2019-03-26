@@ -210,6 +210,7 @@ Surgery (not otherwise specified)
 
 
 </div>
+
 <!--
 <div class="nhsuk-form-group">
 
@@ -274,7 +275,6 @@ Upper GI incl Dyspepsia
 
 
 </div>-->
-
 <!--
 <div class="nhsuk-form-group">
   <label class="nhsuk-label--s" for="select-1">
@@ -410,16 +410,25 @@ WESTCLIFFE HEALTH - SHIPLEY MP
   <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-top-4">
     <!-- SEARCH RESULTS -->
     <div class="nhsuk-grid-column-one-third">
-  <p><strong>Search results for "Hernia and Surgery"</strong>(12) <span>
+  <p><strong>Search results </strong>(12) <span>
     </span></p>
     </div>
 
+    <div class="nhsuk-grid-column-one-third">
 
+                <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:200px;">
+                  <option value="3" selected="">Sort by</option>
+                        <option value="1">Distance</option>
+                        <option value="2">Priority</option>
+
+                      </select>
+
+    </div>
 
     <div class="nhsuk-grid-column-one-third">
       <form class="" action="review">
         <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="submit">
-      Review services
+      Review and book
     </button>
       </form>
 
@@ -433,6 +442,7 @@ WESTCLIFFE HEALTH - SHIPLEY MP
               <th></th>
               <th class="nhsuk-table__header" scope="col">Service name</th>
               <th class="nhsuk-table__header" scope="col">Wait time/Capacity</th>
+              <th class="nhsuk-table__header" scope="col">Speciality</th>
               <th class="nhsuk-table__header" scope="col">Distance</th>
 
 
