@@ -81,7 +81,7 @@ width: 100%;
 }
 
 .autocomplete__hint {
-  color: $color_nhsuk-grey-5;
+  color: $color_nhsuk-grey-2;
   position: absolute;
 }
 
@@ -110,8 +110,8 @@ width: 100%;
 }
 
 .autocomplete__menu {
-  background-color: $color_nhsuk-white;
-  //border: 1px solid $color_nhsuk-grey-5;
+  background-color: #fff;
+  border: 1px solid $color_nhsuk-grey-5;
   border-top: 0;
   color: $color_nhsuk-black;
   margin: 0;
@@ -145,6 +145,7 @@ width: 100%;
 
 .autocomplete__option {
   border-bottom: solid #BFC1C3;
+  background-color: #fff;
   border-width: 1px 0;
   cursor: pointer;
   display: block;
@@ -164,19 +165,20 @@ width: 100%;
 }
 
 .autocomplete__option--odd {
-  background-color: #FAFAFA;
+  background-color:#fff ;
 }
 
 .autocomplete__option--focused,
 .autocomplete__option:hover {
-  background-color: $color_nhsuk-blue;
-  border-color: $color_nhsuk-blue;
-  color: white;
+  background-color: white;
+  border-color: black;
+  color: #212b32;
   outline: none;
+  text-decoration-color: yellow;
 }
 
 .autocomplete__option--no-results {
-  background-color: #FAFAFA;
+  background-color:#fff ;
   color: #646b6f;
   cursor: not-allowed;
 }
@@ -273,4 +275,8 @@ $selected-colour: #FFECC7;
 .nhsuk-table-clickable .multiple-choice--hod {
   padding: 0.9em 0 0 1.05263em;
   margin: 0;
+}
+
+.hidden{
+  display: none;
 }
