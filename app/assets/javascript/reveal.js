@@ -1,9 +1,8 @@
-jQuery(function(){
-         jQuery('#showall').click(function(){
-               jQuery('.targetDiv').show();
-        });
-        jQuery('.showSingle').click(function(){
-              jQuery('.targetDiv').hide();
-              jQuery('#div'+$(this).attr('target')).show();
-        });
-});
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}

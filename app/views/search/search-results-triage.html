@@ -202,7 +202,7 @@ NHS e-referral Service
           Priority
         </legend>
 
-        <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:150px;">
+        <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:200px;">
           <option value="1" selected>Routine</option>
           <option value="2">Urgent</option>
           <option value="3">2 week wait</option>
@@ -292,14 +292,14 @@ Comissioned level
 
 
     </div>
-
+    <!--
 <div class="nhsuk-form-group">
 
 <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
-<legend class="nhsuk-fieldset__legend--xs">
+<legend class="nhsuk-fieldset__legend--s">
 Clinic type
 </legend>
-<div class="nhsuk-checkboxes multiple-choice--hod nhsuk-body-s">
+<div class="nhsuk-checkboxes">
 
 <div class="nhsuk-checkboxes__item">
 <input class="nhsuk-checkboxes__input" id="5" name="5" type="checkbox" value="">
@@ -324,7 +324,7 @@ Hernias
 
 <div class="nhsuk-checkboxes__item">
 <input class="nhsuk-checkboxes__input" id="8" name="8" type="checkbox" value="">
-<label class="nhsuk-label nhsuk-checkboxes__label nhsuk-body-s" for="8">
+<label class="nhsuk-label nhsuk-checkboxes__label" for="8">
 Inflammatory Bowel Disease (IBD)
 </label>
 </div>
@@ -355,7 +355,7 @@ Upper GI incl Dyspepsia
 </fieldset>
 
 
-</div>
+</div>-->
 
     <!--
 <div class="nhsuk-form-group">
@@ -378,19 +378,16 @@ Upper GI incl Dyspepsia
 
         <div class="multiple-choice--hod nhsuk-radios">
           <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="1" name="bookable" type="radio" value="yes">
+            <input class="nhsuk-radios__input" id="1" name="example" type="radio" value="yes">
             <label class="nhsuk-label nhsuk-radios__label" for="1">
-              Only show bookable services
+              <a href="search-results">Only show bookable services</a>
             </label>
           </div>
           <div class="nhsuk-radios__item">
-
-              <input class="nhsuk-radios__input" id="2" name="triage" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="2">
-                <a href="search-results-triage" style="text-decoration:none">Include triage only services</a>
-              </label>
-
-
+            <input class="nhsuk-radios__input" id="2" name="example" type="radio" value="no" checked>
+            <label class="nhsuk-label nhsuk-radios__label" for="2">
+              Include triage only services
+            </label>
           </div>
         </div>
       </fieldset>
@@ -435,7 +432,7 @@ Upper GI incl Dyspepsia
       <!-- TABLE START -->
       <thead class="nhsuk-table__head">
         <tr class="nhsuk-table__row">
-          <th></th>
+
           <th class="nhsuk-table__header" aria-sort="none" scope="col">
             <button type="button" data-index="0">Service name</button>
 
@@ -447,248 +444,37 @@ Upper GI incl Dyspepsia
 
           </th>
           <th class="nhsuk-table__header" aria-sort="none" scope="col">
-            <button type="button" data-index="0">Next appointment</button>
+            <button type="button" data-index="0">Next appointment</button></th>
 
-          </th>
           <th class="nhsuk-table__header" aria-sort="none" scope="col">
             <button type="button" data-index="0">Wait time</button></th>
+
+          <th class="nhsuk-table__header" aria-sort="none" scope="col">
+            <button type="button" data-index="0">lol</button></th>
+
 
 
         </tr>
       </thead>
 
-
       <tbody class="nhsuk-table__body">
         <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell multiple-choice--hod">
 
-            <div class="nhsuk-checkboxes__item">
-              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
-                &nbsp;
-              </label>
-            </div>
-          </td>
           <td class="nhsuk-table__cell">
-            <a>Spire Methley Park Hospital</a> <span class="nhsuk-tag">Good capacity</span>
-            <br>
-
-            <span>Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</span>
-
-
-          </td>
-          <td class="nhsuk-table__cell">11 miles</td>
-          <td class="nhsuk-table__cell">Tomorrow</td>
-          <td class="nhsuk-table__cell">15 weeks</td>
-
-
-
-
-        </tr>
-
-
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell multiple-choice--hod">
-
-            <div class="nhsuk-checkboxes__item">
-              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
-                &nbsp;
-              </label>
-            </div>
-          </td>
-          <td class="nhsuk-table__cell">
-            <a>BMI The Huddersfield Hospital</a> <span class="nhsuk-tag">Good capacity</span>
-            <br>
-            <span>Adult NHS Hernia Repair Clinic The Huddersfield - BMI - NT4</span>
-          </td>
-          <td class="nhsuk-table__cell">11 miles</td>
-          <td class="nhsuk-table__cell">Tomorrow</td>
-          <td class="nhsuk-table__cell">15 weeks</td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell multiple-choice--hod">
-
-            <div class="nhsuk-checkboxes__item">
-              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
-                &nbsp;
-              </label>
-            </div>
-          </td>
-          <td class="nhsuk-table__cell">
-            <a>One Health Group - Oaklands Health Centre</a>
-            <br>
-            <span>Adult NHS General Surgery - Hernia Clinic One Health Group - Holmfirth (NTX26)</span>
-          </td>
-          <td class="nhsuk-table__cell">16 miles</td>
-          <td class="nhsuk-table__cell">1 week</td>
-          <td class="nhsuk-table__cell">5 weeks</td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell multiple-choice--hod">
-
-            <div class="nhsuk-checkboxes__item">
-              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
-                &nbsp;
-              </label>
-            </div>
-          </td>
-          <td class="nhsuk-table__cell">
-            <a>St Jame's University Hospital</a> <span class="nhsuk-tag__warning">Limited capacity</span>
-            <br>
-            <span>Hernia-Not Otherwise Specified Leeds TH(St James's Hosp)-RR8</span></td>
-          <td class="nhsuk-table__cell">3 miles</td>
-          <td class="nhsuk-table__cell">None</td>
-          <td class="nhsuk-table__cell">N/A</td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell multiple-choice--hod">
-
-            <div class="nhsuk-checkboxes__item">
-              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
-                &nbsp;
-              </label>
-            </div>
-          </td>
-          <td class="nhsuk-table__cell">
-            <a onclick="myFunction()">Spire Leeds Hospital</a>
-            <br>
-            <span>Hernias - Surgery (Not Otherwise Specified) Spire Leeds Hospital - NT332</span>
-            <div id="myDIV" style="display:none">
-                <p class="nhsuk-body-s">METHLEY LANE, LEEDS, WEST YORKSHIRE, LS26 9HG</p>
-              <div class="nhsuk-grid-column-one-half nhsuku-margin-left-0">
-
-                <dl class="nhsuk-body-s">
-                  <dt>Conditions</dt>
-                  <dd>Diagnosis & treatment of abdominal wall lesions</dd>
-                  <dt>Exclusions</dt>
-                  <dd>Service Users under the age of 18.
-Any Service User with an ASA (American Society of Anaesthesiologists) score of 3 (who is unstable), unless the appropriate Critical Care facilities that meet the levels of Critical Care for Adult Patients Standards and Guidelines (Intensive Care Society 2002) are available.
-Where the Service Users will require general anaesthetic and the patient has a Body Mass Index greater than 35.
-Service Users with suspected cancer, who should be referred directly on to the appropriate cancer pathway.
-Service Users who have a current and significantly unstable psychiatric disorder where the Hospital cannot reasonably be expected to accommodate the patient’s needs.</dd>
-                </dl>
-
-              </div>
-              <div class="nhsuk-grid-column-one-half">
-              <dl class="nhsuk-body-s">
-                <dt>Procedures</dt>
-                <dd>Suture of anterior abdominal wall</dd>
-<dd>Other repair of anterior abdominal wall</dd>
-<dd>Excision umbilicus </dd>
-<dd>Excision urachus </dd>
-<dd>Extirpation of lesion of umbilicus </dd>
-<dd>Biopsy of lesion of umbilicus
-</dd>
-<dd>Excision of fistula of umbilicus
-</dd>
-<dd>Operations on umbilicus
-</dd>
-<dd>Biopsy of lesion of anterior abdominal wall
-</dd>
-<dd>Drainage of anterior abdominal wall
-</dd>
-<dd>Removal of foreign body from anterior abdominal wall
-</dd>
-<dd>Other operation on anterior abdominal wall</dd>
-
-              </dl>
-                <button class="nhsuk-button nhsuk-u-padding-1" type="button" name="button">Book now</button>
-
-              </div>
-            </div>
-
-
-          </td>
-          <td class="nhsuk-table__cell">None</td>
-          <td class="nhsuk-table__cell">Phone to book</td>
-          <td class="nhsuk-table__cell">15 weeks</td>
-
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell multiple-choice--hod">
-
-            <div class="nhsuk-checkboxes__item">
-              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
-                &nbsp;
-              </label>
-            </div>
-          </td>
-          <td class="nhsuk-table__cell">
-            <a>Dewsbury and District Hospital</a> <span class="nhsuk-tag__warning">Limited capacity</span>
-            <br>
-            <span>Hernia-Surgery Not Otherwise Specified Dewsbury Hospital-RXF</span></td>
-          <td class="nhsuk-table__cell multiple-choice--hod">5 miles</td>
-          <td class="nhsuk-table__cell multiple-choice--hod">none</td>
-          <td class="nhsuk-table__cell multiple-choice--hod">N/A</td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell multiple-choice--hod">
-
-            <div class="nhsuk-checkboxes__item">
-              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
-                &nbsp;
-              </label>
-            </div>
-          </td>
-          <td class="nhsuk-table__cell"><a>Westcliffe Health - Shipley MP</a><br><span>General Surgery Outpatients Shipley</span></td>
-          <td class="nhsuk-table__cell">8 miles</td>
+            <a>Nuffield Health Leeds hospital</a><br><span>Adult NHS Hernia RAS Nuffield Health Leeds hospital | NT225</span></td>
+          <td class="nhsuk-table__cell multiple-choice--hod">2 miles</td>
           <td class="nhsuk-table__cell">none</td>
-          <td class="nhsuk-table__cell">12 weeks</td>
+          <td class="nhsuk-table__cell">16 weeks</td>
+          <td class="nhsuk-table__cell"><a href="triage-message">Send now</a></td>
         </tr>
         <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell multiple-choice--hod">
 
-            <div class="nhsuk-checkboxes__item">
-              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
-                &nbsp;
-              </label>
-            </div>
+          <td class="nhsuk-table__cell multiple-choice--hod"><a href="#">Huddersfield Royal Infirmary</a><br><span>General Surgery RAS Huddersfield Royal Infirmary RWY</span>
           </td>
-          <td class="nhsuk-table__cell"><a>The Yorkshire Clinic</a><br><span>Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</span>
-          </td>
-          <td class="nhsuk-table__cell multiple-choice--hod">9 miles</td>
-          <td class="nhsuk-table__cell multiple-choice--hod">none</td>
-          <td class="nhsuk-table__cell multiple-choice--hod">12 weeks</td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell multiple-choice--hod">
-
-            <div class="nhsuk-checkboxes__item">
-              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
-                &nbsp;
-              </label>
-            </div>
-          </td>
-          <td class="nhsuk-table__cell"><a>Calderdale Royal Hospital</a><br><span>CHFT - MSK Hernia - Calderdale Royal Hospital- RWY</span>
-          </td>
-          <td class="nhsuk-table__cell">12 miles</td>
-          <td class="nhsuk-table__cell">5 week</td>
-          <td class="nhsuk-table__cell">17 weeks</td>
-        </tr>
-
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell multiple-choice--hod">
-
-            <div class="nhsuk-checkboxes__item">
-              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
-                &nbsp;
-              </label>
-            </div>
-          </td>
-          <td class="nhsuk-table__cell"><a>Harrogate District Hospital</a><br><span>General Surgery - Harrogate District Hospital (Harrogate Trust)-RCD</span>
-          </td>
-          <td class="nhsuk-table__cell multiple-choice--hod">15 miles</td>
-          <td class="nhsuk-table__cell multiple-choice--hod">3 weeks</td>
-          <td class="nhsuk-table__cell multiple-choice--hod">21 weeks</td>
+          <td class="nhsuk-table__cell multiple-choice--hod">12 miles</td>
+          <td class="nhsuk-table__cell">none</td>
+          <td class="nhsuk-table__cell">23 weeks</td>
+          <td class="nhsuk-table__cell"><a href="triage-message">Send now</a></td>
         </tr>
       </tbody>
     </table>

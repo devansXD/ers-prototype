@@ -1,10 +1,6 @@
-{% extends "layout.html" %}
+{% extends "layout-transactional.html" %}
 
 {% set mainClasses = 'nhsuk-main-wrapper--s' %}
-
-{% block pageTitle %}
-  NHS e-referral Service
-{% endblock %}
 
 {% block header %}
 <header class="nhsuk-header" role="banner">
@@ -31,8 +27,19 @@
 
   <div class="nhsuk-grid-column-two-thirds">
 
-<h1>Patters, components and styles for the NHS e-Referral service.</h1>
+<h1>Components</h1>
+<p class="nhsuk-body-l">Components are reusable interface elements that can be used in different patterns and layouts. They are part of
+our visual language and are intended to be used unchanged for a consistent user experience.</p>
+<ul class="nhsuk-list">
+    <li><a href="alerts">Alerts</a></li>
+      <li><a href="components/buttons">Buttons</a></li>
+      <li><a href="components/checkboxes">Checkboxes</a></li>
+      <li><a href="components/labels">Labels</a></li>
+        <li><a href="components/radio-buttons">Radio buttons</a></li>
 
+
+
+    </ul>
 
 </div>
 

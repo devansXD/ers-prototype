@@ -31,6 +31,7 @@
 }
 .grey-border {
   border-color: $color_nhsuk-black;
+
 }
 .full-width {
   width: 100%;
@@ -55,7 +56,7 @@ width: 100%;
   font-family: Arial, sans-serif;
   font-size: 12px;
   padding: 4px 8px;
-  border-radius: 4px;
+  margin-left: 8px;
 
 }
 .nhsuk-tag__warning{
@@ -252,7 +253,7 @@ width: 100%;
       padding-top: 4px;
     }
   }
-  .govuk-checkboxes__label {
+  .-checkboxes__label {
     padding: 7px 6px 3px;
   }
 }
@@ -279,4 +280,133 @@ $selected-colour: #FFECC7;
 
 .hidden{
   display: none;
+}
+
+// RADIOS
+
+.multiple-choice--hod [type=radio] + label::before {
+  width: 28px;
+  height: 28px;
+}
+
+.multiple-choice--hod [type=radio] + label::after {
+  border: 7px solid;
+  top: 7px;
+  left: 7px;
+}
+
+
+.multiple-choice--hod {
+  .multiple-choice {
+    padding-top: 1px;
+    padding-bottom: 2px;
+  }
+  .nhsuk-radios__label {
+    padding: 3px 8px 5px;
+  }
+
+  .nhsuk-radios__item {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .multiple-choice--hod {
+    .multiple-choice {
+      margin-bottom: 15px;
+      padding-top: 4px;
+    }
+  }
+  .nhsuk-radios__label {
+    padding: 7px 6px 3px;
+  }
+}
+
+// OTHER TABLE ELEMENTS
+.nhsuk-table {
+.nhsuk-select {
+  border: none;
+
+}
+}
+
+[aria-sort] button,
+[aria-sort] button:hover {
+  background-color: transparent;
+  border-width: 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  color: #005ea5;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0 10px 0 0;
+  position: relative;
+  text-align: inherit;
+  font-size: 1em;
+  margin: 0;
+}
+
+[aria-sort] button:focus,
+[aria-sort] button:hover:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+[aria-sort]:first-child button {
+  right: auto;
+}
+
+[aria-sort] button:before {
+  content: " \25bc";
+  position: absolute;
+  right: -1px;
+  top: 9px;
+  font-size: 0.5em;
+}
+
+[aria-sort] button:after {
+  content: " \25b2";
+  position: absolute;
+  right: -1px;
+  top: 1px;
+  font-size: 0.5em;
+}
+
+[aria-sort="ascending"] button:before,
+[aria-sort="descending"] button:before {
+  content: none;
+}
+
+[aria-sort="ascending"] button:after {
+  content: " \25b2";
+  font-size: .8em;
+  position: absolute;
+  right: -5px;
+  top: 2px;
+}
+
+[aria-sort="descending"] button:after {
+  content: " \25bc";
+  font-size: .8em;
+  position: absolute;
+  right: -5px;
+  top: 2px;
+}
+
+dl{
+
+  margin-bottom: 32px;
+  padding:8px;
+}
+dl {
+  dt{
+      font-weight: bold;
+    margin-bottom: 8px;
+  }
+  dd{
+    margin-bottom:8px;
+  }
 }

@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="/css/main.css">
 
     <script src="/nhsuk-frontend/nhsuk.min.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 
     {% block headIcons %}
       <!--[if IE]><link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico"><![endif]-->
@@ -48,8 +46,8 @@
       {% block beforeContent %}{% endblock %}
 
       {% block main %}
-        <div class="nhsuk-width-container {{ containerClasses }}"">
-          <main class=" {{ mainClasses }}" id="main-content" role="main">
+        <div class="nhsuk-width-container">
+          <main class="nhsuk-main-wrapper {{ mainClasses }}" id="main-content" role="main">
             {% block content %}{% endblock %}
           </main>
         </div>
