@@ -72,37 +72,120 @@
 <h1 class="nhsuk-heading-s">Your services shortlist for review</h1>
 <p>These are the services you have chosen to shortlist. Double check before submitting</p>
 </div>
+<div class="nhsuk-grid-row">
+
+
+
+</div>
+
+</div>
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-three-quarters">
 
-    <table class="nhsuk-table">
+    <table id="sortable" class="nhsuk-table nhsuk-table-clickable">
 
-  <!-- TABLE START -->
-          <thead class="nhsuk-table__head">
-            <tr class="nhsuk-table__row">
-
-              <th class="nhsuk-table__header" scope="col">Service name</th>
-              <th class="nhsuk-table__header" scope="col">Miles</th>
-
-
-
-            </tr>
-          </thead>
+      <!-- TABLE START -->
+      <thead class="nhsuk-table__head">
+        <tr class="nhsuk-table__row">
+          <th></th>
+          <th class="nhsuk-table__header" aria-sort="none" scope="col">
+            <button onclick="sortTable()" type="button" data-index="0">Service name</button>
 
 
-          <tbody class="nhsuk-table__body">
-          <tr class="nhsuk-table__row"><td class="nhsuk-table__cell"><a href="#">Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</a></td><td class="nhsuk-table__cell">7 miles</td></tr>
-         <tr class="nhsuk-table__row"><td class="nhsuk-table__cell"><a href="#">Hernias - Surgery (Not Otherwise Specified) - Spire Leeds Hospital - NT332</a> </td><td class="nhsuk-table__cell">5 miles</td></tr>
-        </tbody>
+          </th>
 
-        </table>
+          <th class="nhsuk-table__header" aria-sort="none" scope="col">
+            <button type="button" data-index="0">Distance</button>
+
+          </th>
+          <th class="nhsuk-table__header" aria-sort="none" scope="col">
+            <button type="button" data-index="0">Next appointment</button>
+
+          </th>
+        </tr>
+      </thead>
+
+
+      <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell multiple-choice--hod">
+
+            <div class="nhsuk-checkboxes__item">
+              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                &nbsp;
+              </label>
+            </div>
+          </td>
+          <td class="nhsuk-table__cell">
+            <a>Spire Methley Park Hospital</a> <span class="nhsuk-tag">Good capacity</span>
+            <br>
+
+            <span>Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</span>
+
+          </td>
+          <td class="nhsuk-table__cell">11 miles</td>
+          <td class="nhsuk-table__cell">Tomorrow</td>
+
+
+
+
+        </tr>
+
+
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell multiple-choice--hod">
+
+            <div class="nhsuk-checkboxes__item">
+              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                &nbsp;
+              </label>
+            </div>
+          </td>
+          <td class="nhsuk-table__cell">
+            <a>BMI The Huddersfield Hospital</a> <span class="nhsuk-tag">Good capacity</span>
+            <br>
+            <span>Adult NHS Hernia Repair Clinic The Huddersfield - BMI - NT4</span>
+          </td>
+          <td class="nhsuk-table__cell">11 miles</td>
+          <td class="nhsuk-table__cell">Tomorrow</td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell multiple-choice--hod">
+
+            <div class="nhsuk-checkboxes__item">
+              <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                &nbsp;
+              </label>
+            </div>
+          </td>
+          <td class="nhsuk-table__cell">
+            <a>One Health Group - Oaklands Health Centre</a>
+            <br>
+            <span>Adult NHS General Surgery - Hernia Clinic One Health Group - Holmfirth (NTX26)</span>
+          </td>
+          <td class="nhsuk-table__cell">16 miles</td>
+          <td class="nhsuk-table__cell">1 week</td>
+        </tr>
+
+
+
+
+
+
+
+      </tbody>
+    </table>
 
         <div class="nhsuk-grid-column-one-third">
           <form class="" action="review">
             <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="submit">
           Send to patient
         </button>
+        <a class="nhsuk" href="search-results">Back to search results</a>
           </form>
 
 
@@ -118,7 +201,7 @@
 
 
 
-  </div>
+
 {% endblock %}
 
 {% block footer %}

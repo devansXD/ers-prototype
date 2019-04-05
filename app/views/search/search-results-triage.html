@@ -72,7 +72,7 @@ NHS e-referral Service
 {% block content %}
 <div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4 nhsuk-u-padding-bottom-4" style="border-bottom:1px solid #AEB7BD">
   <div class="nhsuk-grid-column-one-half">
-    <form class="nhsuk-form" action="index">
+    <form class="nhsuk-form" action="search-results">
       <div class="nhsuk-form-group">
         <label class="nhsuk-label--s" for="autoselect">
           Search term(s)
@@ -219,24 +219,169 @@ NHS e-referral Service
     <h3>Filters</h3>
 
     <div class="nhsuk-form-group">
-      <fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend--s">
-          Distance
-        </legend>
-        <div class="nhsuk-form-group">
 
-          <input class="nhsuk-input nhsuk-u-margin-bottom-2" type="text" name="" placeholder="LS11" value="" style="max-width:200px">
-          <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:200px">
-            <option value="1">+ 5 miles</option>
-            <option value="2" selected>+ 10 miles</option>
-            <option value="3">+ 15 miles</option>
-            <option value="4">+ 20 miles</option>
-            <option value="5">+ 25 miles</option>
-            <option value="6">+ 30 miles</option>
-          </select>
+      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+        <legend class="nhsuk-fieldset__legend--s">
+          Service type
+        </legend>
+
+        <div class="multiple-choice--hod nhsuk-radios">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="1" name="example" type="radio" value="yes" onclick="location.href='search-results'">
+            <label class="nhsuk-label nhsuk-radios__label" for="1">
+              <a href="search-results">Only show bookable services</a>
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="2" name="example" type="radio" value="no" checked>
+            <label class="nhsuk-label nhsuk-radios__label" for="2">
+              Include triage only services
+            </label>
+          </div>
         </div>
       </fieldset>
+
     </div>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend--s">
+              Distance
+            </legend>
+            <div class="nhsuk-form-group">
+
+              <input class="nhsuk-input nhsuk-u-margin-bottom-2" type="text" name="" placeholder="LS11" value="" style="max-width:200px">
+              <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:200px">
+                <option value="1">+ 5 miles</option>
+                <option value="2" selected>+ 10 miles</option>
+                <option value="3">+ 15 miles</option>
+                <option value="4">+ 20 miles</option>
+                <option value="5">+ 25 miles</option>
+                <option value="6">+ 30 miles</option>
+              </select>
+            </div>
+          </fieldset>
+        </div>
+
+    <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend--s">
+  Comissioned level
+  </legend>
+  <div class="nhsuk-checkboxes">
+
+  <div class="nhsuk-checkboxes__item multiple-choice--hod">
+    <input class="nhsuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+    <label class="nhsuk-label nhsuk-checkboxes__label" for="1">
+      Local
+    </label>
+  </div>
+
+  <div class="nhsuk-checkboxes__item multiple-choice--hod">
+    <input class="nhsuk-checkboxes__input" id="2" name="2" type="checkbox" value="">
+    <label class="nhsuk-label nhsuk-checkboxes__label" for="2">
+      National
+    </label>
+  </div>
+
+
+  </div>
+  </fieldset>
+  </div>
+
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend--s">
+            Speciality
+          </legend>
+          <div class="nhsuk-checkboxes">
+            <div class="nhsuk-checkboxes__item multiple-choice--hod">
+              <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+                GI and liver (medicine and surgery)
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item multiple-choice--hod">
+              <input class="nhsuk-checkboxes__input" id="4" name="" 4 type="checkbox" value="">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="4">
+                Surgery (not otherwise specified)
+              </label>
+            </div>
+
+
+          </div>
+        </fieldset>
+
+
+      </div>
+
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend--s">
+            Clinic type
+          </legend>
+          <div class="nhsuk-checkboxes multiple-choice--hod">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="5" name="5" type="checkbox" value="">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="5">
+                Colorectal Surgery
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="6" name="6" type="checkbox" value="">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="6">
+                Gallstones
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="7" name="7" type="checkbox" value="">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="7">
+                Hernias
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="8" name="8" type="checkbox" value="">
+              <label class="nhsuk-label nhsuk-checkboxes__label nhsuk-body-s" for="8">
+                Inflammatory Bowel Disease (IBD)
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="9" name="9" type="checkbox" value="">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="9">
+                Lower GI (medical) excl IBD
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="10" name="10" type="checkbox" value="">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="10">
+                Lumps and Bumps
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="11" name="11" type="checkbox" value="">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="11">
+                Upper GI incl Dyspepsia
+              </label>
+            </div>
+
+
+          </div>
+        </fieldset>
+
+
+      </div>
+
     <!--
   <div class="nhsuk-form-group">
 
@@ -265,33 +410,7 @@ Comissioned level
 </fieldset>
 </div>-->
 
-    <div class="nhsuk-form-group">
 
-      <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
-        <legend class="nhsuk-fieldset__legend--s">
-          Speciality
-        </legend>
-        <div class="nhsuk-checkboxes">
-          <div class="nhsuk-checkboxes__item multiple-choice--hod">
-            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
-              GI and liver (medicine and surgery)
-            </label>
-          </div>
-
-          <div class="nhsuk-checkboxes__item multiple-choice--hod">
-            <input class="nhsuk-checkboxes__input" id="4" name="" 4 type="checkbox" value="">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="4">
-              Surgery (not otherwise specified)
-            </label>
-          </div>
-
-
-        </div>
-      </fieldset>
-
-
-    </div>
     <!--
 <div class="nhsuk-form-group">
 
@@ -369,30 +488,7 @@ Upper GI incl Dyspepsia
   </select>
 </div>-->
 
-    <div class="nhsuk-form-group">
 
-      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-        <legend class="nhsuk-fieldset__legend--s">
-          Service type
-        </legend>
-
-        <div class="multiple-choice--hod nhsuk-radios">
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="1" name="example" type="radio" value="yes">
-            <label class="nhsuk-label nhsuk-radios__label" for="1">
-              <a href="search-results">Only show bookable services</a>
-            </label>
-          </div>
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="2" name="example" type="radio" value="no" checked>
-            <label class="nhsuk-label nhsuk-radios__label" for="2">
-              Include triage only services
-            </label>
-          </div>
-        </div>
-      </fieldset>
-
-    </div>
 
 
     <!--
@@ -414,14 +510,14 @@ Upper GI incl Dyspepsia
   <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-top-4">
     <!-- SEARCH RESULTS -->
     <div class="nhsuk-grid-column-one-half">
-      <h3><strong>Search results for "Hernia and Surgery"</strong> (12) <span>
+      <h3><strong>Triage results for "Hernia and Surgery"</strong> (12) <span>
         </span></h3>
 
     </div>
 
     <div class="nhsuk-grid-column-one-half">
       <form class="" action="review">
-        <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="submit" style="float:right">
+        <button class="nhsuk-button nhsuk-button--disabled nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1" type="submit" style="float:right">
           Create shortlist
         </button>
       </form>
@@ -446,11 +542,8 @@ Upper GI incl Dyspepsia
           <th class="nhsuk-table__header" aria-sort="none" scope="col">
             <button type="button" data-index="0">Next appointment</button></th>
 
-          <th class="nhsuk-table__header" aria-sort="none" scope="col">
-            <button type="button" data-index="0">Wait time</button></th>
+          <th>--</th>
 
-          <th class="nhsuk-table__header" aria-sort="none" scope="col">
-            <button type="button" data-index="0"></button></th>
 
         </tr>
       </thead>
@@ -459,20 +552,18 @@ Upper GI incl Dyspepsia
         <tr class="nhsuk-table__row">
 
           <td class="nhsuk-table__cell">
-            <a>Nuffield Health Leeds hospital</a><br><span>Adult NHS Hernia RAS Nuffield Health Leeds hospital | NT225</span></td>
+            <a>Nuffield Health Leeds hospital</a><span class="nhsuk-tag__default">Triage only</span><br><span>Adult NHS Hernia RAS Nuffield Health Leeds hospital | NT225</span></td>
           <td class="nhsuk-table__cell multiple-choice--hod">2 miles</td>
           <td class="nhsuk-table__cell">none</td>
-          <td class="nhsuk-table__cell">16 weeks</td>
-          <td class="nhsuk-table__cell"><a href="triage-message">Send now</a></td>
+          <td class="nhsuk-table__cell"><a href="triage-review">Send now</a></td>
         </tr>
         <tr class="nhsuk-table__row">
 
-          <td class="nhsuk-table__cell multiple-choice--hod"><a href="#">Huddersfield Royal Infirmary</a><br><span>General Surgery RAS Huddersfield Royal Infirmary RWY</span>
+          <td class="nhsuk-table__cell"><a href="#">Huddersfield Royal Infirmary</a><span class="nhsuk-tag__default">Triage only</span><br><span>General Surgery RAS Huddersfield Royal Infirmary RWY</span>
           </td>
-          <td class="nhsuk-table__cell multiple-choice--hod">12 miles</td>
+          <td class="nhsuk-table__cell">12 miles</td>
           <td class="nhsuk-table__cell">none</td>
-          <td class="nhsuk-table__cell">23 weeks</td>
-          <td class="nhsuk-table__cell"><a href="triage-message">Send now</a></td>
+          <td class="nhsuk-table__cell"><a href="triage-review">Send now</a></td>
         </tr>
       </tbody>
     </table>

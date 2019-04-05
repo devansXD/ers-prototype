@@ -56,36 +56,81 @@
 <!-- SUB MENU PATIENT INFO -->
 <div class="nhsuk-grid-row nhsuk-grey-background" style="border-bottom:1px solid #AEB7BD">
   <div class="nhsuk-grid-column-three-quarters">
+
   <ul class="nhsuk-u-padding-2 nhsuk-u-margin-left-0 nhsuk-header__navigation-list" role="navigation">
     <li><span style="padding:16px;background-color:#425563;color:#f0f4f5;margin-left:-16px;"><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
-    <li><strong>Gender: </strong> Male</li>
-    <li>30 years (4 June 1988)</li>
+    <li>Patient: <a href="Patient name">Dave Evans</a></li>
+    <li>Male 30yrs (4 Jun 1998)</li>
+    <li><strong>NHS No:</strong> 000 007 4563</li>
   </ul>
 </div>
   </div>
 {% endblock %}
 {% block content %}
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+<div class="nhsuk-grid-column-three-quarters">
+<h1 class="nhsuk-heading-s">Triage requested</h1>
 
+<h2 class="nhsuk-heading-s">Check triage details before submitting</h2>
+<dl class="app-check-your-answers app-check-your-answers--short">
 
-    <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-three-quarters">
-<h1 class="nhsuk-heading-m">Send for triage</h1>
+    <div class="app-check-your-answers__contents">
+      <dt class="app-check-your-answers__question">
+        Triage summary
+      </dt>
+      <dd class="app-check-your-answers__answer">
+      Surgery - not otherwise specified - Hernias
+      </dd>
+      <dd class="app-check-your-answers__change">
+        <a href="#">
+        Add message
+        </a>
+      </dd>
+    </div>
 
-<div class="grid-column-row">
+    <div class="app-check-your-answers__contents">
+      <dt class="app-check-your-answers__question">
+      Selected service
+      </dt>
+      <dd class="app-check-your-answers__answer">
+        Nuffield health Leeds Hospital
+      </dd>
+      <dd class="app-check-your-answers__change">
+        <a href="#">
+          Change service
+        </a>
+      </dd>
+    </div>
 
+    <div class="app-check-your-answers__contents">
+      <dt class="app-check-your-answers__question">
+        Clinical information
+      </dt>
+      <dd class="app-check-your-answers__answer">
+        None specified
+      </dd>
+      <dd class="app-check-your-answers__change">
+        <a href="#">
+          Add attachment
+        </a>
+      </dd>
+    </div>
 
+  </dl>
+  <form class="nhsuk-form" action="triage-confirmation">
+    <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="button">
+        Send referral
+      </button>
 
-  <form class="" action="index.html" method="post">
-    <legend>Message</legend>
   </form>
 
 </div>
+
+
+
 </div>
 
 
-
-  </div>
 {% endblock %}
 
 {% block footer %}
