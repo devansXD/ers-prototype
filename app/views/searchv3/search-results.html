@@ -3,14 +3,11 @@
 {% set mainClasses = '' %}
 {% set containerClasses = 'nhsuk-width-container-fluid' %}
 {% set bodyClasses = 'nhsuk-white-background' %}
-
 {% block pageScripts %}
 <script type="text/javascript" src="/js/search.js"></script>
 <script type="text/javascript" src="/js/auto.js"></script>
 <script type="text/javascript" src="/js/reveal.js"></script>
 <script type="text/javascript" src="/js/sort.js"></script>
-<script type="text/javascript" src="/js/sidebar.js"></script>
-
 
 {% endblock %}
 {% block pageTitle %}
@@ -85,7 +82,7 @@ NHS e-referral Service
           <option value=""></option>
           <option id='Surgery - Not Otherwise Specified / Hernias'>Surgery - Not Otherwise Specified / Hernias</option>
           <option id='SNOMED Clinical Term'>SNOMED Clinical Term</option>
-          <option id='Abdominal wall hernia procedure [procedure]'>Abdominal wall <span class="nhsuk-tag">hernia</span> procedure [procedure]</option>
+          <option id='Abdominal wall hernia procedure [procedure]'>Abdominal wall hernia procedure [procedure]</option>
           <option id='Bilateral inguinal hernia repair [procedure] '>Bilateral inguinal hernia repair [procedure] </option>
           <option id='Brain stem herniation [disorder] '>Brain stem herniation [disorder] </option>
           <option id='Colporrhaphy for repair of cystocele and rectocele [procedure] (Synonym) '>Colporrhaphy for repair of cystocele and rectocele [procedure] (Synonym) </option>
@@ -173,7 +170,7 @@ NHS e-referral Service
   <div class="nhsuk-grid-column-one-quarter">
     <div class="nhsuk-form-group">
 
-      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" active>
+      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
         <legend class="nhsuk-fieldset__legend--s">
           Request type
         </legend>
@@ -181,7 +178,7 @@ NHS e-referral Service
         <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
 
           <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral" checked>
+            <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral">
             <label class="nhsuk-label nhsuk-radios__label" for="example-1">
               Referral
             </label>
@@ -189,7 +186,7 @@ NHS e-referral Service
 
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-2" selected="false">
               Advice
             </label>
           </div>
@@ -218,9 +215,35 @@ NHS e-referral Service
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-top-4" id="Sidebar" style="display:none">
+  <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-top-4">
     <!-- Filters go here -->
     <h3>Filters</h3>
+
+    <div class="nhsuk-form-group">
+
+      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+        <legend class="nhsuk-fieldset__legend--s">
+          Service type
+        </legend>
+
+        <div class="multiple-choice--hod nhsuk-radios">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="1" name="example" type="radio" value="yes" checked>
+            <label class="nhsuk-label nhsuk-radios__label" for="1">
+              <a href="search-results">Only show bookable services</a>
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+
+            <input class="nhsuk-radios__input" id="2" name="example" type="radio" value="no" onclick="location.href='search-results-triage'">
+            <label class="nhsuk-label nhsuk-radios__label" for="2">
+            Include triage only services
+            </label
+          </div>
+        </div>
+      </fieldset>
+
+    </div>
 
     <div class="nhsuk-form-group">
       <fieldset class="nhsuk-fieldset">
@@ -394,34 +417,26 @@ Comissioned level
   </div>
   <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-top-4">
     <!-- SEARCH RESULTS -->
-    <div class="nhsuk-grid-column-three-quarters">
+    <div class="nhsuk-grid-column-one-half">
       <h3><strong>Bookable results for "Hernia and Surgery"</strong> (12) <span>
         </span></h3>
 
     </div>
 
-    <div class="nhsuk-grid-column-one-quarter">
+    <div class="nhsuk-grid-column-one-half">
       <form class="" action="referral-review">
         <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="submit" style="float:right">
           Create shortlist
         </button>
       </form>
     </div>
-    <div class="nhsuk-grid-row">
-      <form class="" action="referral-review">
-        <button onclick="myFunction()" class="nhsuk-button nhsuk-button--secondary nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="button">
-          Show filter
-        </button>
-      </form>
-    </div>
 
-
-    <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable nhsuk-body-s">
+    <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable">
 
       <!-- TABLE START -->
       <thead class="nhsuk-table__head">
         <tr class="nhsuk-table__row">
-          <th class="nhsuk-table_header"></th>
+          <th></th>
           <th class="nhsuk-table__header" aria-sort="none" scope="col">
             <button onclick="sortTable()" type="button" data-index="0">Service name</button>
 
@@ -433,12 +448,9 @@ Comissioned level
 
           </th>
           <th class="nhsuk-table__header" aria-sort="none" scope="col">
-            <button onclick="sortTable()" type="button" data-index="0">Next appointment</button>
-
+            <button type="button" data-index="0">Next appointment</button>
 
           </th>
-
-          <th class="nhsuk-table_header"></th>
         </tr>
       </thead>
 
@@ -463,7 +475,6 @@ Comissioned level
           </td>
           <td class="nhsuk-table__cell">11 miles</td>
           <td class="nhsuk-table__cell">Tomorrow</td>
-          <td class="nhsuk-table__cell"><a href="referral-appointments">Book now</a></td>
 
 
 
@@ -488,7 +499,6 @@ Comissioned level
           </td>
           <td class="nhsuk-table__cell">11 miles</td>
           <td class="nhsuk-table__cell">Tomorrow</td>
-          <td class="nhsuk-table__cell"><a href="referral-appointments">Book now</a></td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell multiple-choice--hod">
@@ -507,7 +517,6 @@ Comissioned level
           </td>
           <td class="nhsuk-table__cell">16 miles</td>
           <td class="nhsuk-table__cell">1 week</td>
-              <td class="nhsuk-table__cell"><a href="referral-appointments">Book now</a></td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell multiple-choice--hod">
@@ -525,25 +534,6 @@ Comissioned level
             <span>Hernia-Not Otherwise Specified Leeds TH(St James's Hosp)-RR8</span></td>
           <td class="nhsuk-table__cell">3 miles</td>
           <td class="nhsuk-table__cell">None</td>
-              <td class="nhsuk-table__cell"><a href="referral-appointments">Book now</a></td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td></td>
-
-          <td class="nhsuk-table__cell">
-            <a>Nuffield Health Leeds hospital</a><span class="nhsuk-tag__default">Triage only</span><br><span>Adult NHS Hernia RAS Nuffield Health Leeds hospital | NT225</span></td>
-          <td class="nhsuk-table__cell multiple-choice--hod">2 miles</td>
-          <td class="nhsuk-table__cell">none</td>
-          <td class="nhsuk-table__cell"><a href="triage-review">Send now</a></td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td></td>
-
-          <td class="nhsuk-table__cell"><a href="#">Huddersfield Royal Infirmary</a><span class="nhsuk-tag__default">Triage only</span><br><span>General Surgery RAS Huddersfield Royal Infirmary RWY</span>
-          </td>
-          <td class="nhsuk-table__cell">12 miles</td>
-          <td class="nhsuk-table__cell">none</td>
-          <td class="nhsuk-table__cell"><a href="triage-review">Send now</a></td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell multiple-choice--hod">
@@ -609,7 +599,6 @@ Comissioned level
           </td>
           <td class="nhsuk-table__cell">4 miles</td>
           <td class="nhsuk-table__cell">Patient to book</td>
-              <td class="nhsuk-table__cell"><a href="referral-appointments">Book now</a></td>
 
 
         </tr>
@@ -629,7 +618,6 @@ Comissioned level
             <span>Hernia-Surgery Not Otherwise Specified Dewsbury Hospital-RXF</span></td>
           <td class="nhsuk-table__cell multiple-choice--hod">5 miles</td>
           <td class="nhsuk-table__cell multiple-choice--hod">none</td>
-              <td class="nhsuk-table__cell"><a href="referral-appointments">Book now</a></td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell multiple-choice--hod">
@@ -644,7 +632,6 @@ Comissioned level
           <td class="nhsuk-table__cell"><a>Westcliffe Health - Shipley MP</a><br><span>General Surgery Outpatients Shipley</span></td>
           <td class="nhsuk-table__cell">8 miles</td>
           <td class="nhsuk-table__cell">none</td>
-              <td class="nhsuk-table__cell"><a href="referral-appointments">Book now</a></td>
 
         </tr>
         <tr class="nhsuk-table__row">
@@ -661,7 +648,6 @@ Comissioned level
           </td>
           <td class="nhsuk-table__cell multiple-choice--hod">9 miles</td>
           <td class="nhsuk-table__cell multiple-choice--hod">none</td>
-              <td class="nhsuk-table__cell"><a href="referral-appointments">Book now</a></td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell multiple-choice--hod">
@@ -677,7 +663,6 @@ Comissioned level
           </td>
           <td class="nhsuk-table__cell">12 miles</td>
           <td class="nhsuk-table__cell">5 week</td>
-              <td class="nhsuk-table__cell"><a href="referral-appointments">Book now</a></td>
         </tr>
 
         <tr class="nhsuk-table__row">
@@ -694,7 +679,6 @@ Comissioned level
           </td>
           <td class="nhsuk-table__cell multiple-choice--hod">15 miles</td>
           <td class="nhsuk-table__cell multiple-choice--hod">3 weeks</td>
-              <td class="nhsuk-table__cell"><a href="referral-appointments">Book now</a></td>
         </tr>
       </tbody>
     </table>
