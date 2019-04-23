@@ -73,7 +73,9 @@ width: 100%;
   background-color: $color_nhsuk-white;
   border: 1px solid $color_nhsuk-grey-5;
 }
-
+.nhsuk-tag__highlight{
+  background-color: yellow;
+}
 
 // TABLE CHECKBOXES
 
@@ -252,19 +254,4 @@ $selected-colour: #FFECC7;
   position: absolute;
   right: -5px;
   top: 2px;
-}
-
-dl{
-
-  margin-bottom: 32px;
-  padding:8px;
-}
-dl {
-  dt{
-      font-weight: bold;
-    margin-bottom: 8px;
-  }
-  dd{
-    margin-bottom:8px;
-  }
 }

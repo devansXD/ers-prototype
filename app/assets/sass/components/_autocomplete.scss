@@ -151,3 +151,13 @@
     display: none;
   }
 }
+
+
+/* CSS */
+option{
+  background-color: yellow;
+}
+
+option:active + span {
+  background-color: yellow;
+}

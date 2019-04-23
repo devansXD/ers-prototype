@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout960.html" %}
 
 {% set mainClasses = 'nhsuk-main-wrapper--s' %}
 
@@ -26,14 +26,43 @@
 {% endblock %}
 
 {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
 
-<div class="nhsuk-grid-row nhsuk-width-container-fluid">
+    <h1>
+      Patterns, components and styles for the e Referral Service.
 
-  <div class="nhsuk-grid-column-two-thirds">
+    </h1>
 
-<h1>Patters, components and styles for the NHS e-Referral service.</h1>
+    <p class="nhsuk-body-l">
+          This design system is for everyone. It's purpose is to extend the NHSUK Design System with work specific to the
+          e Referral service. Learn from the research and experience of other service teams and avoid repeating work that has already been done.
+        </p>
 
 
+
+    {{ contentsList({
+      items: [
+        {
+          href: "/styleguide/patterns/",
+          text: "Patterns"
+
+        },
+        {
+          href: "/styleguide/components/",
+          text: "Components"
+        },
+        {
+          href: "/styleguide/styles/",
+          text: "Styles"
+        }
+      ]
+    }) }}
+
+<p></p>
+
+
+  </div>
 </div>
 
 {% endblock %}
