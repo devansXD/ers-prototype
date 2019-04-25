@@ -24,6 +24,10 @@
       </a>
     </div>
     <!-- END LOGO -->
+    <!-- SERVICE NAME -->
+    <div class="nhsuk-header__transactional-service-name">
+          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+        </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
@@ -54,36 +58,43 @@
 
 </header>
 <!-- SUB MENU PATIENT INFO -->
-<div class="nhsuk-grid-row nhsuk-grey-background" style="border-bottom:1px solid #AEB7BD">
-  <div class="nhsuk-grid-column-three-quarters">
-
-  <ul class="nhsuk-u-padding-2 nhsuk-u-margin-left-0 nhsuk-header__navigation-list" role="navigation">
-    <li><span style="padding:16px;background-color:#425563;color:#f0f4f5;margin-left:-16px;"><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="Patient name">Dave Evans</a></li>
-    <li>Male 30yrs (4 Jun 1998)</li>
-    <li><strong>NHS No:</strong> 000 007 4563</li>
+<nav class="nhsuk-grey-background patient-info">
+  <ul role="navigation">
+    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+    <li><strong>Patient: </strong><a href="Patient name">EVANS, David (Mr)</a></li>
+    <li><strong>Gender: </strong> Male</li>
+    <li>30 years (4 June 1988)</li>
   </ul>
-</div>
-  </div>
+</nav>
 {% endblock %}
 {% block content %}
-<div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4 nhsuk-u-padding-bottom-4" style="border-bottom:1px solid #AEB7BD">
-  <div class="nhsuk-grid-column-one-half">
-    <h1 class="nhsuk-heading-s">You have booked an appointment</h1>
-    <p>Details of this booking are:</p>
-<h2>Service name</h2>
 
-<h2>Speciality</h2>
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+  <div class="nhsuk-grid-column-full-width">
 
-<h2>Time</h2>
-<h2>Date</h2>
+    <div class="nhsuk-panel nhsuk-panel--confirmation nhsuk-u-margin-bottom-4">
+      <h1 class="nhsuk-panel__title">
+          Referral complete
+        </h1>
+        <div class="nhsuk-panel__body">
+          UBRN
+          <br><strong>HDJ2123F</strong>
+        </div>
+    </div>
+
+    <div class="nhsuk-u-reading-width">
+      <p>We have sent you a confirmation email.</p>
+      <h2>What happens next</h2>
+      <p>To complete registration, go to Rose Medical Practice with:</p>
+      <ol>
+        <li><strong>Photo ID</strong><br> Like a passport or driver's licence</li>
+        <li><strong>Proof of address</strong><br> A bill less than three months old (gas, electric or council tax)</li>
+        <li><strong>Your NHS number</strong><br> Find it on prescriptions or doctors / hospital letters </li>
+      </ol>
+    </div>
+
   </div>
-    </div>
-    <div class="nhsuk-grid-row">
-      <button class="nhsuk-button" type="button" name="button">Confirm booking</button>
-      <button class="nhsuk-button" type="button" name="button">Print booking</button>
-
-    </div>
+</div>
 
 {% endblock %}
 

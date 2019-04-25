@@ -27,23 +27,28 @@ NHS e-referral Service
     </div>
     <!-- END LOGO -->
 
+    <!-- SERVICE NAME -->
+    <div class="nhsuk-header__transactional-service-name">
+          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+        </div>
+
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
         <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation">
           <ul class="nhsuk-header__navigation-list" style="border:0">
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/conditions/social-care-and-support/">
+              <a class="nhsuk-header__navigation-link" href="/search">
                 Help
               </a>
             </li>
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/news/">
+              <a class="nhsuk-header__navigation-link" href="/search">
                 Alerts
 
               </a>
             </li>
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/service-search">
+              <a class="nhsuk-header__navigation-link" href=/search">
                 Dave Evans
               </a>
             </li>
@@ -54,18 +59,20 @@ NHS e-referral Service
     </div>
   </div>
 
+
 </header>
 <!-- SUB MENU PATIENT INFO -->
-<div class="nhsuk-grid-row nhsuk-grey-background>
-  <div class=" nhsuk-grid-column-three-quarters">
-  <ul class="nhsuk-u-padding-2 nhsuk-u-margin-left-0 nhsuk-header__navigation-list" role="navigation">
-    <li><span style="padding:16px;background-color:#425563;color:#f0f4f5;margin-left:-16px;"><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
-    <li><strong>Gender: </strong> Male</li>
-    <li>30 years (4 June 1988)</li>
-  </ul>
-</div>
-</div>
+
+    <nav class="nhsuk-grey-background patient-info">
+      <ul role="navigation">
+        <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+        <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
+        <li><strong>Gender: </strong> Male</li>
+        <li>30 years (4 June 1988)</li>
+      </ul>
+    </nav>
+
+
 {% endblock %}
 {% block content %}
 <div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4" style="border-bottom:1px solid #AEB7BD;">
@@ -196,20 +203,28 @@ NHS e-referral Service
 
 <!-- COLUMN -->
 <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-left-0">
-  <div class="nhsuk-form-group">
-    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+  <div class="nhsuk-form-group nhsuk-form-group--inline">
+    <fieldset class="nhsuk-fieldset">
       <legend class="nhsuk-fieldset__legend--s">
         Priority
       </legend>
 
-      <select class="nhsuk-select" id="select-1" name="select-1">
-        <option value="1" selected>Routine</option>
-        <option value="2">Urgent</option>
-        <option value="3">2 week wait</option>
-      </select>
-      <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="submit">
-        Search
-      </button>
+<div class="inline">
+  <select class="nhsuk-select" id="select-1" name="select-1">
+    <option value="1" selected>Routine</option>
+    <option value="2">Urgent</option>
+    <option value="3">2 week wait</option>
+  </select>
+  <button class="nhsuk-button--ers" type="submit">
+    Search
+  </button>
+
+</div>
+</fieldset>
+
+
+
+
   </div>
 </div>
 

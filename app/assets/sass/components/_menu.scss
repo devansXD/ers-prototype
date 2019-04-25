@@ -1,0 +1,28 @@
+// ==========================================================================
+// COMPONENTS /
+// ==========================================================================
+
+
+nav.patient-info{
+  display: flex;
+  flex-wrap: nowrap;
+ul{
+  max-width: 75%;
+  display:flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+li{
+  padding: 8px 16px;
+  margin-bottom: 0;
+
+}
+ul li:first-child{
+  background-color:#425563;
+  color:#f0f4f5;
+
+}
+}

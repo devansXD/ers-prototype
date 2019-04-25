@@ -32,6 +32,10 @@ NHS e-referral Service
       </a>
     </div>
     <!-- END LOGO -->
+    <!-- SERVICE NAME -->
+    <div class="nhsuk-header__transactional-service-name">
+          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+        </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
@@ -62,16 +66,16 @@ NHS e-referral Service
 
 </header>
 <!-- SUB MENU PATIENT INFO -->
-<div class="nhsuk-grid-row nhsuk-grey-background" style="border-bottom:1px solid #AEB7BD">
-  <div class="nhsuk-grid-column-three-quarters">
-    <ul class="nhsuk-u-padding-2 nhsuk-u-margin-left-0 nhsuk-header__navigation-list" role="navigation">
-      <li><span style="padding:16px;background-color:#425563;color:#f0f4f5;margin-left:-16px;"><strong>UBRN: </strong> 3452 1007 6779</span></li>
-      <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
-      <li><strong>Gender: </strong> Male</li>
-      <li>30 years (4 June 1988)</li>
-    </ul>
-  </div>
-</div>
+<!-- SUB MENU PATIENT INFO -->
+
+    <nav class="nhsuk-grey-background patient-info">
+      <ul role="navigation">
+        <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+        <li><strong>Patient: </strong> <a href="Patient name">EVANS, David (Mr)</a></li>
+        <li><strong>Gender: </strong> Male</li>
+        <li>30 years (4 June 1988)</li>
+      </ul>
+    </nav>
 {% endblock %}
 {% block content %}
 <div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4 nhsuk-u-padding-bottom-4" style="border-bottom:1px solid #AEB7BD">
@@ -211,7 +215,7 @@ NHS e-referral Service
           <option value="2">Urgent</option>
           <option value="3">2 week wait</option>
         </select>
-        <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="submit">
+        <button class="nhsuk-button--ers" type="submit">
           Search
         </button>
     </div>
@@ -315,14 +319,14 @@ NHS e-referral Service
           </div>
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input" id="2" name="bookable" type="radio" value="yes">
-            <label class="nhsuk-label nhsuk-radios__label" for="1">
+            <label class="nhsuk-label nhsuk-radios__label" for="2">
               Non direct bookable services
             </label>
           </div>
           <div class="nhsuk-radios__item">
 
             <input class="nhsuk-radios__input" id="3" name="triage" type="radio" value="no">
-            <label class="nhsuk-label nhsuk-radios__label" for="2">
+            <label class="nhsuk-label nhsuk-radios__label" for="3">
               <a href="search-results-triage" style="text-decoration:none">Triage only services</a>
             </label>
 
@@ -430,21 +434,23 @@ NHS e-referral Service
   </div>
   <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-top-4">
     <!-- SEARCH RESULTS -->
-    <div class="nhsuk-grid-column-three-quarters">
-      <h3><strong>Bookable results for "Hernia and Surgery"</strong> (12) <span>
+    <div class="nhsuk-grid-column-one-half">
+      <h3><strong>All results for "Hernia and Surgery"</strong> (12) <span>
         </span></h3>
 
     </div>
 
-    <div class="nhsuk-grid-column-one-quarter" style="display:inline">
-      <form class="nhsuk-form nhsuk-form-inline" action="referral-review">
-        <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="submit">
-          Create shortlist
-        </button>
-        <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="submit">
+    <div class="nhsuk-grid-column-one-half">
+      <span style="float:right">
+        <a class="nhsuk-button--ers--secondary" href="referral-appointments" type="submit">
           View appointments
-        </button>
-      </form>
+        </a>
+
+        <a class="nhsuk-button--ers" href="referral-review" role="button" type="submit">
+          Refer - book later
+        </a>
+      </span>
+
     </div>
     <!--
     <div class="nhsuk-grid-row">
@@ -456,7 +462,7 @@ NHS e-referral Service
     </div>
     -->
 
-
+<!-- TABLE -->
     <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable nhsuk-body-s">
 
       <!-- TABLE START -->
@@ -544,6 +550,7 @@ NHS e-referral Service
                 <dd>Other operation on anterior abdominal wall</dd>
 
               </dl>
+              <a class="nhsuk-button--ers" href="referral-review" role="button" draggable="false">Book now</a>
 
 
             </div>
@@ -676,10 +683,9 @@ NHS e-referral Service
                 </dd>
                 <dd>Removal of foreign body from anterior abdominal wall
                 </dd>
-                <dd>Other operation on anterior abdominal wall</dd>
+                <dd>Other operation on anterior abdominal wall...</dd>
 
               </dl>
-
 
             </div>
 
