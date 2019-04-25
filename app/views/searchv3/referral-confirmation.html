@@ -67,23 +67,104 @@
   </div>
 {% endblock %}
 {% block content %}
-<div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4 nhsuk-u-padding-bottom-4" style="border-bottom:1px solid #AEB7BD">
-  <div class="nhsuk-grid-column-one-half">
-    <h1 class="nhsuk-heading-s">You have booked an appointment</h1>
-    <p>Details of this booking are:</p>
-<h2>Service name</h2>
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+  <div class="nhsuk-grid-column-three-quarters">
 
-<h2>Speciality</h2>
+    <div class="nhsuk-panel nhsuk-panel--confirmation nhsuk-u-margin-bottom-4">
+      <h1 class="nhsuk-panel__title">
+          Referral complete
+        </h1>
+        <div class="nhsuk-panel__body">
+          UBRN
+          <br><strong>3452 1007 6779</strong>
+        </div>
+    </div>
 
-<h2>Time</h2>
-<h2>Date</h2>
+
+    <table id="sortable" class="nhsuk-table nhsuk-table-clickable">
+
+      <!-- TABLE START -->
+      <thead class="nhsuk-table__head">
+        <tr class="nhsuk-table__row">
+
+          <th class="nhsuk-table__header" aria-sort="none" scope="col">
+          Service name
+          </th>
+
+          <th class="nhsuk-table__header" aria-sort="none" scope="col">
+          Distance
+
+          </th>
+          <th class="nhsuk-table__header" aria-sort="none" scope="col">
+        Next appointment
+
+          </th>
+        </tr>
+      </thead>
+
+
+      <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            <a>Spire Methley Park Hospital</a> <span class="nhsuk-tag">Good capacity</span>
+            <br>
+
+            <span>Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</span>
+
+          </td>
+          <td class="nhsuk-table__cell">11 miles</td>
+          <td class="nhsuk-table__cell">Tomorrow</td>
+
+
+
+
+        </tr>
+
+
+        <tr class="nhsuk-table__row">
+
+          <td class="nhsuk-table__cell">
+            <a>BMI The Huddersfield Hospital</a> <span class="nhsuk-tag">Good capacity</span>
+            <br>
+            <span>Adult NHS Hernia Repair Clinic The Huddersfield - BMI - NT4</span>
+          </td>
+          <td class="nhsuk-table__cell">11 miles</td>
+          <td class="nhsuk-table__cell">Tomorrow</td>
+        </tr>
+        <tr class="nhsuk-table__row">
+
+          <td class="nhsuk-table__cell">
+            <a>One Health Group - Oaklands Health Centre</a>
+            <br>
+            <span>Adult NHS General Surgery - Hernia Clinic One Health Group - Holmfirth (NTX26)</span>
+          </td>
+          <td class="nhsuk-table__cell">16 miles</td>
+          <td class="nhsuk-table__cell">1 week</td>
+        </tr>
+
+
+
+
+
+
+
+      </tbody>
+    </table>
+
+    <a class="nhsuk-button--ers--secondary" href="#" type="submit">
+    Print booking
+    </a>
+
+    <a class="nhsuk-button--ers" href="#" role="button" type="submit">
+      Email booking
+    </a>
+    <a class="nhsuk-button--ers" href="#" role="button" type="submit">
+    Close booking
+    </a>
+
+
   </div>
-    </div>
-    <div class="nhsuk-grid-row">
-      <button class="nhsuk-button" type="button" name="button">Confirm booking</button>
-      <button class="nhsuk-button" type="button" name="button">Print booking</button>
-
-    </div>
+</div>
 
 {% endblock %}
 
