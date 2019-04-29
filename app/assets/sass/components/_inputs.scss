@@ -4,12 +4,18 @@
 // ==========================================================================
 
 
+.nhsuk-label{
+font-size: 16px !important;
+}
+.nhsuk-checkboxes__label{
+  padding: 0 !important;
+}
 .multiple-choice--hod {
   .multiple-choice {
     padding-top: 1px;
     padding-bottom: 2px;
   }
-  .nhsuk-checkboxes__label {
+  .-checkboxes__label {
     padding: 3px 2px 5px;
   }
 
@@ -38,10 +44,12 @@
       padding-top: 4px;
     }
   }
-  .-checkboxes__label {
+  .nhsuk-checkboxes__label {
     padding: 7px 6px 3px;
   }
 }
+
+// TABLES
 
 .nhsuk-table-clickable tbody tr:hover {
   background-color: #F8F8F8;
@@ -59,7 +67,7 @@ $selected-colour: #FFECC7;
 }
 
 .nhsuk-table-clickable .multiple-choice--hod {
-  padding: 0.9em 0 0 1.05263em;
+  padding:4px;
   margin: 0;
 }
 
@@ -92,17 +100,5 @@ $selected-colour: #FFECC7;
 
   .nhsuk-radios__item {
     margin-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .multiple-choice--hod {
-    .multiple-choice {
-      margin-bottom: 15px;
-      padding-top: 4px;
-    }
-  }
-  .nhsuk-radios__label {
-    padding: 7px 6px 3px;
   }
 }

@@ -24,6 +24,10 @@
       </a>
     </div>
     <!-- END LOGO -->
+    <!-- SERVICE NAME -->
+    <div class="nhsuk-header__transactional-service-name">
+          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+        </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
@@ -54,88 +58,47 @@
 
 </header>
 <!-- SUB MENU PATIENT INFO -->
-<div class="nhsuk-grid-row nhsuk-grey-background" style="border-bottom:1px solid #AEB7BD">
-  <div class="nhsuk-grid-column-three-quarters">
-  <ul class="nhsuk-u-padding-2 nhsuk-u-margin-left-0 nhsuk-header__navigation-list" role="navigation">
-    <li><span style="padding:16px;background-color:#425563;color:#f0f4f5;margin-left:-16px;"><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
+<nav class="nhsuk-grey-background patient-info">
+  <ul role="navigation">
+    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+    <li><strong>Patient: </strong><a href="Patient name">EVANS, David (Mr)</a></li>
     <li><strong>Gender: </strong> Male</li>
     <li>30 years (4 June 1988)</li>
   </ul>
-</div>
-  </div>
+</nav>
 {% endblock %}
 {% block content %}
 
-    <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
   <div class="nhsuk-grid-column-three-quarters">
-<h1 class="nhsuk-heading-s">Triage summary</h1>
 
-<h2 class="nhsuk-heading-s">Check triage details before submitting</h2>
-<dl class="app-check-your-answers app-check-your-answers--short">
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
-            Triage summary
-          </dt>
-          <dd class="app-check-your-answers__answer">
-          Surgery - not otherwise specified - Hernias
-          </dd>
-          <dd class="app-check-your-answers__change">
-            <a href="#">
-            Add message
-            </a>
-          </dd>
+    <div class="nhsuk-panel nhsuk-panel--confirmation nhsuk-u-margin-bottom-4">
+      <h1 class="nhsuk-panel__title--s">
+          Referral complete
+        </h1>
+        <div class="nhsuk-panel__body">
+          UBRN
+          <br><strong>HDJ2123F</strong>
         </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
-          Selected service
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            Nuffield health Leeds Hospital
-          </dd>
-          <dd class="app-check-your-answers__change">
-            <a href="#">
-              Change service
-            </a>
-          </dd>
-        </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
-            Clinical information
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            None specified
-          </dd>
-          <dd class="app-check-your-answers__change">
-            <a href="#">
-              Add attachment
-            </a>
-          </dd>
-        </div>
-
-      </dl>
-      <form class="nhsuk-form" action="triage-confirmation">
-        <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="button">
-            Send referral
-          </button>
-
-      </form>
-
+    </div>
+<div class="nhsuk-panel">
+<p>Please ensure you send a letter with this booking.</p>
 </div>
+    <span>
+      <a class="nhsuk-button--ers--secondary" href="referral-appointments" type="submit">
+      Print booking
+      </a>
 
+      <a class="nhsuk-button--ers" href="referral-review" role="button" type="submit">
+        Email booking
+      </a>
+      <a class="nhsuk-button--ers" href="referral-review" role="button" type="submit">
+      Close booking
+      </a>
+    </span>
 
-
+  </div>
 </div>
-
-
-
-
-
-
-
 
 {% endblock %}
 

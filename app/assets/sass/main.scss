@@ -12,19 +12,28 @@
 @import 'components/autocomplete';
 @import 'components/inputs';
 @import 'components/menu';
+@import 'components/alerts';
+@import 'components/tables';
+
 
 // Add your extra styles here...
+
+
 
 .nhsuk-button--ers{
   @extend .nhsuk-button;
   padding:4px 16px;
   font-size: 18px;
 }
-.nhsuk-button--ers--secondary{
+
+.nhsuk-button--ers_secondary {
   @extend .nhsuk-button--ers;
   background-color: #425563;
-
-}
+  box-shadow: 0 4px 0 #232e35; }
+  .nhsuk-button--ers_secondary:hover, .nhsuk-button--ers_secondary:focus {
+    background-color: #384854; }
+  .nhsuk-button--ers_secondary.nhsuk-button--ers_disabled {
+    background-color: #425563; }
 
 .nhsuk-header__transactional-service-name{
   padding-left: 20px;
@@ -35,6 +44,8 @@
 }
 
 dl{
+  border-left:4px solid $color_nhsuk-grey-2;
+  padding-left: 16px;
 
 dt{
   margin-top: 24px;

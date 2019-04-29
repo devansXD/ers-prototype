@@ -28,8 +28,8 @@ NHS e-referral Service
     <!-- END LOGO -->
     <!-- SERVICE NAME -->
     <div class="nhsuk-header__transactional-service-name">
-      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
-    </div>
+          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+        </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
@@ -60,57 +60,32 @@ NHS e-referral Service
 
 </header>
 <!-- SUB MENU PATIENT INFO -->
-<nav class="nhsuk-grey-background patient-info">
-  <ul role="navigation">
-    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li><strong>Patient: </strong><a href="Patient name">EVANS, David (Mr)</a></li>
-    <li><strong>Gender: </strong> Male</li>
-    <li>30 years (4 June 1988)</li>
-  </ul>
-</nav>
+<div class="nhsuk-grid-row nhsuk-grey-background" style="border-bottom:1px solid #AEB7BD">
+  <div class="nhsuk-grid-column-three-quarters">
+    <ul class="nhsuk-u-padding-2 nhsuk-u-margin-left-0 nhsuk-header__navigation-list" role="navigation">
+      <li><span style="padding:16px;background-color:#425563;color:#f0f4f5;margin-left:-16px;"><strong>UBRN: </strong> 3452 1007 6779</span></li>
+      <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
+      <li><strong>Gender: </strong> Male</li>
+      <li>30 years (4 June 1988)</li>
+    </ul>
+  </div>
+</div>
 {% endblock %}
 {% block content %}
 
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-6">
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
   <div class="nhsuk-grid-column-three-quarters">
-
-    <div class="panel panel-border-wide alert-success">
-        <h2 class="nhsuk-heading-m">
-      <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-  <path stroke-width="4" stroke-linecap="round" stroke="#007f3b" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
-</svg>
-
-Referral successful</h2>
-  <p>The referral details have been sent.</p>
-</div>
-
-<div class="nhsuk-grid-column-one-half nhsuk-u-margin-top-4">
-  <h2 class="nhsuk-heading-s">What happens next</h2>
-  <p>The referral has been sent to the patient who will need to choose an appointment with the chosen care provider</p>
-
-  <div class="nhsuk-inset-text">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
-    <p>You will now need to print and send the patient letter</p>
-  </div>
-
-
-      <span>
-        <a class="nhsuk-button--ers_secondary" href="referral-appointments" type="submit">
-          Print booking
-        </a>
-
-        <a class="nhsuk-button--ers" href="referral-review" role="button" type="submit">
-          Email booking
-        </a>
-      </span>
-</div>
-
-
-
-
+    <h1 class="nhsuk-heading-s">Select an appointment</h1>
+    <p>These are the appointments available for the selected services. Please select one.</p>
   </div>
 </div>
 
+
+
+
+
+
+</div>
 {% endblock %}
 
 {% block footer %}

@@ -34,8 +34,8 @@ NHS e-referral Service
     <!-- END LOGO -->
     <!-- SERVICE NAME -->
     <div class="nhsuk-header__transactional-service-name">
-      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
-    </div>
+          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+        </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
@@ -66,14 +66,14 @@ NHS e-referral Service
 <!-- SUB MENU PATIENT INFO -->
 <!-- SUB MENU PATIENT INFO -->
 
-<nav class="nhsuk-grey-background patient-info">
-  <ul role="navigation">
-    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li><strong>Patient: </strong> <a href="Patient name">EVANS, David (Mr)</a></li>
-    <li><strong>Gender: </strong> Male</li>
-    <li>30 years (4 June 1988)</li>
-  </ul>
-</nav>
+    <nav class="nhsuk-grey-background patient-info">
+      <ul role="navigation">
+        <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+        <li><strong>Patient: </strong> <a href="Patient name">EVANS, David (Mr)</a></li>
+        <li><strong>Gender: </strong> Male</li>
+        <li>30 years (4 June 1988)</li>
+      </ul>
+    </nav>
 {% endblock %}
 {% block content %}
 <div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4 nhsuk-u-padding-bottom-4" style="border-bottom:1px solid #AEB7BD">
@@ -313,19 +313,19 @@ NHS e-referral Service
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input" id="direct-bookable" name="radio-group" type="radio" value="  Directly bookable services">
             <label class="nhsuk-label nhsuk-radios__label" for="direct-bookable">
-              Directly bookable services
+          Directly bookable services
             </label>
           </div>
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input" id="nondirect-bookable" name="radio-group" type="radio" value="Non directly bookable services">
             <label class="nhsuk-label nhsuk-radios__label" for="nondirect-bookable">
-              Non directly bookable services
+          Non directly bookable services
             </label>
           </div>
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input" id="triage" name="radio-group" type="radio" value="Triage only services" onclick="location.href='search-results-triage'">
             <label class="nhsuk-label nhsuk-radios__label" for="triage">
-              Triage only services
+          Triage only services
             </label>
           </div>
 
@@ -433,7 +433,7 @@ NHS e-referral Service
   <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-top-4">
     <!-- SEARCH RESULTS -->
     <div class="nhsuk-grid-column-one-half">
-      <h3><strong>All triage results for "Hernia and Surgery"</strong> (12) <span>
+      <h3><strong>All results for "Hernia and Surgery"</strong> (12) <span>
         </span></h3>
 
     </div>
@@ -460,94 +460,372 @@ NHS e-referral Service
     </div>
     -->
 
-    <!-- TABLE -->
-    <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable nhsuk-body-s" style="font-size:16px;">
+<!-- TABLE -->
+<div class="nhsuk-table-responsive">
+  <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable nhsuk-body-s" style="font-size:16px;">
 
-      <!-- TABLE START -->
-      <thead class="nhsuk-table__head">
-        <tr class="nhsuk-table__row">
-          <th class="nhsuk-table_header"></th>
-          <th class="nhsuk-table__header" aria-sort="none" scope="col">
-            <button onclick="sortTable()" type="button" data-index="0">Service name</button>
-
-          </th>
-
-          <th class="nhsuk-table__header" aria-sort="none" scope="col">
-            <button type="button" data-index="0">Distance</button>
-
-          </th>
-          <th class="nhsuk-table__header" aria-sort="none" scope="col">
-            <button onclick="sortTable()" type="button" data-index="0">Next appointment</button>
+    <!-- TABLE START -->
+    <thead class="nhsuk-table__head">
+      <tr class="nhsuk-table__row">
+        <th class="nhsuk-table_header"></th>
+        <th class="nhsuk-table__header" aria-sort="none" scope="col">
+          <button onclick="sortTable()" type="button" data-index="0">Service name</button>
 
 
-          </th>
+        </th>
 
-          <th class="nhsuk-table_header"></th>
-        </tr>
-      </thead>
+        <th class="nhsuk-table__header" aria-sort="none" scope="col">
+          <button type="button" data-index="0">Distance</button>
 
-
-      <tbody class="nhsuk-table__body">
-
-
-        <!-- -->
-        <tr class="nhsuk-table__row">
-          <td></td>
-
-          <td class="nhsuk-table__cell">
-            <a class="toggleitbutton3">Nuffield Health Leeds hospital</a><span class="nhsuk-tag__default">Triage only</span><br><span>Adult NHS Hernia RAS Nuffield Health Leeds hospital | NT225</span>
-
-            <div class="toggleitpanel3" style="display:none">
-
-              <p class="nhsuk-body-s">2 LEIGHTON STREET, LEEDS, WEST YORKSHIRE, LS1 3EB<br>
-                Phone: 0800 015 5020 Email: nuffieldhealth.ereferrals@nhs.net</p>
+        </th>
+        <th class="nhsuk-table__header" aria-sort="none" scope="col">
+          <button onclick="sortTable()" type="button" data-index="0">Next appointment</button>
 
 
-              <dl class="nhsuk-body-s">
-                <dt>Conditions treated</dt>
-                <dd>Abdominal hernia. Abdominal pain.
-                  Femoral hernia. Groin hernia.
-                  Inguinal hernia. Umbilical hernia.
-                  Nuffield Health Website
-                  Abdominal hernia. Abdominal pain.
-                  Femoral hernia. Groin hernia.
-                  Inguinal hernia. Umbilical hernia.</dd>
-              </dl>
+        </th>
+
+        <th class="nhsuk-table_header"></th>
+      </tr>
+    </thead>
 
 
-              <dl class="nhsuk-body-s">
-                <dt>Procedures</dt>
-                <dd>Laproscopic Hernia repair.
-                  Open hernia repair.
-                  Nuffield Health Website</dd>
+    <tbody class="nhsuk-table__body">
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell multiple-choice--hod">
 
-              </dl>
-              <a class="nhsuk-button--ers" href="referral-review-triage" role="button" draggable="false">Book now</a>
+          <div class="nhsuk-checkboxes__item">
+            <input type="checkbox" class="nhsuk-checkboxes__input" id="radio-1">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+              &nbsp;
+            </label>
+          </div>
+        </td>
+        <td class="nhsuk-table__cell">
+          <a class="toggleitbutton1">Spire Methley Park Hospital</a> <span class="nhsuk-tag">Good capacity</span>
+          <br>
 
+          <span>Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</span>
 
-            </div>
+          <div class="toggleitpanel1" style="display:none">
 
-
-
-          </td>
-          <td class="nhsuk-table__cell">2 miles</td>
-          <td class="nhsuk-table__cell">none</td>
-        </tr>
-
-
-        <!-- Triage -->
-        <tr class="nhsuk-table__row">
-          <td></td>
-
-          <td class="nhsuk-table__cell"><a href="#">Huddersfield Royal Infirmary</a><span class="nhsuk-tag__default">Triage only</span><br><span>General Surgery RAS Huddersfield Royal Infirmary RWY</span>
-          </td>
-          <td class="nhsuk-table__cell">12 miles</td>
-          <td class="nhsuk-table__cell">none</td>
-        </tr>
+            <p class="nhsuk-body-s">METHLEY LANE, LEEDS, WEST YORKSHIRE, LS26 9HG <br>
+              Phone: 0113 242 5544 Email: enquiries@spire.nhs.net</p>
 
 
-      </tbody>
-    </table>
+            <dl class="nhsuk-body-s">
+              <dt>Conditions</dt>
+              <dd>Diagnosis & treatment of abdominal wall lesions</dd>
+              <dt>Exclusions</dt>
+              <dd>Service Users under the age of 18.
+                Any Service User with an ASA (American Society of Anaesthesiologists) score of 3 (who is unstable), unless the appropriate Critical Care facilities that meet the levels of Critical Care for Adult Patients Standards and Guidelines
+                (Intensive Care Society 2002) are available.
+              </dd>
+              <dd>
+                Where the Service Users will require general anaesthetic and the patient has a Body Mass Index greater than 35.
+                Service Users with suspected cancer, who should be referred directly on to the appropriate cancer pathway.
+                Service Users who have a current and significantly unstable psychiatric disorder where the Hospital cannot reasonably be expected to accommodate the patient’s needs.</dd>
+            </dl>
+
+
+            <dl class="nhsuk-body-s">
+              <dt>Procedures</dt>
+              <dd>Suture of anterior abdominal wall</dd>
+              <dd>Other repair of anterior abdominal wall</dd>
+              <dd>Excision umbilicus </dd>
+              <dd>Excision urachus </dd>
+              <dd>Extirpation of lesion of umbilicus </dd>
+              <dd>Biopsy of lesion of umbilicus
+              </dd>
+              <dd>Excision of fistula of umbilicus
+              </dd>
+              <dd>Operations on umbilicus
+              </dd>
+              <dd>Biopsy of lesion of anterior abdominal wall
+              </dd>
+              <dd>Drainage of anterior abdominal wall
+              </dd>
+              <dd>Removal of foreign body from anterior abdominal wall
+              </dd>
+              <dd>Other operation on anterior abdominal wall</dd>
+
+            </dl>
+            <a class="nhsuk-button--ers" href="referral-review" role="button" draggable="false">Book now</a>
+
+
+          </div>
+
+
+
+        </td>
+        <td class="nhsuk-table__cell">11 miles</td>
+        <td class="nhsuk-table__cell">Tomorrow</td>
+
+
+
+
+      </tr>
+
+
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell multiple-choice--hod">
+
+          <div class="nhsuk-checkboxes__item">
+            <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+              &nbsp;
+            </label>
+          </div>
+        </td>
+        <td class="nhsuk-table__cell">
+          <a>BMI The Huddersfield Hospital</a> <span class="nhsuk-tag">Good capacity</span>
+          <br>
+          <span>Adult NHS Hernia Repair Clinic The Huddersfield - BMI - NT4</span>
+        </td>
+        <td class="nhsuk-table__cell">11 miles</td>
+        <td class="nhsuk-table__cell">Tomorrow</td>
+      </tr>
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell multiple-choice--hod">
+
+          <div class="nhsuk-checkboxes__item">
+            <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+              &nbsp;
+            </label>
+          </div>
+        </td>
+        <td class="nhsuk-table__cell">
+          <a>One Health Group - Oaklands Health Centre</a><span class="nhsuk-tag">Good capacity</span>
+          <br>
+          <span>Adult NHS General Surgery - Hernia Clinic One Health Group - Holmfirth (NTX26)</span>
+        </td>
+        <td class="nhsuk-table__cell">16 miles</td>
+        <td class="nhsuk-table__cell">1 week</td>
+      </tr>
+
+      <!-- -->
+      <tr class="nhsuk-table__row">
+        <td></td>
+
+        <td class="nhsuk-table__cell">
+          <a class="toggleitbutton3">Nuffield Health Leeds hospital</a><span class="nhsuk-tag__default">Triage only</span><br><span>Adult NHS Hernia RAS Nuffield Health Leeds hospital | NT225</span>
+
+          <div class="toggleitpanel3" style="display:none">
+
+            <p class="nhsuk-body-s">2 LEIGHTON STREET, LEEDS, WEST YORKSHIRE, LS1 3EB<br>
+              Phone: 0800 015 5020 Email: nuffieldhealth.ereferrals@nhs.net</p>
+
+
+            <dl class="nhsuk-body-s">
+              <dt>Conditions treated</dt>
+<dd>Abdominal hernia. Abdominal pain.
+Femoral hernia. Groin hernia.
+Inguinal hernia. Umbilical hernia.
+Nuffield Health Website
+              Abdominal hernia. Abdominal pain.
+Femoral hernia. Groin hernia.
+Inguinal hernia. Umbilical hernia.</dd>            </dl>
+
+
+            <dl class="nhsuk-body-s">
+              <dt>Procedures</dt>
+              <dd>Laproscopic Hernia repair.
+Open hernia repair.
+Nuffield Health Website</dd>
+
+            </dl>
+            <a class="nhsuk-button--ers" href="referral-review-triage" role="button" draggable="false">Book now</a>
+
+
+          </div>
+
+
+
+        </td>
+        <td class="nhsuk-table__cell">2 miles</td>
+        <td class="nhsuk-table__cell">none</td>
+      </tr>
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell multiple-choice--hod">
+
+          <div class="nhsuk-checkboxes__item">
+            <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+              &nbsp;
+            </label>
+          </div>
+        </td>
+        <td class="nhsuk-table__cell">
+          <a>St Jame's University Hospital</a> <span class="nhsuk-tag__warning">Limited capacity</span>
+          <br>
+          <span>Hernia-Not Otherwise Specified Leeds TH(St James's Hosp)-RR8</span></td>
+        <td class="nhsuk-table__cell">3 miles</td>
+        <td class="nhsuk-table__cell">None</td>
+      </tr>
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell multiple-choice--hod">
+
+          <div class="nhsuk-checkboxes__item">
+            <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+              &nbsp;
+            </label>
+          </div>
+        </td>
+        <td class="nhsuk-table__cell">
+          <a class="toggleitbutton2">Spire Leeds Hospital</a>
+          <br>
+          <span>Hernias - Surgery (Not Otherwise Specified) Spire Leeds Hospital - NT332</span>
+          <div class="toggleitpanel2" style="display:none">
+            <p class="nhsuk-body-s">METHLEY LANE, LEEDS, WEST YORKSHIRE, LS26 9HG <br>
+              Phone: 0113 242 5544 Email: enquiries@spire.nhs.net</p>
+
+
+            <dl class="nhsuk-body-s">
+              <dt>Conditions</dt>
+              <dd>Diagnosis & treatment of abdominal wall lesions</dd>
+              <dt>Exclusions</dt>
+              <dd>Service Users under the age of 18.
+                Any Service User with an ASA (American Society of Anaesthesiologists) score of 3 (who is unstable), unless the appropriate Critical Care facilities that meet the levels of Critical Care for Adult Patients Standards and Guidelines
+                (Intensive Care Society 2002) are available.
+              </dd>
+              <dd>
+                Where the Service Users will require general anaesthetic and the patient has a Body Mass Index greater than 35.
+                Service Users with suspected cancer, who should be referred directly on to the appropriate cancer pathway.
+                Service Users who have a current and significantly unstable psychiatric disorder where the Hospital cannot reasonably be expected to accommodate the patient’s needs.</dd>
+            </dl>
+
+
+            <dl class="nhsuk-body-s">
+              <dt>Procedures</dt>
+              <dd>Suture of anterior abdominal wall</dd>
+              <dd>Other repair of anterior abdominal wall</dd>
+              <dd>Excision umbilicus </dd>
+              <dd>Excision urachus </dd>
+              <dd>Extirpation of lesion of umbilicus </dd>
+              <dd>Biopsy of lesion of umbilicus
+              </dd>
+              <dd>Excision of fistula of umbilicus
+              </dd>
+              <dd>Operations on umbilicus
+              </dd>
+              <dd>Biopsy of lesion of anterior abdominal wall
+              </dd>
+              <dd>Drainage of anterior abdominal wall
+              </dd>
+              <dd>Removal of foreign body from anterior abdominal wall
+              </dd>
+              <dd>Other operation on anterior abdominal wall...</dd>
+
+            </dl>
+
+          </div>
+
+
+        </td>
+        <td class="nhsuk-table__cell">4 miles</td>
+        <td class="nhsuk-table__cell">Patient to book</td>
+
+
+      </tr>
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell multiple-choice--hod">
+
+          <div class="nhsuk-checkboxes__item">
+            <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+              &nbsp;
+            </label>
+          </div>
+        </td>
+        <td class="nhsuk-table__cell">
+          <a>Dewsbury and District Hospital</a> <span class="nhsuk-tag__warning">Limited capacity</span>
+          <br>
+          <span>Hernia-Surgery Not Otherwise Specified Dewsbury Hospital-RXF</span></td>
+        <td class="nhsuk-table__cell">5 miles</td>
+        <td class="nhsuk-table__cell">none</td>
+      </tr>
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell multiple-choice--hod">
+
+          <div class="nhsuk-checkboxes__item">
+            <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+              &nbsp;
+            </label>
+          </div>
+        </td>
+        <td class="nhsuk-table__cell"><a>Westcliffe Health - Shipley MP</a><br><span>General Surgery Outpatients Shipley</span></td>
+        <td class="nhsuk-table__cell">8 miles</td>
+        <td class="nhsuk-table__cell">none</td>
+
+      </tr>
+
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell multiple-choice--hod">
+
+                  <div class="nhsuk-checkboxes__item">
+                    <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                      &nbsp;
+                    </label>
+                  </div>
+                </td>
+                <td class="nhsuk-table__cell"><a>The Yorkshire Clinic</a><br><span>Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</span>
+                </td>
+                <td class="nhsuk-table__cell">9 miles</td>
+                <td class="nhsuk-table__cell">none</td>
+              </tr>
+
+
+      <tr class="nhsuk-table__row">
+        <td></td>
+
+        <td class="nhsuk-table__cell"><a href="#">Huddersfield Royal Infirmary</a><span class="nhsuk-tag__default">Triage only</span><br><span>General Surgery RAS Huddersfield Royal Infirmary RWY</span>
+        </td>
+        <td class="nhsuk-table__cell">12 miles</td>
+        <td class="nhsuk-table__cell">none</td>
+      </tr>
+
+
+
+
+
+
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell multiple-choice--hod">
+
+          <div class="nhsuk-checkboxes__item">
+            <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+              &nbsp;
+            </label>
+          </div>
+        </td>
+        <td class="nhsuk-table__cell"><a>Calderdale Royal Hospital</a><span class="nhsuk-tag__default">Restricted service</span><br><span>CHFT - MSK Hernia - Calderdale Royal Hospital- RWY</span>
+        </td>
+        <td class="nhsuk-table__cell">12 miles</td>
+        <td class="nhsuk-table__cell">5 week</td>
+      </tr>
+
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell multiple-choice--hod">
+
+          <div class="nhsuk-checkboxes__item">
+            <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+              &nbsp;
+            </label>
+          </div>
+        </td>
+        <td class="nhsuk-table__cell"><a>Harrogate District Hospital</a><br><span>General Surgery - Harrogate District Hospital (Harrogate Trust)-RCD</span>
+        </td>
+        <td class="nhsuk-table__cell">15 miles</td>
+        <td class="nhsuk-table__cell">3 weeks</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
   </div>
 
 </div>

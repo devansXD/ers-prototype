@@ -24,6 +24,10 @@
       </a>
     </div>
     <!-- END LOGO -->
+    <!-- SERVICE NAME -->
+    <div class="nhsuk-header__transactional-service-name">
+          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+        </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
@@ -67,69 +71,23 @@
   </div>
 {% endblock %}
 {% block content %}
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-<div class="nhsuk-grid-column-three-quarters">
-<h1 class="nhsuk-heading-s">Triage requested</h1>
+<div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4 nhsuk-u-padding-bottom-4" style="border-bottom:1px solid #AEB7BD">
+  <div class="nhsuk-grid-column-one-half">
+    <h1 class="nhsuk-heading-s">You have booked an appointment</h1>
+    <p>Details of this booking are:</p>
+<h2>Service name</h2>
 
-<h2 class="nhsuk-heading-s">Check triage details before submitting</h2>
-<dl class="app-check-your-answers app-check-your-answers--short">
+<h2>Speciality</h2>
 
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question">
-        Triage summary
-      </dt>
-      <dd class="app-check-your-answers__answer">
-      Surgery - not otherwise specified - Hernias
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="#">
-        Add message
-        </a>
-      </dd>
+<h2>Time</h2>
+<h2>Date</h2>
+  </div>
     </div>
+    <div class="nhsuk-grid-row">
+      <button class="nhsuk-button" type="button" name="button">Confirm booking</button>
+      <button class="nhsuk-button" type="button" name="button">Print booking</button>
 
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question">
-      Selected service
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Nuffield health Leeds Hospital
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="#">
-          Change service
-        </a>
-      </dd>
     </div>
-
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question">
-        Clinical information
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        None specified
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="#">
-          Add attachment
-        </a>
-      </dd>
-    </div>
-
-  </dl>
-  <form class="nhsuk-form" action="triage-confirmation">
-    <button class="nhsuk-button nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="button">
-        Send referral
-      </button>
-
-  </form>
-
-</div>
-
-
-
-</div>
-
 
 {% endblock %}
 

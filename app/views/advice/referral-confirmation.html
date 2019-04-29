@@ -71,7 +71,7 @@ NHS e-referral Service
 {% endblock %}
 {% block content %}
 
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-6">
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-4">
   <div class="nhsuk-grid-column-three-quarters">
 
     <div class="panel panel-border-wide alert-success">
@@ -83,30 +83,19 @@ NHS e-referral Service
 Referral successful</h2>
   <p>The referral details have been sent.</p>
 </div>
+<h2 class="nhsuk-heading-s">What happens next</h2>
+<p>The referral has been sent to the patient.</p>
+<p>The patient will now need to choose an appointment slot in Manage Your Referral.</p>
 
-<div class="nhsuk-grid-column-one-half nhsuk-u-margin-top-4">
-  <h2 class="nhsuk-heading-s">What happens next</h2>
-  <p>The referral has been sent to the patient who will need to choose an appointment with the chosen care provider</p>
+    <span>
+      <a class="nhsuk-button--ers_secondary" href="referral-appointments" type="submit">
+        Print booking
+      </a>
 
-  <div class="nhsuk-inset-text">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
-    <p>You will now need to print and send the patient letter</p>
-  </div>
-
-
-      <span>
-        <a class="nhsuk-button--ers_secondary" href="referral-appointments" type="submit">
-          Print booking
-        </a>
-
-        <a class="nhsuk-button--ers" href="referral-review" role="button" type="submit">
-          Email booking
-        </a>
-      </span>
-</div>
-
-
-
+      <a class="nhsuk-button--ers" href="referral-review" role="button" type="submit">
+        Email booking
+      </a>
+    </span>
 
   </div>
 </div>

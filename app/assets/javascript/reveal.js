@@ -11,3 +11,10 @@ $(document).ready(function() {
   });
 
  });
+
+ $(document).ready(function() {
+    $(".toggleitbutton3").click(function () {
+    $(".toggleitpanel3").toggle();
+   });
+
+  });
