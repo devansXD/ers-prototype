@@ -18,3 +18,10 @@ $(document).ready(function() {
    });
 
   });
+
+  $(document).ready(function() {
+     $(".toggleitbutton4").click(function () {
+     $(".toggleitpanel4").toggle();
+    });
+
+   });
