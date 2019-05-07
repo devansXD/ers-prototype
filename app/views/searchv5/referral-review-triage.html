@@ -15,7 +15,7 @@ NHS e-referral Service
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container-fluid nhsuk-header__container">
     <div class="nhsuk-header__logo">
-      <a class="nhsuk-header__link" href="search" aria-label="NHS homepage">
+      <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
         <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
           <path fill="#fff" d="M0 0h40v16H0z"></path>
           <path fill="#005eb8"
@@ -81,15 +81,7 @@ NHS e-referral Service
         </svg>
         Go back to search results</a>
     </div>
-    <div class="panel panel-border-wide alert-success">
-        <h2 class="nhsuk-heading-m">
-      <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-  <path stroke-width="4" stroke-linecap="round" stroke="#007f3b" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
-</svg>
-These details have not yet been submited</h2>
-
-</div>
-    <h1 class="nhsuk-heading-l">Check the details before sending to the patient</h1>
+    <h1 class="nhsuk-heading-l">Check the details before sending the referral</h1>
 
     <h2 class="nhsuk-heading-m">Referral details</h2>
 
@@ -151,14 +143,17 @@ These details have not yet been submited</h2>
           Services
         </dt>
         <dd class="app-check-your-answers__answer">
-          Spire Methley Park Hospital
-          <br>
+        Nuffield Health Leeds Hospital
 
+        </dd>
+      </div>
 
-          BMI The Huddersfield Hospital
-          <br>
-
-          One Health Group - Oaklands Health Centre
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          Contact
+        </dt>
+        <dd class="app-check-your-answers__answer">
+        Phone: 0800 015 5020 <br> Email: nuffieldhealth.ereferrals@nhs.net<
 
         </dd>
       </div>
@@ -178,55 +173,16 @@ These details have not yet been submited</h2>
     </dl>
 
 
-
-    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-      <legend class="nhsuk-fieldset__legend">
-        Send reminder letter?
-      </legend>
-
-      <span class="nhsuk-hint" id="example-hint">
-        The patient will receive a letter of appointment not booked.
-      </span>
-
-      <div class="multiple-choice--hod nhsuk-radios">
-
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Yes" checked>
-          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-            Yes
-          </label>
-          <span class="nhsuk-hint">Send reminder in <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="3">7 days</option>
-          <option value="1" selected="">14 days</option>
-          <option value="2">28 days</option>
-
-        </select></span>
-        </div>
-
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="No">
-          <label class="nhsuk-label nhsuk-radios__label" for="example-2" selected="false">
-            No
-          </label>
-        </div>
-
-      </div>
-
-
-      </fieldset>
+<h3>Before you submit</h3>
+<p>The request will be created and you will need to add a referral letter</p>
 <div class="nhsuk-u-margin-top-4">
-      <h2 class="nhsuk-heading-s">Now send the referral</h2>
-      <p>These details will be sent to the patient to book</p>
 
-      <form class="" action="referral-confirmation">
+      <form class="" action="referral-confirmation-triage">
         <button class="nhsuk-button--ers" type="submit">
-          Send referral
+          Send triage
         </button>
         </form>
         </div>
-
-
-
   </div>
 
 

@@ -25,3 +25,10 @@ $(document).ready(function() {
     });
 
    });
+
+   $(document).ready(function() {
+      $(".sidebarbttn").click(function () {
+      $(".sidebar").toggle();
+     });
+
+    });

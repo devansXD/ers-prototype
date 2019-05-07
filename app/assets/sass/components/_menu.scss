@@ -2,6 +2,11 @@
 // COMPONENTS /
 // ==========================================================================
 
+.nhsuk-action-bar{
+  a:first-child{
+    margin-right: 32px;
+  }
+}
 
 nav.patient-info{
   display: flex;

@@ -1,0 +1,27 @@
+
+ul.nhsuk-list{
+  list-style-type: none;
+  margin: 24px 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  border-left: 4px solid #d8dde0;
+  padding-left: 16px;
+
+  li{
+  border-bottom: 1px solid #d8dde0;
+  padding: 16px 0;
+  }
+}
+
+dl{
+
+
+dt{
+  margin-top: 24px;
+  font-weight: bold;
+}
+dd{
+  margin: 0;
+  padding: 4px 0;
+}
+}

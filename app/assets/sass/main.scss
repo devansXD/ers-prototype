@@ -14,12 +14,16 @@
 @import 'components/menu';
 @import 'components/alerts';
 @import 'components/tables';
-
+@import 'components/lists';
 
 // Add your extra styles here...
 
-
-
+table td{
+  cursor:default;
+  a{
+    cursor: pointer;
+  }
+}
 .nhsuk-button--ers{
   @extend .nhsuk-button;
   padding:4px 16px;
@@ -43,19 +47,6 @@
   flex-wrap: nowrap;
 }
 
-dl{
-  border-left:4px solid $color_nhsuk-grey-2;
-  padding-left: 16px;
-
-dt{
-  margin-top: 24px;
-  font-weight: bold;
-}
-dd{
-  margin: 0;
-  padding: 4px 0;
-}
-}
 
 @mixin nhsuk-width-container-fluid {
   margin: 0 $nhsuk-gutter-half;
@@ -96,20 +87,23 @@ width: 100%;
 }
 
 .nhsuk-tag {
-  background-color: $color_nhsuk-aqua-green;
-  color: $color_nhsuk-white;
+
+  background-color: $color_nhsuk-white;
+  color: $color_nhsuk-green;
   display: inline-block;
   font-family: Arial, sans-serif;
   font-size: 12px;
   padding: 4px 8px;
   margin-left: 8px;
+  border: 1px solid $color_nhsuk-green;
 
 
 }
 
 .nhsuk-tag__warning{
     @extend .nhsuk-tag;
-  background-color: $color_nhsuk-red;
+  border:1px solid $color_nhsuk-red;
+  color: $color_nhsuk-red;
 }
 .nhsuk-tag__default{
   @extend .nhsuk-tag;
