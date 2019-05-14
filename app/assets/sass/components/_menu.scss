@@ -31,3 +31,34 @@ ul li:first-child{
 
 }
 }
+
+
+nav.nhsuk-tabs{
+  display: flex;
+  flex-wrap: nowrap;
+ul{
+  max-width: 75%;
+  display:flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+li{
+padding: 8px 16px;
+  margin-bottom: 0;
+  border-right:1px solid $color_nhsuk-grey-2;
+
+  a:link, a:visited, a:hover,a:active{
+    padding: 8px 16px;
+    display:flex;
+    flex-wrap:nowrap;
+    text-decoration: none;
+
+    :focus{
+      background-color: $color_nhsuk-grey-1;
+    }
+  }
+}
+}

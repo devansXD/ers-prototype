@@ -73,7 +73,7 @@ NHS e-referral Service
 {% block content %}
 
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-three-quarters">
+    <div class="nhsuk-width-container-fluid">
     <div class="nhsuk-back-link">
       <a class="nhsuk-back-link__link" href="search-results">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -81,153 +81,52 @@ NHS e-referral Service
         </svg>
         Go back to search results</a>
     </div>
-    <h1 class="nhsuk-heading-l">Check the details before sending the referral</h1>
 
-    <h2 class="nhsuk-heading-m">Referral details</h2>
+</div>
+<div class="nhsuk-grid-column-one-half nhsuk-u-margin-top-4">
+  <div class="panel panel-border-wide alert-default">
+    <h1 class="nhsuk-heading-s">
 
-    <dl class="app-check-your-answers app-check-your-answers--short">
+      Check these details before you submit
+  </h1>
+      <p>These details have not yet been submitted to the patient.</p>
 
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Referral summary
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          Surgery - not otherwise specified - Hernias
-        </dd>
-
-      </div>
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Priority
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          Routine
-        </dd>
-
-      </div>
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Type
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          Referral
-        </dd>
-
-      </div>
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Clinical information
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          None specified
-        </dd>
-
-      </div>
-
-    </dl>
+  </div>
   </div>
 
 
-</div>
-
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
-    <h2 class="nhsuk-heading-m">Services chosen</h2>
-
-    <dl class="app-check-your-answers app-check-your-answers--short">
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Services
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          Spire Methley Park Hospital
-          <br>
+    </div>
 
 
-          BMI The Huddersfield Hospital
-          <br>
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+  <div class="nhsuk-grid-column-one-half">
+    <h2 class="nhsuk-heading-m">Services you have chosen</h2>
+    <p>These are the services available for the patient to choose from.</p>
 
-          One Health Group - Oaklands Health Centre
-
-        </dd>
-      </div>
+  <ul class="nhsuk-list">
+    <li><strong>Spire Methley Park Hospital</strong>
+  <br>Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</li>
+  <li><strong>The Huddersfield BMI</strong><br>Adult NHS Hernia Repair Clinic - The Huddersfield - BMI - NT4</li>
+  <li><strong>One Health Group </strong><br>Adult NHS General Surgery - Hernia Clinic - One Health Group - Holmfirth (NTX26)</li>
+  </ul>
 
 
 
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Clinical information
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          None specified
-        </dd>
+    <div class="nhsuk-u-margin-top-6">
 
-      </div>
+<h3>Now submit to the patient</h3>
 
-    </dl>
-
-
-
-    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-      <legend class="nhsuk-fieldset__legend">
-        Send reminder letter?
-      </legend>
-
-      <span class="nhsuk-hint" id="example-hint">
-        The patient will receive a letter of appointment not booked.
-      </span>
-
-      <div class="multiple-choice--hod nhsuk-radios">
-
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Yes" checked>
-          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-            Yes
-          </label>
-          <span class="nhsuk-hint">Send reminder in <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="3">7 days</option>
-          <option value="1" selected="">14 days</option>
-          <option value="2">28 days</option>
-
-        </select></span>
-        </div>
-
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="No">
-          <label class="nhsuk-label nhsuk-radios__label" for="example-2" selected="false">
-            No
-          </label>
-        </div>
-
-      </div>
-
-
-      </fieldset>
-<div class="nhsuk-u-margin-top-4">
-      <h2 class="nhsuk-heading-s">Now send the referral</h2>
       <p>These details will be sent to the patient to book</p>
+      <p class="nhsuk-hint">The patient will be sent a reminder letter in 14 days <a href="#">Change</a></p>
 
-      <form class="" action="referral-confirmation">
+      <form class="nhsuk-form" action="referral-confirmation">
         <button class="nhsuk-button--ers" type="submit">
-          Submit
+          Submit to the patient
         </button>
-        </form>
-        </div>
-
-
-
+      </form>
+    </div>
   </div>
-
-
 </div>
-
-
-
-
-
 
 {% endblock %}
 

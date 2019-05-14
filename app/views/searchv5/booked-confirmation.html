@@ -58,47 +58,36 @@
 
 </header>
 <!-- SUB MENU PATIENT INFO -->
-<nav class="nhsuk-grey-background patient-info">
-  <ul role="navigation">
-    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li><strong>Patient: </strong><a href="Patient name">EVANS, David (Mr)</a></li>
-    <li><strong>Gender: </strong> Male</li>
-    <li>30 years (4 June 1988)</li>
-  </ul>
-</nav>
-{% endblock %}
-{% block content %}
-
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+<div class="nhsuk-grid-row nhsuk-grey-background" style="border-bottom:1px solid #AEB7BD">
   <div class="nhsuk-grid-column-three-quarters">
 
-    <div class="nhsuk-panel nhsuk-panel--confirmation nhsuk-u-margin-bottom-4">
-      <h1 class="nhsuk-panel__title--s">
-          Referral complete
-        </h1>
-        <div class="nhsuk-panel__body">
-          UBRN
-          <br><strong>HDJ2123F</strong>
-        </div>
-    </div>
-<div class="nhsuk-panel">
-<p>Please ensure you send a letter with this booking.</p>
+  <ul class="nhsuk-u-padding-2 nhsuk-u-margin-left-0 nhsuk-header__navigation-list" role="navigation">
+    <li><span style="padding:16px;background-color:#425563;color:#f0f4f5;margin-left:-16px;"><strong>UBRN: </strong> 3452 1007 6779</span></li>
+    <li>Patient: <a href="Patient name">Dave Evans</a></li>
+    <li>Male 30yrs (4 Jun 1998)</li>
+    <li><strong>NHS No:</strong> 000 007 4563</li>
+  </ul>
 </div>
-    <span>
-      <a class="nhsuk-button--ers--secondary" href="referral-appointments" type="submit">
-      Print booking
-      </a>
-
-      <a class="nhsuk-button--ers" href="referral-review" role="button" type="submit">
-        Email booking
-      </a>
-      <a class="nhsuk-button--ers" href="referral-review" role="button" type="submit">
-      Close booking
-      </a>
-    </span>
-
   </div>
-</div>
+{% endblock %}
+{% block content %}
+<div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4 nhsuk-u-padding-bottom-4" style="border-bottom:1px solid #AEB7BD">
+  <div class="nhsuk-grid-column-one-half">
+    <h1 class="nhsuk-heading-s">You have booked an appointment</h1>
+    <p>Details of this booking are:</p>
+<h2>Service name</h2>
+
+<h2>Speciality</h2>
+
+<h2>Time</h2>
+<h2>Date</h2>
+  </div>
+    </div>
+    <div class="nhsuk-grid-row">
+      <button class="nhsuk-button" type="button" name="button">Confirm booking</button>
+      <button class="nhsuk-button" type="button" name="button">Print booking</button>
+
+    </div>
 
 {% endblock %}
 

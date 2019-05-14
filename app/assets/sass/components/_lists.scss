@@ -4,13 +4,13 @@ ul.nhsuk-list{
   margin: 24px 0;
   font-size: 1em;
   line-height: 1.5em;
-  border-left: 4px solid #d8dde0;
-  padding-left: 16px;
+  border-left: 10px solid #d8dde0;
 
   li{
   border-bottom: 1px solid #d8dde0;
   padding: 16px 0;
-  }
+  background-color: $color_nhsuk-grey-5;
+  padding-left: 16px;}
 }
 
 dl{
@@ -23,5 +23,19 @@ dt{
 dd{
   margin: 0;
   padding: 4px 0;
+}
+}
+
+ul.ers-list--unstyled{
+  list-style-type: none;
+  padding-left: 0;
+
+a{
+  text-decoration: none;
+  color: $color_nhsuk-grey-1;
+  display: block;
+  h3{
+    color: $color_nhsuk-blue;
+  }
 }
 }

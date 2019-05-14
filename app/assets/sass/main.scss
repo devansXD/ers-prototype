@@ -16,6 +16,8 @@
 @import 'components/tables';
 @import 'components/lists';
 
+@import 'components/boxshadow';
+
 // Add your extra styles here...
 
 table td{
@@ -89,30 +91,36 @@ width: 100%;
 .nhsuk-tag {
 
   background-color: $color_nhsuk-white;
-  color: $color_nhsuk-green;
   display: inline-block;
   font-family: Arial, sans-serif;
   font-size: 12px;
   padding: 4px 8px;
   margin-left: 8px;
-  border: 1px solid $color_nhsuk-green;
+  font-weight: bold;
+  border-width: 2px;
+  border-style: solid;
 
 
+}
+.nhsuk-tag__success{
+    @extend .nhsuk-tag;
+  border-color: $color_nhsuk-green;
+  color: $color_nhsuk-green;
 }
 
 .nhsuk-tag__warning{
     @extend .nhsuk-tag;
-  border:1px solid $color_nhsuk-red;
+  border-color: $color_nhsuk-red;
   color: $color_nhsuk-red;
 }
 .nhsuk-tag__default{
   @extend .nhsuk-tag;
-  color: $color_nhsuk-black;
-  background-color: $color_nhsuk-white;
-  border: 1px solid $color_nhsuk-grey-5;
+  color: $color_nhsuk-grey-1;
+  border-color:$color_nhsuk-grey-1;
 }
 .nhsuk-tag__highlight{
-  background-color: yellow;
+color: $color_nhsuk-warm-yellow;
+border-color: $color_nhsuk-warm-yellow;
 }
 
 

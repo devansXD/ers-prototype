@@ -15,7 +15,7 @@ NHS e-referral Service
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container-fluid nhsuk-header__container">
     <div class="nhsuk-header__logo">
-      <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+      <a class="nhsuk-header__link" href="search" aria-label="NHS homepage">
         <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
           <path fill="#fff" d="M0 0h40v16H0z"></path>
           <path fill="#005eb8"
@@ -73,7 +73,7 @@ NHS e-referral Service
 {% block content %}
 
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-three-quarters">
+    <div class="nhsuk-width-container-fluid">
     <div class="nhsuk-back-link">
       <a class="nhsuk-back-link__link" href="search-results">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -81,107 +81,39 @@ NHS e-referral Service
         </svg>
         Go back to search results</a>
     </div>
-    <h1 class="nhsuk-heading-l">Check the details before sending the referral</h1>
+    <div class="panel panel-border-wide alert-default">
+      <h1 class="nhsuk-heading-s">
 
-    <h2 class="nhsuk-heading-m">Referral details</h2>
+        Check these details before you submit
+    </h1>
+        <p>These details have not yet been submitted</p>
 
-    <dl class="app-check-your-answers app-check-your-answers--short">
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Referral summary
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          Surgery - not otherwise specified - Hernias
-        </dd>
-
-      </div>
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Priority
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          Routine
-        </dd>
-
-      </div>
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Type
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          Referral
-        </dd>
-
-      </div>
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Clinical information
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          None specified
-        </dd>
-
-      </div>
-
-    </dl>
-  </div>
-
-
+    </div>
+    </div>
 </div>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
-    <h2 class="nhsuk-heading-m">Services chosen</h2>
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+  <div class="nhsuk-grid-column-one-half">
+    <h2 class="nhsuk-heading-m">Service chosen for Triage</h2>
 
-    <dl class="app-check-your-answers app-check-your-answers--short">
+  <ul class="nhsuk-list">
+    <li><strong>Spire Methley Park Hospital</strong>
+  <br>Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</li>
+  </ul>
 
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Services
-        </dt>
-        <dd class="app-check-your-answers__answer">
-        Nuffield Health Leeds Hospital
+    <div class="nhsuk-u-margin-top-6">
 
-        </dd>
-      </div>
+<h3>Now submit for triage</h3>
+      <p>These details will be sent to the organisation</p>
 
-
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Clinical information
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          None specified
-        </dd>
-
-      </div>
-
-    </dl>
-
-
-<h3>Before you submit</h3>
-<p>The request will be created and you will need to add a referral letter</p>
-<div class="nhsuk-u-margin-top-4">
-
-      <form class="" action="referral-confirmation">
+      <form class="" action="referral-confirmation-triage">
         <button class="nhsuk-button--ers" type="submit">
-          Submit
+          Submit for triage
         </button>
-        </form>
-        </div>
+      </form>
+    </div>
   </div>
-
-
 </div>
-
-
-
-
-
 
 {% endblock %}
 
