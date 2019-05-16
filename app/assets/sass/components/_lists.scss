@@ -1,16 +1,32 @@
 
+ul {
+
+list-style-type: none;
+margin: 24px 0;
+line-height: 1.5em;
+padding-left: 0;
+
+li{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+}
 ul.nhsuk-list{
   list-style-type: none;
   margin: 24px 0;
   font-size: 1em;
   line-height: 1.5em;
-  border-left: 10px solid #d8dde0;
 
   li{
   border-bottom: 1px solid #d8dde0;
   padding: 16px 0;
   background-color: $color_nhsuk-grey-5;
   padding-left: 16px;}
+}
+.nhsuk-list-item{
+  border-bottom: 1px solid $color_nhsuk-grey-4;
+  padding-top:16px;
 }
 
 dl{

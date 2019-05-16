@@ -89,7 +89,7 @@ NHS e-referral Service
 
       Check these details before you submit
   </h1>
-      <p>These details have not yet been submitted to the patient.</p>
+
 
   </div>
   </div>
@@ -100,37 +100,63 @@ NHS e-referral Service
 
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
   <div class="nhsuk-grid-column-one-half">
-    <h2 class="nhsuk-heading-m">Services you have chosen</h2>
-    <p>These are the services available for the patient to choose from.</p>
 
-  <ul class="nhsuk-list">
-    <li><strong>Spire Methley Park Hospital</strong>
-  <br>Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</li>
-  </ul>
-  <ul class="nhsuk-list">
-  <li><strong>The Huddersfield BMI</strong><br>Adult NHS Hernia Repair Clinic - The Huddersfield - BMI - NT4</li>
-  </ul>
-  <ul class="nhsuk-list">
-  <li><strong>One Health Group </strong><br>Adult NHS General Surgery - Hernia Clinic - One Health Group - Holmfirth (NTX26)</li>
-  </ul>
+    <div class="nhsuk-list">
+      <h2 class="nhsuk-heading-m">Services you have chosen</h2>
+      <p>These are the services available for the patient to choose from.</p>
+<div class="nhsuk-list-item">
+  <p><strong>Spire Methley Park Hospital</strong>
+  <br>Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</p>
+  </div>
+<div class="nhsuk-list-item">
+  <p><strong>The Huddersfield BMI</strong><br>Adult NHS Hernia Repair Clinic - The Huddersfield - BMI - NT4</p>
+  </div>
+  <div class="nhsuk-list-item">
+  <p><strong>One Health Group </strong><br>Adult NHS General Surgery - Hernia Clinic - One Health Group - Holmfirth (NTX26)</p>
+</div>
+</div>
 
 
-
-    <div class="nhsuk-u-margin-top-6">
+    <div class="nhsuk-u-margin-top-4">
 
       <h3>Before you submit</h3>
-      <p>Which clinician </p>
+      <div class="nhsuk-list-item">
+        <div class="nhsuk-form-group">
+          <div class="nhsuk-checkboxes__item multiple-choice--hod">
+            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+              Patient to receive reminder letter
+            </label>
+          </div>
 
-<h3>Now submit to the patient</h3>
+          <p>The patient will be sent a reminder letter in 14 days <a href="#">Change</a></p>
+    <label class="nhsuk-label nhsuk-u-margin-bottom-3" for="select-1">
+      Which clinician are you submitting on behalf of?
+    </label>
+    <select class="nhsuk-select" id="select-1" name="select-1">
+      <option value="1">John Smith</option>
+      <option value="2" selected="">Janet Smyth</option>
+      <option value="3">James Taylor</option>
+        <option value="4">Jim Trent</option>
 
-      <p>These details will be submitted  to the patient to book</p>
-      <p class="nhsuk-hint">The patient will be sent a reminder letter in 14 days <a href="#">Change</a></p>
+    </select>
+  </div>
+
+
+      </div>
+
+<div class="nhsuk-u-margin-top-4">
+<h3>Now submit the request</h3>
+
+      <p>These details will be submitted  to allow the patient to book</p>
+
 
       <form class="nhsuk-form" action="referral-confirmation">
         <button class="nhsuk-button--ers" type="submit">
           Submit
         </button>
       </form>
+      </div>
     </div>
   </div>
 </div>

@@ -19,6 +19,14 @@
 @import 'components/boxshadow';
 
 // Add your extra styles here...
+.nhsuk-section-border{
+  border-bottom: 1px solid $color_nhsuk-grey-4;
+  padding-bottom:8px;
+  ::after {
+    border:4px solid $color_nhsuk-grey-4;
+  }
+}
+
 
 table td{
   cursor:default;
