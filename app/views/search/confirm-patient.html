@@ -5,7 +5,7 @@
 {% set bodyClasses = 'nhsuk-white-background' %}
 {% block pageScripts %}
 <script type="text/javascript" src="/js/search.js"></script>
-<script type="text/javascript" src="/js/auto.js"></script>
+<script type="text/javascript" src="/js/auto-names.js"></script>
 {% endblock %}
 {% block pageTitle %}
 NHS e-referral Service
@@ -26,28 +26,29 @@ NHS e-referral Service
       </a>
     </div>
     <!-- END LOGO -->
+
     <!-- SERVICE NAME -->
     <div class="nhsuk-header__transactional-service-name">
-      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
-    </div>
+          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+        </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
         <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation">
           <ul class="nhsuk-header__navigation-list" style="border:0">
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/conditions/social-care-and-support/">
+              <a class="nhsuk-header__navigation-link" href="/search">
                 Help
               </a>
             </li>
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/news/">
+              <a class="nhsuk-header__navigation-link" href="/search">
                 Alerts
 
               </a>
             </li>
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/service-search">
+              <a class="nhsuk-header__navigation-link" href=/search">
                 Dave Evans
               </a>
             </li>
@@ -57,100 +58,97 @@ NHS e-referral Service
       </div>
     </div>
   </div>
-
 </header>
 <!-- SUB MENU PATIENT INFO -->
 
-<nav class="nhsuk-grey-background patient-info">
-  <ul role="navigation">
-    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
-    <li><strong>Gender: </strong> Male</li>
-    <li>30 years (4 June 1988)</li>
-  </ul>
-</nav>
+    <nav class="nhsuk-grey-background patient-info">
+      <ul role="navigation">
+        <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+
+      </ul>
+    </nav>
+
 {% endblock %}
 {% block content %}
 
+
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-    <div class="nhsuk-width-container-fluid">
+  <div class="nhsuk-grid-column-one-half">
     <div class="nhsuk-back-link">
       <a class="nhsuk-back-link__link" href="search-results">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to search results</a>
+        Go back</a>
     </div>
+    <h1 class="nhsuk-heading-m">Check patient details</h1>
 
-</div>
-<div class="nhsuk-grid-column-one-half nhsuk-u-margin-top-4">
-  <div class="panel panel-border-wide alert-default">
-    <h1 class="nhsuk-heading-s">
+    <dl class="app-check-your-answers app-check-your-answers--short">
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          NHS number
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          134 343 451
+        </dd>
+      </div>
 
-      Check these details before you submit
-  </h1>
-
-
-  </div>
-  </div>
-
-
-    </div>
-
-
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-one-half">
-
-    <div class="nhsuk-list">
-      <h2 class="nhsuk-heading-m nhsuk-section-border">Services you have chosen</h2>
-<div class="nhsuk-list-item">
-  <p><strong>Spire Methley Park Hospital</strong>
-  <br>Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350</p>
-  </div>
-<div class="nhsuk-list-item">
-  <p><strong>The Huddersfield BMI</strong><br>Adult NHS Hernia Repair Clinic - The Huddersfield - BMI - NT4</p>
-  </div>
-  <div class="nhsuk-list-item">
-  <p><strong>One Health Group </strong><br>Adult NHS General Surgery - Hernia Clinic - One Health Group - Holmfirth (NTX26)</p>
-</div>
-</div>
-
-
-    <div class="nhsuk-u-margin-top-4">
-
-        <h3 class="nhsuk-heading-s nhsuk-section-border">Before you submit</h3>
-      <div class="nhsuk-list-item">
-        <div class="nhsuk-form-group">
-          <div class="nhsuk-checkboxes__item multiple-choice--hod">
-            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
-              Patient to receive reminder letter
-            </label>
-          </div>
-
-          <p>The patient will be sent a reminder letter in 14 days <a href="#">Change</a></p>
-
-  </div>
-
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          Patient name
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          David Evans
+        </dd>
 
       </div>
 
-<div class="nhsuk-u-margin-top-4">
-<h3>Now submit the request</h3>
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+        Address
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          51 Broad Street<br>
+          Northgate <br>
+          Halifax <br>
+          HX1 1UB <br>
 
-      <p>These details will be submitted  to allow the patient to book</p>
 
+        </dd>
 
-      <form class="nhsuk-form" action="referral-confirmation">
-        <button class="nhsuk-button--ers" type="submit">
-          Submit
-        </button>
-      </form>
       </div>
-    </div>
-  </div>
-</div>
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+        Contact
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          07700 800 457 <br>
+        davidevans@gmail.com
+        </dd>
 
+      </div>
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+        Consent to callback
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          Yes
+
+
+        </dd>
+
+      </div>
+
+    </dl>
+
+    <a class="nhsuk-button--ers" href="choose-clinician">Continue</a>
+  </div>
+
+
+
+
+
+</div>
 {% endblock %}
 
 {% block footer %}

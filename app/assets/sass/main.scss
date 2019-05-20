@@ -20,13 +20,20 @@
 @import 'components/boxshadow';
 
 // Add your extra styles here...
-.nhsuk-section-border{
-  border-bottom: 1px solid $color_nhsuk-grey-4;
-  padding-bottom:8px;
-  ::after {
-    border:4px solid $color_nhsuk-grey-4;
-  }
+h2{
+  border-bottom: 1px solid solid $color_nhsuk-green
 }
+.nhsuk-section-border{
+  display:inline-block;
+    border-bottom: 4px solid $color_nhsuk-grey-4;
+    padding-bottom:8px;
+    ::after {
+      border:4px solid $color_nhsuk-grey-4;
+    }
+  }
+
+
+
 
 
 table td{
@@ -105,8 +112,8 @@ width: 100%;
   font-size: 12px;
   padding: 4px 8px;
   margin-left: 8px;
-  font-weight: bold;
-  border-width: 2px;
+  font-weight: 400;
+  border-width: 1px;
   border-style: solid;
 
 
