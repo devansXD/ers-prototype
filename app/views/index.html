@@ -1,6 +1,4 @@
-{% extends "layout.html" %}
-
-{% set mainClasses = 'nhsuk-main-wrapper--s' %}
+{% extends "layout-nhsuk.html" %}
 
 {% block pageTitle %}
   NHS e-referral Service
@@ -50,21 +48,63 @@
 
       <!-- Content goes here -->
 
-<h3>Prototypes</h3>
+<h3>Admin Referrer - service search work flow </h3>
+
+
+  <table class="nhsuk-table">
+    <!-- TABLE START -->
+    <thead class="nhsuk-table__head">
+      <tr class="nhsuk-table__row">
+        <th class="nhsuk-table_header">Version</th>
+        <th class="nhsuk-table_header">Confidence</th>
 
 
 
-      <dl>
-        <dt>Service search</dt>
 
-          <dd><a href="/search/">v6</a> <span class="nhsuk-tag">CURRENT ALPHA</span></dd>
-          <dd><a href="/searchv5/">v5</a></dd>
-        <dd><a href="/searchv4/">v4</a></dd>
-        <dd><a href="/searchv3/">v3</a></dd>
-        <dd><a href="/searchv2/">v2</a></dd>
-        <dd><a href="/searchv1/">v1</a></dd>
 
-          </dl>
+      </tr>
+    </thead>
+
+      <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell"><a href="/search/">version 6</a></td>
+            <td class="nhsuk-table__cell"><span class="nhsuk-tag__success">HIGH CONFIDENCE</span></td>
+
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell"><a href="/search/v5">version 5</a></td>
+            <td class="nhsuk-table__cell"><span class="nhsuk-tag__success">HIGH CONFIDENCE</span></td>
+
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell"><a href="/search/v4">version 4</a></td>
+            <td class="nhsuk-table__cell"><span class="nhsuk-tag">MEDIUM CONFIDENCE</span></td>
+
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell"><a href="/search/v3">version 3</a></td>
+            <td class="nhsuk-table__cell"><span class="nhsuk-tag">MEDIUM CONFIDENCE</span></td>
+
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell"><a href="/search/v2">version 2</a></td>
+            <td class="nhsuk-table__cell"><span class="nhsuk-tag__warning">LOW CONFIDENCE</span></td>
+
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell"><a href="/search/v1">version 1</a></td>
+            <td class="nhsuk-table__cell"><span class="nhsuk-tag__warning">LOW CONFIDENCE</span></td>
+
+        </tr>
+
+
+      </tbody>
+
+  </table>
+
+
+
+
 
 
 
