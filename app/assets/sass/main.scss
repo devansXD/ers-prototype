@@ -16,7 +16,7 @@
 @import 'components/tables';
 @import 'components/lists';
 @import 'components/icons/icons';
-
+@import 'components/buttons';
 @import 'components/boxshadow';
 
 // Add your extra styles here...
@@ -42,10 +42,12 @@ table td{
     cursor: pointer;
   }
 }
+
 .nhsuk-button--ers{
   @extend .nhsuk-button;
   padding:4px 16px;
   font-size: 18px;
+  font-weight: normal;
 }
 
 .nhsuk-button--ers_secondary {
@@ -60,6 +62,7 @@ table td{
 .nhsuk-header__transactional-service-name{
   padding-left: 20px;
 }
+
 .inline{
   display: flex;
   flex-wrap: nowrap;

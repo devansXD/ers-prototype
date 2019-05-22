@@ -71,15 +71,17 @@ NHS e-referral Service
     <li><strong>Patient: </strong> <a href="#">EVANS, David (Mr)</a></li>
     <li><strong>Gender: </strong> Male</li>
     <li>30 years (4 June 1988)</li>
+    
   </ul>
 </nav>
 {% endblock %}
 {% block content %}
-<div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4 nhsuk-u-padding-bottom-4" style="border-bottom:1px solid #AEB7BD">
-  <div class="nhsuk-grid-column-one-half">
-    <form class="nhsuk-form" action="search-results">
+<div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4" style="border-bottom:1px solid #AEB7BD;">
+  <form class="nhsuk-form" action="search-results">
+    <div class="nhsuk-grid-column-one-half">
+
       <div class="nhsuk-form-group">
-        <label class="nhsuk-label--s" for="autoselect">
+        <label class="nhsuk-label--s nhsuk-u-margin-bottom-1" for="autoselect">
           Search term(s)
         </label>
         <select id="autoselect" name="autoselect">
@@ -164,60 +166,76 @@ NHS e-referral Service
           <option id='Davis, Jonathan Hernia (Mr)'>Davis, Jonathan Hernia (Mr)<br>Nuffield Health Hospital</option>
         </select>
       </div>
-
       <button class="nhsuk-button--ers" type="submit">
         Search
       </button>
 
-    </form>
-
-  </div>
-  <!-- COLUMN -->
-  <div class="nhsuk-grid-column-one-quarter">
-    <div class="nhsuk-form-group">
-
-      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" active>
-        <legend class="nhsuk-fieldset__legend--s">
-          Request type
-        </legend>
-
-        <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-              Advice
-            </label>
-          </div>
-
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral" checked>
-            <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-              Referral
-            </label>
-          </div>
 
 
 
-        </div>
-      </fieldset>
-    </div>
-  </div>
-  <!-- COLUMN -->
-  <div class="nhsuk-grid-column-one-quarter">
-    <div class="nhsuk-form-group">
-      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-        <legend class="nhsuk-fieldset__legend--s">
-          Priority
-        </legend>
-
-        <select class="nhsuk-select" id="select-1" name="select-1">
-          <option value="1" selected>Routine</option>
-          <option value="2">Urgent</option>
-          <option value="3">2 week wait</option>
-        </select>
 
     </div>
+
+    <!-- COLUMN -->
+
+    <div class="nhsuk-grid-column-one-quarter">
+
+
+
+                        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                          <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
+                            Request type
+                          </legend>
+
+                          <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
+                            <div class="nhsuk-radios__item">
+                              <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
+                              <label class="nhsuk-label nhsuk-radios__label" for="example-2" selected="false">
+                                Advice
+                              </label>
+                            </div>
+
+                            <div class="nhsuk-radios__item">
+                              <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral">
+                              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                                Referral
+                              </label>
+                            </div>
+
+
+
+                          </div>
+                        </fieldset>
+
+
+
+
+    </div>
+
+
+<!-- COLUMN -->
+<div class="nhsuk-grid-column-one-quarter">
+
+
+  <div class="nhsuk-form-group">
+    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+      <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
+        Priority
+      </legend>
+
+      <select class="nhsuk-select" id="select-1" name="select-1">
+        <option value="0" selected>Select one</option>
+        <option value="1">Routine</option>
+        <option value="2">Urgent</option>
+        <option value="3">2 week wait</option>
+      </select>
+
   </div>
+
+
+</div>
+
+</form>
 </div>
 
 <!-- Main content panels -->
@@ -335,7 +353,7 @@ NHS e-referral Service
         <div class="nhsuk-grid-full-width">
           <div class="nhsuk-action-bar">
 
-            <button style="margin-right:32px;" class="nhsuk-button--ers_secondary sidebarbttn" onclick=" ga('send', 'event', 'Button', 'Filter', 'Show'); _paq.push(['trackEvent', 'Button', ‘Filter’, Show']);">Show filters</button>
+            <a href="#" style="margin-right:32px;" class="sidebarbttn" onclick=" ga('send', 'event', 'Button', 'Filter', 'Show'); _paq.push(['trackEvent', 'Button', ‘Filter’, Show']);">Show filters</a>
 
             <a class="nhsuk-button nhsuk-button--ers_secondary" href="referral-appointments" type="submit">
               Find appointments

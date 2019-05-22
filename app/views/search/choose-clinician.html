@@ -50,55 +50,51 @@ NHS e-referral Service
             <li class="nhsuk-header__navigation-item">
               <a class="nhsuk-header__navigation-link" href=/search"> Dave Evans </a> </li> </ul> </nav> </div> </div> </div> </header> <!-- SUB MENU PATIENT INFO -->
 
-                <nav class="nhsuk-grey-background patient-info">
-                  <ul role="navigation">
-                    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+              <nav class="nhsuk-grey-background patient-info">
+                <ul role="navigation">
+                  <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+                  <li><strong>Patient: </strong> <a href="#">EVANS, David (Mr)</a></li>
+                  <li><strong>Gender: </strong> Male</li>
+                  <li>30 years (4 June 1988)</li>
 
-                  </ul>
-                </nav>
+                </ul>
+              
+              </nav>
 
                 {% endblock %}
                 {% block content %}
 
-
                 <div class="nhsuk-grid-row nhsuk-u-margin-top-4" style="padding:0 0 350px 0;">
                   <div class="nhsuk-grid-column-one-third">
-                    <h1 class="nhsuk-heading-m">Who are you referring on behalf of?</h1>
+                    <div class="nhsuk-back-link">
+                      <a class="nhsuk-back-link__link" href="index">
+                        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                        </svg>
+                        Go back</a>
+                    </div>
+                    <h1 class="nhsuk-heading-l">Who are you referring on behalf of?</h1>
 
                     <form class="nhsuk-form" action="search">
 
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label--s" for="autoselect">
-                            Choose a clinician
-                          </label>
-                          <select id="autoselect" name="autoselect">
-                            <option value=""></option>
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label--s" for="autoselect">
+                          Choose a clinician
+                        </label>
+                        <select id="autoselect" name="autoselect">
+                          <option value=""></option>
+                          <option id='Berry,Vanessa Jane'>Berry,Vanessa Jane</option>
+                          <option id='Bircher,Jane'>Bircher,Jane</option>
+                          <option id='Kane,Nicholas Mark'>Kane,Nicholas Mark</option>
+                          <option id='Morris,Deborah Joanne'>Morris,Deborah Joanne</option>
+                          <option id='Norwood,Carl'>Norwood,Carl</option>
+                          <option id='Peacock,Shirley'>Peacock,Shirley</option>
+                        </select>
 
-                            <option id='Bryce Estrada'>Bryce Estrada</option>
-                            <option id='Kayleigh Bates'>Kayleigh Bates</option>
-                            <option id='Aileen Villanueva'>Aileen Villanueva</option>
-                            <option id='Mya Perry'>Mya Perry</option>
-                            <option id='Angel Lawrence'>Angel Lawrence</option>
-                            <option id='Zaid Murray'>Zaid Murray</option>
-                            <option id='Gloria Mcintyre'>Gloria Mcintyre</option>
-                            <option id='Colten Burnett'>Colten Burnett</option>
-                            <option id='Cheyanne Scott'>Cheyanne Scott</option>
-                            <option id='Yosef Kramer'>Yosef Kramer</option>
-                            <option id='Davon Nguyen'>Davon Nguyen</option>
-                            <option id='Kasey Fischer'>Kasey Fischer</option>
-                            <option id='August Hall'>August Hall</option>
-                            <option id='Carlee Frost'>Carlee Frost</option>
-                            <option id='Lewis Frost'>Lewis Frost</option>
-                            <option id='Matthias Marshall'>Matthias Marshall</option>
-                            <option id='Kevin Calhoun'>Kevin Calhoun</option>
-                            <option id='Quintin Livingston'>Quintin Livingston</option>
-                            <option id='Kiley Valenzuela'>Kiley Valenzuela</option>
-                          </select>
-
-                        </div>
-                        <button class="nhsuk-button--ers" type="submit">
-                          Contine
-                        </button>
+                      </div>
+                      <button class="nhsuk-button--ers" type="submit">
+                        Contine
+                      </button>
 
 
                     </form>
