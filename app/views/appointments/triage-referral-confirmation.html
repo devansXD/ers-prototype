@@ -71,39 +71,40 @@ NHS e-referral Service
 {% endblock %}
 {% block content %}
 
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-6">
-  <div class="nhsuk-grid-column-three-quarters">
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+  <div class="nhsuk-grid-column-two-thirds">
 
     <div class="panel panel-border-wide alert-success">
-        <h2 class="nhsuk-heading-m">
-      <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-  <path stroke-width="4" stroke-linecap="round" stroke="#007f3b" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
-</svg>
 
-Triage request successfully created</h2>
-  <p>The referral details have been sent.</p>
-</div>
-<h2 class="nhsuk-heading-s">What happens next</h2>
-<p>The referral has been sent to the patient who will need to choose an appointment with the chosen care provider</p>
+      <h1 class="nhsuk-heading-m">
+The triage request was created successfully</h1>
 
-<div class="nhsuk-inset-text">
-  <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>You will now need to print and send the patient letter</p>
-</div>
-
-
-    <span>
-      <a class="nhsuk-button--ers_secondary" href="referral-appointments" type="submit">
-        Print booking
-      </a>
-
-      <a class="nhsuk-button--ers" href="referral-review" role="button" type="submit">
-        Email booking
-      </a>
-    </span>
+    </div>
 
   </div>
+  <div class="nhsuk-grid-column-one-half">
+  </div>
 </div>
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h2 class="nhsuk-heading-s nhsuk-section-border">What to do now</h2>
+    <p> You need to provide the patient with the <strong>triage request</strong>details</p>
+    <p>You will also need to add a referral letter so the provider knows what the referral is for.</p>
+
+  </div>
+  <!-- SIDEBAR ACTIONS -->
+
+  <div class="nhsuk-grid-column-one-third">
+    <h3 class="nhsuk-heading-s nhsuk-section-border">Actions</h3>
+    <ul style="left-margin:0">
+      <li><a href="print-this-page">Print triage instructions</a></li>
+      <li><a href="#">Manage this booking</a></li>
+    </ul>
+  </div>
+</div>
+
+
 
 {% endblock %}
 

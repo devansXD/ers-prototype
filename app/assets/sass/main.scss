@@ -51,6 +51,12 @@ table td{
   }
 }*/
 
+.nhsuk-inset-text--ers{
+  @extend .nhsuk-inset-text;
+  border-color: $color_nhsuk-grey-4;
+  border-left-width: 10px;
+}
+
 .nhsuk-button--ers{
   @extend .nhsuk-button;
   padding:4px 16px;

@@ -4,8 +4,7 @@
 {% set containerClasses = 'nhsuk-width-container-fluid' %}
 {% set bodyClasses = 'nhsuk-white-background' %}
 {% block pageScripts %}
-<script type="text/javascript" src="/js/search.js"></script>
-<script type="text/javascript" src="/js/auto.js"></script>
+
 {% endblock %}
 {% block pageTitle %}
 NHS e-referral Service
@@ -15,7 +14,7 @@ NHS e-referral Service
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container-fluid nhsuk-header__container">
     <div class="nhsuk-header__logo">
-      <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+      <a class="nhsuk-header__link" href="search" aria-label="NHS homepage">
         <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
           <path fill="#fff" d="M0 0h40v16H0z"></path>
           <path fill="#005eb8"
@@ -60,11 +59,10 @@ NHS e-referral Service
 
 </header>
 <!-- SUB MENU PATIENT INFO -->
-
 <nav class="nhsuk-grey-background patient-info">
   <ul role="navigation">
     <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
+    <li><strong>Patient: </strong><a href="Patient name">EVANS, David (Mr)</a></li>
     <li><strong>Gender: </strong> Male</li>
     <li>30 years (4 June 1988)</li>
   </ul>
@@ -72,125 +70,35 @@ NHS e-referral Service
 {% endblock %}
 {% block content %}
 
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-three-quarters">
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-three-quarters">
     <div class="nhsuk-back-link">
       <a class="nhsuk-back-link__link" href="search-results">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to search results</a>
+        Go back</a>
+
+
+      <a class="nhsuk-back-link__link" href="search-results" style="float:right">
+        <span class="hod-printer side-space icon-medium"></span>
+        Print this page</a>
     </div>
-    <h1 class="nhsuk-heading-l">Check the details before sending the referral</h1>
-
-    <h2 class="nhsuk-heading-m">Referral details</h2>
-
-    <dl class="app-check-your-answers app-check-your-answers--short">
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Referral summary
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          Surgery - not otherwise specified - Hernias
-        </dd>
-
-      </div>
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Priority
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          Routine
-        </dd>
-
-      </div>
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Type
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          Referral
-        </dd>
-
-      </div>
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Clinical information
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          None specified
-        </dd>
-
-      </div>
-
-    </dl>
-  </div>
-
-
-</div>
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
-    <h2 class="nhsuk-heading-m">Services chosen</h2>
-
-    <dl class="app-check-your-answers app-check-your-answers--short">
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Services
-        </dt>
-        <dd class="app-check-your-answers__answer">
-        Nuffield Health Leeds Hospital
-
-        </dd>
-      </div>
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Contact
-        </dt>
-        <dd class="app-check-your-answers__answer">
-        Phone: 0800 015 5020 <br> Email: nuffieldhealth.ereferrals@nhs.net<
-
-        </dd>
-      </div>
-
-
-
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-          Clinical information
-        </dt>
-        <dd class="app-check-your-answers__answer">
-          None specified
-        </dd>
-
-      </div>
-
-    </dl>
-
-
-<h3>Before you submit</h3>
-<p>The request will be created and you will need to add a referral letter</p>
-<div class="nhsuk-u-margin-top-4">
-
-      <form class="" action="referral-confirmation-triage">
-        <button class="nhsuk-button--ers" type="submit">
-          Send triage
-        </button>
-        </form>
-        </div>
-  </div>
-
-
+<div class="nhsuk-grid-column-three-quarters">
+  <h1 class="nhsuk-heading-m">Patient referral booking instructions</h1>
+<div id="boxshadow">
+<img src="/images/letter.jpg" alt="Patient booking instructions">
+</div>
+</div>
 </div>
 
+      </div>
 
 
-
+      <!--ENTIRE GRID -->
+    </div>
 
 
 {% endblock %}
