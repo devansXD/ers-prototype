@@ -1,4 +1,12 @@
 $(document).ready(function() {
+   $(".toggleitbutton").click(function () {
+   $(".toggleitpanel").toggle();
+  });
+
+ });
+
+
+$(document).ready(function() {
    $(".toggleitbutton1").click(function () {
    $(".toggleitpanel1").toggle();
   });

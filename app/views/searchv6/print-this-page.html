@@ -4,11 +4,7 @@
 {% set containerClasses = 'nhsuk-width-container-fluid' %}
 {% set bodyClasses = 'nhsuk-white-background' %}
 {% block pageScripts %}
-<script type="text/javascript" src="/js/search.js"></script>
-<script type="text/javascript" src="/js/auto.js"></script>
-<script type="text/javascript" src="/js/reveal.js"></script>
-<script type="text/javascript" src="/js/sort.js"></script>
-<script type="text/javascript" src="/js/sidebar.js"></script>
+
 {% endblock %}
 {% block pageTitle %}
 NHS e-referral Service
@@ -75,89 +71,34 @@ NHS e-referral Service
 {% block content %}
 
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-6">
-  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-three-quarters">
     <div class="nhsuk-back-link">
       <a class="nhsuk-back-link__link" href="search-results">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to search results</a>
+        Go back</a>
+
+
+      <a class="nhsuk-back-link__link" href="search-results" style="float:right">
+        <span class="hod-printer side-space icon-medium"></span>
+        Print this page</a>
     </div>
 
-    <h1 class="nhsuk-heading-m">Select an appointment</h1>
-    <p>These are the appointments available for the selected service.</p>
-
-    <ul class="nhsuk-list">
-      <li><strong><a class="toggleitbutton1" href="#">Spire Methley Park Hospital</a></strong>
-    <br>Abdominal Wall Procedures (Not Otherwise Specified) - Spire Methley Park Hospital - NT350
-
-    <div class="toggleitpanel1" style="display:none">
-      <table class="nhsuk-table">
-        <caption class="nhsuk-table__caption"></caption>
-        <thead class="nhsuk-table__head">
-          <tr class="nhsuk-table__row">
-            <th class="nhsuk-table__header" scope="col">Date</th>
-            <th class="nhsuk-table__header" scope="col">Time</th>
-            <th class="nhsuk-table__header" scope="col"></th>
-          </tr>
-        </thead>
-        <tbody class="nhsuk-table__body">
-          <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Thursday 4th</td>
-            <td class="nhsuk-table__cell ">9:00am</td>
-            <td class="nhsuk-table__cell "><a href="#">Book appointment</a></td>
-          </tr>
-          <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Thursday 4th</td>
-            <td class="nhsuk-table__cell ">15:00pm</td>
-            <td class="nhsuk-table__cell "><a href="#">Book appointment</a></td>
-          </tr>
-          <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Friday 5th</td>
-            <td class="nhsuk-table__cell ">9:00am</td>
-            <td class="nhsuk-table__cell "><a href="#">Book appointment</a></td>
-          </tr>
-          <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Friday 5th</td>
-            <td class="nhsuk-table__cell ">9:00am</td>
-            <td class="nhsuk-table__cell "><a href="#">Book appointment</a></td>
-          </tr>
-          <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Friday 5th</td>
-            <td class="nhsuk-table__cell ">9:00am</td>
-            <td class="nhsuk-table__cell "><a href="#">Book appointment</a></td>
-          </tr>
-          <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Friday 5th</td>
-            <td class="nhsuk-table__cell ">9:00am</td>
-            <td class="nhsuk-table__cell "><a href="#">Book appointment</a></td>
-          </tr>
-          <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Friday 5th</td>
-            <td class="nhsuk-table__cell ">9:00am</td>
-            <td class="nhsuk-table__cell "><a href="#">Book appointment</a></td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-
-    </li>
-
-</ul>
-  <ul class="nhsuk-list">
-    <li><strong><a href="#">The Huddersfield BMI</a></strong><br>Adult NHS Hernia Repair Clinic - The Huddersfield - BMI - NT4</li>
-    </ul>
-      <ul class="nhsuk-list">
-    <li><strong><a href="#">One Health Group</a></strong><br>Adult NHS General Surgery - Hernia Clinic - One Health Group - Holmfirth (NTX26)</li>
-    </ul>
-
+<div class="nhsuk-grid-row">
+<div class="nhsuk-grid-column-three-quarters">
+  <h1 class="nhsuk-heading-m">Patient referral booking instructions</h1>
+<div id="boxshadow">
+<img src="/images/letter.jpg" alt="Patient booking instructions">
+</div>
+</div>
+</div>
 
       </div>
+
+
+      <!--ENTIRE GRID -->
     </div>
-
-
-
 
 
 {% endblock %}

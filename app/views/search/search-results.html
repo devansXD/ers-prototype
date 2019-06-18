@@ -71,7 +71,7 @@ NHS e-referral Service
     <li><strong>Patient: </strong> <a href="#">EVANS, David (Mr)</a></li>
     <li><strong>Gender: </strong> Male</li>
     <li>30 years (4 June 1988)</li>
-    
+
   </ul>
 </nav>
 {% endblock %}
@@ -244,28 +244,7 @@ NHS e-referral Service
     <!-- Filters go here -->
     <h3>Filters</h3>
 
-    <div class="nhsuk-form-group">
-      <fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend--s">
-          Distance
-        </legend>
-        <span class="nhsuk-hint">eg. patient's address</span>
-        <div class="nhsuk-form-group">
 
-          <input class="nhsuk-input nhsuk-u-margin-bottom-2" type="text" name="" placeholder="LS11" value="" style="max-width:200px">
-          <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:200px">
-            <option value="1">+ 5 miles</option>
-            <option value="2" selected>+ 10 miles</option>
-            <option value="3">+ 15 miles</option>
-            <option value="4">+ 20 miles</option>
-            <option value="5">+ 25 miles</option>
-            <option value="6">+ 30 miles</option>
-          </select>
-        </div>
-        <p></p>
-        <p><a class="nhsuk-link" href="#">Save as default</a></p>
-      </fieldset>
-    </div>
 
     <div class="nhsuk-form-group">
 
@@ -288,60 +267,8 @@ NHS e-referral Service
       </fieldset>
     </div>
 
-    <div class="nhsuk-form-group">
-
-      <fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend--s">
-          Speciality
-        </legend>
-        <div class="nhsuk-checkboxes">
-          <div class="nhsuk-checkboxes__item multiple-choice--hod">
-            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
-              GI and liver (medicine and surgery)
-            </label>
-          </div>
-
-          <div class="nhsuk-checkboxes__item multiple-choice--hod">
-            <input class="nhsuk-checkboxes__input" id="4" name="" 4 type="checkbox" value="">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="4">
-              Surgery (not otherwise specified)
-            </label>
-          </div>
 
 
-        </div>
-      </fieldset>
-    </div>
-    <!--
-<div class="nhsuk-form-group">
-  <label class="nhsuk-label--s" for="select-1">
-    Appointments within
-  </label>
-  <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:200px">
-    <option value="1">5 days</option>
-    <option value="2" selected>10 days</option>
-    <option value="3" disabled>2 weeks</option>
-  </select>
-</div>-->
-
-
-
-
-    <!--
-<div class="nhsuk-form-group">
-<fieldset class=nhsuk-fieldset"">
-
-  <div class="nhsuk-checkboxes__item">
-  <input class="nhsuk-radios__input" id="14" name="14" type="checkbox" value="">
-  <label class="nhsuk-label nhsuk-radios__label" for="14">
-  Age / gender appropriate only
-  </label>
-  </div>
-
-
-</fieldset>
-</div>-->
 
   </div>
   <!-- SEARCH RESULTS -->
@@ -353,7 +280,6 @@ NHS e-referral Service
         <div class="nhsuk-grid-full-width">
           <div class="nhsuk-action-bar">
 
-            <a href="#" style="margin-right:32px;" class="sidebarbttn" onclick=" ga('send', 'event', 'Button', 'Filter', 'Show'); _paq.push(['trackEvent', 'Button', ‘Filter’, Show']);">Show filters</a>
 
             <a class="nhsuk-button nhsuk-button--ers_secondary" href="referral-appointments" type="submit">
               Find appointments
@@ -373,15 +299,6 @@ NHS e-referral Service
 
 
 
-    <!--
-    <div class="nhsuk-grid-row">
-      <form class="" action="referral-review">
-        <button onclick="myFunction()" class="nhsuk-button nhsuk-button--secondary nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="button">
-          Show filter
-        </button>
-      </form>
-    </div>
-    -->
 
     <!-- TABLE -->
     <div class="nhsuk-table-responsive">
@@ -401,6 +318,7 @@ NHS e-referral Service
               <button type="button" data-index="0">Distance</button>
 
             </th>
+          
             <th class="nhsuk-table__header" aria-sort="none" scope="col">
               <button onclick="sortTable()" type="button" data-index="0">Next appointment</button>
 
@@ -420,7 +338,7 @@ NHS e-referral Service
 
 
           <!-- -->
-          <tr class="nhsuk-table__row">
+          <tr class="nhsuk-table__row toggleitbutton3">
             <td></td>
 
             <td class="nhsuk-table__cell">
@@ -479,7 +397,7 @@ NHS e-referral Service
             <td class="nhsuk-table__cell">3 miles</td>
             <td class="nhsuk-table__cell">None</td>
           </tr>
-          <tr class="nhsuk-table__row">
+          <tr class="nhsuk-table__row toggleitbutton2">
             <td class="nhsuk-table__cell multiple-choice--hod">
 
               <div class="nhsuk-checkboxes__item">

@@ -1,0 +1,252 @@
+{% extends "layout.html" %}
+
+{% set mainClasses = '' %}
+{% set containerClasses = 'nhsuk-width-container-fluid' %}
+{% set bodyClasses = 'nhsuk-white-background' %}
+{% block pageScripts %}
+<script type="text/javascript" src="/js/search.js"></script>
+<script type="text/javascript" src="/js/auto.js"></script>
+{% endblock %}
+{% block pageTitle %}
+NHS e-referral Service
+{% endblock %}
+
+{% block header %}
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container-fluid nhsuk-header__container">
+    <div class="nhsuk-header__logo">
+      <a class="nhsuk-header__link" href="confirm-patient" aria-label="NHS homepage">
+        <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
+          <path fill="#fff" d="M0 0h40v16H0z"></path>
+          <path fill="#005eb8"
+            d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6">
+          </path>
+          <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+        </svg>
+      </a>
+    </div>
+    <!-- END LOGO -->
+
+    <!-- SERVICE NAME -->
+    <div class="nhsuk-header__transactional-service-name">
+      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+    </div>
+
+    <div class="nhsuk-header__content" id="content-header">
+      <div class="nhsuk-header__menu">
+        <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation">
+          <ul class="nhsuk-header__navigation-list" style="border:0">
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/search">
+                Help
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/search">
+                Alerts
+
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href=/search"> Dave Evans </a> </li> </ul> </nav> </div> </div> </div> </header> <!-- SUB MENU PATIENT INFO -->
+
+                <nav class="nhsuk-grey-background patient-info">
+                  <ul role="navigation">
+                    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+                    <li>Patient: <a href="#">EVANS, David (Mr)</a></li>
+                    <li><strong>Gender: </strong> Male</li>
+                    <li>30 years (4 June 1988)</li>
+                    <li>
+                      <a class="nhsuk-back-link__link" href="search">
+
+                        Close</a>
+
+                    </li>
+                  </ul>
+                </nav>
+
+
+                {% endblock %}
+                {% block content %}
+                <div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4" style="border-bottom:1px solid #AEB7BD;">
+                  <form class="nhsuk-form" action="search-results">
+                    <div class="nhsuk-grid-column-one-half">
+
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label--s nhsuk-u-margin-bottom-1" for="autoselect">
+                          Search term(s)
+                        </label>
+                        <select id="autoselect" name="autoselect">
+                          <option value=""></option>
+                          <option id='Surgery - Not Otherwise Specified / Hernias'>Surgery - Not Otherwise Specified / Hernias</option>
+                          <option id='SNOMED Clinical Term'>SNOMED Clinical Term</option>
+                          <option id='Abdominal wall hernia procedure'>Abdominal wall <code>hernia</code> procedure</option>
+                          <option id='Bilateral inguinal hernia repair'>Bilateral inguinal hernia repair</option>
+                          <option id='Brain stem herniation [disorder] '>Brain stem herniation</option>
+                          <option id='Colporrhaphy for repair of cystocele and rectocele [procedure] (Synonym) '>Colporrhaphy for repair of cystocele and rectocele (Synonym) </option>
+                          <option id='Congenital cerebral hernia [disorder] '>Congenital cerebral hernia</option>
+                          <option id='Congenital endaural hernia [disorder] '>Congenital endaural hernia</option>
+                          <option id='Congenital hiatus hernia [disorder] '>Congenital hiatus hernia</option>
+                          <option id='Cystocele [disorder] '>Cystocele</option>
+                          <option id='Cystocele affecting obstetric care [disorder] '>Cystocele affecting obstetric care</option>
+                          <option id='Cystocele with first degree uterine prolapse [disorder] '>Cystocele with first degree uterine prolapse</option>
+                          <option id='Cystocele with second degree uterine prolapse [disorder] '>Cystocele with second degree uterine prolapse</option>
+                          <option id='Cystocele with third degree uterine prolapse [disorder] '>Cystocele with third degree uterine prolapse</option>
+                          <option id='Cystocele with unspecified uterine prolapse [disorder] '>Cystocele with unspecified uterine prolapse</option>
+                          <option id='Cystocele without uterine prolapse [disorder] '>Cystocele without uterine prolapse</option>
+                          <option id='Diaphragmatic hernia [disorder] '>Diaphragmatic hernia</option>
+                          <option id='Endoscopic primary repair of inguinal hernia [procedure] '>Endoscopic primary repair of inguinal hernia</option>
+                          <option id='Epigastric hernia [disorder] '>Epigastric hernia</option>
+                          <option id='Femoral hernia [disorder] '>Femoral hernia</option>
+                          <option id='Hernia of abdominal cavity [disorder] '>Hernia of abdominal cavity</option>
+                          <option id='Hernia of abdominal wall [disorder] '>Hernia of abdominal wall</option>
+                          <option id='Hernia of anterior abdominal wall [disorder] '>Hernia of anterior abdominal wall</option>
+                          <option id='Hernia of body cavity structure [disorder] '>Hernia of body cavity structure</option>
+                          <option id='Hernia repair [procedure] '>Hernia repair</option>
+                          <option id='Herniated urinary bladder [disorder] '>Herniated urinary bladder</option>
+                          <option id='Herniation of intervertebral disc [disorder] (Synonym) '>Herniation of intervertebral disc (Synonym) </option>
+                          <option id='Herniation of nucleus pulposus [disorder] '>Herniation of nucleus pulposus</option>
+                          <option id='Herniation of rectum into vagina [disorder] '>Herniation of rectum into vagina</option>
+                          <option id='HH - Homonymous hemianopia [finding] (Synonym) '>HH - Homonymous hemianopia (Synonym) </option>
+                          <option id='Hiatal hernia [disorder] '>Hiatal hernia </option>
+                          <option id='Incisional hernia [disorder] '>Incisional hernia</option>
+                          <option id='Inguinal hernia [disorder] '>Inguinal hernia </option>
+                          <option id='Intestinal hernia [disorder] '>Intestinal hernia</option>
+                          <option id='Irreducible hernia of anterior abdominal wall [disorder] '>Irreducible hernia of anterior abdominal wall</option>
+                          <option id='Ischiatic hernia [disorder] '>Ischiatic hernia</option>
+                          <option id='Laparoscopic repair of hiatus hernia [procedure] '>Laparoscopic repair of hiatus hernia</option>
+                          <option id='Laparoscopic repair of inguinal hernia [procedure] '>Laparoscopic repair of inguinal hernia</option>
+                          <option id='Lumbar hernia [disorder] '>Lumbar hernia</option>
+                          <option id='Obturator hernia [disorder] '>Obturator hernia</option>
+                          <option id='Oesophageal hiatus hernia repair [procedure] '>Oesophageal hiatus hernia repair</option>
+                          <option id='Oesophageal operation (including hiatus hernia) [procedure] (Synonym) '>Oesophageal operation (including hiatus hernia) (Synonym) </option>
+                          <option id='Paraumbilical hernia [disorder] '>Paraumbilical hernia</option>
+                          <option id='Perineal hernia [disorder] '>Perineal hernia </option>
+                          <option id='Posterior vaginal hernia [disorder] (Synonym) '>Posterior vaginal hernia (Synonym) </option>
+                          <option id='Primary laparoscopic repair of inguinal hernia [procedure] '>Primary laparoscopic repair of inguinal hernia</option>
+                          <option id='Primary repair of femoral hernia [procedure] '>Primary repair of femoral hernia</option>
+                          <option id='Primary repair of incisional hernia [procedure] '>Primary repair of incisional hernia [procedure] </option>
+                          <option id='Primary repair of incisional hernia using synthetic patch [procedure]'>Primary repair of incisional hernia using synthetic patch</option>
+                          <option id='Primary repair of inguinal hernia [procedure] '>Primary repair of inguinal hernia</option>
+                          <option id='Primary repair of inguinal hernia using sutures [procedure] '>Primary repair of inguinal hernia using sutures</option>
+                          <option id='Primary repair of inguinal hernia using synthetic patch [procedure] '>Primary repair of inguinal hernia using synthetic patch</option>
+                          <option id='Primary repair of umbilical hernia [procedure] '>Primary repair of umbilical hernia [procedure] </option>
+                          <option id='Primary repair of umbilical hernia using suture [procedure] '>Primary repair of umbilical hernia using suture</option>
+                          <option id='Rectovaginal hernia [disorder] (Synonym) '>Rectovaginal hernia (Synonym) </option>
+                          <option id='Repair of diaphragmatic hernia [procedure] '>Repair of diaphragmatic hernia</option>
+                          <option id='Repair of femoral hernia [procedure] '>Repair of femoral hernia</option>
+                          <option id='Repair of hernia of abdominal wall [procedure] '>Repair of hernia of abdominal wall</option>
+                          <option id='Repair of incisional hernia [procedure] '>Repair of incisional hernia</option>
+                          <option id='Repair of incisional hernia with prosthesis or graft [procedure] (Synonym) '>Repair of incisional hernia with prosthesis or graft (Synonym)</option>
+                          <option id='Repair of inguinal hernia [procedure] '>Repair of inguinal hernia</option>
+                          <option id='Repair of recurrent incisional hernia [procedure] '>Repair of recurrent incisional hernia</option>
+                          <option id='Repair of recurrent inguinal hernia [procedure] '>Repair of recurrent inguinal hernia</option>
+                          <option id='Repair of recurrent umbilical hernia [procedure] '>Repair of recurrent umbilical hernia</option>
+                          <option id='Repair of umbilical hernia [procedure] '>Repair of umbilical hernia</option>
+                          <option id='Repair of umbilical hernia with prosthesis [procedure] '>Repair of umbilical hernia with prosthesis</option>
+                          <option id='Richter' s femoral hernia'>Richter' s femoral hernia</option>
+                          <option id='Scrotal hernia'>Scrotal hernia</option>
+                          <option id='Simple excision of inguinal hernial sac [procedure] '>Simple excision of inguinal hernial sac </option>
+                          <option id='Simple Spigelian hernia [disorder] '>Simple Spigelian hernia</option>
+                          <option id='Spigelian hernia [disorder] '>Spigelian hernia</option>
+                          <option id='Strangulated femoral hernia [disorder] '>Strangulated femoral hernia</option>
+                          <option id='Umbilical hernia [disorder] '>Umbilical hernia</option>
+                          <option id='Uterine hernia [disorder] (Synonym) '>Uterine hernia(Synonym) </option>
+                          <option id='Vaginal hernia [disorder] '>Vaginal hernia</option>
+                          <option id='Ventral incisional hernia [disorder]'>Ventral incisional hernia</option>
+                          <option id='Named Clinician'>Named Clinician</option>
+                          <option id='Davis, Jonathan Hernia (Mr)'>Davis, Jonathan Hernia (Mr)<br>Nuffield Health Hospital</option>
+                        </select>
+                      </div>
+                      <button class="nhsuk-button--ers" type="submit">
+                        Search
+                      </button>
+
+
+
+
+
+                    </div>
+
+                    <!-- COLUMN -->
+
+                    <div class="nhsuk-grid-column-one-quarter">
+
+
+
+                                        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                                          <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
+                                            Request type
+                                          </legend>
+
+                                          <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
+                                            <div class="nhsuk-radios__item">
+                                              <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
+                                              <label class="nhsuk-label nhsuk-radios__label" for="example-2" selected="false">
+                                                Advice
+                                              </label>
+                                            </div>
+
+                                            <div class="nhsuk-radios__item">
+                                              <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral">
+                                              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                                                Referral
+                                              </label>
+                                            </div>
+
+
+
+                                          </div>
+                                        </fieldset>
+
+
+
+
+                    </div>
+
+
+                <!-- COLUMN -->
+                <div class="nhsuk-grid-column-one-quarter">
+
+
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                      <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
+                        Priority
+                      </legend>
+
+                      <select class="nhsuk-select" id="select-1" name="select-1">
+                        <option value="0" selected>Select one</option>
+                        <option value="1">Routine</option>
+                        <option value="2">Urgent</option>
+                        <option value="3">2 week wait</option>
+                      </select>
+
+                  </div>
+
+
+                </div>
+
+                </form>
+      </div>
+
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-4" style="padding:0 0 350px 0;">
+        <div class="nhsuk-grid-column-three-quarters">
+          <h1 class="nhsuk-heading-m">Search for clinical services</h1>
+        </div>
+
+
+
+      </div>
+      {% endblock %}
+
+      {% block footer %}
+      <footer role="contentinfo">
+        <div class="nhsuk-footer" id="nhsuk-footer">
+          <div class="nhsuk-width-container nhsuk-width-container-fluid">
+
+            <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+          </div>
+        </div>
+      </footer>
+      {% endblock %}

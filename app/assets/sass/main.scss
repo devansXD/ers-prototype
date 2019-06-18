@@ -33,15 +33,23 @@ h2{
   }
 
 
-
-
-
+.nhsuk-search-input:after{
+  clear: both;
+  content: '';
+  display: block;
+}
+.nhsuk-search-input__item{
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 24px;
+}
+/*
 table td{
   cursor:default;
   a{
     cursor: pointer;
   }
-}
+}*/
 
 .nhsuk-button--ers{
   @extend .nhsuk-button;
@@ -66,6 +74,7 @@ table td{
 .inline{
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 
@@ -218,4 +227,12 @@ border-color: $color_nhsuk-warm-yellow;
   position: absolute;
   right: -5px;
   top: 2px;
+}
+
+.nhsuk-label__strong{
+  font-weight: 600;
+  a{
+    font-weight: normal;
+  }
+
 }
