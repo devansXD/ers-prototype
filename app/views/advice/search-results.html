@@ -73,13 +73,6 @@ NHS e-referral Service
     <li>30 years (4 June 1988)</li>
 
   </ul>
-  <div class="nhsuk-close">
-    <a class="" href="search">Close
-      <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-<path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-</svg></a>
-
-  </div>
 </nav>
 {% endblock %}
 {% block content %}
@@ -175,7 +168,7 @@ NHS e-referral Service
         <option id='Vaginal hernia [disorder] '>Vaginal hernia</option>
         <option id='Ventral incisional hernia [disorder]'>Ventral incisional hernia</option>
         <option id='Named Clinician'>Named Clinician</option>
-        <option id='Davis, Jonathan Hernia (Mr)'>Davis, Jonathan Hernia (Mr)<br> | Nuffield Health Hospital</option>
+        <option id='Davis, Jonathan Hernia (Mr)'>Davis, Jonathan Hernia (Mr)<br>Nuffield Health Hospital</option>
       </select>
       <br>
       <p><a class="toggleitbutton" href="#">+ More search options</a></p>
@@ -248,16 +241,17 @@ NHS e-referral Service
               Commissioned level
             </legend>
 
-            <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
+            <div class="multiple-choice--hod nhsuk-radios inline">
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-3" name="level" type="radio" value="All">
-                <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label--s" for="example-3" selected="false">
+                <input class="nhsuk-radios__input" id="all" name="all" type="radio" value="All">
+                <label class="nhsuk-label nhsuk-radios__label" for="">
                   All
                 </label>
               </div>
+
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-4" name="level" type="radio" value="Local">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-4">
+                <input class="nhsuk-radios__input" id="local" name="example" type="radio" value="Local">
+                <label class="nhsuk-label nhsuk-radios__label" for="local">
                   Local
                 </label>
               </div>
@@ -283,7 +277,7 @@ NHS e-referral Service
   <!-- SEARCH RESULTS -->
   <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-top-4">
     <div class="nhsuk-grid-column-two-thirds">
-      <h3><strong>All results for "Hernia and Surgery"</strong> (9) <span>
+      <h3><strong>All results for "Hernia and Surgery"</strong> (12) <span>
         </span></h3>
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-full-width">
@@ -351,7 +345,7 @@ NHS e-referral Service
             <td></td>
 
             <td class="nhsuk-table__cell">
-              <a class="">Nuffield Health Leeds hospital</a><span class="nhsuk-tag__default">Triage only</span><br><span>Adult NHS Hernia RAS Nuffield Health Leeds hospital | NT225</span>
+              <a class="toggleitbutton1">Nuffield Health Leeds hospital</a><span class="nhsuk-tag__default">Triage only</span><br><span>Adult NHS Hernia RAS Nuffield Health Leeds hospital | NT225</span>
 
               <div class="toggleitpanel1" style="display:none">
 
@@ -417,7 +411,7 @@ NHS e-referral Service
               </div>
             </td>
             <td class="nhsuk-table__cell">
-              <a class="">Spire Leeds Hospital</a> <span class="nhsuk-tag__default">Ring to book</span>
+              <a class="toggleitbutton2">Spire Leeds Hospital</a> <span class="nhsuk-tag__default">Ring to book</span>
               <br>
               <span>Hernias - Surgery (Not Otherwise Specified) Spire Leeds Hospital - NT332</span>
               <div class="toggleitpanel2" style="display:none">
@@ -544,7 +538,7 @@ NHS e-referral Service
 
 
             </td>
-            <td class="nhsuk-table__cell"><a class="">Calderdale Royal Hospital</a><span class="nhsuk-tag__default">Refer via pathway</span><br><span>CHFT - MSK Hernia - Calderdale Royal Hospital- RWY</span>
+            <td class="nhsuk-table__cell"><a class="toggleitbutton3">Calderdale Royal Hospital</a><span class="nhsuk-tag__default">Refer via pathway</span><br><span>CHFT - MSK Hernia - Calderdale Royal Hospital- RWY</span>
               <div class="toggleitpanel3" style="display:none">
                 <p> You must refer to one of the listed pathways services first</p>
 
@@ -581,7 +575,7 @@ NHS e-referral Service
         </tbody>
       </table>
       <br>
-      <p class="align-centre"><a class="nhsuk-button nhsuk-button--ers_secondary" href="#">Load 10 more results</a></p>
+      <a class="nhsuk-button nhsuk-button--ers_secondary" href="#">Load more results</a>
     </div>
   </div>
 

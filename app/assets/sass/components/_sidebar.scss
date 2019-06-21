@@ -1,6 +1,15 @@
-.sidebar {
-    width: 0px;
-    overflow:hidden;
-    visibility: hidden;
-    display: none;
+.side-navigation {
+  li{
+margin: 24px 0;
+border-bottom: 1px solid $color_nhsuk-grey-5;
+
+  }
+  a{
+
+    display: block;
+    padding: 8px;
+    vertical-align: middle;
+    text-decoration: none;
+
+  }
 }

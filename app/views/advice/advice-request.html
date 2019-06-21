@@ -68,13 +68,6 @@ NHS e-referral Service
     <li><strong>Gender: </strong> Male</li>
     <li>30 years (4 June 1988)</li>
   </ul>
-  <div class="nhsuk-close">
-    <a class="" href="search">Close
-      <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-<path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-</svg></a>
-
-  </div>
 </nav>
 {% endblock %}
 {% block content %}
@@ -91,15 +84,26 @@ NHS e-referral Service
 
 </div>
 <div class="nhsuk-grid-column-one-half nhsuk-u-margin-top-4">
-  <div class="panel panel-border-wide alert-default">
-    <h1 class="nhsuk-heading-s">
-
-      Check these details before you continue
-  </h1>
+<h1 class="nhsuk-heading-s">Request advice</h1>
 
 
+<div class="nhsuk-form-group">
+  <span><a href="#">Aluagh, Noor</a> <strong>Today</strong> 11:19</span>
+
+  <div class="nhsuk-panel nhsuk-message">
+    <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+    <p>My patient is suffering from the following symptons:
+    <br>- Loss of bladder control
+  <br> - Chest pain
+<br> - A high temperature</p>
   </div>
+
+
+<textarea class="nhsuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
   </div>
+
+
 
 
     </div>
@@ -108,34 +112,7 @@ NHS e-referral Service
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
   <div class="nhsuk-grid-column-one-half">
 
-    <div class="nhsuk-list">
-      <h2 class="nhsuk-heading-m">Service you have chosen for triage</h2>
 
-<div class="nhsuk-list-item">
-  <p><strong>Nuffield Health Leeds Hospital</strong>
-  <br>Adult NHS Hernia RAS Nuffield Health Leeds hospital | NT225</p>
-  </div>
-
-
-</div>
-
-
-    <div class="nhsuk-u-margin-top-4">
-
-
-
-
-
-
-      <form class="nhsuk-form  nhsuk-u-margin-top-4" action="triage-referral-confirmation">
-        <button class="nhsuk-button--ers" type="submit">
-        Continue
-        </button>
-      </form>
-
-
-
-    </div>
   </div>
 </div>
 

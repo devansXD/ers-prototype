@@ -59,18 +59,13 @@ NHS e-referral Service
                     <li>Patient: <a href="#">EVANS, David (Mr)</a></li>
                     <li><strong>Gender: </strong> Male</li>
                     <li>30 years (4 June 1988)</li>
-                      </ul>
+                    <li>
+                      <a class="nhsuk-back-link__link" href="search">
 
-                      <div class="nhsuk-close">
-                        <a class="" href="search">Close
-                          <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-    <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-  </svg></a>
+                        Close</a>
 
-                      </div>
-
-
-
+                    </li>
+                  </ul>
                 </nav>
 
                 {% endblock %}
@@ -197,8 +192,6 @@ NHS e-referral Service
                               </label>
                             </div>
                           </div>
-
-
                         </div>
                         <div class="nhsuk-grid-column-three-quarters">
                           <!-- PRIORITY / POSTCODE /  DISTANCE -->
@@ -233,33 +226,34 @@ NHS e-referral Service
                               <option value="6">+ 30 miles</option>
                             </select>
                           </div>
-
+                        
                         </div>
                       </div>
                     </div>
                     <div class="nhsuk-form-group">
                       <div class="nhsuk-grid-row">
                         <div class="nhsuk-grid-column-full">
-
+                          <div class="nhsuk-date-input__item">
                             <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
                               Commissioned level
                             </legend>
 
-                            <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
+                            <div class="multiple-choice--hod nhsuk-radios inline">
                               <div class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input" id="example-3" name="level" type="radio" value="All">
-                                <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label--s" for="example-3" selected="false">
+                                <input class="nhsuk-radios__input" id="all" name="all" type="radio" value="All">
+                                <label class="nhsuk-label nhsuk-radios__label" for="">
                                   All
                                 </label>
                               </div>
+
                               <div class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input" id="example-4" name="level" type="radio" value="Local">
-                                <label class="nhsuk-label nhsuk-radios__label" for="example-4">
+                                <input class="nhsuk-radios__input" id="local" name="example" type="radio" value="Local">
+                                <label class="nhsuk-label nhsuk-radios__label" for="local">
                                   Local
                                 </label>
                               </div>
                             </div>
-
+                          </div>
                         </div>
                       </div>
                     </div>
