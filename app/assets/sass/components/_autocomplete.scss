@@ -10,6 +10,7 @@
 .autocomplete__hint,
 .autocomplete__input {
   @extend .nhsuk-input;
+  font-size: 16px;
 }
 
 .autocomplete__input {
@@ -18,6 +19,7 @@
 }
 
 .autocomplete__hint {
+  font-size: 16px;
   color: $color_nhsuk-grey-2;
   position: absolute;
 }
