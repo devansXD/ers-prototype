@@ -71,7 +71,6 @@ NHS e-referral Service
     <li><strong>Patient: </strong> <a href="#">EVANS, David (Mr)</a></li>
     <li><strong>Gender: </strong> Male</li>
     <li>30 years (4 June 1988)</li>
-
   </ul>
   <div class="nhsuk-close">
     <a class="" href="search">Close
@@ -91,6 +90,32 @@ NHS e-referral Service
     <div class="nhsuk-form-group">
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-one-half">
+            <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
+              Request type
+            </legend>
+            <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
+                <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label--s" for="example-2" selected="false">
+                  Advice
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral" checked>
+                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                  Referral
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+
+            <div class="nhsuk-form-group">
+                <div class="nhsuk-grid-row">
+                  <div class="nhsuk-grid-column-one-half">
 
       <!--SEARCH GOES HERE -->
       <label class="nhsuk-label--s nhsuk-u-margin-bottom-1" for="autoselect">
@@ -188,26 +213,6 @@ NHS e-referral Service
     </div>
     <div class="nhsuk-form-group hidden toggleitpanel">
       <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-quarter">
-            <!--REQUEST TYPE AND COMMISSIONED LEVEL -->
-          <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
-            Request type
-          </legend>
-          <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
-              <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label--s" for="example-2" selected="false">
-                Advice
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                Referral
-              </label>
-            </div>
-          </div>
-        </div>
         <div class="nhsuk-grid-column-three-quarters">
           <!-- PRIORITY / POSTCODE /  DISTANCE -->
           <div class="nhsuk-search-input__item">
@@ -555,10 +560,6 @@ NHS e-referral Service
           </tr>
 
 
-
-
-
-
           <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell toggleitbutton4">
 
@@ -610,7 +611,7 @@ NHS e-referral Service
         </tbody>
       </table>
       <br>
-      <p class="align-centre"><a href="#">Load 10 more results</a></p>
+      <p class="align-centre"><a class="nhsuk-button--ers_secondary" href="#">Load 10 more results</a></p>
     </div>
   </div>
 
