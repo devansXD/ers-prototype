@@ -19,6 +19,7 @@
 @import 'components/buttons';
 @import 'components/boxshadow';
 @import 'components/sidebar';
+@import 'components/icons';
 
 // Add your extra styles here...
 h2{
@@ -38,17 +39,16 @@ h2{
 }
 
 
+.nhsuk-icon--ers{
+
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
 
 .nhsuk-close{
   padding: 8px 0;
   margin-right: 16px;
-  .nhsuk-icon--ers{
-    width:24px;
-    height: 24px;
-    vertical-align: middle;
-
-
-  }
 
 }
 

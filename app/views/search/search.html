@@ -18,7 +18,7 @@ NHS e-referral Service
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container-fluid nhsuk-header__container">
     <div class="nhsuk-header__logo">
-      <a class="nhsuk-header__link" href="confirm-patient" aria-label="NHS homepage">
+      <a class="nhsuk-header__link" href="search" aria-label="Back to search">
         <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
           <path fill="#fff" d="M0 0h40v16H0z"></path>
           <path fill="#005eb8"
@@ -56,7 +56,12 @@ NHS e-referral Service
                 <nav class="nhsuk-grey-background patient-info">
                   <ul role="navigation">
                     <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
-                    <li>Patient: <a href="#">EVANS, David (Mr)</a></li>
+                    <li>Patient: <a href="#">EVANS, David (Mr) <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+
+                        <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon id="Rectangle" fill="#415563" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+                        </g>
+                    </svg></a></li>
                     <li><strong>Gender: </strong> Male</li>
                     <li>30 years (4 June 1988)</li>
                       </ul>
@@ -74,35 +79,14 @@ NHS e-referral Service
                 </nav>
 
                 {% endblock %}
+
                 {% block content %}
                 <div class="nhsuk-grid-row nhsuk-panel--grey nhsuk-u-padding-top-4">
 
                 <!-- NEW HTML -->
                 <div class="nhsuk-grid-column-full">
                   <div class="nhsuk-form">
-                    <div class="nhsuk-form-group">
-                      <div class="nhsuk-grid-row">
-                        <div class="nhsuk-grid-column-one-half">
-                          <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
-                            Request type
-                          </legend>
-                          <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
-                            <div class="nhsuk-radios__item">
-                              <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
-                              <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label--s" for="example-2" selected="false">
-                                Advice
-                              </label>
-                            </div>
-                            <div class="nhsuk-radios__item">
-                              <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral">
-                              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                                Referral
-                              </label>
-                            </div>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
+
 
                       <!--SEARCH GOES HERE -->
 
@@ -110,7 +94,7 @@ NHS e-referral Service
                           <div class="nhsuk-grid-row">
                             <div class="nhsuk-grid-column-one-half">
 
-                      <label class="nhsuk-label--s nhsuk-u-margin-bottom-1" for="autoselect">
+                      <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-2" for="autoselect">
                         Search term(s)
                       </label>
                       <select id="autoselect" name="autoselect" class="nhsuk-u-input--width-5">
@@ -199,6 +183,37 @@ NHS e-referral Service
                         <option id="">Smith, Paul (Dr) <br> Spire Leeds</option>
                       </select>
                     </div>
+                    <div class="nhsuk-grid-column-one-quarter">
+                        <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
+                        Request type
+                      </legend>
+                      <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
+                          <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label" for="example-2" selected="false">
+                            Advice
+                          </label>
+                        </div>
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral">
+                          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                            Referral
+                          </label>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="nhsuk-grid-column-one-quarter">
+                        <label class="nhsuk-label nhsuk-label__strong">
+                          Priority
+                        </label>
+                        <select class="nhsuk-select nhsuk-input--width-10" id="select-1" name="select-1">
+                          <option value="0" selected>Select one</option>
+                          <option value="1">Routine</option>
+                          <option value="2">Urgent</option>
+                          <option value="3">2 week wait</option>
+                        </select>
+
+                      </div>
                     </div>
                     </div>
 
@@ -209,25 +224,17 @@ NHS e-referral Service
 
                     <div class="nhsuk-form-group">
                       <div class="nhsuk-grid-row">
-                        <div class="nhsuk-grid-column-three-quarters">
+                        <div class="nhsuk-grid-column-one-quarter">
                           <!-- PRIORITY / POSTCODE /  DISTANCE -->
-                          <div class="nhsuk-search-input__item">
-                            <label class="nhsuk-label nhsuk-label__strong">
-                              Priority
-                            </label>
-                            <select class="nhsuk-select nhsuk-input--width-10" id="select-1" name="select-1">
-                              <option value="0" selected>Select one</option>
-                              <option value="1">Routine</option>
-                              <option value="2">Urgent</option>
-                              <option value="3">2 week wait</option>
-                            </select>
-                          </div>
+
                           <div class="nhsuk-date-input__item">
                             <label class="nhsuk-label nhsuk-label__strong">
                               Postcode / place
                             </label>
                             <input class="nhsuk-input nhsuk-u-margin-bottom-2" type="text" name="" placeholder="LS236JE" value="LS23 6JE" style="max-width:200px">
                           </div>
+                          </div>
+                            <div class="nhsuk-grid-column-one-quarter">
                           <div class="nhsuk-date-input__item">
                             <label class="nhsuk-label nhsuk-label__strong nhsuk-body-xs">
                               Distance <a class="nhsuk-body-xs" href="#">Make default</a>
@@ -242,14 +249,10 @@ NHS e-referral Service
                               <option value="6">+ 30 miles</option>
                             </select>
                           </div>
+                          </div>
 
-                        </div>
-                      </div>
-                    </div>
-                    <div class="nhsuk-form-group">
-                      <div class="nhsuk-grid-row">
-                        <div class="nhsuk-grid-column-full">
 
+                          <div class="nhsuk-grid-column-one-quarter">
                             <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
                               Commissioned level
                             </legend>
@@ -268,10 +271,11 @@ NHS e-referral Service
                                 </label>
                               </div>
                             </div>
-
-                        </div>
+                            </div>
                       </div>
-                    </div>
+                      </div>
+
+
                     <div class="nhsuk-form-group">
                       <div class="nhsuk-grid-row">
                         <div class="nhsuk-grid-column-full">
@@ -279,6 +283,7 @@ NHS e-referral Service
                         </div>
                       </div>
                     </div>
+
                   </div>
                 </div>
                 </div>

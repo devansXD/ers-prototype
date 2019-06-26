@@ -21,7 +21,7 @@ NHS e-referral Service
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container-fluid nhsuk-header__container">
     <div class="nhsuk-header__logo">
-      <a class="nhsuk-header__link" href="confirm-patient" aria-label="NHS e-Referral Service">
+        <a class="nhsuk-header__link" href="search" aria-label="Back to search">
         <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
           <path fill="#fff" d="M0 0h40v16H0z"></path>
           <path fill="#005eb8"
@@ -87,41 +87,18 @@ NHS e-referral Service
 <!-- NEW HTML -->
 <div class="nhsuk-grid-column-full">
   <div class="nhsuk-form">
-    <div class="nhsuk-form-group">
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-one-half">
-            <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
-              Request type
-            </legend>
-            <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
-                <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label--s" for="example-2" selected="false">
-                  Advice
-                </label>
-              </div>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral" checked>
-                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                  Referral
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
 
-
-
-            <div class="nhsuk-form-group">
-                <div class="nhsuk-grid-row">
-                  <div class="nhsuk-grid-column-one-half">
 
       <!--SEARCH GOES HERE -->
-      <label class="nhsuk-label--s nhsuk-u-margin-bottom-1" for="autoselect">
+
+        <div class="nhsuk-form-group">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-half">
+
+      <label class="nhsuk-label nhsuk-label__strong nhsuk-u-margin-bottom-2" for="autoselect">
         Search term(s)
       </label>
-      <select id="autoselect" name="autoselect" class="nhsuk-u-input--width-5">
+      <select id="autoselect" name="autoselect" class="nhsuk-u-input--width-4">
         <option value=""></option>
         <option id='Surgery - Not Otherwise Specified / Hernias'>Surgery - Not Otherwise Specified / Hernias</option>
         <option id='SNOMED Clinical Term'>SNOMED Clinical Term</option>
@@ -206,37 +183,69 @@ NHS e-referral Service
         <option id="">Smith, Paul (Dr) <br> BMI Healthcare</option>
         <option id="">Smith, Paul (Dr) <br> Spire Leeds</option>
       </select>
-      <br>
-      <p><a class="toggleitbutton" href="#">+ More search options</a></p>
+
+      <br>  <p><a class="toggleitbutton" href="#">+More search options</a></p>
+
+    </div>
+    <div class="nhsuk-grid-column-one-quarter">
+
+        <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
+        Request type
+      </legend>
+      <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
+          <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label" for="example-2" selected="false">
+            Advice
+          </label>
+        </div>
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+            Referral
+          </label>
+        </div>
+      </div>
+      </div>
+      <div class="nhsuk-grid-column-one-quarter">
+        <label class="nhsuk-label nhsuk-label__strong">
+          Priority
+        </label>
+        <select class="nhsuk-select nhsuk-input--width-10" id="select-1" name="select-1">
+          <option value="0" selected>Select one</option>
+          <option value="1">Routine</option>
+          <option value="2">Urgent</option>
+          <option value="3">2 week wait</option>
+        </select>
+
+      </div>
     </div>
     </div>
-    </div>
-    <div class="nhsuk-form-group hidden toggleitpanel">
+
+
+
+    <!-- END FORM GROUP -->
+
+
+    <div class="nhsuk-form-group toggleitpanel hidden">
       <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-three-quarters">
+
+        <div class="nhsuk-grid-column-one-quarter">
           <!-- PRIORITY / POSTCODE /  DISTANCE -->
-          <div class="nhsuk-search-input__item">
-            <label class="nhsuk-label nhsuk-label__strong">
-              Priority
-            </label>
-            <select class="nhsuk-select nhsuk-input--width-10" id="select-1" name="select-1">
-              <option value="0" selected>Select one</option>
-              <option value="1">Routine</option>
-              <option value="2">Urgent</option>
-              <option value="3">2 week wait</option>
-            </select>
-          </div>
+
           <div class="nhsuk-date-input__item">
             <label class="nhsuk-label nhsuk-label__strong">
               Postcode / place
             </label>
             <input class="nhsuk-input nhsuk-u-margin-bottom-2" type="text" name="" placeholder="LS236JE" value="LS23 6JE" style="max-width:200px">
           </div>
+          </div>
+            <div class="nhsuk-grid-column-one-quarter">
           <div class="nhsuk-date-input__item">
-            <label class="nhsuk-label nhsuk-label__strong">
-              Distance <a href="#">Make default</a>
+            <label class="nhsuk-label nhsuk-label__strong nhsuk-body-xs">
+              Distance <a class="nhsuk-body-xs" href="#">Make default</a>
             </label>
-            <select class="nhsuk-select" id="select-1" name="select-1" style="min-width:200px">
+            <select class="nhsuk-select nhsuk-body-xs" id="select-1" name="select-1" style="min-width:200px">
               <option value="select a distance" disabled>Select a distance</option>
               <option value="1">+ 5 miles</option>
               <option value="2">+ 10 miles</option>
@@ -246,13 +255,10 @@ NHS e-referral Service
               <option value="6">+ 30 miles</option>
             </select>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="nhsuk-form-group hidden toggleitpanel">
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-full">
-          <div class="nhsuk-date-input__item">
+          </div>
+
+
+          <div class="nhsuk-grid-column-one-quarter">
             <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
               Commissioned level
             </legend>
@@ -271,10 +277,11 @@ NHS e-referral Service
                 </label>
               </div>
             </div>
-          </div>
-        </div>
+            </div>
       </div>
-    </div>
+      </div>
+
+
     <div class="nhsuk-form-group">
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-full">
@@ -282,6 +289,7 @@ NHS e-referral Service
         </div>
       </div>
     </div>
+
   </div>
 </div>
 </div>
@@ -290,7 +298,7 @@ NHS e-referral Service
 <div class="nhsuk-grid-row">
 
   <!-- SEARCH RESULTS -->
-  <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-top-4">
+  <div class="nhsuk-width-container-fluid nhsuk-u-margin-top-4">
     <div class="nhsuk-grid-column-two-thirds">
       <h3><strong>All results for "Hernia and Surgery"</strong> (9) <span>
         </span></h3>
@@ -358,14 +366,15 @@ NHS e-referral Service
           <!-- -->
           <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell toggleitbutton3">
-            <svg class="nhsuk-icon nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-                <g id="Plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                    <g transform="translate(31.000000, 31.000000)" fill-rule="nonzero" id="Shape" stroke="#425462" stroke-width="12">
-                        <path d="M44,44 L88,44 L44,44 L44,0 L44,44 Z M44,44 L44,88 L44,44 L4.26325641e-14,44 L44,44 Z"></path>
-                    </g>
-                </g>
-            </svg></td>
+              <svg class="nhsuk-icon nhsuk-icon__arrow-down" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+
+                  <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <polygon id="Rectangle" fill="#415563" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+                  </g>
+              </svg>
+
+          </td>
 
             <td class="nhsuk-table__cell">
               <a class="">Nuffield Health Leeds hospital</a><span class="nhsuk-tag__default">Triage only</span><br><span>Adult NHS Hernia RAS Nuffield Health Leeds hospital | NT225</span>
@@ -544,14 +553,12 @@ NHS e-referral Service
 
           <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell">
-            <svg class="nhsuk-icon nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-down" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
 
-                <g id="Plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                    <g transform="translate(31.000000, 31.000000)" fill-rule="nonzero" id="Shape" stroke="#425462" stroke-width="12">
-                        <path d="M44,44 L88,44 L44,44 L44,0 L44,44 Z M44,44 L44,88 L44,44 L4.26325641e-14,44 L44,44 Z"></path>
-                    </g>
-                </g>
-            </svg></td>
+                  <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <polygon id="Rectangle" fill="#415563" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+                  </g>
+              </svg></td>
 
             <td class="nhsuk-table__cell"><a href="#">Huddersfield Royal Infirmary</a><span class="nhsuk-tag__default">Triage only</span><br><span>General Surgery RAS Huddersfield Royal Infirmary RWY</span>
             </td>
@@ -563,12 +570,10 @@ NHS e-referral Service
           <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell toggleitbutton4">
 
-              <svg class="nhsuk-icon nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-down" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
 
-                  <g id="Plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                      <g transform="translate(31.000000, 31.000000)" fill-rule="nonzero" id="Shape" stroke="#425462" stroke-width="12">
-                          <path d="M44,44 L88,44 L44,44 L44,0 L44,44 Z M44,44 L44,88 L44,44 L4.26325641e-14,44 L44,44 Z"></path>
-                      </g>
+                  <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <polygon id="Rectangle" fill="#415563" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
                   </g>
               </svg>
 
