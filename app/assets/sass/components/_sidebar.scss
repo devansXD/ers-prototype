@@ -1,15 +1,22 @@
-.side-navigation {
+nav.nhsuk-sidebar-actions{
+  border-radius: 1px;
+  border:1px solid $color_nhsuk-grey-4;
+  padding: 4px;
+  display: flex-wrap;
   li{
 margin: 0;
-border-bottom: 1px solid $color_nhsuk-grey-5;
 
+padding: 8px 0;
+li:first-child{
+  background-color:$color_nhsuk-grey-4;
+}
   }
+
   a{
 
-    display: block;
-    padding: 8px;
+    padding: 10px;
     vertical-align: middle;
     text-decoration: none;
-
+    border-bottom: 1px solid $color_nhsuk-grey-4;
   }
 }

@@ -29,8 +29,8 @@ NHS e-referral Service
 
     <!-- SERVICE NAME -->
     <div class="nhsuk-header__transactional-service-name">
-          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
-        </div>
+      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+    </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
@@ -48,55 +48,192 @@ NHS e-referral Service
               </a>
             </li>
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href=/search">
-                Dave Evans
-              </a>
-            </li>
-          </ul>
-        </nav>
+              <a class="nhsuk-header__navigation-link" href=/search"> Dave Evans </a> </li> </ul> </nav> </div> </div> </div> </header> <!-- SUB MENU PATIENT INFO -->
+                <nav class="nhsuk-grey-background nhsuk-tabs">
+                  <ul role="navigation">
+                    <li><a href="#">Patients</a></li>
+                    <li><a href="#">Worklists</a></li>
+                    <li><a href="#">Directory of services</a></li>
+                    <li><a href="#">Enquiries</a></li>
+                    <li><a href="#">Reports</a></li>
+                  </ul>
+                </nav>
+                {% endblock %}
+                {% block content %}
+                <div class="nhsuk-grid-row nhsuk-u-margin-top-4"">
+  <div class=" nhsuk-grid-column-two-thirds">
+                  <div class="nhsuk-back-link">
+                    <a class="nhsuk-back-link__link" href="search-results">
+                      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                      </svg>
+                      Go back to reports</a>
+                  </div>
+                  <h1 class="nhsuk-heading-l">Advice and guidance activity reports</h1>
+
+                  <details class="nhsuk-details" open="">
+                    <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+                      <span class="nhsuk-details__summary-text">
+                        About these reports
+                      </span>
+                    </summary>
+                    <div class="nhsuk-details__text" id="details-content-0" aria-hidden="false">
+                      <p>These reports are delivered as CSV files. To understand how these reports are put together read the <a href="."> business rules and processing logic used to generate them.</a></p>
+
+                    </div>
+                  </details>
+                </div>
+
+
+                <div class="nhsuk-grid-column-one-third">
+
+
+                </div>
 
       </div>
-    </div>
+
+
+      <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-grey-background nhsuk-u-padding-top-4">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+
+
+
+
+
+
+                <div class="nhsuk-form-group nhsuk-u-padding-left-4">
+                  <fieldset class="nhsuk-fieldset" aria-describedby="dob-with-autocomplete-attribute-hint" role="group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Create a new report
+                      </h1>
+                    </legend>
+
+                    <p>Enter a date range for the reports</p>
+                    <span class="nhsuk-hint" id="dob-with-autocomplete-attribute-hint">
+                      For example, 01/08/2017
+                    </span>
+
+
+                    <div class="nhsuk-date-input inline" id="">
+                      <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-label--s">
+                            From date
+                          </label>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-5" id="" name="" type="number" autocomplete="" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+
+                      <div class="nhsuk-date-input__item inline">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-label--s">
+                            End date
+                          </label>
+  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-5" id="" name="" type="number" autocomplete="" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+
+
+                    </div>
+                    <div class="nhsuk-u-margin-top-4 inline">
+                      <button class="nhsuk-button--ers" type="submit">
+                          Create new report
+                        </button>
+                        <a class="nhsuk-u-margin-left-4" href="report-generated">Clear dates</a>
+
+                    </div>
+
+
+
+
+
+                  </fieldset>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="nhsuk-table__panel-with-heading-tab">
+  <h3 class="nhsuk-table__heading-tab">My reports</h3>
+  <div class="nhsuk-table-responsive">
+    <table class="nhsuk-table">
+      <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell" colspan="4">You have no advice and guidance reports</td>
+
+
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">7 April 2018 to 11 April 2019</td>
+          <td class="nhsuk-table__cell ">Requested on 12 April 2019</td>
+            <td class="nhsuk-table__cell" colspan="2">Report being generated</td>
+
+
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">7 April 2018 to 11 April 2019</td>
+          <td class="nhsuk-table__cell ">Requested on 12 April 2019</td>
+            <td class="nhsuk-table__cell "><a class="nhsuk-button--ers_secondary nhsuk-u-margin-0" href="referral-appointments" type="submit">
+              Download
+                </a></td>
+                <td>
+                  Report available for 7 days
+                  </td>
+
+        </tr>
+
+      </tbody>
+    </table>
   </div>
-
-
-</header>
-<!-- SUB MENU PATIENT INFO -->
-
-  
-
-
-{% endblock %}
-{% block content %}
-
-
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-three-quarters">
-    <h1 class="nhsuk-heading-m">Advice and guidance activity reports</h1>
-
-    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
-      <a href="reports">Find reports</a>
-    </h2>
-    <p>Not tested</p>
-
-    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
-      <a href="report-generated">Reports generated</a>
-    </h2>
-    <p>Not tested</p>
-  </div>
-
-
-
 </div>
-{% endblock %}
 
-{% block footer %}
-<footer role="contentinfo">
-  <div class="nhsuk-footer" id="nhsuk-footer">
-    <div class="nhsuk-width-container nhsuk-width-container-fluid">
 
-      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
-    </div>
-  </div>
-</footer>
-{% endblock %}
+
+        </div>
+
+
+
+
+        <div class="nhsuk-grid-column-one-third">
+
+          <!--
+          <div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information:</span>
+            <h3>Why we are creating reports this way</h3>
+            <p>Creating reports as and when they are required is more efficient.</p>
+            <p>Reports will be available to download for 7 calendar days. If you require the same report again, create the report again.
+            </p>
+            <p>The advice and guidance activity report is the first report to be delivered this way.</p>
+            <p>To provide feedback on this NHS e-RS application feature, <a href="#"> please take a short survey.</a></p>
+          </div>
+-->
+        </div>
+
+      </div>
+
+
+
+
+      {% endblock %}
+
+      {% block footer %}
+      <footer role="contentinfo">
+        <div class="nhsuk-footer" id="nhsuk-footer">
+          <div class="nhsuk-width-container nhsuk-width-container-fluid">
+
+            <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+          </div>
+        </div>
+      </footer>
+      {% endblock %}
