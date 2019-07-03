@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layout-nhsuk.html' %}
 
 {% block pageTitle %}
   Mini hub - Page three
@@ -12,14 +12,14 @@
         text: "Home"
       }
     ],
-    href: "/templates/mini-hub",
+    href: "/docs/templates/mini-hub",
     text: "Main page"
   }) }}
 {% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-grid-column-three-quarters">
 
       <h1>
         Page three heading
@@ -31,36 +31,29 @@
       {{ contentsList({
         items: [
           {
-            href: "/templates/mini-hub",
+            href: "/docs/templates/mini-hub",
             text: "Main page"
           },
           {
-            href: "/templates/mini-hub/page-2",
+            href: "/docs/templates/mini-hub/page-2",
             text: "Page two"
           },
           {
-            href: "/templates/mini-hub/page-3",
+            href: "/docs/templates/mini-hub/page-3",
             text: "Page three",
             current: "true"
           }
         ]
       }) }}
 
-      <p>
-        [Page content goes here]
-      </p>
-
-      <p>
-        [Visit the
-        <a href="https://beta.nhs.uk/service-manual/">NHS digital service manual</a>
-        for guidance and examples.]
-      </p>
+      <p>[Page content goes here]</p>
+      <p>[Visit the <a href="https://beta.nhs.uk/service-manual/">NHS digital service manual</a> for guidance and examples.]</p>
 
       {{ pagination({
-        "previousUrl": "/templates/mini-hub/page-2",
+        "previousUrl": "/docs/templates/mini-hub/page-2",
         "previousPage": "Page two"
       }) }}
 
-    </div>
+    </div>  
   </div>
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Developer friendly install guide - NHS.UK prototype kit
+  NHS.UK prototype kit - Advanced install
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,17 +22,17 @@
 
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>Developer friendly install guide</h1>
+      <h1>Advanced install guide</h1>
 
       <p class="nhsuk-body-l">The prototype kit is built on the <a href="http://expressjs.com/" target="_blank">Express<span class="nhsuk-u-visually-hidden">opens in new window</span></a></a> framework, and uses the <a href="https://github.com/nhsuk/nhsuk-frontend" target="_blank">NHS.UK frontend<span class="nhsuk-u-visually-hidden">opens in new window</span></a>.</p>
 
-      <h2 class="nhsuk-u-padding-top-4">GitHub</h2>
+      <h2>GitHub</h2>
 
-      <p><a href="https://github.com/nhsuk/nhsuk-prototype-kit">NHS.UK prototype kit GitHub repo</a>
+      <p>Clone or download the kit from the <a href="https://github.com/nhsuk/nhsuk-prototype-kit" target="_blank">NHS.UK prototype kit GitHub repo<span class="nhsuk-u-visually-hidden">opens in new window</span>.</a>
       
       <h2>Requirements</h2>
 
-      <p>node.js - LTS version 8 or higher</p>
+      <p>node.js - version 8.x.x</p>
 
       <h2>Install dependencies</h2>
 
@@ -44,19 +44,21 @@
 
       <p>Go to <a href="http://localhost:3000">localhost:3000</a> in your browser.</p>
 
-      <div class="nhsuk-panel">
+      <hr>
 
-        <h2>Getting started</h2>
+      <h2>How to guides</h2>
 
-        <ul>
-          <li><a href="/docs/how-tos/making-pages">Making pages</a></li>
-          <li><a href="/docs/how-tos/adding-assets">Adding CSS, JavaScript and Images</a></li>
-          <li><a href="/docs/how-tos/components">Using components</a></li>
-        </ul>
+      <p>These guides will show you how to use the prototype kit, from creating a simple page to building complex user journeys.</p>
 
-        <p>See all <a href="/docs/how-tos">how to guides</a>.</p>
+      <ul>
+        <li><a href="/docs/how-tos/making-pages">How to make pages</a></li>
+        <li><a href="/docs/how-tos/page-elements">How to style page elements</a></li>
+        <li><a href="/docs/how-tos/components">How to use components</a></li>
+      </ul>
 
-      </div>
+      <p><a href="/docs/how-tos">See all how to guides</a></p>
+
+      <hr>
 
       {{ backLink({
         "href": "/docs/install",
