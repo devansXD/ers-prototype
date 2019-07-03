@@ -27,9 +27,28 @@
 
 .styleguide-example{
   border: 1px solid $color_nhsuk-grey-4;
-  padding: 16px;
-  margin-top: 32px;
+  padding:40px 16px;
+  margin: 32px 0;
+  position: relative;
+  overflow: hidden;
+
 }
+.styleguide-example::before{
+  content:"EXAMPLE";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding:4px 8px;
+  text-transform: none;
+  font-size: 14px;
+  font-weight: bold;
+  background: $color_nhsuk-grey-4;
+  color: $color_nhsuk-black;
+  -webkit-font-smoothing:antialiased;
+
+}
+
+
 
 .nhsuk-section-border{
   display:inline-block;

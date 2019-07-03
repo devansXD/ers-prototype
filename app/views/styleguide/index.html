@@ -12,8 +12,8 @@
   <div class="nhsuk-grid-column-full nhsuk-u-margin-top-5">
 
     <p class="nhsuk-body-l">
-      This design system is for everyone. It's purpose is to document work specific to the
-      e Referral service, specically, patterns and components that are not contributed back as yet to the NHS service manual.
+      The purpose of this design system is to document patterns and components specific to the
+      e-Referral service.
     </p>
 
 
@@ -25,9 +25,10 @@
     <h4>This is a heading h4</h4>
     <h5>This is a heading h5</h5>
     <h2>Components</h2>
+      <h3>Alerts</h3>
 
     <div class="styleguide-example">
-      <h3>Alerts</h3>
+
 
       <div class="panel panel-border-wide alert-default">
           <h1 class="nhsuk-heading-s">
@@ -51,22 +52,22 @@ The request was created successfully
 
 
 
-
+  <h3>Buttons</h3>
     <div class="styleguide-example">
-      <h3>Buttons</h3>
+
 
       <a class="nhsuk-button--ers" href="#">Primary button</a>
       <a class="nhsuk-button--ers_secondary" href="#">Secondary button</a>
 
     </div>
-
+    <h3>Labels</h3>
     <div class="styleguide-example">
-      <h3>Labels</h3>
+
 
     </div>
-
+  <h3>Patient header</h3>
     <div class="styleguide-example">
-      <h3>Patient header</h3>
+
 
 
 
@@ -125,26 +126,216 @@ The request was created successfully
 
     </div>
 
+          <h3>Sidebar</h3>
+
 
                     <div class="styleguide-example">
-                      <h3>Sidebar</h3>
 
 
 
-                      <nav class="nhsuk-sidebar-actions">
-                        <ul>
-                          <li>Referral actions</li>
-                          <li><a href="#">Email the instructions</a></li>
-                          <li><a href="#">Print the instructions</a></li>
-                          <li><a href="#">Manage this referral</a></li>
-                        </ul>
+                      <div class="nhsuk-sidebar">
+                        <h3>Referral actions</h3>
+                        <nav class="nhsuk-sidebar-actions">
+                          <ul>
 
-                      </nav>
+                            <li><a href="#">Email the instructions</a></li>
+                            <li><a href="#">Print the instructions</a></li>
+                            <li><a href="#">Manage this referral</a></li>
+                          </ul>
+
+                        </nav>
+
+                      </div>
+
+
+
+
 
                     </div>
 
-                    <div class="styleguide-example">
                       <h3>Table multi select</h3>
+                    <div class="styleguide-example">
+
+                      <div class="nhsuk-table-responsive">
+                        <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable">
+
+                          <!-- TABLE START -->
+                          <thead class="nhsuk-table__head">
+                            <tr class="nhsuk-table__row">
+                              <th class="nhsuk-table_header"></th>
+                              <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                                <button onclick="sortTable()" type="button" data-index="0">Service name</button>
+
+
+                              </th>
+
+                              <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                                <button type="button" data-index="0">Distance</button>
+
+                              </th>
+
+                              <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                                <button onclick="sortTable()" type="button" data-index="0">Next appointment</button>
+
+
+                              </th>
+
+
+                            </tr>
+                          </thead>
+
+
+                          <tbody class="nhsuk-table__body">
+
+
+
+
+
+
+
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell multiple-choice--hod">
+
+                                <div class="nhsuk-checkboxes__item">
+                                  <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+                                  <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                                    &nbsp;
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="nhsuk-table__cell">
+                                <a>St Jame's University Hospital</a> <span class="nhsuk-tag__warning">Limited capacity</span>
+                                <br>
+                                <span>Hernia-Not Otherwise Specified Leeds TH(St James's Hosp)-RR8</span></td>
+                              <td class="nhsuk-table__cell">3 miles</td>
+                              <td class="nhsuk-table__cell">None</td>
+                            </tr>
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell multiple-choice--hod">
+
+                                <div class="nhsuk-checkboxes__item">
+                                  <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+                                  <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                                    &nbsp;
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="nhsuk-table__cell toggleitbutton2">
+                                <a class="">Spire Leeds Hospital</a> <span class="nhsuk-tag__default">Telephone appointments</span>
+                                <br>
+                                <span>Hernias - Surgery (Not Otherwise Specified) Spire Leeds Hospital - NT332</span>
+                                <div class="toggleitpanel2" style="display:none">
+                                  <p class="nhsuk-body-s">METHLEY LANE, LEEDS, WEST YORKSHIRE, LS26 9HG <br>
+                                    Phone: 0113 242 5544 Email: enquiries@spire.nhs.net</p>
+
+                                    <dl class="nhsuk-body-s">
+                                      <dt>Referrer alerts</dt>
+                                      <dd>Please read 'exclusions' section prior to referral</dd>
+                                    </dl>
+
+                                  <dl class="nhsuk-body-s">
+                                    <dt>Conditions</dt>
+                                    <dd>Diagnosis & treatment of abdominal wall lesions</dd>
+                                    <dt>Exclusions</dt>
+                                    <dd>Service Users under the age of 18.
+                                      Any Service User with an ASA (American Society of Anaesthesiologists) score of 3 (who is unstable), unless the appropriate Critical Care facilities that meet the levels of Critical Care for Adult Patients Standards and Guidelines
+                                      (Intensive Care Society 2002) are available.
+                                    </dd>
+                                    <dd>
+                                      Where the Service Users will require general anaesthetic and the patient has a Body Mass Index greater than 35.
+                                      Service Users with suspected cancer, who should be referred directly on to the appropriate cancer pathway.
+                                      Service Users who have a current and significantly unstable psychiatric disorder where the Hospital cannot reasonably be expected to accommodate the patient’s needs.</dd>
+                                  </dl>
+
+
+                                  <dl class="nhsuk-body-s">
+                                    <dt>Procedures</dt>
+                                    <dd>Suture of anterior abdominal wall
+                                      Other repair of anterior abdominal wall
+                                      Excision umbilicus
+                                      Excision urachus
+                                      Extirpation of lesion of umbilicus
+                                      Biopsy of lesion of umbilicus
+
+                                      Excision of fistula of umbilicus
+
+                                      Operations on umbilicus
+
+                                      Biopsy of lesion of anterior abdominal wall
+                                      Drainage of anterior abdominal wall
+
+                                      Removal of foreign body from anterior abdominal wall
+                                      Other operation on anterior abdominal wall...</dd>
+
+                                  </dl>
+                                  <a class="nhsuk-link toggleitbutton2" href="#" role="button" draggable="false">Close</a>
+
+                                </div>
+
+
+                              </td>
+                              <td class="nhsuk-table__cell">4 miles</td>
+                              <td class="nhsuk-table__cell">None</td>
+
+
+                            </tr>
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell multiple-choice--hod">
+
+                                <div class="nhsuk-checkboxes__item">
+                                  <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+                                  <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                                    &nbsp;
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="nhsuk-table__cell">
+                                <a>Dewsbury and District Hospital</a> <span class="nhsuk-tag__warning">Limited capacity</span>
+                                <br>
+                                <span>Hernia-Surgery Not Otherwise Specified Dewsbury Hospital-RXF</span></td>
+                              <td class="nhsuk-table__cell">5 miles</td>
+                              <td class="nhsuk-table__cell">none</td>
+                            </tr>
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell multiple-choice--hod">
+
+                                <div class="nhsuk-checkboxes__item">
+                                  <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+                                  <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                                    &nbsp;
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="nhsuk-table__cell"><a>Westcliffe Health - Shipley MP</a><br><span>General Surgery Outpatients Shipley</span></td>
+                              <td class="nhsuk-table__cell">8 miles</td>
+                              <td class="nhsuk-table__cell">none</td>
+
+                            </tr>
+
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell multiple-choice--hod">
+
+                                <div class="nhsuk-checkboxes__item">
+                                  <input type="checkbox" class="nhsuk-checkboxes__input jsCheckbox" id="radio-1">
+                                  <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                                    &nbsp;
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="nhsuk-table__cell"><a>The Yorkshire Clinic</a><br><span>Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</span>
+                              </td>
+                              <td class="nhsuk-table__cell">9 miles</td>
+                              <td class="nhsuk-table__cell">Ring to book</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                        <br>
+                        <p class="align-centre"><a class="nhsuk-button--ers_secondary" href="#">Load 10 more results</a></p>
+                      </div>
+
+
+
 
                     </div>
 

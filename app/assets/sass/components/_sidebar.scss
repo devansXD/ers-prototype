@@ -1,22 +1,54 @@
-nav.nhsuk-sidebar-actions{
-  border-radius: 1px;
-  border:1px solid $color_nhsuk-grey-4;
-  padding: 4px;
-  display: flex-wrap;
-  li{
-margin: 0;
+// ==========================================================================
+// COMPONENTS / SIDEBAR
+// ==========================================================================
 
-padding: 8px 0;
-li:first-child{
-  background-color:$color_nhsuk-grey-4;
+.nhsuk-sidebar {
+  padding: 0;
+  margin: 0;
+  border-radius: 2px;
+  border: 1px solid $color_nhsuk-grey-4;
+
+  h3 {
+    margin-bottom: 0;
+    padding: 12px 0 12px 24px;
+    display: block;
+    background: $color_nhsuk-grey-4;
+  }
 }
+
+nav.nhsuk-sidebar-actions {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 4px;
   }
 
-  a{
+  li {
+    display: inline-block;
+    margin: 2px 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 
-    padding: 10px;
-    vertical-align: middle;
+    a:nth-last-child {
+      background-color: $color_nhsuk-red;
+    }
+  }
+
+  a {
+    color: $color_nhsuk-blue;
+    display: block;
+    padding: 12px 24px;
+    position: relative;
     text-decoration: none;
-    border-bottom: 1px solid $color_nhsuk-grey-4;
+    width: 100%;
+    box-shadow: none;
+    vertical-align: middle;
+    line-height: 1.5em;
+    border-top: 1px solid $color_nhsuk-grey-4;
+
+    a:nth-last-child(an+b) {
+      border-bottom: 0;
+    }
   }
 }
