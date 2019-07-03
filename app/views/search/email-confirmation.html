@@ -61,29 +61,28 @@ NHS e-referral Service
 </header>
 <!-- SUB MENU PATIENT INFO -->
 
-    <nav class="nhsuk-grey-background patient-info">
-      <ul role="navigation">
-        <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
-        <div class="nhsuk-close">
-          <a class="" href="search">Close
-            <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<nav class="nhsuk-grey-background patient-info">
+  <ul role="navigation">
+    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+    <li><strong>Patient: </strong><a href="Patient name">EVANS, David (Mr)</a></li>
+    <li><strong>Gender: </strong> Male</li>
+    <li>30 years (4 June 1988)</li>
+  </ul>
+  <div class="nhsuk-close">
+    <a class="" href="search">Close
+      <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
 </svg></a>
 
-
-
-
-        </div>
-
-      </ul>
-    </nav>
+  </div>
+</nav>
 
 {% endblock %}
 {% block content %}
 
 
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-one-half">
+  <div class="nhsuk-grid-column-full">
 
     <div class="panel panel-border-wide alert-success">
       <h1 class="nhsuk-heading-s">
@@ -93,8 +92,41 @@ NHS e-referral Service
 
     </div>
 
-    <h2 class="nhsuk-heading-s">What will happen now</h2>
-    <p>Once the patient receives the email they will be able to login to the Manage Your Referral service to book an appointment</p>
+
+    <div class="nhsuk-grid-row nhsuk-u-margin-bottom-9">
+
+      <div class="nhsuk-grid-column-two-thirds">
+        <h2 class="nhsuk-heading-s">What will happen now</h2>
+        <p>Once the patient receives the email they will be able to login to the Manage Your Referral service to book an appointment</p>
+
+
+      </div>
+
+      <div class="nhsuk-grid-column-one-third">
+        <div class="nhsuk-sidebar">
+          <h3>Referral actions</h3>
+          <nav class="nhsuk-sidebar-actions">
+            <ul>
+
+          
+              <li><a href="#">Print the instructions <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+</svg></a></li>
+              <li><a href="#">Manage this referral  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+</svg></a></li>
+            </ul>
+
+          </nav>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
 
   </div>
 
@@ -103,6 +135,9 @@ NHS e-referral Service
 
 
 </div>
+
+
+
 {% endblock %}
 
 {% block footer %}
