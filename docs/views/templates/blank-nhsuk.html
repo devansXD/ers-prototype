@@ -1,17 +1,22 @@
-{% extends 'layout-nhsuk.html' %}
+{% extends 'layout.html' %}
 
 {% block pageTitle %}
-  NHS.UK prototype kit - Blank template
+  Blank template - NHS.UK prototype kit
 {% endblock %}
 
 {% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
 {% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
 
-    <div class="nhsuk-grid-column-three-quarters">
+    <div class="nhsuk-grid-column-two-thirds">
 
+      <!-- Add your content here -->
 
     </div>  
 
