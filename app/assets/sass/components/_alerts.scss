@@ -21,6 +21,11 @@
   border-left-width: 10px;
 }
 
+.panel-border-wide.alert-info {
+  border-color: #425462;
+  background-color:$color_nhsuk-grey-5;
+}
+
 .panel-border-wide.alert-default {
   border-color: #2b8cc4;
   background-color: #dbeff9;
