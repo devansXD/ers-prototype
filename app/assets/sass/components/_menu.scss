@@ -44,8 +44,12 @@ a{
 
 
 nav.nhsuk-tabs{
+  font-size: 17px;
   display: flex;
   flex-wrap: nowrap;
+  background: $color_nhsuk-grey-4;
+  border-bottom: 1px solid $color_nhsuk-grey-2;
+
 ul{
   max-width: 75%;
   display:flex;
@@ -55,17 +59,34 @@ ul{
   padding: 0;
   list-style-type: none;
 
+
 }
 li{
   margin-bottom: 0;
   border-right:1px solid $color_nhsuk-grey-2;
 
-  a:link, a:visited, a:hover,a:active{
+  a:link, a:visited{
+    margin-bottom: 0;
+    color:$color_nhsuk-blue;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1.5em;
     padding: 12px 16px;
-    display:block;
-    flex-wrap:nowrap;
     text-decoration: none;
+    a:hover{
+      background-color: $color_nhsuk-grey-2;
+    }
+
+    a:active{
+      background: $color_nhsuk-white;
+    }
 
   }
+}
+
+a.nhsuk-focus{
+  background-color: $color_nhsuk-white;
+
 }
 }
