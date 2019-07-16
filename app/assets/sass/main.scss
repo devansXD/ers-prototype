@@ -126,7 +126,9 @@ table td{
   flex-wrap: nowrap;
   flex-direction: row;
 }
-
+.block{
+  display: block;
+}
 
 @mixin nhsuk-width-container-fluid {
   margin: 0 $nhsuk-gutter-half;
@@ -170,8 +172,8 @@ width: 100%;
 
   background-color: $color_nhsuk-white;
   display: inline-block;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
+  font-family: Frutiger, sans-serif;
+  font-size: 14px;
   padding: 4px 8px;
   margin-left: 8px;
   font-weight: 400;

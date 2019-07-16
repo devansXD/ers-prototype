@@ -1,4 +1,8 @@
-
+.app-check-your-answers--no-border {
+  dl, dt, dd{
+    border: 0
+  }
+}
 ul {
 
 list-style-type: none;

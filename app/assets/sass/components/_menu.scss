@@ -90,3 +90,29 @@ a.nhsuk-focus{
 
 }
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+
+
+
+}
+
+.flex-container  div {
+
+  margin-right: 10px;
+ul {
+  display: inline;
+  margin-left: 32px;
+  justify-content: space-between;
+
+  li{
+    display: inline;
+    text-align:center;
+    margin-right:32px;
+    padding: 8px;
+  }
+}
+
+}

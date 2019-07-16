@@ -1,6 +1,15 @@
 //
-table th,table td, table dl{
+.nhsuk-table--no-border {
+  tr, td {
+    border: 0
+  }
+}
+
+#results{
+th,td, dl{
   font-size: 17px !important;
+}
+
 }
 
 table td{
@@ -8,9 +17,7 @@ vertical-align: top;
 padding-top: 16px;
 
 }
-table tr:hover{
-  cursor:pointer !important;
-}
+
 
 
 
