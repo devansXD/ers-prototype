@@ -21,6 +21,7 @@
 @import 'components/sidebar';
 @import 'components/icons';
 @import 'components/toggle';
+@import 'components/summary-list';
 
 
 // Add your extra styles here...
@@ -173,7 +174,7 @@ width: 100%;
   background-color: $color_nhsuk-white;
   display: inline-block;
   font-family: Frutiger, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   padding: 4px 8px;
   margin-left: 8px;
   font-weight: 400;
@@ -199,8 +200,9 @@ width: 100%;
   border-color:$color_nhsuk-grey-1;
 }
 .nhsuk-tag__highlight{
-color: $color_nhsuk-warm-yellow;
-border-color: $color_nhsuk-warm-yellow;
+  @extend .nhsuk-tag;
+color: $color_nhsuk-blue;
+border-color: $color_nhsuk-blue;
 }
 
 
