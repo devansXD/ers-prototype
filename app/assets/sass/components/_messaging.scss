@@ -1,0 +1,61 @@
+
+// ==========================================================================
+// COMPONENTS / ALERTS
+// ==========================================================================
+.nhsuk-message {
+  box-sizing: border-box;
+  clear: both;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  position: relative;
+
+  p{
+
+    padding:0;
+    font-size: 1em;
+  }
+
+}
+
+.nhsuk-message_blue{
+  background-color:#EDF4FB;
+}
+
+.nhsuk-message_green {
+background-color: #c6ece9;
+}
+
+.nhsuk-message_blue:after{
+	bottom: 100%;
+	left: 100px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.nhsuk-message_blue:after {
+	border-bottom-color:#EDF4FB;
+	border-width: 10px;
+
+}
+
+.nhsuk-message_green:after{
+	bottom: 100%;
+	right: 100px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.nhsuk-message_green:after {
+	border-bottom-color:#c6ece9;
+	border-width: 10px;
+
+}

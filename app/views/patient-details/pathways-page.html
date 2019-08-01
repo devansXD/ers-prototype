@@ -1,0 +1,388 @@
+{% extends "layout.html" %}
+
+{% set mainClasses = '' %}
+{% set containerClasses = 'nhsuk-width-container-fluid' %}
+{% set bodyClasses = 'nhsuk-white-background' %}
+
+{% block pageScripts %}
+<script type="text/javascript" src="/js/search.js"></script>
+<script type="text/javascript" src="/js/auto.js"></script>
+<script type="text/javascript" src="/js/reveal.js"></script>
+<script type="text/javascript" src="/js/sort.js"></script>
+<script type="text/javascript" src="/js/sidebar.js"></script>
+
+
+{% endblock %}
+{% block pageTitle %}
+NHS e-referral Service
+{% endblock %}
+
+{% block header %}
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container-fluid nhsuk-header__container">
+    <div class="nhsuk-header__logo">
+      <a class="nhsuk-header__link" href="search" aria-label="NHS e-Referral Service">
+        <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
+          <path fill="#fff" d="M0 0h40v16H0z"></path>
+          <path fill="#005eb8"
+            d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6">
+          </path>
+          <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+        </svg>
+      </a>
+    </div>
+    <!-- END LOGO -->
+    <!-- SERVICE NAME -->
+    <div class="nhsuk-header__transactional-service-name">
+      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+    </div>
+
+    <div class="nhsuk-header__content" id="content-header">
+      <div class="nhsuk-header__menu">
+        <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation">
+          <ul class="nhsuk-header__navigation-list" style="border:0">
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/conditions/social-care-and-support/">
+                Help
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/news/">
+                Alerts
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/service-search">
+                Dave Evans
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- SUB MENU PATIENT INFO -->
+<!-- SUB MENU PATIENT INFO -->
+
+<nav class="nhsuk-grey-background patient-info">
+  <ul role="navigation">
+    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+    <li><strong>Patient: </strong> <a href="Patient name">EVANS, David (Mr)</a></li>
+    <li><strong>Gender: </strong> Male</li>
+    <li>30 years (4 June 1988)</li>
+  </ul>
+  <div class="nhsuk-close">
+    <a class="" href="search">Close
+      <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+</svg></a>
+
+  </div>
+</nav>
+{% endblock %}
+{% block content %}
+
+
+<!-- Main content panels -->
+<div class="nhsuk-grid-row">
+
+  <div class="nhsuk-width-container-fluid nhsuk-u-margin-top-4">
+    <!-- SEARCH RESULTS -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="search-results">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back to search results</a>
+      </div>
+      <h3>Pathway services for Calderdale Royal Hospital</h3>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-full-width">
+          <div class="nhsuk-action-bar">
+            <a class="nhsuk-button nhsuk-button--ers_secondary" href="referral-appointments" type="submit">
+              View appointments
+            </a>
+            <a class="nhsuk-button nhsuk-button--ers" href="referral-review" role="button" type="submit">
+              Patient to book
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!--
+    <div class="nhsuk-grid-row">
+      <form class="" action="referral-review">
+        <button onclick="myFunction()" class="nhsuk-button nhsuk-button--secondary nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-1 nhsuk-u-margin-left-4" type="button">
+          Show filter
+        </button>
+      </form>
+    </div>
+    -->
+
+    <!-- TABLE -->
+    <div class="nhsuk-table-responsive">
+      <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable">
+
+        <!-- TABLE START -->
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table_header"></th>
+            <th class="nhsuk-table__header" aria-sort="none" scope="col">
+              <button onclick="sortTable()" type="button" data-index="0">Service name</button>
+
+            </th>
+
+            <th class="nhsuk-table__header" aria-sort="none" scope="col">
+              <button onclick="sortTable()" type="button" data-index="1">Distance</button>
+
+            </th>
+            <th class="nhsuk-table__header" aria-sort="none" scope="col">
+              <button onclick="sortTable()" type="button" data-index="1">Next appointment</button>
+            </th>
+
+          </tr>
+        </thead>
+
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell multiple-choice--hod">
+
+              <div class="nhsuk-checkboxes__item">
+                <input type="checkbox" class="nhsuk-checkboxes__input" id="radio-1">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                  &nbsp;
+                </label>
+              </div>
+            </td>
+            <td class="nhsuk-table__cell">
+              <a class="toggleitbutton1">CALDERDALE ROYAL HOSPITAL</a>
+              <br>
+
+              <span>General Surgery Not Otherwise Specified -Calderdale Royal Hospital-RWY </span>
+
+              <div class="toggleitpanel1" style="display:none">
+
+                <p class="nhsuk-body-s">SALTERHEBBLE, HALIFAX, WEST YORKSHIRE, HX3 0PW<br>
+                  Phone: 01484 355733</p>
+                <dl class="nhsuk-body-s">
+                  <dt>Conditions</dt>
+
+                  <dd>Hernia
+                    All general surgical conditions
+                    Skin and subcutaneous lumps, swelling,
+                    All skin lesions that are not appropriate for dermatology</dd>
+
+                </dl>
+
+                <dl class="nhsuk-body-s">
+                  <dt>Exclusions</dt>
+                  <dd>Patients under the age of 16 years should be referred into the General Paediatric surgery service
+                    Bariatric Surgery (CCG approval required prior to referral via appropriate route - NOT Choose & Book)
+                    Haemorrhoids - refer through Colorectal Surgery Service
+                    Breast - refer through Breast Surgery Service
+                    Vascular - refer through Vascular Surgery Service
+                    Colorectal - refer through Colorectal Surgery Service
+                    Benign neoplasm of skin of face or eyelid - please refer to plastic surgery Some procedures require approval through an exceptional cases committee please refer to guidelines on restricted medical treatments.
+                    In order for us to progress with a referral for these Restricted Procedures, we require prior approval from the CCG. Any referral for consideration for surgery will be returned to the GP
+                    Skin:
+                    . Skin & Subcutaneous Lesion (fatty lumps/lipomata)
+                    . Other Benign Skin lesions
+                    . Skin hypo-pigmentation
+                    . Vascular Skin lesions
+                    For suspected Cancer referrals please use the 2 week Fast Track pro forma and refer via the E-Referral Service</dd>
+
+                </dl>
+
+
+                <dl class="nhsuk-body-s">
+                  <dt>Procedures</dt>
+                  <dd>Trigger point injection</dd>
+
+                </dl>
+                <a class="nhsuk-link toggleitbutton2" href="#" role="button" draggable="false">Close</a>
+
+
+              </div>
+
+
+
+            </td>
+            <td class="nhsuk-table__cell">11 miles</td>
+            <td class="nhsuk-table__cell">Tomorrow</td>
+
+
+
+
+          </tr>
+
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell multiple-choice--hod">
+
+              <div class="nhsuk-checkboxes__item">
+                <input type="checkbox" class="nhsuk-checkboxes__input" id="radio-1">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                  &nbsp;
+                </label>
+              </div>
+            </td>
+            <td class="nhsuk-table__cell">
+              <a class="toggleitbutton2">HUDDERSFIELD ROYAL INFIRMARY</a>
+              <br>
+
+              <span>General Surgery-Not Otherwise Specified - Huddersfield Royal Infirmary RWY</span>
+
+              <div class="toggleitpanel2" style="display:none">
+
+                <p class="nhsuk-body-s">ACRE STREET, HUDDERSFIELD, WEST YORKSHIRE, HD3 3EA<br>
+                  Phone: 01484 355904</p>
+                <dl class="nhsuk-body-s">
+                  <dt>Conditions</dt>
+
+                  <dd>Hernia
+All general surgical conditions
+Skin and subcutaneous lumps
+Swelling
+All skin lesions that are not appropriate for dermatology</dd>
+
+                </dl>
+
+                <dl class="nhsuk-body-s">
+                  <dt>Exclusions</dt>
+                  <dd>Patients under the age of 16 years should be referred into the General Paediatric surgery service
+Bariatric Surgery (CCG approval required prior to referral via appropriate route - NOT Choose & Book)
+Haemorrhoids - refer through Colorectal Surgery Service
+Breast - refer through Breast Surgery Service
+Vascular - refer through Vascular Surgery Service
+Colorectal - refer through Colorectal Surgery Service
+Benign neoplasm of skin of face or eyelid - please refer to plastic surgery Some procedures require approval through an exceptional cases committee please refer to guidelines on restricted medical treatments.
+In order for us to progress with a referral for these Restricted Procedures, we require prior approval from the CCG. Any referral for consideration for surgery will be returned to the GP
+Skin:
+. Skin & Subcutaneous Lesion (fatty lumps/lipomata)
+. Other Benign Skin lesions
+. Skin hypo-pigmentation
+. Vascular Skin lesions
+For suspected Cancer referrals please use the 2 week Fast Track pro forma and refer via the E-Referral Service</dd>
+
+                </dl>
+
+
+                <dl class="nhsuk-body-s">
+                  <dt>Procedures</dt>
+                  <dd>Trigger point injection</dd>
+
+                </dl>
+                <a class="nhsuk-link toggleitbutton1" href="#" role="button" draggable="false">Close</a>
+
+
+              </div>
+
+
+
+            </td>
+            <td class="nhsuk-table__cell">11 miles</td>
+            <td class="nhsuk-table__cell">Tomorrow</td>
+
+
+
+
+          </tr>
+
+
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell multiple-choice--hod">
+
+              <div class="nhsuk-checkboxes__item">
+                <input type="checkbox" class="nhsuk-checkboxes__input" id="radio-1">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="radio-1">
+                  &nbsp;
+                </label>
+              </div>
+            </td>
+            <td class="nhsuk-table__cell">
+              <a class="toggleitbutton3">TODMORDEN HEALTH CENTRE</a>
+              <br>
+
+              <span>General Surgery - Not otherwise Specified - Todmorden Health Centre </span>
+
+              <div class="toggleitpanel3" style="display:none">
+
+                <p class="nhsuk-body-s">LOWER GEORGE STREET, TODMORDEN, LANCASHIRE, OL14 5RN<br>
+                  Phone: 01484 355904</p>
+                <dl class="nhsuk-body-s">
+                  <dt>Conditions</dt>
+
+                  <dd>"Hernia
+All general surgical conditions
+Skin and subcutaneous lumps
+Swelling
+All skin lesions that are not appropriate for dermatology"</dd>
+
+                </dl>
+
+                <dl class="nhsuk-body-s">
+                  <dt>Exclusions</dt>
+                  <dd>"Patients under the age of 16 years should be referred into the General Paediatric surgery service
+Bariatric Surgery (CCG approval required prior to referral via appropriate route - NOT Choose & Book)
+Haemorrhoids - refer through Colorectal Surgery Service
+Breast - refer through Breast Surgery Service
+Vascular - refer through Vascular Surgery Service
+Colorectal - refer through Colorectal Surgery Service
+Benign neoplasm of skin of face or eyelid - please refer to plastic surgery Some procedures require approval through an exceptional cases committee please refer to guidelines on restricted medical treatments.
+In order for us to progress with a referral for these Restricted Procedures, we require prior approval from the CCG. Any referral for consideration for surgery will be returned to the GP
+Skin:
+. Skin & Subcutaneous Lesion (fatty lumps/lipomata)
+. Other Benign Skin lesions
+. Skin hypo-pigmentation
+. Vascular Skin lesions
+For suspected Cancer referrals please use the 2 week Fast Track pro forma and refer via the E-Referral Service"</dd>
+
+                </dl>
+
+
+                <dl class="nhsuk-body-s">
+                  <dt>Procedures</dt>
+                  <dd>Trigger point injection</dd>
+
+                </dl>
+                <a class="nhsuk-link toggleitbutton1" href="#" role="button" draggable="false">Close</a>
+
+
+              </div>
+
+
+
+            </td>
+            <td class="nhsuk-table__cell">11 miles</td>
+            <td class="nhsuk-table__cell">Tomorrow</td>
+
+
+
+
+          </tr>
+
+
+
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container nhsuk-width-container-fluid">
+
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}

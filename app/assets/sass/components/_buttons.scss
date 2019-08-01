@@ -3,3 +3,35 @@
 // ==========================================================================
 // COMPONENTS / BUTTONS
 // ==========================================================================
+
+
+
+.nhsuk-button--ers{
+  @extend .nhsuk-button;
+  padding:4px 16px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.nhsuk-button--ers_secondary {
+  @extend .nhsuk-button--ers;
+  background-color: #425563;
+  box-shadow: 0 4px 0 #232e35; }
+  .nhsuk-button--ers_secondary:hover, .nhsuk-button--ers_secondary:focus {
+    background-color: #384854; }
+  .nhsuk-button--ers_secondary.nhsuk-button--ers_disabled {
+    background-color: #425563; }
+
+.nhsuk-button--ers_reverse{
+@extend .nhsuk-button--ers;
+background-color: $color_nhsuk-white;
+border:1px solid  #425563;
+color: #425563;
+box-shadow: 0 4px 0 #425563;
+}
+
+.nhsuk-button--ers_reverse:hover, .nhsuk-button--ers_reverse:focus {
+  @extend .nhsuk-button--ers_reverse;
+  background-color: $color_nhsuk-grey-5; }
+.nhsuk-button--ers_reverse.nhsuk-button--ers_disabled {
+  background-color: #425563; }

@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block beforeContent %}
+  {{ hero({
+    "heading": "e Referral service",
+    "text": "Prototypes and confidence levels from usability testing"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+
+    <h2>Appointments</h2>
+    <div class="nhsuk-grid-column-full">
+    <table class="nhsuk-table">
+      <!-- TABLE START -->
+      <thead class="nhsuk-table__head">
+        <tr class="nhsuk-table__row">
+          <th class="nhsuk-table_header">Version</th>
+          <th class="nhsuk-table_header">Confidence</th>
+          <th class="nhsuk-table_header">Changes made</th>
+        </tr>
+      </thead>
+
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><a href="appointments/">version 1</a></td>
+              <td class="nhsuk-table__cell"><span class="nhsuk-tag__warning">NOT YET TESTED</span></td>
+                <td class="nhsuk-table__cell">Simplified flow, fewer steps to book</td>
+
+          </tr>
+
+
+
+
+
+        </tbody>
+
+    </table>
+    </div>
+  </div>
+{% endblock %}
