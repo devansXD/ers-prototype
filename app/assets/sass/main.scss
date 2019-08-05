@@ -28,6 +28,40 @@
 
 // Add your extra styles here...
 
+.nhsuk-u-border-left{
+  border-left: 1px solid $color_nhsuk-grey-4;
+}
+.nhsuk-u-border-right{
+  border-right: 1px solid $color_nhsuk-grey-4;
+}
+
+
+.nhsuk-heading-menu{
+  display: flex;
+  text-align: justify;
+  justify-content: space-between;
+
+
+}
+
+.nhsuk-heading-menu__title{
+  display: inline-block;
+  vertical-align: middle;
+}
+.nhsuk-heading-menu__actions{
+  display: inline;
+  vertical-align: middle;
+}
+.nhsuk-menu{
+  display: inline-block;
+  position: relative;
+
+}
+
+
+
+
+
 .styleguide-example{
   border: 1px solid $color_nhsuk-grey-4;
   padding:40px 16px;
@@ -168,7 +202,6 @@ width: 100%;
   font-family: Frutiger, sans-serif;
   font-size: 16px;
   padding: 4px 8px;
-  margin-left: 8px;
   font-weight: 400;
   border-width: 1px;
   border-style: solid;
@@ -196,7 +229,6 @@ width: 100%;
 color: $color_nhsuk-blue;
 border-color: $color_nhsuk-blue;
 }
-
 
 
 .nhsuk-label__strong{

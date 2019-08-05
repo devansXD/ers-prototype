@@ -32,6 +32,23 @@ box-shadow: 0 4px 0 #425563;
 
 .nhsuk-button--ers_reverse:hover, .nhsuk-button--ers_reverse:focus {
   @extend .nhsuk-button--ers_reverse;
-  background-color: $color_nhsuk-grey-5; }
+  background-color: $color_nhsuk-grey-5;
+cursor: pointer;}
 .nhsuk-button--ers_reverse.nhsuk-button--ers_disabled {
-  background-color: #425563; }
+  background-color: #425563;
+cursor: pointer;}
+
+.nhsuk-upload-button-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.nhsuk-upload-button-container input[type=file] {
+  font-size: 5em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
