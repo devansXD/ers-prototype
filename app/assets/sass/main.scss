@@ -15,7 +15,6 @@
 @import 'components/alerts';
 @import 'components/tables';
 @import 'components/lists';
-@import 'components/icons/icons';
 @import 'components/buttons';
 @import 'components/boxshadow';
 @import 'components/sidebar';
@@ -23,7 +22,8 @@
 @import 'components/toggle';
 @import 'components/summary-list';
 @import 'components/messaging';
-
+@import 'components/test';
+@import 'components/tags';
 
 
 // Add your extra styles here...
@@ -36,29 +36,8 @@
 }
 
 
-.nhsuk-heading-menu{
-  display: flex;
-  text-align: justify;
-  justify-content: space-between;
 
-
-}
-
-.nhsuk-heading-menu__title{
-  display: inline-block;
-  vertical-align: middle;
-}
-.nhsuk-heading-menu__actions{
-  display: inline;
-  vertical-align: middle;
-}
-.nhsuk-menu{
-  display: inline-block;
-  position: relative;
-
-}
-
-
+// STYLEGUIDE //
 
 
 
@@ -193,41 +172,6 @@ div input[type=checkbox]::before, input[type=radio]::before{
 display: flex;
 justify-content: space-between;
 width: 100%;
-}
-
-.nhsuk-tag {
-
-  background-color: $color_nhsuk-white;
-  display: inline-block;
-  font-family: Frutiger, sans-serif;
-  font-size: 16px;
-  padding: 4px 8px;
-  font-weight: 400;
-  border-width: 1px;
-  border-style: solid;
-
-
-}
-.nhsuk-tag__success{
-    @extend .nhsuk-tag;
-  border-color: $color_nhsuk-green;
-  color: $color_nhsuk-green;
-}
-
-.nhsuk-tag__warning{
-    @extend .nhsuk-tag;
-  border-color: $color_nhsuk-red;
-  color: $color_nhsuk-red;
-}
-.nhsuk-tag__default{
-  @extend .nhsuk-tag;
-  color: $color_nhsuk-grey-1;
-  border-color:$color_nhsuk-grey-1;
-}
-.nhsuk-tag__highlight{
-  @extend .nhsuk-tag;
-color: $color_nhsuk-blue;
-border-color: $color_nhsuk-blue;
 }
 
 

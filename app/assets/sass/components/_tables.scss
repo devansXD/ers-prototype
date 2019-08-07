@@ -7,7 +7,7 @@
 
 #results{
 th,td, dl{
-  font-size: 17px !important;
+  font-size: 18px !important;
 }
 
 }
@@ -95,4 +95,24 @@ padding-top: 16px;
   position: absolute;
   right: -5px;
   top: 2px;
+}
+
+// SEARCH RESULTS
+
+.nhsuk-search-result-title{
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 700;
+  a{
+    margin-right: 16px;
+  }
+}
+.nhsuk-search-result-meta{
+  color:#768692;
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-top: 8px;
+
+
 }

@@ -139,26 +139,42 @@ NHS e-referral Service
 
     </div>
 
+    <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+  <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+    Some attachments failed to upload
+  </h2>
+  <div class="nhsuk-error-summary__body">
+    <p>
+      The file sizes are too big. Try a smaller file size and upload again.
+    </p>
+    <ul class="nhsuk-list nhsuk-error-summary__list">
+      <li>
+        <a href="#example-error-1">knee-xray.doc</a>
+      </li>
 
-    <div class="nhsuk-form-group">
+    </ul>
+  </div>
+</div>
 
-    
 
-      <span><strong><a href="#">POLLARD, Steven (Dr)</a> Today</strong> 11:19</span>
+<div class="nhsuk-form-group">
+  <!-- MESSAGE PANEL -->
+  <div class="message-panel">
+    <p class="nhsuk-message-name"><strong><a href="#">POLLARD, Steven (Dr)</a> Today</strong> 11:19</p>
 
-      <div class="nhsuk-message nhsuk-message_requester">
-        <p>Please can you advise - I have this 51 year old lady who had a previous knee injury following a fall -
-          The patient went to A&E but no fracture was found and she was given analgesics and advised rest.
-          We are now 5 weeks later and the patient still has some degree of swelling and reduced mobility.
-          Please can you advise on what would be the best appropriate treatment option for this patient?</p>
-      </div>
-      <div class="nhsuk-message nhsuk-message_requester">
-        <p><strong>Attchment:</strong> <a href="#">Knee excercises following trauma.docx</a></p>
-      </div>
+    <div class="nhsuk-message nhsuk-message_requester">
+      <p>Please can you advise - I have this 51 year old lady who had a previous knee injury following a fall -
+        The patient went to A&E but no fracture was found and she was given analgesics and advised rest.
+        We are now 5 weeks later and the patient still has some degree of swelling and reduced mobility.
+        Please can you advise on what would be the best appropriate treatment option for this patient?</p>
+    </div>
+    <div class="nhsuk-message nhsuk-message_requester">
+      <p><strong>Attchment:</strong> <a href="#">Knee excercises following trauma.docx</a></p>
+    </div>
 
-      <div class="nhsuk-message_green-container">
+    <div class="nhsuk-message_responder--wrapper">
 
-      <span><strong><a href="#">NAYLOR, Amanda (Dr)</a> Today</strong> 14:22</span>
+      <p class="nhsuk-message-name"><strong><a href="#">NAYLOR, Amanda (Dr)</a> Today</strong> 14:22</p>
 
 
       <div class="nhsuk-message nhsuk-message_responder">
@@ -172,73 +188,68 @@ NHS e-referral Service
 
     </div>
 
+  </div>
+
+  <!-- TEXT BOX AREA -->
+  <div class="nhsuk-action-bar">
+    <div class="nhsuk-upload-button-container">
+<button class="nhsuk-button nhsuk-button--ers_reverse">Upload a file</button>
+<input type="file" name="filefield" multiple="multiple">
+</div>
+    <button class="nhsuk-button nhsuk-button--ers_reverse" type="submit">
+      Link
+    </button>
+  </div>
+  <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-1" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+  <p class="nhsuk-hint nhsuk-u-margin-top-0 nhs-body-s">You have 2,000 characters remaining.</p>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h3>Files attached</h3>
+      <hr class="nhsuk-u-margin-bottom-0">
+
+      <dl class="nhsuk-summary-list nhsuk-error-summary">
 
 
 
-      <!-- TEXT BOX AREA -->
-      <div class="nhsuk-action-bar">
-        <button class="nhsuk-button nhsuk-button--ers_reverse" type="submit">
-          Attach
-        </button>
-        <button class="nhsuk-button nhsuk-button--ers_reverse" type="submit">
-          Link
-        </button>
-      </div>
-      <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-1" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-      <p class="nhsuk-hint nhsuk-u-margin-top-0">You have 2,000 characters remaining.</p>
+        <div class="nhsuk-summary-list__row">
 
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-full">
+          <dt class="nhsuk-summary-list__key">
+            knee-xray.doc
 
-          <h3>Files attached</h3>
-          <hr class="nhsuk-u-margin-bottom-0">
-
-          <dl class="nhsuk-summary-list">
+          </dt>
 
 
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">Remove file</a>
 
-            <div class="nhsuk-summary-list__row">
-
-              <dt class="nhsuk-summary-list__key">
-                No files attached
-
-              </dt>
-
-
-              <dd class="nhsuk-summary-list__actions">
-
-
-                <a href="#">
-                  Upload files<span class="nhsuk-u-visually-hidden"></span>
-
-                </a>
-
-              </dd>
-
-            </div>
-
-
-
-
-
-
-
-          </dl>
-
-
+          </dd>
 
         </div>
 
-        <div class="nhsuk-grid-column-one-half">
 
-        </div>
 
-      </div>
 
-      <button class="nhsuk-button nhsuk-button--ers" type="button" name="button">Send advice</button>
+
+
+
+      </dl>
+
+
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-half">
+
     </div>
 
   </div>
+
+  <button class="nhsuk-button nhsuk-button--ers" type="button" name="button">Send advice</button>
+</div>
+
+</div>
 
 
 
@@ -247,10 +258,10 @@ NHS e-referral Service
 
 
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-one-half">
+<div class="nhsuk-grid-column-one-half">
 
 
-  </div>
+</div>
 </div>
 
 {% endblock %}

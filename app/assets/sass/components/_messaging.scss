@@ -15,9 +15,12 @@
   p{
 
     padding:0;
-    font-size: 1em;
+    font-size: .9em;
   }
 
+}
+p.nhsuk-message-name{
+  font-size: .9em;
 }
 
 .nhsuk-message_requester{
@@ -26,6 +29,8 @@
 
 .nhsuk-message_responder {
 background-color: #c6ece9;
+float: right;
+
 }
 
 .nhsuk-message_requester:after{
@@ -44,16 +49,15 @@ background-color: #c6ece9;
 	border-width: 10px;
 
 }
-.nhsuk-message_responder-container{
-  display: flex;
-  flex-direction:row-reverse;
-  text-align: justify;
+.nhsuk-message_responder--wrapper{
+  float: right;
+p:first-child{
   float: right;
 }
+}
 .nhsuk-message_responder-name{
-  display: flex;
-  flex-direction:row-reverse;
-  text-align: justify;
+  text-align: right;
+
 }
 
 .nhsuk-message_responder:after{
@@ -72,12 +76,14 @@ background-color: #c6ece9;
 	border-width: 10px;
 
 }
+
+
 .nhsuk-message_responder:before{
   justify-content: flex-end;
 }
 .message-panel{
   max-height: 300px;
-  position:sticky;
+  position:relative;
   padding-top: 16px;
   margin-bottom: 16px;
   overflow:scroll;

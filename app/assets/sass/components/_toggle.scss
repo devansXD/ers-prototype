@@ -1,4 +1,43 @@
 
-div[class*="toggleitpanel"] {
-  width: 75%;
+// ACTIONS MENU
+
+.nhsuk-heading-menu{
+  display: flex;
+  text-align: justify;
+  justify-content: space-between;
+
+}
+
+.nhsuk-heading-menu__title{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nhsuk-heading-menu__actions{
+  position: relative;
+  display: inline-block;
+
+}
+
+.nhsuk-toggle-menu{
+
+  border: 1px solid $color_nhsuk-grey-4;
+  display:none;
+  position: absolute;
+  background-color: $color_nhsuk-white;
+  min-width: 200px;
+
+  a{
+    color: $color_nhsuk-blue;
+    display: block;
+    padding: 12px;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    line-height: 1.5em;
+    border-top: 1px solid $color_nhsuk-grey-4;
+  }
+}
+.show{
+  display: block;
 }
