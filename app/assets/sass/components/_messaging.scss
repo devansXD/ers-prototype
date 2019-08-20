@@ -5,12 +5,14 @@
 .nhsuk-message {
   box-sizing: border-box;
   clear: both;
-  padding: 16px;
+  padding: 16px 16px 0px 16px;
   margin-bottom: 16px;
   margin-top: 8px;
   border-radius: 4px;
   position: relative;
   max-width: 75%;
+  display: flex;
+  
 
   p{
 
@@ -82,20 +84,17 @@ p:first-child{
   justify-content: flex-end;
 }
 .message-panel{
-  max-height: 300px;
+  // max-height: 300px;
+  min-height: 300px;
   position:relative;
   padding-top: 16px;
   margin-bottom: 16px;
   overflow:scroll;
   top: -1px;
-  z-index: 200;
   border-bottom: 1px solid $color_nhsuk-grey-3;
   border-top: 1px solid $color_nhsuk-grey-3;
-  -webkit-box-shadow: inset 4px 136px 11px -134px rgba(158,158,158,1);
--moz-box-shadow: inset 4px 136px 11px -134px rgba(158,158,158,1);
-box-shadow: inset 4px 136px 11px -134px rgba(158,158,158,1);
+  //-webkit-box-shadow: inset 4px 136px 11px -134px rgba(158,158,158,1);
+//-moz-box-shadow: inset 4px 136px 11px -134px rgba(158,158,158,1);
+//box-shadow: inset 4px 136px 11px -134px rgba(158,158,158,1);
 
-}
-.message-panel > div{
-  z-index: -1;
 }

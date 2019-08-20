@@ -1,11 +1,11 @@
 /* ==========================================================================
    #SECONDARY NAV
    ========================================================================== */
-.hmcts-sub-navigation {
+.nhsuk-sub-navigation {
   margin-bottom: 40px;
 }
 
-.hmcts-sub-navigation__list {
+.nhsuk-sub-navigation__list {
   font-size: 0;
   list-style: none;
   margin: 0;
@@ -13,13 +13,13 @@
 }
 
 @media (min-width: 40.0625em) {
-  .hmcts-sub-navigation__list {
+  .nhsuk-sub-navigation__list {
     box-shadow: inset 0 -1px 0 #bfc1c3;
     width: 100%;
   }
 }
 
-.hmcts-sub-navigation__item {
+.nhsuk-sub-navigation__item {
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,13 +33,13 @@
 }
 
 @media print {
-  .hmcts-sub-navigation__item {
+  .nhsuk-sub-navigation__item {
     font-family: sans-serif;
   }
 }
 
 @media (min-width: 40.0625em) {
-  .hmcts-sub-navigation__item {
+  .nhsuk-sub-navigation__item {
     font-size: 19px;
     font-size: 1.1875rem;
     line-height: 1.31579;
@@ -47,18 +47,18 @@
 }
 
 @media print {
-  .hmcts-sub-navigation__item {
+  .nhsuk-sub-navigation__item {
     font-size: 14pt;
     line-height: 1.15;
   }
 }
 
-.hmcts-sub-navigation__item:last-child {
+.nhsuk-sub-navigation__item:last-child {
   box-shadow: none;
 }
 
 @media (min-width: 40.0625em) {
-  .hmcts-sub-navigation__item {
+  .nhsuk-sub-navigation__item {
     box-shadow: none;
     display: inline-block;
     margin-right: 20px;
@@ -66,7 +66,7 @@
   }
 }
 
-.hmcts-sub-navigation__link {
+.nhsuk-sub-navigation__link {
   display: block;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -75,23 +75,23 @@
 }
 
 @media (min-width: 40.0625em) {
-  .hmcts-sub-navigation__link {
+  .nhsuk-sub-navigation__link {
     padding-left: 0;
   }
 }
 
-.hmcts-sub-navigation__link:focus {
+.nhsuk-sub-navigation__link:focus {
   color: #0b0c0c;
   position: relative;
 }
 
-.hmcts-sub-navigation__link[aria-current="page"] {
+.nhsuk-sub-navigation__link[aria-current="page"] {
   color: #0b0c0c;
   position: relative;
   text-decoration: none;
 }
 
-.hmcts-sub-navigation__link[aria-current="page"]:before {
+.nhsuk-sub-navigation__link[aria-current="page"]:before {
   background-color: #005ea5;
   content: "";
   display: block;
@@ -103,12 +103,12 @@
 }
 
 @media (min-width: 40.0625em) {
-  .hmcts-sub-navigation__link[aria-current="page"]:before {
+  .nhsuk-sub-navigation__link[aria-current="page"]:before {
     height: 5px;
     width: 100%;
   }
 }
 
-.hmcts-sub-navigation__link[aria-current="page"]:focus:before {
+.nhsuk-sub-navigation__link[aria-current="page"]:focus:before {
   background-color: #0b0c0c;
 }

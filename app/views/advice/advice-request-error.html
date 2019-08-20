@@ -133,7 +133,28 @@ NHS e-referral Service
     <div class="nhsuk-heading-menu">
       <h1 class="nhsuk-heading-m nhsuk-heading-menu__title">Advice conversation</h1>
       <div class="nhsuk-heading-menu__actions">
-        <button class="nhsuk-button--ers inline-block" type="button" name="button">Actions</button>
+
+        <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Actions
+    <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+
+      <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Rectangle" fill="#f1f1f1" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+      </g>
+    </svg>
+
+
+  </button>
+  <div id="myDropdown" class="dropdown-content">
+    <p class="nhsuk-u-padding-left-3"><strong>Referr to this service</strong></p>
+    <a href="#">Patient to book</a>
+    <a href="#">Find appointments</a>
+    <br>
+    <p class="nhsuk-u-padding-left-3"><strong>or</strong></p>
+    <a href="#">Search for another service</a>
+    <a href="#">End conversation</a>
+  </div>
+</div>
 
       </div>
 
@@ -145,14 +166,9 @@ NHS e-referral Service
   </h2>
   <div class="nhsuk-error-summary__body">
     <p>
-      The file sizes are too big. Try a smaller file size and upload again.
+      The file you attempted to upload is too large. Check the file size and try again.
     </p>
-    <ul class="nhsuk-list nhsuk-error-summary__list">
-      <li>
-        <a href="#example-error-1">knee-xray.doc</a>
-      </li>
 
-    </ul>
   </div>
 </div>
 
@@ -168,25 +184,9 @@ NHS e-referral Service
         We are now 5 weeks later and the patient still has some degree of swelling and reduced mobility.
         Please can you advise on what would be the best appropriate treatment option for this patient?</p>
     </div>
-    <div class="nhsuk-message nhsuk-message_requester">
-      <p><strong>Attchment:</strong> <a href="#">Knee excercises following trauma.docx</a></p>
-    </div>
-
-    <div class="nhsuk-message_responder--wrapper">
-
-      <p class="nhsuk-message-name"><strong><a href="#">NAYLOR, Amanda (Dr)</a> Today</strong> 14:22</p>
 
 
-      <div class="nhsuk-message nhsuk-message_responder">
-        <span class="nhsuk-message__arrow" aria-hidden="true"></span>
 
-        <p>I would suggest you try a steroidal injection for this patient, currently I do not think there is any need
-          for this patient to have a referral to my service. However if this injection does not relieve the
-          symptoms then this patient may respond well to a course of physiotherapy. I have also attached a
-          exercise programme for the patient that may be beneficial.</p>
-      </div>
-
-    </div>
 
   </div>
 
@@ -196,9 +196,7 @@ NHS e-referral Service
 <button class="nhsuk-button nhsuk-button--ers_reverse">Upload a file</button>
 <input type="file" name="filefield" multiple="multiple">
 </div>
-    <button class="nhsuk-button nhsuk-button--ers_reverse" type="submit">
-      Link
-    </button>
+
   </div>
   <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-1" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
   <p class="nhsuk-hint nhsuk-u-margin-top-0 nhs-body-s">You have 2,000 characters remaining.</p>
@@ -209,7 +207,7 @@ NHS e-referral Service
       <h3>Files attached</h3>
       <hr class="nhsuk-u-margin-bottom-0">
 
-      <dl class="nhsuk-summary-list nhsuk-error-summary">
+      <dl class="nhsuk-summary-list">
 
 
 

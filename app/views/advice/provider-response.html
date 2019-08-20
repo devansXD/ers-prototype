@@ -100,7 +100,7 @@ NHS e-referral Service
 
     <dl class="">
       <dt>Status</dt>
-      <dd><span class="nhsuk-tag__default">Provider response required</span></dd>
+      <dd><span class="nhsuk-tag__warning">Provider response required</span></dd>
 
       <dt>Service name</dt>
       <dd>Adult knee service - Woodsend Hospital</dd>
@@ -159,37 +159,57 @@ NHS e-referral Service
 
     </div>
     <div class="nhsuk-form-group">
-
-
-
       <!-- MESSAGE PANEL -->
       <div class="message-panel">
+        <p class="nhsuk-message-name"><strong><a href="#">POLLARD, Steven (Dr)</a> Today</strong> 11:19</p>
 
-        <h2 class="nhsuk-heading-s">Start an advice conversation...</h2>
+        <div class="nhsuk-message nhsuk-message_requester">
+          <p>Please can you advise - I have this 51 year old lady who had a previous knee injury following a fall -
+            The patient went to A&E but no fracture was found and she was given analgesics and advised rest.
+            We are now 5 weeks later and the patient still has some degree of swelling and reduced mobility.
+            Please can you advise on what would be the best appropriate treatment option for this patient?</p>
+        </div>
+        <div class="nhsuk-message nhsuk-message_requester">
+          <p><strong>Attchment:</strong> <a href="#">Knee excercises following trauma.docx</a></p>
+        </div>
 
+        <div class="nhsuk-message_responder--wrapper">
+
+          <p class="nhsuk-message-name"><strong><a href="#">NAYLOR, Amanda (Dr)</a> Today</strong> 14:22</p>
+
+
+          <div class="nhsuk-message nhsuk-message_responder">
+            <span class="nhsuk-message__arrow" aria-hidden="true"></span>
+
+            <p>I would suggest you try a steroidal injection for this patient, currently I do not think there is any need
+              for this patient to have a referral to my service. However if this injection does not relieve the
+              symptoms then this patient may respond well to a course of physiotherapy. I have also attached a
+              exercise programme for the patient that may be beneficial.</p>
+          </div>
+
+        </div>
 
       </div>
 
       <!-- TEXT BOX AREA -->
-
+      <div class="nhsuk-action-bar">
+        <div class="nhsuk-upload-button-container">
+          <button class="nhsuk-button nhsuk-button--ers_reverse">Upload a file</button>
+          <input type="file" name="filefield" multiple="multiple">
+        </div>
+        <!-- <button class="nhsuk-button nhsuk-button--ers_reverse" type="submit">
+          Link
+        </button>-->
+      </div>
       <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-1" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
       <p class="nhsuk-hint nhsuk-u-margin-top-0 nhs-body-s">You have 2,000 characters remaining.</p>
 
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-full">
 
-          <h3>Upload an attachment</h3>
+          <h3>Files attached</h3>
+          <hr class="nhsuk-u-margin-bottom-0">
 
-
-            <div class="nhsuk-upload-button-container">
-              <button class="nhsuk-button nhsuk-button--ers_reverse">Upload a file</button>
-              <input type="file" name="filefield" multiple="multiple">
-            </div>
-            <!-- <button class="nhsuk-button nhsuk-button--ers_reverse" type="submit">
-              Link
-            </button>-->
-
-  <hr class="nhsuk-u-margin-bottom-0">
           <dl class="nhsuk-summary-list">
 
 
@@ -216,10 +236,8 @@ NHS e-referral Service
 
       </div>
 
-      <a href="advice-request-sent" class="nhsuk-button nhsuk-button--ers" type="button" name="button">Send advice</a>
-
+      <button class="nhsuk-button nhsuk-button--ers" type="button" name="button">Send advice</button>
     </div>
-
   </div>
 </div>
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
