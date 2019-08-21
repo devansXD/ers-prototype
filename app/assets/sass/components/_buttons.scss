@@ -52,7 +52,7 @@ cursor: pointer;}
 }
 // comment out changes
 .dropbtn {
-  background-color: #3498DB;
+  background-color: $color_nhsuk-green;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -61,7 +61,7 @@ cursor: pointer;}
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: $color_nhsuk-grey-5;
 }
 
 .dropdown {
