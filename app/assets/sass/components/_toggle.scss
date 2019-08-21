@@ -17,6 +17,12 @@
 .nhsuk-heading-menu__title{
   display: inline-block;
   vertical-align: middle;
+  .nhsuk-heading-menu__action-link{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: normal;
+  }
 }
 
 .nhsuk-heading-menu__actions{

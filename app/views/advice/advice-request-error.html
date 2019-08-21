@@ -160,17 +160,7 @@ NHS e-referral Service
 
     </div>
 
-    <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
-  <h2 class="nhsuk-error-summary__title" id="error-summary-title">
-    Some attachments failed to upload
-  </h2>
-  <div class="nhsuk-error-summary__body">
-    <p>
-      The file you attempted to upload is too large. Check the file size and try again.
-    </p>
 
-  </div>
-</div>
 
 
 <div class="nhsuk-form-group">
@@ -191,48 +181,34 @@ NHS e-referral Service
   </div>
 
   <!-- TEXT BOX AREA -->
-  <div class="nhsuk-action-bar">
-    <div class="nhsuk-upload-button-container">
-<button class="nhsuk-button nhsuk-button--ers_reverse">Upload a file</button>
-<input type="file" name="filefield" multiple="multiple">
-</div>
 
-  </div>
   <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-1" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
   <p class="nhsuk-hint nhsuk-u-margin-top-0 nhs-body-s">You have 2,000 characters remaining.</p>
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <h3>Files attached</h3>
-      <hr class="nhsuk-u-margin-bottom-0">
+      <h3>Upload a file</h3>
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+    <h3 class="nhsuk-error-summary__title" id="error-summary-title">
+      Some files failed to upload
+    </h3>
 
-      <dl class="nhsuk-summary-list">
+    <div class="nhsuk-error-summary__body">
+      <p>
+        The file you attempted to upload is too large. The file must be smaller than 10MB
+      </p>
+      <div class="nhsuk-action-bar">
+        <div class="nhsuk-upload-button-container">
+    <button class="nhsuk-button nhsuk-button--ers_reverse">Choose a file</button>
+    <input type="file" name="filefield" multiple="multiple">
+    </div>
 
+      </div>
 
+    </div>
+  </div>
 
-        <div class="nhsuk-summary-list__row">
-
-          <dt class="nhsuk-summary-list__key">
-            knee-xray.doc
-
-          </dt>
-
-
-          <dd class="nhsuk-summary-list__actions">
-            <a href="#">Remove file</a>
-
-          </dd>
-
-        </div>
-
-
-
-
-
-
-
-      </dl>
 
 
 
