@@ -1,0 +1,261 @@
+{% extends "layout.html" %}
+
+{% set mainClasses = '' %}
+{% set containerClasses = 'nhsuk-width-container-fluid' %}
+{% set bodyClasses = 'nhsuk-white-background' %}
+{% block pageScripts %}
+<script type="text/javascript" src="/js/action-menu.js"></script>
+{% endblock %}
+{% block pageTitle %}
+NHS e-referral Service
+{% endblock %}
+
+{% block header %}
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container-fluid nhsuk-header__container">
+    <div class="nhsuk-header__logo">
+      <a class="nhsuk-header__link" href="search" aria-label="NHS homepage">
+        <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
+          <path fill="#fff" d="M0 0h40v16H0z"></path>
+          <path fill="#005eb8"
+            d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6">
+          </path>
+          <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+        </svg>
+      </a>
+    </div>
+    <!-- END LOGO -->
+    <!-- SERVICE NAME -->
+    <div class="nhsuk-header__transactional-service-name">
+      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+    </div>
+
+    <div class="nhsuk-header__content" id="content-header">
+      <div class="nhsuk-header__menu">
+        <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation">
+          <ul class="nhsuk-header__navigation-list" style="border:0">
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/conditions/social-care-and-support/">
+                Help
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/news/">
+                Alerts
+
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/service-search">
+                Dave Evans
+              </a>
+            </li>
+          </ul>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+</header>
+<!-- SUB MENU PATIENT INFO -->
+
+<nav class="nhsuk-grey-background patient-info">
+  <ul role="navigation">
+    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+    <li>Patient: <a href="#">EVANS, David (Mr) <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+
+          <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <polygon id="Rectangle" fill="#415563" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+          </g>
+        </svg></a></li>
+    <li><strong>Gender: </strong> Male</li>
+    <li>30 years (4 June 1988)</li>
+  </ul>
+  <div class="nhsuk-close">
+    <a class="" href="search">Close
+      <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+      </svg></a>
+
+  </div>
+</nav>
+{% endblock %}
+{% block content %}
+
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+  <div class="nhsuk-grid-column-one-quarter">
+    <div class="nhsuk-search-input__item">
+      <label class="nhsuk-label nhsuk-label__strong">
+        Priority
+      </label>
+      <select class="nhsuk-select" id="select-1" name="select-1">
+        <option value="0" selected="">Select one</option>
+        <option value="1">Routine</option>
+        <option value="2">Urgent</option>
+        <option value="3">2 week wait</option>
+      </select>
+    </div>
+
+    <dl class="">
+      <dt>Status</dt>
+      <dd><span class="nhsuk-tag__warning">Provider response required</span></dd>
+
+      <dt>Service name</dt>
+      <dd>Adult knee service - Woodsend Hospital</dd>
+
+      <dt>Specialty</dt>
+      <dd>Orthopaedics</dd>
+      <dt>Referred by</dt>
+      <dd>WOTTON, Nicolas</dd>
+      <dt>Referring organisation</dt>
+      <dd>Wollaton Road Practice</dd>
+      <dd>Wollaton Vale</dd>
+      <dd>Nottingham</dd>
+      <dd>NG8 2GR</dd>
+      <dt>Referring Practice</dt>
+      <dd>Wollaton Road Practice</dd>
+      <dd>Wollaton Vale</dd>
+      <dd>Nottingham</dd>
+      <dd>NG8 2GR</dd>
+    </dl>
+  </div>
+  <div class="nhsuk-grid-column-three-quarters nhsuk-u-border-left">
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="search-results">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to search results</a>
+    </div>
+    <div class="nhsuk-heading-menu">
+      <h1 class="nhsuk-heading-m nhsuk-heading-menu__title">Advice conversation</h1>
+      <div class="nhsuk-heading-menu__actions">
+
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Actions
+            <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+
+              <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon id="Rectangle" fill="#f1f1f1" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+              </g>
+            </svg>
+
+
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <p class="nhsuk-u-padding-left-3"><strong>Referr to this service</strong></p>
+            <a href="#">Patient to book</a>
+            <a href="#">Find appointments</a>
+            <br>
+            <p class="nhsuk-u-padding-left-3"><strong>or</strong></p>
+            <a href="#">Search for another service</a>
+            <a href="#">End conversation</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="nhsuk-form-group">
+      <!-- MESSAGE PANEL -->
+      <div class="message-panel">
+        <p class="nhsuk-message-name"><strong><a href="#">POLLARD, Steven (Dr)</a> Today</strong> 11:19</p>
+
+        <div class="nhsuk-message nhsuk-message_requester">
+          <p>Please can you advise - I have this 51 year old lady who had a previous knee injury following a fall -
+            The patient went to A&E but no fracture was found and she was given analgesics and advised rest.
+            We are now 5 weeks later and the patient still has some degree of swelling and reduced mobility.
+            Please can you advise on what would be the best appropriate treatment option for this patient?</p>
+        </div>
+        <div class="nhsuk-message nhsuk-message_requester">
+          <p><strong>Attchment:</strong> <a href="#">Knee excercises following trauma.docx</a></p>
+        </div>
+
+        <div class="nhsuk-message_responder--wrapper">
+
+          <p class="nhsuk-message-name"><strong><a href="#">NAYLOR, Amanda (Dr)</a> Today</strong> 14:22</p>
+
+
+          <div class="nhsuk-message nhsuk-message_responder">
+            <span class="nhsuk-message__arrow" aria-hidden="true"></span>
+
+            <p>I would suggest you try a steroidal injection for this patient, currently I do not think there is any need
+              for this patient to have a referral to my service. However if this injection does not relieve the
+              symptoms then this patient may respond well to a course of physiotherapy. I have also attached a
+              exercise programme for the patient that may be beneficial.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- TEXT BOX AREA -->
+      <div class="nhsuk-action-bar">
+        <div class="nhsuk-upload-button-container">
+          <button class="nhsuk-button nhsuk-button--ers_reverse">Upload a file</button>
+          <input type="file" name="filefield" multiple="multiple">
+        </div>
+        <!-- <button class="nhsuk-button nhsuk-button--ers_reverse" type="submit">
+          Link
+        </button>-->
+      </div>
+      <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-1" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      <p class="nhsuk-hint nhsuk-u-margin-top-0 nhs-body-s">You have 2,000 characters remaining.</p>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+
+          <h3>Files attached</h3>
+          <hr class="nhsuk-u-margin-bottom-0">
+
+          <dl class="nhsuk-summary-list">
+
+
+
+            <div class="nhsuk-summary-list__row">
+
+              <dt class="nhsuk-summary-list__key">
+                No files attached to send
+
+              </dt>
+
+
+              <dd class="nhsuk-summary-list__actions">
+
+              </dd>
+
+            </div>
+          </dl>
+        </div>
+
+        <div class="nhsuk-grid-column-one-half">
+
+        </div>
+
+      </div>
+
+      <button class="nhsuk-button nhsuk-button--ers" type="button" name="button">Send advice</button>
+    </div>
+  </div>
+</div>
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+  <div class="nhsuk-grid-column-one-half">
+
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container nhsuk-width-container-fluid">
+
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}
