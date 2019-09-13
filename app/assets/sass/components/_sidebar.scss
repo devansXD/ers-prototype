@@ -3,10 +3,12 @@
 // ==========================================================================
 
 .nhsuk-sidebar {
-  padding: 0;
-  margin: 0;
-  border-radius: 2px;
-  border: 1px solid $color_nhsuk-grey-4;
+
+  position: relative;
+  border-right: 1px solid $color_nhsuk-grey-4;
+  min-height: 700px;
+  margin-bottom: 32px;
+
 
   h3 {
     margin-bottom: 0;
@@ -25,22 +27,30 @@ nav.nhsuk-sidebar-actions {
 
   li {
     display: inline-block;
-    margin: 2px 0;
+    margin-bottom:8px;
     width: 100%;
-    margin: 0;
     padding: 0;
+    border: 2px solid $color_nhsuk-grey-4;
+    border-radius: 4px;
+    background-color: $color_nhsuk-white;
   }
 
-  a {
+  a:link, a:visited {
     color: $color_nhsuk-blue;
     display: block;
     padding: 12px 24px;
+    font-size: 16px;
     position: relative;
+    font-weight: bold;
     text-decoration: none;
     width: 100%;
     box-shadow: none;
     vertical-align: middle;
     line-height: 1.5em;
-    border-top: 1px solid $color_nhsuk-grey-4;
+
+  }
+  a:hover{
+    background-color: $color_nhsuk-grey-4;
+    color: $color_nhsuk-white;
   }
 }

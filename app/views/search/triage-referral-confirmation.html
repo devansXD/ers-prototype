@@ -78,35 +78,24 @@ NHS e-referral Service
 {% endblock %}
 {% block content %}
 
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-full">
 
-    <div class="panel panel-border-wide alert-success">
-
-      <h1 class="nhsuk-heading-m">
-The triage request was created successfully</h1>
-
-    </div>
-
-  </div>
-  <div class="nhsuk-grid-column-one-half">
-  </div>
-</div>
-<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-4">
   <!-- SIDEBAR ACTIONS -->
 
-  <div class="nhsuk-grid-column-one-quarter">
+  <div class="nhsuk-grid-column-one-quarter nhsuk-sidebar">
 
-    <div class="nhsuk-sidebar">
-      <h3>Referral actions</h3>
+
+
       <nav class="nhsuk-sidebar-actions">
         <ul>
-          <li><a href="referral-summary">Add referral letter <svg class="nhsuk-icon nhsuk-icon__chevron-right .nhsuk-icon--ers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-<path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-</svg></a></li>
+
 
 
           <li><a href="print-this-page">Print triage instructions <svg class="nhsuk-icon nhsuk-icon__chevron-right .nhsuk-icon--ers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+</svg></a></li>
+
+<li><a href="#">Add referral letter <svg class="nhsuk-icon nhsuk-icon__chevron-right .nhsuk-icon--ers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
 <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
 </svg></a></li>
 
@@ -117,11 +106,17 @@ The triage request was created successfully</h1>
 
       </nav>
 
-    </div>
+
 
 
   </div>
   <div class="nhsuk-grid-column-three-quarters">
+    <div class="panel panel-border-wide alert-success">
+
+      <h1 class="nhsuk-heading-m">
+The triage request was created successfully</h1>
+
+    </div>
 
     <h2 class="nhsuk-heading-s">What to do now</h2>
     <p> You need to provide the patient with the triage details.</p>
