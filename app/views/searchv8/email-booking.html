@@ -5,7 +5,7 @@
 {% set bodyClasses = 'nhsuk-white-background' %}
 {% block pageScripts %}
 <script type="text/javascript" src="/js/search.js"></script>
-<script type="text/javascript" src="/js/auto.js"></script>
+<script type="text/javascript" src="/js/auto-names.js"></script>
 {% endblock %}
 {% block pageTitle %}
 NHS e-referral Service
@@ -26,28 +26,29 @@ NHS e-referral Service
       </a>
     </div>
     <!-- END LOGO -->
+
     <!-- SERVICE NAME -->
     <div class="nhsuk-header__transactional-service-name">
-      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
-    </div>
+          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+        </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
         <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation">
           <ul class="nhsuk-header__navigation-list" style="border:0">
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/conditions/social-care-and-support/">
+              <a class="nhsuk-header__navigation-link" href="/search">
                 Help
               </a>
             </li>
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/news/">
+              <a class="nhsuk-header__navigation-link" href="/search">
                 Alerts
 
               </a>
             </li>
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/service-search">
+              <a class="nhsuk-header__navigation-link" href=/search">
                 Dave Evans
               </a>
             </li>
@@ -57,9 +58,9 @@ NHS e-referral Service
       </div>
     </div>
   </div>
-
 </header>
 <!-- SUB MENU PATIENT INFO -->
+
 <nav class="nhsuk-grey-background patient-info">
   <ul role="navigation">
     <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
@@ -75,25 +76,12 @@ NHS e-referral Service
 
   </div>
 </nav>
+
 {% endblock %}
 {% block content %}
+
+
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-full">
-    <div class="panel panel-border-wide alert-success">
-
-      <h1 class="nhsuk-heading-m">
-The triage request was created successfully</h1>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
-  <!-- SIDEBAR ACTIONS -->
-
   <div class="nhsuk-grid-column-one-quarter nhsuk-sidebar">
 
 
@@ -102,16 +90,10 @@ The triage request was created successfully</h1>
         <ul>
 
 
-
-          <li><a href="print-this-page">Print triage instructions <svg class="nhsuk-icon nhsuk-icon__chevron-right .nhsuk-icon--ers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-<path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-</svg></a></li>
-
-<li><a href="#">Add referral letter <svg class="nhsuk-icon nhsuk-icon__chevron-right .nhsuk-icon--ers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-<path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-</svg></a></li>
-
           <li><a href="referral-summary">View referral summary<svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+</svg></a></li>
+<li><a href="referral-summary">Manage  worklists<svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
 <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
 </svg></a></li>
         </ul>
@@ -125,16 +107,34 @@ The triage request was created successfully</h1>
   <div class="nhsuk-grid-column-three-quarters">
 
 
-    <h2 class="nhsuk-heading-s">What to do now</h2>
-    <p> You need to provide the patient with the triage details.</p>
-    <p>You will also need to add a referral letter so the provider knows what the referral is for.</p>
+    <div class="panel panel-border-wide alert-default">
+      <h1 class="nhsuk-heading-s">
+
+        Check patient NHS login email
+    </h1>
+
+    </div>
+
+    <p class="nhsuk-body-m"><strong>Does the patient agree to receive an email to this address?</strong></p>
+
+    <p class="nhsuk-hint">david.evans78@hotmail.com</p>
+
+    <div class="nhsuk-inset-text--ers">
+      <p>The patient will need this to manage their referral online. If the patient wants to amend their email address, they can do so via the NHS service.</p>
+      <p><a href="#">What is NHS login?</a></p>
+
+    </div>
+
+    <a class="nhsuk-button nhsuk-button--ers" href="email-confirmation">Yes- send email</a>
 
   </div>
 
+
+
+
+
+
 </div>
-
-
-
 {% endblock %}
 
 {% block footer %}

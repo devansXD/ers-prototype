@@ -77,37 +77,24 @@ NHS e-referral Service
 </nav>
 {% endblock %}
 {% block content %}
+
+
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-full">
-    <div class="panel panel-border-wide alert-success">
-
-      <h1 class="nhsuk-heading-m">
-The triage request was created successfully</h1>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
   <!-- SIDEBAR ACTIONS -->
 
   <div class="nhsuk-grid-column-one-quarter nhsuk-sidebar">
 
 
-
       <nav class="nhsuk-sidebar-actions">
         <ul>
-
-
-
-          <li><a href="print-this-page">Print triage instructions <svg class="nhsuk-icon nhsuk-icon__chevron-right .nhsuk-icon--ers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <li><a href="email-booking">Email booking instructions<svg class="nhsuk-icon nhsuk-icon__chevron-right .nhsuk-icon--ers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+</svg></a></li>
+<li><a href="print-this-page">Print booking instructions <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
 <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
 </svg></a></li>
 
-<li><a href="#">Add referral letter <svg class="nhsuk-icon nhsuk-icon__chevron-right .nhsuk-icon--ers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <li><a href="#">Add referral letter<svg class="nhsuk-icon nhsuk-icon__chevron-right .nhsuk-icon--ers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
 <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
 </svg></a></li>
 
@@ -119,21 +106,24 @@ The triage request was created successfully</h1>
       </nav>
 
 
-
-
   </div>
   <div class="nhsuk-grid-column-three-quarters">
+    <div class="panel panel-border-wide alert-success">
+      <h1 class="nhsuk-heading-m">
+        The request was created successfully</h1>
+    </div>
 
+    <h2 class="nhsuk-heading-m">What to do now</h2>
 
-    <h2 class="nhsuk-heading-s">What to do now</h2>
-    <p> You need to provide the patient with the triage details.</p>
+    <p>You need to provide the patient with the booking instructions.</p>
     <p>You will also need to add a referral letter so the provider knows what the referral is for.</p>
+
+
+
 
   </div>
 
 </div>
-
-
 
 {% endblock %}
 
