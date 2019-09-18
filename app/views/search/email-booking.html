@@ -29,8 +29,8 @@ NHS e-referral Service
 
     <!-- SERVICE NAME -->
     <div class="nhsuk-header__transactional-service-name">
-          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
-        </div>
+      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+    </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
@@ -48,102 +48,94 @@ NHS e-referral Service
               </a>
             </li>
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href=/search">
-                Dave Evans
-              </a>
-            </li>
-          </ul>
-        </nav>
+              <a class="nhsuk-header__navigation-link" href=/search"> Dave Evans </a> </li> </ul> </nav> </div> </div> </div> </header> <!-- SUB MENU PATIENT INFO -->
 
-      </div>
-    </div>
-  </div>
-</header>
-<!-- SUB MENU PATIENT INFO -->
+                <nav class="nhsuk-grey-background patient-info">
+                  <ul role="navigation">
+                    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+                    <li><strong>Patient: </strong><a href="Patient name">EVANS, David (Mr)</a></li>
+                    <li><strong>Gender: </strong> Male</li>
+                    <li>30 years (4 June 1988)</li>
+                  </ul>
+                  <div class="nhsuk-close">
+                    <a class="" href="search">Close
+                      <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+                      </svg></a>
 
-<nav class="nhsuk-grey-background patient-info">
-  <ul role="navigation">
-    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li><strong>Patient: </strong><a href="Patient name">EVANS, David (Mr)</a></li>
-    <li><strong>Gender: </strong> Male</li>
-    <li>30 years (4 June 1988)</li>
-  </ul>
-  <div class="nhsuk-close">
-    <a class="" href="search">Close
-      <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-<path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-</svg></a>
+                  </div>
+                </nav>
 
-  </div>
-</nav>
+                {% endblock %}
+                {% block content %}
+                <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+                  <div class="nhsuk-grid-column-full">
+                    <div class="panel panel-border-wide alert-default">
+                      <h1 class="nhsuk-heading-s">
 
-{% endblock %}
-{% block content %}
+                        Check patient NHS login email
+                    </h1>
 
+                    </div>
 
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-one-quarter nhsuk-sidebar">
+                  </div>
+                </div>
 
 
-
-      <nav class="nhsuk-sidebar-actions">
-        <ul>
-
-
-          <li><a href="referral-summary">View referral summary<svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-<path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-</svg></a></li>
-<li><a href="referral-summary">Manage  worklists<svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-<path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-</svg></a></li>
-        </ul>
-
-      </nav>
+                <div class="nhsuk-grid-row">
+                  <div class="nhsuk-grid-column-one-quarter nhsuk-sidebar">
 
 
 
+                    <nav class="nhsuk-sidebar-actions">
+                      <ul>
 
-  </div>
-  <div class="nhsuk-grid-column-three-quarters">
+
+                        <li><a href="referral-summary">View referral summary<svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                            </svg></a></li>
+                        <li><a href="referral-summary">Manage worklists<svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                            </svg></a></li>
+                      </ul>
+
+                    </nav>
 
 
-    <div class="panel panel-border-wide alert-default">
-      <h1 class="nhsuk-heading-s">
 
-        Check patient NHS login email
-    </h1>
 
-    </div>
+                  </div>
+                  <div class="nhsuk-grid-column-three-quarters">
 
-    <p class="nhsuk-body-m"><strong>Does the patient agree to receive an email to this address?</strong></p>
+                    <p class="nhsuk-body-m"><strong>Does the patient agree to receive an email to this address?</strong></p>
 
-    <p class="nhsuk-hint">david.evans78@hotmail.com</p>
+                    <p class="nhsuk-hint">david.evans78@hotmail.com</p>
 
-    <div class="nhsuk-inset-text--ers">
-      <p>The patient will need this to manage their referral online. If the patient wants to amend their email address, they can do so via the NHS service.</p>
-      <p><a href="#">What is NHS login?</a></p>
+                    <div class="nhsuk-inset-text--ers">
+                      <p>The patient will need this to manage their referral online. If the patient wants to amend their email address, they can do so via the NHS service.</p>
+                      <p><a href="#">What is NHS login?</a></p>
 
-    </div>
+                    </div>
 
-    <a class="nhsuk-button nhsuk-button--ers" href="email-confirmation">Yes- send email</a>
+                    <a class="nhsuk-button nhsuk-button--ers" href="email-confirmation">Yes- send email</a>
 
-  </div>
+                  </div>
 
 
 
 
 
 
-</div>
-{% endblock %}
+                </div>
+                {% endblock %}
 
-{% block footer %}
-<footer role="contentinfo">
-  <div class="nhsuk-footer" id="nhsuk-footer">
-    <div class="nhsuk-width-container nhsuk-width-container-fluid">
+                {% block footer %}
+                <footer role="contentinfo">
+                  <div class="nhsuk-footer" id="nhsuk-footer">
+                    <div class="nhsuk-width-container nhsuk-width-container-fluid">
 
-      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
-    </div>
-  </div>
-</footer>
-{% endblock %}
+                      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+                    </div>
+                  </div>
+                </footer>
+                {% endblock %}
