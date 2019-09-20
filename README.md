@@ -1,6 +1,10 @@
 # NHS.UK prototype kit
 
-The prototype kit is still in development and is not ready to use.
+The eRS prototype kit is an extension of the NHSUK prototype kit.It has been designed to work in tandem with it. The eRS kit contains styles, components and patterns that are:
+
+not yet in the NHSUK Design System
+unique to eRS
+Therefore you should reference the NHSUK Design System first. And only use this if you can’t find what you need.
 
 ## Prerequisite
 
