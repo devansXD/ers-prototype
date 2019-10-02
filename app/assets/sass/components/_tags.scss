@@ -5,13 +5,18 @@
   display: inline-block;
   font-family: Frutiger, sans-serif;
   font-size: 14px;
-  
+
   padding: 4px;
   font-weight: 400;
   border-width: 1px;
   border-style: solid;
 
 
+}
+.nhsuk-tag-large{
+  padding: 8px;
+  font-weight: 700;
+  border-width: 2px;
 }
 .nhsuk-tag__success{
     @extend .nhsuk-tag;
