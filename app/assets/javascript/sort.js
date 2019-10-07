@@ -1,34 +1,33 @@
-function sortTable() {
-  var table, rows, switching, i, x, y, shouldSwitch;
-  table = document.getElementById("sortable");
-  switching = true;
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i < (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName("TD")[0];
-      y = rows[i + 1].getElementsByTagName("TD")[0];
-      //check if the two rows should switch place:
-      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-        //if so, mark as a switch and break the loop:
-        shouldSwitch = true;
-        break;
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
+$(document).ready(function() {
+
+  function compare(idx) {
+    return function(a, b) {
+      var A = getCell(a, idx), B = getCell(b, idx)
+      return $.isNumeric(A) && $.isNumeric(B) ?
+        A - B : A.toString().localeCompare(B)
     }
   }
-}
+
+  function getCell(tr, index){
+    return $(tr).children('td').eq(index).text()
+  }
+
+
+  $('table thead th').click(function() {
+    var table = $(this).parents('table').eq(0);
+    var row = table.find('tr:gt(0)').toArray().sort(compare($(this).index()));
+
+    this.asc = !this.asc;
+
+    if(!this.asc) {
+      row.reverse();
+    }
+
+    $.each(row, function(key, value) {
+      table.append(row[key]);
+    });
+
+    flipIcon($(this), this.asc);
+  });
+
+});
