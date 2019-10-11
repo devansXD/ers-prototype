@@ -6,6 +6,8 @@
 {% block pageScripts %}
 <script type="text/javascript" src="/js/search.js"></script>
 <script type="text/javascript" src="/js/auto-names.js"></script>
+<script type="text/javascript" src="/js/modal.js"></script>
+
 
 {% endblock %}
 {% block pageTitle %}
@@ -70,9 +72,6 @@ NHS e-referral Service
                 {% endblock %}
                 {% block content %}
 
-                <!--MODAL-->
-
-                <!-- Trigger/Open The Modal -->
 
 
 
@@ -106,11 +105,30 @@ NHS e-referral Service
                       <p><a href="#">What is NHS login?</a></p>
 
                     </div>
-
-                    <a class="nhsuk-button nhsuk-button--ers" href="referral-summary-confirmation">Yes- send email</a>
+                    <a id="email-success-button" class="nhsuk-button nhsuk-button--ers email-success-button">Yes- send email</a>
 
                   </div>
 
+
+                </div>
+                <!-- The Modal -->
+                <div id="email-success" class="nhsuk-modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="panel-small panel-border-wide alert-success-inline">
+                      <h2 class="nhsuk-heading-xs">Email sent to the patient</h2>
+
+                    </div>
+                    <p class="nhsuk-body-s">Once the patient recieves the email they  can login to the Manage Your Referral service  to book an appointment.</p>
+                    <div class="actions">
+                      <a class="nhsuk-button--ers" href="referral-summary" aria-role="button" type="button" name="button">Manage refarral</a>
+
+                    </div>
+
+
+
+                  </div>
 
                 </div>
                 {% endblock %}
@@ -124,4 +142,5 @@ NHS e-referral Service
                     </div>
                   </div>
                 </footer>
+
                 {% endblock %}

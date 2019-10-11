@@ -24,10 +24,37 @@
 @import 'components/messaging';
 @import 'components/tags';
 @import 'components/summary';
+@import 'components/tabs';
+@import 'components/modal';
 
 
-// Add your extra styles here...
+.flex-container{
+  display: flex;
+:first-child{
+  margin-right: 32px;
+}
+}
+.nhsuk-heading-links-container{
+  display: flex;
+  font-size: .1px;
+  padding: 8px 0;
+  align-items: baseline;
+}
+.nhsuk-heading-links{
+  vertical-align: middle;
+  min-height: 40px;
+  line-height: 40px;
 
+}
+
+.nhsuk-heading-links ul{
+  display: inline-flex;
+  margin: auto 32px;
+  li{
+    margin: 0 32px;
+  }
+
+}
 .nhsuk-u-border-left{
   border-left: 1px solid $color_nhsuk-grey-4;
 }
@@ -35,7 +62,12 @@
   border-right: 1px solid $color_nhsuk-grey-4;
 }
 
-
+.nhsuk-link-button{
+  height: 38px;
+  line-height: 38px;
+  vertical-align: middle;
+  padding: 4px;
+}
 
 // STYLEGUIDE //
 

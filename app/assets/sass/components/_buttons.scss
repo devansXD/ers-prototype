@@ -26,10 +26,15 @@ background-color: $color_nhsuk-white;
 border:1px solid  #425563;
 color: #425563;
 box-shadow: 0 4px 0 #425563;
+
+}
+.nhsuk-button--ers_reverse:link{
+  color: green;
 }
 
 .nhsuk-button--ers_reverse:hover, .nhsuk-button--ers_reverse:focus {
   @extend .nhsuk-button--ers_reverse;
+  color:#425563;
   background-color: $color_nhsuk-grey-5;
 cursor: pointer;}
 .nhsuk-button--ers_reverse.nhsuk-button--ers_disabled {
@@ -60,9 +65,7 @@ cursor: pointer;}
   cursor: pointer;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: $color_nhsuk-grey-5;
-}
+
 
 .dropdown {
   position: relative;

@@ -4,7 +4,7 @@
 {% set containerClasses = 'nhsuk-width-container-fluid' %}
 {% set bodyClasses = 'nhsuk-white-background' %}
 {% block pageScripts %}
-<script type="text/javascript" src="/js/action-menu.js"></script>
+<script type="text/javascript" src="/js/sort.js"></script>
 {% endblock %}
 {% block pageTitle %}
 NHS e-referral Service
@@ -81,79 +81,12 @@ NHS e-referral Service
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
   <div class="nhsuk-width-container-fluid">
     <div class="nhsuk-back-link">
-      <a class="nhsuk-back-link__link" href="search-results">
+      <a class="nhsuk-back-link__link" href="referral-summary">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
         Go back to referral summary</a>
     </div>
-
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full">
-        <h1 class="nhsuk-heading-l">Referral information</h1>
-        <h2 class="nhsuk-heading-m">Referred by</h2>
-        <div class="nhsuk-grid-row">
-
-          <div class="nhsuk-grid-column-one-third">
-
-            <dl class="app-check-your-answers app-check-your-answers--short app-check-your-answers--no-border">
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Name
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  WALKER , Fred (Mr) </dd>
-              </div>
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Organisation
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  Paxton Green Group Practice
-                </dd>
-              </div>
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Address
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  Routine
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Phone number
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  -
-
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Priority
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  Routine
-
-                </dd>
-              </div>
-
-
-            </dl>
-
-          </div>
-        </div>
-
-
-
-
-
-      </div>
-    </div>
-
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-full">
 
@@ -161,7 +94,10 @@ NHS e-referral Service
 
         <h3 class="nhsuk-heading-s">Upload a file</h3>
 
-        <a class="nhsuk-button nhsuk-button--ers_reverse" type="button" name="button">Choose a file</a>
+        <form class="" action="attachment-added">
+            <button class="nhsuk-button nhsuk-button--ers_reverse" type="submit" name="button">Choose a file</button>
+
+        </form>
         <hr class="nhsuk-u-margin-bottom-0">
 
         <dl class="nhsuk-summary-list">
@@ -176,13 +112,17 @@ NHS e-referral Service
             </dt>
 
             <dt class="nhsuk-summary-list__value">
-              <textarea class="nhsuk-textarea" id="more-detail" name="more-detail" rows="1" aria-describedby="more-detail-hint"></textarea>
+              <a href="#">Add description</a>
             </dt>
             <dt class="nhsuk-summary-list__actions">
         <a href="#">Remove file</a>
 
             </dt>
         </dl>
+
+        <a class="nhsuk-button nhsuk-button--ers" href="referral-summary-attached" role="button" type="submit">
+      Submit
+            </a>
         </div>
 
       </div>

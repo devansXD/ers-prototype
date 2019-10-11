@@ -5,6 +5,9 @@
   text-align: justify;
   justify-content: space-between;
   font-size: .1px;
+  min-height: 40px;
+  vertical-align: middle;
+  display: inline;
   &:after {
       content: "";
       display: inline-block;
@@ -58,6 +61,9 @@
   padding:4px 16px;
   font-size: 18px;
   font-weight: normal;
+  button.dropbtn:hover {
+    background-color: $color_nhsuk-blue !important;
+  }
 }
 
 .dropdown {
@@ -72,6 +78,7 @@
   top: 38px;
   background-color:$color_nhsuk-white;
   min-width:300px;
+
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 200;

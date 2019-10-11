@@ -4,7 +4,7 @@
 {% set containerClasses = 'nhsuk-width-container-fluid' %}
 {% set bodyClasses = 'nhsuk-white-background' %}
 {% block pageScripts %}
-<script type="text/javascript" src="/js/action-menu.js"></script>
+<script type="text/javascript" src="/js/sort.js"></script>
 {% endblock %}
 {% block pageTitle %}
 NHS e-referral Service
@@ -81,7 +81,7 @@ NHS e-referral Service
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
   <div class="nhsuk-width-container-fluid">
     <div class="nhsuk-back-link">
-      <a class="nhsuk-back-link__link" href="search-results">
+      <a class="nhsuk-back-link__link" href="referral-summary">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
@@ -90,95 +90,23 @@ NHS e-referral Service
 
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-full">
-        <h1 class="nhsuk-heading-l">Referral information</h1>
-        <h2 class="nhsuk-heading-m">Referred by</h2>
-        <div class="nhsuk-grid-row">
-
-          <div class="nhsuk-grid-column-one-third">
-
-            <dl class="app-check-your-answers app-check-your-answers--short app-check-your-answers--no-border">
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Name
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  WALKER , Fred (Mr) </dd>
-              </div>
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Organisation
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  Paxton Green Group Practice
-                </dd>
-              </div>
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Address
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  Routine
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Phone number
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  -
-
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Priority
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  Routine
-
-                </dd>
-              </div>
-
-
-            </dl>
-
-          </div>
-        </div>
-
-
-
-
-
-      </div>
-    </div>
-
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full">
 
         <h2 class="nhsuk-heading-m">Referral attachments</h2>
 
         <h3 class="nhsuk-heading-s">Upload a file</h3>
+        <form class="" action="attachment-added">
+            <button class="nhsuk-button nhsuk-button--ers_reverse" type="submit" name="button">Choose a file</button>
+        </form>
+        <p>No files are attached.</p>
 
-        <a class="nhsuk-button nhsuk-button--ers_reverse">Upload file</a>
-        <p>No files are attached yet.</p>
         <a class="nhsuk-button nhsuk-button--ers" href="referral-summary-attached" role="button" type="submit">
       Submit
             </a>
+        </div>
 
       </div>
     </div>
-
-
-
   </div>
-
-
-
-
-
-
 </div>
 
 {% endblock %}

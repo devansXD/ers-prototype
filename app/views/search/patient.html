@@ -6,7 +6,9 @@
 {% block pageScripts %}
 <script type="text/javascript" src="/js/search.js"></script>
 <script type="text/javascript" src="/js/auto.js"></script>
-<script type="text/javascript" src="/js/reveal.js"></script>
+<script type="text/javascript" src="/js/sort.js"></script>
+<script type="text/javascript" src="/js/tabs.js"></script>
+
 {% endblock %}
 {% block pageTitle %}
 NHS e-referral Service
@@ -52,11 +54,11 @@ NHS e-referral Service
               <a class="nhsuk-header__navigation-link" href=/search"> Dave Evans </a> </li> </ul> </nav> </div> </div> </div> </header> <!-- SUB MENU PATIENT INFO -->
                 <nav class="nhsuk-tabs">
                   <ul role="navigation">
-                    <li><a class="active" href="#">Patient</a></li>
-                    <li><a href="#">Worklists</a></li>
-                    <li><a href="#">Directory of services</a></li>
-                    <li><a href="#">Enquiries</a></li>
-                    <li><a href="#">Reports</a></li>
+                    <li><a href="#patient" class="selected" href="#">Patient</a></li>
+                    <li><a href="#worklists">Worklists</a></li>
+                    <li><a href="#dos">Directory of services</a></li>
+                    <li><a href="#enquiries">Enquiries</a></li>
+                    <li><a href="#reports">Reports</a></li>
                   </ul>
                 </nav>
 
@@ -64,380 +66,424 @@ NHS e-referral Service
 
                 {% block content %}
 
-                <div class="nhsuk-grid-row nhsuk-panel--grey nhsuk-u-padding-top-4">
+                <div class="tab active" id="patient">
+                  <div class="nhsuk-grid-row nhsuk-panel--grey nhsuk-u-padding-top-4">
 
-                  <!-- NEW HTML -->
-                  <div class="nhsuk-grid-column-full">
-                    <div class="nhsuk-form">
-
-
-                      <!--SEARCH GOES HERE -->
-
-                      <div class="nhsuk-form-group">
-                        <div class="nhsuk-grid-row">
-                          <div class="nhsuk-grid-column-one-half">
+                    <!-- NEW HTML -->
+                    <div class="nhsuk-grid-column-full">
+                      <div class="nhsuk-form">
 
 
+                        <!--SEARCH GOES HERE -->
 
-                          </div>
-                          <div class="nhsuk-grid-column-one-half">
-                            <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
-                              Search by
-                            </legend>
-                            <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
-                              <div class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="Advice">
-                                <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label" for="example-2" selected="false">
-                                  NHS Number
-                                </label>
-                              </div>
-                              <div class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral">
-                                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                                  UBRN
-                                </label>
-                              </div>
-                              <div class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="Referral">
-                                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                                  Demographics
-                                </label>
+                        <div class="nhsuk-form-group">
+                          <div class="nhsuk-grid-row">
+                            <div class="nhsuk-grid-column-one-half">
+
+
+
+                            </div>
+                            <div class="nhsuk-grid-column-one-half">
+                              <legend class="nhsuk-fieldset__legend--s nhsuk-u-margin-bottom-2">
+                                Search by
+                              </legend>
+                              <div class="multiple-choice--hod nhsuk-radios nhsuk-radios--inline">
+                                <div class="nhsuk-radios__item">
+                                  <input class="nhsuk-radios__input" id="" name="searchby" type="radio" value="">
+                                  <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label" for="nhs-number">
+                                    NHS Number
+                                  </label>
+                                </div>
+                                <div class="nhsuk-radios__item">
+                                  <input class="nhsuk-radios__input" id="ubrn" name="searchby" type="radio" value="">
+                                  <label class="nhsuk-label nhsuk-radios__label" for="ubrn">
+                                    UBRN
+                                  </label>
+                                </div>
+                                <div class="nhsuk-radios__item">
+                                  <input class="nhsuk-radios__input" id="demographics" name="searchby" type="radio" value="">
+                                  <label class="nhsuk-label nhsuk-radios__label" for="demographics">
+                                    Demographics
+                                  </label>
+                                </div>
                               </div>
                             </div>
-                          </div>
 
+                          </div>
                         </div>
-                      </div>
 
 
 
-                      <!-- END FORM GROUP -->
+                        <!-- END FORM GROUP -->
 
 
-                      <div class="nhsuk-form-group">
-                        <div class="nhsuk-grid-row">
-                          <div class="nhsuk-grid-column-one-quarter">
-                            <!-- NHS NUMBER HERE -->
+                        <div class="nhsuk-form-group">
+                          <div class="nhsuk-grid-row">
+                            <div class="nhsuk-grid-column-one-quarter">
+                              <!-- NHS NUMBER HERE -->
 
 
+
+                            </div>
+                            <div class="nhsuk-grid-column-one-quarter">
+                              <div class="nhsuk-date-input__item">
+                                <label class="nhsuk-label nhsuk-label__strong nhsuk-body-xs">
+                                  NHS number
+                                </label>
+                                <input class="nhsuk-input" type="number" inputmode="numeric" name="" value="">
+                              </div>
+                            </div>
 
                           </div>
-                          <div class="nhsuk-grid-column-one-quarter">
-                            <div class="nhsuk-date-input__item">
-                              <label class="nhsuk-label nhsuk-label__strong nhsuk-body-xs">
-                                NHS number
-                              </label>
-                              <input class="nhsuk-input" type="number" inputmode="numeric" name="" value="">
+                        </div>
+
+
+                        <div class="nhsuk-form-group">
+                          <div class="nhsuk-grid-row">
+                            <div class="nhsuk-grid-column-full">
+                              <a class="nhsuk-button--ers" href="search-results">Search</a>
                             </div>
                           </div>
-
                         </div>
+
                       </div>
-
-
-                      <div class="nhsuk-form-group">
-                        <div class="nhsuk-grid-row">
-                          <div class="nhsuk-grid-column-full">
-                            <a class="nhsuk-button--ers" href="search-results">Search</a>
-                          </div>
-                        </div>
-                      </div>
-
                     </div>
                   </div>
-                </div>
-                <!-- END SEARCH COLUMN -->
-                <div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-6">
-                  <div class="nhsuk-grid-column-one-third">
-                    <h2>Patient details</h2>
-                    <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
-
-                      <div class="nhsuk-summary-list__row">
-                        <dt class="nhsuk-summary-list__key">
-                          Name
-                        </dt>
-                        <dd class="nhsuk-summary-list__value">
-                          ROCK, David Dale (Mr)
-                        </dd>
-
-                      </div>
-
-                      <div class="nhsuk-summary-list__row">
-                        <dt class="nhsuk-summary-list__key">
-                          NHS number
-                        </dt>
-                        <dd class="nhsuk-summary-list__value">
-                          946-541-6533
-
-                        </dd>
-
-                      </div>
-                      <div class="nhsuk-summary-list__row">
-                        <dt class="nhsuk-summary-list__key">
-                          Contact
-                        </dt>
-                        <dd class="nhsuk-summary-list__value">
-                          no information
-
-                        </dd>
-
-                      </div>
-                      <div class="nhsuk-summary-list__row">
-                        <dt class="nhsuk-summary-list__key">
-                          Address
-                        </dt>
-                        <dd class="nhsuk-summary-list__value">
-                          700 Craven Road
-                          <br>
-                          Leeds
-                          <br>
-                          West  Yorkshire
-                          <br>LS6 2RX
+                  <!-- END SEARCH COLUMN -->
+                  <div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-6">
+                    <div class="nhsuk-grid-column-one-third">
+                      <h2>Patient details</h2>
+                      <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+
+                        <div class="nhsuk-summary-list__row">
+                          <dt class="nhsuk-summary-list__key">
+                            Name
+                          </dt>
+                          <dd class="nhsuk-summary-list__value">
+                            ROCK, David Dale (Mr)
+                          </dd>
+
+                        </div>
+
+                        <div class="nhsuk-summary-list__row">
+                          <dt class="nhsuk-summary-list__key">
+                            NHS number
+                          </dt>
+                          <dd class="nhsuk-summary-list__value">
+                            946-541-6533
+
+                          </dd>
+
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                          <dt class="nhsuk-summary-list__key">
+                            Contact
+                          </dt>
+                          <dd class="nhsuk-summary-list__value">
+                            no information
+
+                          </dd>
+
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                          <dt class="nhsuk-summary-list__key">
+                            Address
+                          </dt>
+                          <dd class="nhsuk-summary-list__value">
+                            700 Craven Road
+                            <br>
+                            Leeds
+                            <br>
+                            West  Yorkshire
+                            <br>LS6 2RX
+
+                          </dd>
+
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                          <dt class="nhsuk-summary-list__key">
+                            Date of birth
+                          </dt>
+                          <dd class="nhsuk-summary-list__value">
+                            04-Jun-1950
+
+                          </dd>
+
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                          <dt class="nhsuk-summary-list__key">
+                            Age
+                          </dt>
+                          <dd class="nhsuk-summary-list__value">
+                            68 years
+
+                          </dd>
+
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                          <dt class="nhsuk-summary-list__key">
+                            Gender
+                          </dt>
+                          <dd class="nhsuk-summary-list__value">
+                            Male
+
+                          </dd>
+
+                        </div>
+
+                      </dl>
+
+                    <a href="/search/search" class="nhsuk-button nhsuk-button--ers" href="#">Referr/Advice</a>
+                    </div>
+                    <div class="nhsuk-grid-column-one-third">
 
-                        </dd>
-
-                      </div>
-                      <div class="nhsuk-summary-list__row">
-                        <dt class="nhsuk-summary-list__key">
-                          Date of birth
-                        </dt>
-                        <dd class="nhsuk-summary-list__value">
-                          04-Jun-1950
-
-                        </dd>
-
-                      </div>
-                      <div class="nhsuk-summary-list__row">
-                        <dt class="nhsuk-summary-list__key">
-                          Age
-                        </dt>
-                        <dd class="nhsuk-summary-list__value">
-                          68 years
-
-                        </dd>
-
-                      </div>
-                      <div class="nhsuk-summary-list__row">
-                        <dt class="nhsuk-summary-list__key">
-                          Gender
-                        </dt>
-                        <dd class="nhsuk-summary-list__value">
-                          Male
-
-                        </dd>
-
-                      </div>
-
-                    </dl>
-
-                  <a href="/search/search" class="nhsuk-button nhsuk-button--ers" href="#">Referr/Advice</a>
-                  </div>
-                  <div class="nhsuk-grid-column-one-third">
-
-
-                  </div>
-
-                </div>
-
-                <div class="nhsuk-grid-row">
-                  <div class="nhsuk-grid-column-full">
-                    <h2>Patient activity list</h2>
-                    <div class="nhsuk-form-group">
-                      <div class="nhsuk-checkboxes__item multiple-choice--hod">
-                        <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="" checked>
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
-                          Show all non-archived referrals
-                        </label>
-                      </div>
-                      <p>Last Refresh:27-Sep-1029 16:27</p>
-
-                      <p class="nhsuk-link"><a href="#">Refresh list</a></p>
-
-              </div>
-
-
-                    <!-- TABLE -->
-                    <div class="nhsuk-table-responsive">
-                      <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable">
-
-                        <!-- TABLE START -->
-                        <thead class="nhsuk-table__head">
-                          <tr class="nhsuk-table__row">
-                            <th class="nhsuk-table_header">UBRN</th>
-                            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-                              <button onclick="sortTable()" type="button" data-index="0">Requested date/time</button>
-
-
-                            </th>
-
-                            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-                              <button type="button" data-index="0">Appointment</button>
-
-                            </th>
-
-                            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-                              <button onclick="sortTable()" type="button" data-index="0">Referred by</button>
-
-
-                            </th>
-
-                            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-                              <button onclick="sortTable()" type="button" data-index="0">Category</button>
-
-
-                            </th>
-
-
-                            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-                              <button onclick="sortTable()" type="button" data-index="0">Type</button>
-
-
-                            </th>
-
-
-
-
-                          </tr>
-                        </thead>
-
-
-                        <tbody class="nhsuk-table__body">
-
-
-
-
-
-
-                          <!-- -->
-                          <tr class="nhsuk-table__row">
-                            <td class="nhsuk-table__cell">
-                              <p class="nhsuk-search-result-title"><a href="#">0000 4914 6786</a></p>
-
-
-
-                            </td>
-
-                            <td class="nhsuk-table__cell">
-
-
-                              <p class="">25-Sep-2019 14:14</p>
-
-                            </td>
-                            <td class="nhsuk-table__cell">-</td>
-                            <td class="nhsuk-table__cell">HEADLEY, Mike</td>
-                            <td class="nhsuk-table__cell">Triage request</td>
-                            <td class="nhsuk-table__cell">Referral</td>
-
-                          </tr>
-                          <tr class="nhsuk-table__row">
-                            <td class="nhsuk-table__cell">
-                              <p class="nhsuk-search-result-title"><a href="#">0000 4914 6529</a></p>
-
-
-
-                            </td>
-
-                            <td class="nhsuk-table__cell">
-
-
-                              <p>25-Sep-2019 14:14</p>
-
-                            </td>
-                            <td class="nhsuk-table__cell">-</td>
-                            <td class="nhsuk-table__cell">HEADLEY, Mike</td>
-                            <td class="nhsuk-table__cell">Triage request</td>
-                            <td class="nhsuk-table__cell">Referral</td>
-
-                          </tr>
-                          <tr class="nhsuk-table__row">
-                            <td class="nhsuk-table__cell">
-                              <p class="nhsuk-search-result-title"><a href="#">0000 4914 6786</a></p>
-
-
-
-                            </td>
-
-                            <td class="nhsuk-table__cell">
-
-
-                              <p>25-Sep-2019 14:14</p>
-
-                            </td>
-                            <td class="nhsuk-table__cell">-</td>
-                            <td class="nhsuk-table__cell">HEADLEY, Mike</td>
-                            <td class="nhsuk-table__cell">Triage request</td>
-                            <td class="nhsuk-table__cell">Referral</td>
-
-                          </tr>
-                          <tr class="nhsuk-table__row">
-                            <td class="nhsuk-table__cell">
-                            <p class="nhsuk-search-result-title"><a href="#">0000 4914 6786</a></p>
-
-
-
-                            </td>
-
-                            <td class="nhsuk-table__cell">
-
-
-                              <p>25-Sep-2019 14:14</p>
-
-                            </td>
-                            <td class="nhsuk-table__cell">-</td>
-                            <td class="nhsuk-table__cell">HEADLEY, Mike</td>
-                            <td class="nhsuk-table__cell">Triage request</td>
-                            <td class="nhsuk-table__cell">Referral</td>
-
-                          </tr>
-                          <tr class="nhsuk-table__row">
-                            <td class="nhsuk-table__cell">
-                            <p class="nhsuk-search-result-title"><a href="#">0000 4914 6786</a></p>
-
-
-
-                            </td>
-
-                            <td class="nhsuk-table__cell">
-
-
-                              <p>25-Sep-2019 14:14</p>
-
-                            </td>
-                            <td class="nhsuk-table__cell">-</td>
-                            <td class="nhsuk-table__cell">HEADLEY, Mike</td>
-                            <td class="nhsuk-table__cell">Triage request</td>
-                            <td class="nhsuk-table__cell">Referral</td>
-
-                          </tr>
-                          <tr class="nhsuk-table__row">
-                            <td class="nhsuk-table__cell">
-                            <p class="nhsuk-search-result-title"><a href="#">0000 4914 6786</a></p>
-
-
-
-                            </td>
-
-                            <td class="nhsuk-table__cell">
-
-
-                              <p>25-Sep-2019 14:14</p>
-
-                            </td>
-                            <td class="nhsuk-table__cell">-</td>
-                            <td class="nhsuk-table__cell">HEADLEY, Mike</td>
-                            <td class="nhsuk-table__cell">Triage request</td>
-                            <td class="nhsuk-table__cell">Referral</td>
-
-                          </tr>
-
-                        </tbody>
-                      </table>
 
                     </div>
 
-
                   </div>
+
+                  <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-full">
+                      <h2>Patient activity list</h2>
+                      <div class="nhsuk-form-group">
+                        <div class="nhsuk-checkboxes__item multiple-choice--hod">
+                          <input class="nhsuk-checkboxes__input" id="archived" name="archived" type="checkbox" value="" checked>
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="archived">
+                            Show all non-archived referrals
+                          </label>
+                        </div>
+                        <p>Last Refresh:27-Sep-1029 16:27</p>
+
+                        <p class="nhsuk-link"><a href="#">Refresh list</a></p>
+
                 </div>
+
+
+                      <!-- TABLE -->
+                      <div class="nhsuk-table-responsive">
+                        <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable">
+
+                          <!-- TABLE START -->
+                          <thead class="nhsuk-table__head">
+                            <tr class="nhsuk-table__row">
+                              <th class="nhsuk-table_header">UBRN</th>
+                              <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                                <button onclick="sortTable()" type="button" data-index="0">Requested date/time</button>
+
+
+                              </th>
+
+                              <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                                <button type="button" data-index="0">Appointment</button>
+
+                              </th>
+
+                              <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                                <button onclick="sortTable()" type="button" data-index="0">Referred by</button>
+
+
+                              </th>
+
+                              <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                                <button onclick="sortTable()" type="button" data-index="0">Category</button>
+
+
+                              </th>
+
+
+                              <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                                <button onclick="sortTable()" type="button" data-index="0">Type</button>
+
+
+                              </th>
+
+
+
+
+                            </tr>
+                          </thead>
+
+
+                          <tbody class="nhsuk-table__body">
+
+
+
+
+
+
+                            <!-- -->
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell">
+                                <p class="nhsuk-search-result-title"><a href="#">0000 4914 6785</a></p>
+
+
+
+                              </td>
+
+                              <td class="nhsuk-table__cell">
+
+
+                                <p class="">25-Sep-2019 14:14</p>
+
+                              </td>
+                              <td class="nhsuk-table__cell">-</td>
+                              <td class="nhsuk-table__cell">HEADLEY, Mike</td>
+                              <td class="nhsuk-table__cell">Triage request</td>
+                              <td class="nhsuk-table__cell">Referral</td>
+
+                            </tr>
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell">
+                                <p class="nhsuk-search-result-title"><a href="#">0000 4914 6529</a></p>
+
+
+
+                              </td>
+
+                              <td class="nhsuk-table__cell">
+
+
+                                <p>16-Sep-2019 14:10</p>
+
+                              </td>
+                              <td class="nhsuk-table__cell">20-Sep-2019 12:30</td>
+                              <td class="nhsuk-table__cell">LEEDHAM, Sam</td>
+                              <td class="nhsuk-table__cell">Past</td>
+                              <td class="nhsuk-table__cell">Referral</td>
+
+                            </tr>
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell">
+                                <p class="nhsuk-search-result-title"><a href="#">0000 4914 6056</a></p>
+
+
+
+                              </td>
+
+                              <td class="nhsuk-table__cell">
+
+
+                                <p>04-Sep-2019 09:09</p>
+
+                              </td>
+                              <td class="nhsuk-table__cell">-</td>
+                              <td class="nhsuk-table__cell">HEADLEY, Mike</td>
+                              <td class="nhsuk-table__cell">Triage response</td>
+                              <td class="nhsuk-table__cell">Referral</td>
+
+                            </tr>
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell">
+                              <p class="nhsuk-search-result-title"><a href="#">0000 4914 6015</a></p>
+
+
+
+                              </td>
+
+                              <td class="nhsuk-table__cell">
+
+
+                                <p>02-Sep-2019 15:26</p>
+
+                              </td>
+                              <td class="nhsuk-table__cell">04-Sep-2019 09:00</td>
+                              <td class="nhsuk-table__cell">SHAWSHANK, Mark</td>
+                              <td class="nhsuk-table__cell">Past</td>
+                              <td class="nhsuk-table__cell">Referral</td>
+
+                            </tr>
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell">
+                              <p class="nhsuk-search-result-title"><a href="#">0000 4914 5997</a></p>
+
+
+
+                              </td>
+
+                              <td class="nhsuk-table__cell">
+
+
+                                <p>02-Sep-2019 11:59</p>
+
+                              </td>
+                              <td class="nhsuk-table__cell">-</td>
+                              <td class="nhsuk-table__cell">HEADLEY, Mike</td>
+                              <td class="nhsuk-table__cell">Unbooked</td>
+                              <td class="nhsuk-table__cell">Referral</td>
+
+                            </tr>
+                            <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell">
+                              <p class="nhsuk-search-result-title"><a href="#">0000 4914 5912</a></p>
+
+
+
+                              </td>
+
+                              <td class="nhsuk-table__cell">
+
+
+                                <p>27-Aug-2019 14:56</p>
+
+                              </td>
+                              <td class="nhsuk-table__cell">-</td>
+                              <td class="nhsuk-table__cell">HEADLEY, Mike</td>
+                              <td class="nhsuk-table__cell">Unbooked</td>
+                              <td class="nhsuk-table__cell">Referral</td>
+
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                </div>
+                <!--END TAB-->
+
+                <div class="tab" id="worklists">
+                  <div class="nhsuk-grid-row nhsuk-u-padding-top-4">
+
+                    <!-- NEW HTML -->
+                    <div class="nhsuk-grid-column-full">
+                      <p>alalalal</p>
+                      </div>
+                      </div>
+
+                </div>
+
+                <div class="tab" id="dos">
+                  <div class="nhsuk-grid-row nhsuk-u-padding-top-4">
+
+                    <!-- NEW HTML -->
+                    <div class="nhsuk-grid-column-full">
+                      </div>
+                      </div>
+
+                </div>
+                <div class="tab" id="enquiries">
+                  <div class="nhsuk-grid-row nhsuk-u-padding-top-4">
+
+                    <!-- NEW HTML -->
+                    <div class="nhsuk-grid-column-full">
+                      </div>
+                      </div>
+
+                </div>
+                <div class="tab" id="reports">
+                  <div class="nhsuk-grid-row nhsuk-u-padding-top-4">
+
+                    <!-- NEW HTML -->
+                    <div class="nhsuk-grid-column-full">
+                      </div>
+                      </div>
+
+                </div>
+
                 {% endblock %}
 
                 {% block footer %}

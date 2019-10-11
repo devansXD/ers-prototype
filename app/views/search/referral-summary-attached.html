@@ -91,32 +91,23 @@ NHS e-referral Service
   </div>
   <div class="nhsuk-grid-column-full">
     <div class="flex-container">
-      <div class="nhsuk-heading-menu">
-        <h1 class="nhsuk-heading-m nhsuk-heading-menu__title">Referral summary</h1>
-        <div class="nhsuk-heading-menu__actions">
-          <a class="nhsuk-heading-menu__action-link" href="#">Referral history</a>
+      <div class="nhsuk-heading-links-container">
+        <h1 class="nhsuk-heading-l nhsuk-heading-menu__title">Referral summary</h1>
+        <div class="nhsuk-heading-links">
+          <ul>
+            <li><a href="https://vibrant-mclean-37b45f.netlify.com/index-2.html">Referral history</a></li>
+            <li><a href="#">Advice and guidance</a></li>
+            <li><a href="#">Related UBRN</a></li>
+          </ul>
         </div>
       </div>
-      <div>
-        <ul>
-          <li><a href="https://vibrant-mclean-37b45f.netlify.com/index-2.html">Referral history</a></li>
-          <li><a href="#">Advice and guidance</a></li>
-          <li><a href="#">Related UBRN</a></li>
-        </ul>
 
-      </div>
 
     </div>
 
-
-
-
-
-
-
-    <div class="panel panel-border-wide alert-default">
+    <div class="panel panel-border-wide alert-success">
       <h2 class="nhsuk-heading-s nhsuk-u-padding-top-3">
-        Missing referral letter / clinical information
+        Referral letter has been attached
       </h2>
 
     </div>
@@ -124,41 +115,56 @@ NHS e-referral Service
 
     <div class="nhsuk-grid-row">
 
-      <div class="nhsuk-grid-column-one-third">
-        <span class="nhsuk-tag__highlight nhsuk-tag-large">Unbooked</span>
+      <div class="nhsuk-grid-column-one-half flex-container">
+
+        <div class="flex-child">
+          <span class="nhsuk-tag__highlight nhsuk-tag-large">UNBOOKED</span>
+
+
+        </div>
+
+        <div class="flex-child">
+          <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Letter due
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                13 December 2019
+              </dd>
+
+            </div>
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Services
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                The Yorkshire Clinic
+                <br>
+                <a href="#">Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</a>
+                <br>
+
+
+
+              </dd>
+
+            </div>
+
+          </dl>
+
+            <p><a href="#">Print patient letter</a> <a href="#">Send patient letter</a></p>
+
+        </div>
+
+
+
+
+
+
 
       </div>
-      <div class="nhsuk-grid-column-one-third">
 
-        <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
-
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Letter due
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              13 December 2019
-            </dd>
-
-          </div>
-
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Services
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              The Yorkshire Clinic
-              <br>
-              <a href="#">Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</a>
-            </dd>
-
-          </div>
-
-        </dl>
-        <span><a href="#">Print patient letter</a> <a href="#">Send patient letter</a></span>
-
-
-      </div>
 
       <div class="nhsuk-grid-column-one-third">
         <div class="nhsuk-heading-menu__actions">
@@ -246,11 +252,39 @@ NHS e-referral Service
         </div>
         <div class="nhsuk-grid-row">
 
-          <div class="nhsuk-grid-column-one-third">
+          <div class="nhsuk-grid-column-full">
             <h2>Referral details</h2>
             <h3 class="nhsuk-heading-m">Attachments</h3>
-            <p class="nhsuk-hint">You have no attachments to view yet.</p>
-            <p><a class="nhsuk-button--ers_secondary" href="attachment">Add an attachment</a></p>
+            <p><a class="" href="attachment">Add an attachment</a></p>
+
+            <div class="nhsuk-table-responsive">
+              <table class="nhsuk-table">
+
+                <thead class="nhsuk-table__head">
+                  <tr class="nhsuk-table__row">
+                    <th class="nhsuk-table__header" scope="col">File</th>
+                    <th class="nhsuk-table__header" scope="col">Description</th>
+                    <th class="nhsuk-table__header" scope="col">Added by</th>
+                    <th class="nhsuk-table__header" scope="col">Date added</th>
+
+
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><a href="#">Referral letter.pdf</a></td>
+                    <td class="nhsuk-table__cell">Patient referral letter</td>
+                    <td class="nhsuk-table__cell">JONES, Michael (Dr) - referring  clinician</td>
+                    <td class="nhsuk-table__cell">09-April-2019</td>
+
+
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+
           </div>
         </div>
 
@@ -261,35 +295,32 @@ NHS e-referral Service
 
             <p><a href="#">Add requirement</a></p>
 
-            <div class="nhsuk-table-responsive">
-              <table class="nhsuk-table">
+            <table class="nhsuk-table">
 
-                <thead class="nhsuk-table__head">
-                  <tr class="nhsuk-table__row">
-                    <th class="nhsuk-table__header" scope="col">Type</th>
-                    <th class="nhsuk-table__header" scope="col">Description</th>
-                    <th class="nhsuk-table__header" scope="col">Status</th>
-                    <th class="nhsuk-table__header" scope="col">Comments</th>
-                    <th class="nhsuk-table__header" scope="col">Action</th>
+              <thead class="nhsuk-table__head">
+                <tr class="nhsuk-table__row">
+                  <th class="nhsuk-table__header" scope="col">Type</th>
+                  <th class="nhsuk-table__header" scope="col">Description</th>
+                  <th class="nhsuk-table__header" scope="col">Status</th>
+                  <th class="nhsuk-table__header" scope="col">Comments</th>
+                  <th class="nhsuk-table__header" scope="col">Action</th>
 
-                  </tr>
-                </thead>
-                <tbody class="nhsuk-table__body">
-                  <tr class="nhsuk-table__row">
-                    <td class="nhsuk-table__cell">Interpreter</td>
-                    <td class="nhsuk-table__cell">Spanish translator <br>required</td>
-                    <td class="nhsuk-table__cell">Booked</td>
-                    <td class="nhsuk-table__cell">None</td>
-                    <td class="nhsuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+              </thead>
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">Interpreter</td>
+                  <td class="nhsuk-table__cell">Spanish translator required</td>
+                  <td class="nhsuk-table__cell">Booked</td>
+                  <td class="nhsuk-table__cell">None</td>
+                  <td class="nhsuk-table__cell"><a href="#">Remove</a></td>
 
-                  </tr>
+                </tr>
 
-                </tbody>
-              </table>
-            </div>
-            <a class="nhsuk-button nhsuk-button--ers" href="referral-summary-attached" role="button" type="submit">
-      Patient to book
-            </a>
+              </tbody>
+            </table>
+
+
 
           </div>
 

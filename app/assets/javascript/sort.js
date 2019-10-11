@@ -12,7 +12,6 @@ $(document).ready(function() {
     return $(tr).children('td').eq(index).text()
   }
 
-
   $('table thead th').click(function() {
     var table = $(this).parents('table').eq(0);
     var row = table.find('tr:gt(0)').toArray().sort(compare($(this).index()));
