@@ -4,19 +4,20 @@
 // ==========================================================================
 
 legend, label,{
-  font-size: 17px !important;
+  
 }
 
 .sidebar .nhsuk-label{
 font-size: 16px !important;
 }
-.nhsuk-checkboxes__label{
-  padding: 0 !important;
-}
+
 .multiple-choice--hod {
   .multiple-choice {
     padding-top: 1px;
     padding-bottom: 2px;
+    .nhsuk-checkboxes__label{
+      padding: 0 !important;
+    }
   }
   .-checkboxes__label {
     padding: 3px 2px 5px;
@@ -97,11 +98,12 @@ $selected-colour: #FFECC7;
   .multiple-choice {
     padding-top: 1px;
     padding-bottom: 2px;
+    .nhsuk-radios__label {
+      padding: 3px 8px 5px;
+
+    }
   }
-  .nhsuk-radios__label {
-    padding: 3px 8px 5px;
-    font-size: 17px !important;
-  }
+
 
   .nhsuk-radios__item {
     margin-bottom: 0;
