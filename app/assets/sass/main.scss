@@ -27,13 +27,17 @@
 @import 'components/tabs';
 @import 'components/modal';
 
-
+.filter-group{
+  display: block;
+  float: left;
+}
 .flex-container{
   display: flex;
 :first-child{
   margin-right: 32px;
 }
 }
+
 .nhsuk-heading-links-container{
   display: flex;
   font-size: .1px;

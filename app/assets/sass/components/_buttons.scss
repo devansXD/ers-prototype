@@ -28,9 +28,6 @@ color: #425563;
 box-shadow: 0 4px 0 #425563;
 
 }
-.nhsuk-button--ers_reverse:link{
-  color: green;
-}
 
 .nhsuk-button--ers_reverse:hover, .nhsuk-button--ers_reverse:focus {
   @extend .nhsuk-button--ers_reverse;
@@ -40,6 +37,10 @@ cursor: pointer;}
 .nhsuk-button--ers_reverse.nhsuk-button--ers_disabled {
   background-color: #425563;
 cursor: pointer;}
+
+.nhsuk-button--ers_reverse:link{
+  color: green;
+}
 
 .nhsuk-upload-button-container {
   position: relative;

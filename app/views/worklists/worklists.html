@@ -4,21 +4,26 @@
 {% set containerClasses = 'nhsuk-width-container-fluid' %}
 {% set bodyClasses = 'nhsuk-white-background' %}
 {% block pageScripts %}
-  <script type="text/javascript" src="/js/search.js"></script>
-  <script type="text/javascript" src="/js/auto.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script type="text/javascript" src="/js/auto.js"></script>
+<script type="text/javascript" src="/js/reveal.js"></script>
+<script type="text/javascript" src="/js/sort.js"></script>
+<script type="text/javascript" src="/js/sidebar.js"></script>
 {% endblock %}
 {% block pageTitle %}
-  NHS e-referral Service
+NHS e-referral Service
 {% endblock %}
 
 {% block header %}
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container-fluid nhsuk-header__container">
     <div class="nhsuk-header__logo">
-      <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+      <a class="nhsuk-header__link" href="search" aria-label="NHS homepage">
         <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
           <path fill="#fff" d="M0 0h40v16H0z"></path>
-          <path fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          <path fill="#005eb8"
+            d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6">
+          </path>
           <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
         </svg>
       </a>
@@ -26,30 +31,30 @@
     <!-- END LOGO -->
     <!-- SERVICE NAME -->
     <div class="nhsuk-header__transactional-service-name">
-          <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
-        </div>
+      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+    </div>
 
     <div class="nhsuk-header__content" id="content-header">
       <div class="nhsuk-header__menu">
         <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation">
           <ul class="nhsuk-header__navigation-list" style="border:0">
-        <li class="nhsuk-header__navigation-item">
-          <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/conditions/social-care-and-support/">
-            Help
-          </a>
-        </li>
-        <li class="nhsuk-header__navigation-item">
-          <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/news/">
-            Alerts
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/conditions/social-care-and-support/">
+                Help
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/news/">
+                Alerts
 
-          </a>
-        </li>
-        <li class="nhsuk-header__navigation-item">
-          <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/service-search">
-            Dave Evans
-          </a>
-        </li>
-      </ul>
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/service-search">
+                Dave Evans
+              </a>
+            </li>
+          </ul>
         </nav>
 
       </div>
@@ -58,35 +63,315 @@
 
 </header>
 <!-- SUB MENU PATIENT INFO -->
-<div class="nhsuk-grid-row nhsuk-grey-background" style="border-bottom:1px solid #AEB7BD">
-  <div class="nhsuk-grid-column-three-quarters">
 
-  <ul class="nhsuk-u-padding-2 nhsuk-u-margin-left-0 nhsuk-header__navigation-list" role="navigation">
-    <li><span style="padding:16px;background-color:#425563;color:#f0f4f5;margin-left:-16px;"><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="Patient name">Dave Evans</a></li>
-    <li>Male 30yrs (4 Jun 1998)</li>
-    <li><strong>NHS No:</strong> 000 007 4563</li>
-  </ul>
-</div>
-  </div>
 {% endblock %}
 {% block content %}
-<div class="nhsuk-grid-row nhsuk-grey-background nhsuk-u-padding-top-4 nhsuk-u-padding-bottom-4" style="border-bottom:1px solid #AEB7BD">
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <nav class="nhsuk-tabs" wiid="C104">
+      <ul role="navigation" wiid="C105">
+        <li wiid="C106"><a href="#" wiid="C107">Patients</a></li>
+        <li wiid="C108"><a href="#" wiid="C109">Worklists</a></li>
+        <li wiid="C110"><a href="#" wiid="C111">Directory of services</a></li>
+        <li wiid="C112"><a href="#" wiid="C113">Enquiries</a></li>
+        <li wiid="C114"><a href="#" wiid="C115">Reports</a></li>
+      </ul>
+    </nav>
+  </div>
   <div class="nhsuk-grid-column-one-half">
-    <h1 class="nhsuk-heading-s">Worklists</h1>
+  </div>
+</div>
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-3">
+  <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-5">
+
+
+
+  </div>
+  <!-- SIDEBAR ACTIONS -->
+
+  <div class="nhsuk-grid-column-one-quarter nhsuk-margin-right-0 sidebar" id="Sidebar" style="display:none"">
+
+
+    <h3>Filters</h3>
+
+    <p><a href="#">Clear all filters</a></p>
+
+    <div class="nhsuk-form-group">
+
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+          Priority
+        </legend>
+        <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+              Routine
+            </label>
+
+        </div>
+        <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+              2 week wait
+            </label>
+          </div>
+        </div>
+        </div>
+      </fieldset>
+      </div>
+        <div class="nhsuk-form-group">
+
+
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+          Status
+        </legend>
+        <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+              Rejected
+            </label>
+          </div>
+
+
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+              Triage returned
+            </label>
+          </div>
+
+          </div>
+
+      </fieldset>
+
 
     </div>
 
+
+    <nav class="side-navigation" role="navigation" aria-label="Secondary navigation">
+    </nav>
+  </div>
+  <div class="nhsuk-grid-column-three-quarters sidebar nhsuk-u-border-left">
+    <div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+      <h1 class="nhsuk-fieldset__heading">
+        Show referrals for
+      </h1>
+    </legend>
+    <div class="nhsuk-radios nhsuk-radios--s nhsuk-radios--inline">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+        <label class="nhsuk-label nhsuk-radios__label" for="changed-name">
+          Me
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+        <label class="nhsuk-label nhsuk-radios__label" for="changed-name-2">
+          My  organisation
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+    <p><a class="sidebarbttn" href="#" type="submit">- Hide filters</a></p>
+    <div class="nhsuk-table-nav">
+      <p>Last updated 30 mins ago <a href="#">Refresh</a></p>
+
+    </div>
+    <div class="nhsuk-scrollable-pane">
+  <div class="nhsuk-scrollable-pane__wrapper">
+    <div class="nhsuk-tabs-container">
+      <nav class="nhsuk-tabs--l list">
+        <ul>
+          <li><a href="#">Rejected/triage response <span class="nhsuk-body-l">6</span></a></li>
+          <li><a href="#">Letters outstanding <span class="nhsuk-body-l">6</span></a></li>
+          <li><a href="#">Incomplete<span class="nhsuk-body-l">6</span></a></li>
+          <li><a href="#">Advice and guidance<span class="nhsuk-body-l">6</span></a></li>
+          <li><a href="#">Assessment returned / cancelled / DNA<span class="nhsuk-body-l">6</span></a></li>
+          <li><a href="#">Awaiting booking <span class="nhsuk-body-l">6</span></a></li>
+        </ul>
+
+      </nav>
+
+    </div>
+    <div class="nhsuk-table-nav">
+      <p><a href="#">Add/remove columns</a></p>
+    </div>
+    <div class="nhsuk-table-responsive">
+      <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable">
+
+        <!-- TABLE START -->
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+
+            <th class="nhsuk-table__header" aria-sort="none" scope="col">
+              <button onclick="sortTable()" type="button" data-index="0">UBRN</button>
+
+
+            </th>
+
+            <th class="nhsuk-table__header" aria-sort="none" scope="col">
+              <button type="button" data-index="0">Patient name</button>
+
+            </th>
+
+            <th class="nhsuk-table__header" aria-sort="none" scope="col">
+              <button onclick="sortTable()" type="button" data-index="0">Priority</button>
+
+
+            </th>
+            <th class="nhsuk-table__header" aria-sort="none" scope="col">
+              <button onclick="sortTable()" type="button" data-index="0">Referrer</button>
+
+
+            </th>
+            <th class="nhsuk-table__header" aria-sort="none" scope="col">
+              <button onclick="sortTable()" type="button" data-index="0">Clinical context</button>
+
+
+            </th>
+            <th class="nhsuk-table__header" aria-sort="none" scope="col">
+              <button onclick="sortTable()" type="button" data-index="0">Status</button>
+
+
+            </th>
+            <th class="nhsuk-table__header" aria-sort="none" scope="col">
+              <button onclick="sortTable()" type="button" data-index="0">Reject reason</button>
+
+
+            </th>
+
+
+          </tr>
+        </thead>
+
+
+        <tbody class="nhsuk-table__body">
+
+
+
+
+
+
+          <!-- -->
+          <tr class="nhsuk-table__row">
+
+
+            <td class="nhsuk-table__cell">
+              <a href="#">0003 0866 0007</a>
+
+
+
+
+
+
+            </td>
+            <td class="nhsuk-table__cell">Mr Howard Jones</td>
+            <td class="nhsuk-table__cell">Routine</td>
+            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+            <td class="nhsuk-table__cell">Noor Altaf</td>
+            <td class="nhsuk-table__cell">Rejected</td>
+            <td class="nhsuk-table__cell">Outpatient</td>
+
+
+          </tr>
+          <tr class="nhsuk-table__row">
+
+
+            <td class="nhsuk-table__cell">
+              <a href="#">0003 0866 0007</a>
+
+
+
+
+
+
+            </td>
+            <td class="nhsuk-table__cell">Mr Howard Jones</td>
+            <td class="nhsuk-table__cell">Routine</td>
+            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+            <td class="nhsuk-table__cell">Noor Altaf</td>
+            <td class="nhsuk-table__cell">Rejected</td>
+            <td class="nhsuk-table__cell">Outpatient</td>
+
+
+          </tr>
+          <tr class="nhsuk-table__row">
+
+
+            <td class="nhsuk-table__cell">
+              <a href="#">0003 0866 0007</a>
+            </td>
+            <td class="nhsuk-table__cell">Mr Howard Jones</td>
+            <td class="nhsuk-table__cell">Routine</td>
+            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+            <td class="nhsuk-table__cell">Noor Altaf</td>
+            <td class="nhsuk-table__cell">Rejected</td>
+            <td class="nhsuk-table__cell">Outpatient</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">
+              <a href="#">0003 0866 0007</a>
+            </td>
+            <td class="nhsuk-table__cell">Mr Howard Jones</td>
+            <td class="nhsuk-table__cell">Routine</td>
+            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+            <td class="nhsuk-table__cell">Noor Altaf</td>
+            <td class="nhsuk-table__cell">Rejected</td>
+            <td class="nhsuk-table__cell">Outpatient</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">
+              <a href="#">0003 0866 0007</a>
+            </td>
+            <td class="nhsuk-table__cell">Mr Howard Jones</td>
+            <td class="nhsuk-table__cell">Routine</td>
+            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+            <td class="nhsuk-table__cell">Noor Altaf</td>
+            <td class="nhsuk-table__cell">Rejected</td>
+            <td class="nhsuk-table__cell">Outpatient</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">
+              <a href="#">0003 0866 0007</a>
+            </td>
+            <td class="nhsuk-table__cell">Mr Howard Jones</td>
+            <td class="nhsuk-table__cell">Routine</td>
+            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+            <td class="nhsuk-table__cell">Noor Altaf</td>
+            <td class="nhsuk-table__cell">Rejected</td>
+            <td class="nhsuk-table__cell">Outpatient</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <nav role="navigation" aria-label="Pagination">
+  <div class="pagination__summary">Showing 101 - 150 of 246 results</div>
+
+</nav>
+      <p class="align-centre"><a class="nhsuk-button--ers_secondary" href="#">Load more</a></p>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
 
 {% block footer %}
 <footer role="contentinfo">
- <div class="nhsuk-footer" id="nhsuk-footer">
-   <div class="nhsuk-width-container nhsuk-width-container-fluid">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container nhsuk-width-container-fluid">
 
-     <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
-   </div>
- </div>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
 </footer>
 {% endblock %}

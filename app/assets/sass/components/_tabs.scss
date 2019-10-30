@@ -3,6 +3,62 @@
 // TABS /
 // ==========================================================================
 
+// ========================
+// TABLE TABS
+// ========================
+.nhsuk-tabs-container{
+  position:relative;
+   margin:0 auto;
+   overflow-x:auto;
+   height:100px;
+}
+.list{
+  position:relative;
+    left:0px;
+    top:0px;
+  	min-width:2000px;
+    margin-top:0px;
+}
+nav.nhsuk-tabs--l{
+
+  ul{
+    margin: 0;
+    padding: 0;
+
+  }
+  li{
+    display: inline-grid;
+    position:relative;
+    text-align:center;
+    cursor:grab;
+    cursor:-webkit-grab;
+    color:#efefef;
+    vertical-align:middle;
+    margin: 16px;
+    flex-basis:auto;
+    max-width: 215px;
+    min-width: 215px;
+    border: 1px solid $color_nhsuk-grey-2;
+    border-bottom: 6px solid $color_nhsuk-blue;
+    text-align:left;
+
+    font-size: 16px;
+    line-height: 16px;
+
+    a{
+      display: inline-block;
+      color: $color_nhsuk-black;
+      padding: 8px 8px 0 8px;
+    }
+    span{
+      padding: 8px 0;
+      margin: 0;
+      font-weight: 900;
+    }
+
+
+  }
+}
 
 nav.nhsuk-tabs{
   display: flex;

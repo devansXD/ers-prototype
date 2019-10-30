@@ -4,7 +4,86 @@
     border: 0
   }
 }
+.nhsuk-table-nav{
+  display: inline-block;
+  float: right;
+  vertical-align: bottom;
+  margin-right: 32px;
+}
 
+.pagination .pagination_list-items {
+
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    a {
+      font-size: 1.5em;
+      display: inline-block;
+      padding: 15px 5px 10px 5px;
+      margin-right: 15px;
+      text-decoration: none;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+    &.active a,
+    &.active a:hover {
+      color: #005EA5;
+      -webkit-box-shadow: inset 0px -5px 0px 0px #005EA5;
+      -moz-box-shadow: inset 0px -5px 0px 0px #005EA5;
+      box-shadow: inset 0px -5px 0px 0px #005EA5;
+    }
+  }
+}
+
+.padding {
+  padding-left: 15px;
+}
+
+.pagination {
+  padding: 0;
+}
+.pagination__item {
+  display: inline-block;
+  list-style: none;
+  font-size: 1.5em;
+}
+.pagination__link {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    background: #F8F8F8;
+    outline: 3px solid #FFBF47;
+  }
+
+  &.current {
+
+    font-weight: 700;
+    border: none;
+    pointer-events: none;
+    cursor: default;
+
+    &:hover, &:focus {
+
+      background: none;
+    }
+  }
+}
+
+.pagination__summary {
+
+  -webkit-font-smoothing: antialiased;
+  padding: 8px 0;
+  font-size: 1.2em;
+  margin-right: 32px;
+
+  @media (min-width: 642px) {
+    float: right;
+  }
+}
 #results{
 th,td, dl{
   font-size: 18px !important;
@@ -115,4 +194,51 @@ padding-top: 16px;
   margin-top: 8px;
 
 
+}
+
+.nhsuk-scrollable-pane {
+
+  @media only screen and (min-width: 1020px){
+    position: relative;
+    overflow: hidden; // Hides the shadow
+    clear: both; // Fixes render bug
+    // width: 100% // Fixes render bug
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 50px;
+      height: 100%;
+      border-radius: 10px 0 0 10px / 50% 0 0 50%;
+      box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
+      content:"";
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1020px) {
+  .nhsuk-scrollable-pane__wrapper {
+    overflow-x: scroll;
+  }
+
+  .nhsuk-scrollable-pane__wrapper .nhsuk-table__header,
+  .nhsuk-scrollable-pane__wrapper .nhsuk-table__cell {
+    white-space: nowrap;
+  }
+
+  .nhsuk-scrollable-pane > div::-webkit-scrollbar {
+    height: 10px; // Match nhsuk spacing units
+  }
+
+  .nhsuk-scrollable-pane > div::-webkit-scrollbar-track {
+    background: nhsuk-colour("$color_nhsuk-grey-5");
+    box-shadow: 0 0 2px rgba(0,0,0,.15) inset; // Simulate scrollbar look and feel
+  }
+
+  .nhsuk-scrollable-pane > div::-webkit-scrollbar-thumb {
+    background: nhsuk-colour("$color_nhsuk-green");
+    border-radius: nhsuk-spacing(1);
+  }
 }

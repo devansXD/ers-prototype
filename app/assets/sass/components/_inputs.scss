@@ -3,10 +3,41 @@
 // COMPONENTS / INPUTS
 // ==========================================================================
 
-legend, label,{
-  
-}
+// ===================================
+// DEAL WITH SMALL VERSIONS FIRST
+// ===================================
 
+.nhsuk-checkboxes--s .nhsuk-checkboxes__label{
+  margin-top: -2px;
+  float: left;
+  padding:11px 15px 10px 1px;
+  :before{
+    top: 8px;
+    width: 24px;
+    height: 24px;
+  }
+}
+.nhsuk-checkboxes--s .nhsuk-checkboxes__label::before {
+    top: 8px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .nhsuk-checkboxes--s .nhsuk-checkboxes__label::after {
+      content: "";
+      display:block;
+      clear: both;
+    }
+
+.nhsuk-checkboxes--s .nhsuk-checkboxes__input{
+  left: -10px;
+}
+.nhsuk-checkboxes--s .nhsuk-checkboxes__item{
+  min-height: 0;
+  margin-bottom: 0;
+  padding-left: 34px;
+  float: left;
+}
 .sidebar .nhsuk-label{
 font-size: 16px !important;
 }
@@ -94,18 +125,30 @@ $selected-colour: #FFECC7;
 }
 
 
-.multiple-choice--hod {
-  .multiple-choice {
-    padding-top: 1px;
-    padding-bottom: 2px;
-    .nhsuk-radios__label {
-      padding: 3px 8px 5px;
-
-    }
-  }
-
-
-  .nhsuk-radios__item {
-    margin-bottom: 0;
-  }
+.nhsuk-radios--s .nhsuk-radios__input{
+  left: -10px;
 }
+
+.nhsuk-radios--s .nhsuk-radios__item{
+  min-height: 0;
+  margin-bottom: 0;
+  padding-left: 34px;
+  float: left;
+}
+
+.nhsuk-radios--s .nhsuk-radios__label{
+  padding: 11px 15px 10px 1px;
+  margin-top: -2px;
+  float: left;
+}
+
+  .nhsuk-radios--s .nhsuk-radios__label::before{
+    top:8px;
+    width: 24px;
+    height: 24px;
+  }
+  .nhsuk-radios--s .nhsuk-radios__label::after{
+    top: 15px;
+    left: 7px;
+    border-width: 5px;
+  }
