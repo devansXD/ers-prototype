@@ -33,6 +33,8 @@ $(document).ready(function() {
     });
 
    });
+   
+// Sidebar  reveal
 
    $(document).ready(function() {
       $(".sidebarbttn").click(function () {

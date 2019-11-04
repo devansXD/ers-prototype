@@ -21,12 +21,21 @@
     top: 8px;
     width: 24px;
     height: 24px;
+    box-sizing: border-box;
   }
 
   .nhsuk-checkboxes--s .nhsuk-checkboxes__label::after {
+    opacity: 1;
       content: "";
       display:block;
       clear: both;
+      position: absolute;
+      top: 15px;
+      left: 6px;
+      height: 5px;
+      width: 11px;
+      border-width: 0 0 3px 3px;
+
     }
 
 .nhsuk-checkboxes--s .nhsuk-checkboxes__input{
@@ -38,9 +47,12 @@
   padding-left: 34px;
   float: left;
 }
+
+
 .sidebar .nhsuk-label{
 font-size: 16px !important;
 }
+// MULTI SELECT
 
 .multiple-choice--hod {
   .multiple-choice {

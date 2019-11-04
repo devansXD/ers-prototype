@@ -4,36 +4,17 @@
     border: 0
   }
 }
-.nhsuk-table-nav{
-  display: inline-block;
-  float: right;
+.nhsuk-table-nav-panel{
+  display: inline;
   vertical-align: bottom;
   margin-right: 32px;
-}
-
-.pagination .pagination_list-items {
-
-  li {
+  font-size: 0;
+  .sidebarbttn{
+    float: left;
     display: inline-block;
-    font-size: 1.5em;
-    a {
-      font-size: 1.5em;
-      display: inline-block;
-      padding: 15px 5px 10px 5px;
-      margin-right: 15px;
-      text-decoration: none;
-
-      &:focus {
-        outline: 0;
-      }
-    }
-    &.active a,
-    &.active a:hover {
-      color: #005EA5;
-      -webkit-box-shadow: inset 0px -5px 0px 0px #005EA5;
-      -moz-box-shadow: inset 0px -5px 0px 0px #005EA5;
-      box-shadow: inset 0px -5px 0px 0px #005EA5;
-    }
+  }
+  .nhsuk-table-actions{
+    float: right;
   }
 }
 

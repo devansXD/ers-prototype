@@ -4,9 +4,7 @@
 {% set containerClasses = 'nhsuk-width-container-fluid' %}
 {% set bodyClasses = 'nhsuk-white-background' %}
 {% block pageScripts %}
-<script type="text/javascript" src="/js/search.js"></script>
-<script type="text/javascript" src="/js/auto.js"></script>
-<script type="text/javascript" src="/js/reveal.js"></script>
+
 <script type="text/javascript" src="/js/sort.js"></script>
 <script type="text/javascript" src="/js/sidebar.js"></script>
 {% endblock %}
@@ -67,21 +65,7 @@ NHS e-referral Service
 {% endblock %}
 {% block content %}
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <nav class="nhsuk-tabs" wiid="C104">
-      <ul role="navigation" wiid="C105">
-        <li wiid="C106"><a href="#" wiid="C107">Patients</a></li>
-        <li wiid="C108"><a href="#" wiid="C109">Worklists</a></li>
-        <li wiid="C110"><a href="#" wiid="C111">Directory of services</a></li>
-        <li wiid="C112"><a href="#" wiid="C113">Enquiries</a></li>
-        <li wiid="C114"><a href="#" wiid="C115">Reports</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="nhsuk-grid-column-one-half">
-  </div>
-</div>
+
 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-3">
   <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-5">
 
@@ -90,31 +74,33 @@ NHS e-referral Service
   </div>
   <!-- SIDEBAR ACTIONS -->
 
-  <div class="nhsuk-grid-column-one-quarter nhsuk-margin-right-0 sidebar" id="Sidebar" style="display:none"">
+  <div class="nhsuk-grid-column-one-quarter nhsuk-margin-right-0 sidebar" id="Sidebar">
 
+  <h3>Filters</h3>
 
-    <h3>Filters</h3>
 
     <p><a href="#">Clear all filters</a></p>
 
     <div class="nhsuk-form-group">
 
+
       <fieldset class="nhsuk-fieldset">
+
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
           Priority
         </legend>
         <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
           <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+            <input class="nhsuk-checkboxes__input" id="priority" name="priority" type="checkbox" value="routine">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="priority">
               Routine
             </label>
 
         </div>
         <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
           <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+            <input class="nhsuk-checkboxes__input" id="priority2" name="priority" type="checkbox" value="2wkwait">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="priority2">
               2 week wait
             </label>
           </div>
@@ -131,16 +117,16 @@ NHS e-referral Service
         </legend>
         <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
           <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+            <input class="nhsuk-checkboxes__input" id="status" name="status" type="checkbox" value="">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="status">
               Rejected
             </label>
           </div>
 
 
           <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="3" name="3" type="checkbox" value="">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="3">
+            <input class="nhsuk-checkboxes__input" id="status1" name="status" type="checkbox" value="triage">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="status1">
               Triage returned
             </label>
           </div>
@@ -156,7 +142,7 @@ NHS e-referral Service
     <nav class="side-navigation" role="navigation" aria-label="Secondary navigation">
     </nav>
   </div>
-  <div class="nhsuk-grid-column-three-quarters sidebar nhsuk-u-border-left">
+  <div class="nhsuk-grid-column-three-quarters nhsuk-u-border-left">
     <div class="nhsuk-form-group">
   <fieldset class="nhsuk-fieldset">
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
@@ -180,9 +166,20 @@ NHS e-referral Service
     </div>
   </fieldset>
 </div>
-    <p><a class="sidebarbttn" href="#" type="submit">- Hide filters</a></p>
-    <div class="nhsuk-table-nav">
-      <p>Last updated 30 mins ago <a href="#">Refresh</a></p>
+
+    <div class="nhsuk-table-nav-panel">
+
+        <span> <a class="nhsuk-button--ers_secondary sidebarbttn" href="#" type="submit">
+            Show filters
+          </a></span>
+          <div class="nhsuk-table-actions">
+
+              <p>Last updated 30 mins ago <a href="#">Refresh</a></p>
+          </div>
+
+
+
+
 
     </div>
     <div class="nhsuk-scrollable-pane">
@@ -201,8 +198,14 @@ NHS e-referral Service
       </nav>
 
     </div>
-    <div class="nhsuk-table-nav">
-      <p><a href="#">Add/remove columns</a></p>
+    <div class="nhsuk-table-nav-panel">
+      <div class="nhsuk-table-actions">
+        <p><a href="#">Export to Excel</a>
+        <a href="#">Add/remove columns</a></p>
+
+
+      </div>
+
     </div>
     <div class="nhsuk-table-responsive">
       <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable">
@@ -253,7 +256,7 @@ NHS e-referral Service
         </thead>
 
 
-        <tbody class="nhsuk-table__body">
+        <tbody class="nhsuk-table__body nhsuk-body-">
 
 
 
@@ -351,12 +354,7 @@ NHS e-referral Service
           </tr>
         </tbody>
       </table>
-      <br>
-      <nav role="navigation" aria-label="Pagination">
-  <div class="pagination__summary">Showing 101 - 150 of 246 results</div>
 
-</nav>
-      <p class="align-centre"><a class="nhsuk-button--ers_secondary" href="#">Load more</a></p>
     </div>
     </div>
     </div>
