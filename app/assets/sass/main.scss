@@ -27,6 +27,16 @@
 @import 'components/tabs';
 @import 'components/modal';
 
+.nhsuk-panel--s{
+  background-color: $color_nhsuk-grey-4;
+  padding: 8px 8px 0 8px;
+  font-size: 0;
+  margin: 0;
+  font-size: 19px;
+  line-height: normal;
+  float: right;
+}
+
 .filter-group{
   display: block;
   float: left;

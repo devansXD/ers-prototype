@@ -143,71 +143,88 @@ NHS e-referral Service
     </nav>
   </div>
   <div class="nhsuk-grid-column-three-quarters nhsuk-u-border-left">
-    <div class="nhsuk-form-group">
-  <fieldset class="nhsuk-fieldset">
-    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-      <h1 class="nhsuk-fieldset__heading">
-        Show referrals for
-      </h1>
-    </legend>
-    <div class="nhsuk-radios nhsuk-radios--s nhsuk-radios--inline">
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
-        <label class="nhsuk-label nhsuk-radios__label" for="changed-name">
-          Me
-        </label>
-      </div>
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-        <label class="nhsuk-label nhsuk-radios__label" for="changed-name-2">
-          My  organisation
-        </label>
-      </div>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+          <h1 class="nhsuk-fieldset__heading">
+            Show referrals for
+          </h1>
+        </legend>
+        <div class="nhsuk-radios nhsuk-radios--s nhsuk-radios--inline">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+            <label class="nhsuk-label nhsuk-radios__label" for="changed-name">
+              Me
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+            <label class="nhsuk-label nhsuk-radios__label" for="changed-name-2">
+              My  organisation
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
     </div>
-  </fieldset>
+
+      </div>
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-panel--s">
+          <p>Last updated 30 mins ago <a href="#">Refresh</a></p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+<div class="nhsuk-table-nav-panel">
+  <p>  <a class="nhsuk-button--ers_secondary sidebarbttn" href="#" type="submit">
+        Show filters
+      </a></p>
+  <div class="nhsuk-table-actions">
+    <p><a class="nhsuk-button nhsuk-button--ers_secondary" href="#">Export to Excel</a>
+    <a class="nhsuk-button nhsuk-button--ers_secondary" href="#">Add/remove columns</a>
+
+
+  </div>
+
 </div>
 
-    <div class="nhsuk-table-nav-panel">
-
-        <span> <a class="nhsuk-button--ers_secondary sidebarbttn" href="#" type="submit">
-            Show filters
-          </a></span>
-          <div class="nhsuk-table-actions">
-
-              <p>Last updated 30 mins ago <a href="#">Refresh</a></p>
-          </div>
 
 
 
 
 
-    </div>
+
+
+
+
+
+
     <div class="nhsuk-scrollable-pane">
   <div class="nhsuk-scrollable-pane__wrapper">
     <div class="nhsuk-tabs-container">
       <nav class="nhsuk-tabs--l list">
         <ul>
           <li><a href="#">Rejected/triage response <span class="nhsuk-body-l">6</span></a></li>
-          <li><a href="#">Letters outstanding <span class="nhsuk-body-l">6</span></a></li>
+          <li><a href="#">Letters outstanding <span class="nhsuk-body-l">6</span><span class="tag">2 overdue</span></a></li>
           <li><a href="#">Incomplete<span class="nhsuk-body-l">6</span></a></li>
-          <li><a href="#">Advice and guidance<span class="nhsuk-body-l">6</span></a></li>
-          <li><a href="#">Assessment returned / cancelled / DNA<span class="nhsuk-body-l">6</span></a></li>
+          <li><a href="#">Advice and guidance<span class="nhsuk-body-l">6</span><span class="tag">1 new</span></a></li>
+          <li><a href="#">Assessment returned / cancelled / DNA<span class="nhsuk-body-l">6</span><span class="tag">2 new</span></a></li>
           <li><a href="#">Awaiting booking <span class="nhsuk-body-l">6</span></a></li>
         </ul>
 
       </nav>
 
     </div>
-    <div class="nhsuk-table-nav-panel">
-      <div class="nhsuk-table-actions">
-        <p><a href="#">Export to Excel</a>
-        <a href="#">Add/remove columns</a></p>
 
-
-      </div>
-
-    </div>
-    <div class="nhsuk-table-responsive">
+    <div class="nhsuk-table-responsive nhsuk-u-margin-top-0">
       <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable">
 
         <!-- TABLE START -->
