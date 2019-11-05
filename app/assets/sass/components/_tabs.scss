@@ -40,8 +40,7 @@ nav.nhsuk-tabs--l{
     max-width: 215px;
     min-width: 215px;
     min-height: 115px;
-    border: 1px solid $color_nhsuk-grey-2;
-    border-bottom: 6px solid $color_nhsuk-blue;
+    background: $color_nhsuk-grey-5;
     text-align:left;
     font-size: 16px;
     line-height: 16px;
@@ -62,11 +61,12 @@ nav.nhsuk-tabs--l{
       color: $color_nhsuk-white;
       border-radius: 12px;
     }
-
-
   }
 }
+li.active{
+  border-bottom: 6px solid $color_nhsuk-blue !important;
 
+}
 nav.nhsuk-tabs{
   display: flex;
   height: 48px;
