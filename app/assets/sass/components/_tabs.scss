@@ -12,6 +12,7 @@
    overflow-x:auto;
    height:200px;
    overflow-y: visible;
+
 }
 .list{
   position:relative;
@@ -30,7 +31,6 @@ nav.nhsuk-tabs--l{
   li{
     display: inline-grid;
     position:relative;
-    text-align:center;
     cursor:grab;
     cursor:-webkit-grab;
     color:#efefef;
@@ -44,6 +44,8 @@ nav.nhsuk-tabs--l{
     text-align:left;
     font-size: 16px;
     line-height: 16px;
+    flex-direction: column;
+
 
     a{
       display: inline-block;
@@ -60,6 +62,7 @@ nav.nhsuk-tabs--l{
       padding: 4px 8px;
       color: $color_nhsuk-white;
       border-radius: 12px;
+      display:block;
     }
   }
 }

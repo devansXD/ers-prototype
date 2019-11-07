@@ -178,14 +178,16 @@ padding-top: 16px;
 }
 
 .nhsuk-scrollable-pane {
-
-  @media only screen and (min-width: 1020px){
     position: relative;
     overflow: hidden; // Hides the shadow
     clear: both; // Fixes render bug
     // width: 100% // Fixes render bug
 
-    &:after {
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .nhsuk-scrollable-pane::after {
+      overflow-x: scroll;
       position: absolute;
       top: 0;
       left: 100%;
@@ -195,11 +197,9 @@ padding-top: 16px;
       box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
       content:"";
     }
-  }
-
 }
 
-@media only screen and (min-width: 1020px) {
+@media only screen and (max-width: 1024px) {
   .nhsuk-scrollable-pane__wrapper {
     overflow-x: scroll;
   }
@@ -213,13 +213,8 @@ padding-top: 16px;
     height: 10px; // Match nhsuk spacing units
   }
 
-  .nhsuk-scrollable-pane > div::-webkit-scrollbar-track {
-    background: nhsuk-colour("$color_nhsuk-grey-5");
-    box-shadow: 0 0 2px rgba(0,0,0,.15) inset; // Simulate scrollbar look and feel
-  }
-
   .nhsuk-scrollable-pane > div::-webkit-scrollbar-thumb {
-    background: nhsuk-colour("$color_nhsuk-green");
+    background: $color_nhsuk-grey-4;
     border-radius: nhsuk-spacing(1);
   }
 }

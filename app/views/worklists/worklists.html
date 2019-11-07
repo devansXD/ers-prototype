@@ -4,9 +4,11 @@
 {% set containerClasses = 'nhsuk-width-container-fluid' %}
 {% set bodyClasses = 'nhsuk-white-background' %}
 {% block pageScripts %}
-
+<script type="text/javascript" src="/js/action-menu.js"></script>
 <script type="text/javascript" src="/js/sort.js"></script>
-<script type="text/javascript" src="/js/sidebar.js"></script>
+<script type="text/javascript" src="/js/reveal.js"></script>
+
+
 {% endblock %}
 {% block pageTitle %}
 NHS e-referral Service
@@ -61,22 +63,27 @@ NHS e-referral Service
 
 </header>
 <!-- SUB MENU PATIENT INFO -->
+<nav class="nhsuk-tabs">
+  <ul role="navigation">
+    <li><a href="#patient" href="#">Patient</a></li>
+    <li><a class="selected" href="#worklists">Worklists</a></li>
+    <li><a href="#dos">Directory of services</a></li>
+    <li><a href="#enquiries">Enquiries</a></li>
+    <li><a href="#reports">Reports</a></li>
+  </ul>
+</nav>
 
 {% endblock %}
 {% block content %}
 
 
 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-3">
-  <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-5">
 
-
-
-  </div>
   <!-- SIDEBAR ACTIONS -->
 
-  <div class="nhsuk-grid-column-one-quarter nhsuk-margin-right-0 sidebar" id="Sidebar">
+  <div class="nhsuk-grid-column-one-quarter nhsuk-margin-right-0 nhsuk-filter-layout__filter" id="Sidebar">
 
-  <h3>Filters</h3>
+    <h3>Filters</h3>
 
 
     <p><a href="#">Clear all filters</a></p>
@@ -96,19 +103,19 @@ NHS e-referral Service
               Routine
             </label>
 
-        </div>
-        <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
-          <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="priority2" name="priority" type="checkbox" value="2wkwait">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="priority2">
-              2 week wait
-            </label>
+          </div>
+          <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="priority2" name="priority" type="checkbox" value="2wkwait">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="priority2">
+                2 week wait
+              </label>
+            </div>
           </div>
         </div>
-        </div>
       </fieldset>
-      </div>
-        <div class="nhsuk-form-group">
+    </div>
+    <div class="nhsuk-form-group">
 
 
       <fieldset class="nhsuk-fieldset">
@@ -131,7 +138,7 @@ NHS e-referral Service
             </label>
           </div>
 
-          </div>
+        </div>
 
       </fieldset>
 
@@ -146,29 +153,29 @@ NHS e-referral Service
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
         <div class="nhsuk-form-group">
-      <fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-          <h1 class="nhsuk-fieldset__heading">
-            Show referrals for
-          </h1>
-        </legend>
-        <div class="nhsuk-radios nhsuk-radios--s nhsuk-radios--inline">
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
-            <label class="nhsuk-label nhsuk-radios__label" for="changed-name">
-              Me
-            </label>
-          </div>
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-            <label class="nhsuk-label nhsuk-radios__label" for="changed-name-2">
-              My  organisation
-            </label>
-          </div>
-        </div>
-      </fieldset>
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h1 class="nhsuk-fieldset__heading">
+                Show referrals for
+              </h1>
+            </legend>
+            <div class="nhsuk-radios nhsuk-radios--s nhsuk-radios--inline">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="nhsuk-label nhsuk-radios__label" for="changed-name">
+                  Me
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                <label class="nhsuk-label nhsuk-radios__label" for="changed-name-2">
+                  My organisation
+                </label>
+              </div>
+            </div>
+          </fieldset>
 
-    </div>
+        </div>
 
       </div>
       <div class="nhsuk-grid-column-one-third">
@@ -183,184 +190,263 @@ NHS e-referral Service
     </div>
 
 
-<div class="nhsuk-table-nav-panel">
-<button onclick="myFunction()" class="nhsuk-button--ers_secondary sidebarbttn" href="#" type="submit">
+    <div class="nhsuk-table-nav-panel">
+      <button onclick="myFunction()" class="nhsuk-button--ers_secondary sidebarbttn" href="#" type="submit">
         Show filters
       </button>
-  <div class="nhsuk-table-actions">
-  <button class="nhsuk-button nhsuk-button--ers_secondary" href="#">Export to Excel</button>
-    <button class="nhsuk-button nhsuk-button--ers_secondary nhsuk-u-margin-left-3" href="#">Add/remove columns</button>
-  </div>
 
-</div>
+      <div class="nhsuk-table-actions">
+        <button class="nhsuk-button nhsuk-button--ers_secondary" href="#">Export to Excel</button>
+        <div class="nhsuk-heading-menu__actions nhsuk-u-margin-left-3">
+          <button onclick="myFunction()" class="nhsuk-button nhsuk-button--ers_secondary action-button">Add /remove columns
+            <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+              <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon id="Rectangle" fill="#f1f1f1" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+              </g>
+            </svg>
+
+
+          </button>
+          <div id="action-menu" class="dropdown-content">
+
+            <div class="nhsuk-form-group">
+
+
+              <fieldset class="nhsuk-fieldset">
+
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+                  Show me only
+                </legend>
+                <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="routine">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="">
+                    UBRN created
+                    </label>
+
+                  </div>
+                  <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="2wkwait">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="">
+                        Clinician
+                      </label>
+                    </div>
+                  </div>
+                  <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="2wkwait">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="">
+                        Last activity
+                      </label>
+                    </div>
+                  </div>
+                  <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="2wkwait">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="">
+                        Clinical context
+                      </label>
+                    </div>
+                  </div>
+                  <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="2wkwait">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="">
+                      Referrer
+                      </label>
+                    </div>
+                  </div>
+                  <div class="nhsuk-checkboxes nhsuk-checkboxes--s">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="2wkwait">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="">
+                        Reject reason
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
 
     <div class="nhsuk-scrollable-pane">
-  <div class="nhsuk-scrollable-pane__wrapper">
-    <div class="nhsuk-tabs-container">
-      <nav class="nhsuk-tabs--l list">
-        <ul>
-          <li class="active"><a href="#">Rejected/triage response <span class="nhsuk-body-l">6</span></a></li>
-          <li><a href="#">Letters outstanding <span class="nhsuk-body-l">6</span><span class="tag">2 overdue</span></a></li>
-          <li><a href="#">Incomplete<span class="nhsuk-body-l">6</span></a></li>
-          <li><a href="#">Advice and guidance<span class="nhsuk-body-l">6</span><span class="tag">1 new</span></a></li>
-          <li><a href="#">Assessment returned / cancelled / DNA<span class="nhsuk-body-l">6</span><span class="tag">2 new</span></a></li>
-          <li><a href="#">Awaiting booking <span class="nhsuk-body-l">6</span></a></li>
-        </ul>
+      <div class="scroller scroller-left"><i class="glyphicon glyphicon-chevron-left"></i></div>
+  <div class="scroller scroller-right"><i class="glyphicon glyphicon-chevron-right"></i></div>
+      <div class="nhsuk-scrollable-pane__wrapper">
+        <div class="nhsuk-tabs-container">
+          <nav class="nhsuk-tabs--l list">
+            <ul>
+              <li class="active"><a href="#"><span class="nhsuk-body-l">6</span>Rejected/triage response</a></li>
+              <li><a href="#"><span class="nhsuk-body-l">6</span>Letters outstanding<span class="tag">2 overdue</span></a></li>
+              <li><a href="#"><span class="nhsuk-body-l">6</span>Incomplete</a></li>
+              <li><a href="#"><span class="nhsuk-body-l">6</span>Advice and guidance<span class="tag">1 new</span></a></li>
+              <li><a href="#"><span class="nhsuk-body-l">6</span>Assessment returned / cancelled / DNA<span class="tag">2 new</span></a></li>
+              <li><a href="#"><span class="nhsuk-body-l">6</span>Awaiting booking </a></li>
+            </ul>
 
-      </nav>
+          </nav>
 
-    </div>
+        </div>
 
-    <div class="nhsuk-table-responsive nhsuk-u-margin-top-0">
-      <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-top-0">
+          <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable">
 
-        <!-- TABLE START -->
-        <thead class="nhsuk-table__head">
-          <tr class="nhsuk-table__row">
+            <!-- TABLE START -->
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
 
-            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-              <button onclick="sortTable()" type="button" data-index="0">UBRN</button>
-
-
-            </th>
-
-            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-              <button type="button" data-index="0">Patient name</button>
-
-            </th>
-
-            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-              <button onclick="sortTable()" type="button" data-index="0">Priority</button>
+                <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                  <button onclick="sortTable()" type="button" data-index="0">UBRN</button>
 
 
-            </th>
-            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-              <button onclick="sortTable()" type="button" data-index="0">Referrer</button>
+                </th>
+
+                <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                  <button type="button" data-index="0">Patient name</button>
+
+                </th>
+
+                <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                  <button onclick="sortTable()" type="button" data-index="0">Priority</button>
 
 
-            </th>
-            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-              <button onclick="sortTable()" type="button" data-index="0">Clinical context</button>
+                </th>
+                <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                  <button onclick="sortTable()" type="button" data-index="0">Referrer</button>
 
 
-            </th>
-            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-              <button onclick="sortTable()" type="button" data-index="0">Status</button>
+                </th>
+                <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                  <button onclick="sortTable()" type="button" data-index="0">Clinical context</button>
 
 
-            </th>
-            <th class="nhsuk-table__header" aria-sort="none" scope="col">
-              <button onclick="sortTable()" type="button" data-index="0">Reject reason</button>
+                </th>
+                <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                  <button onclick="sortTable()" type="button" data-index="0">Status</button>
 
 
-            </th>
+                </th>
+                <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                  <button onclick="sortTable()" type="button" data-index="0">Reject reason</button>
 
 
-          </tr>
-        </thead>
+                </th>
 
 
-        <tbody class="nhsuk-table__body nhsuk-body-">
+              </tr>
+            </thead>
 
 
-
-
-
-
-          <!-- -->
-          <tr class="nhsuk-table__row">
-
-
-            <td class="nhsuk-table__cell">
-              <a href="#">0003 0866 0007</a>
+            <tbody class="nhsuk-table__body nhsuk-body-">
 
 
 
 
 
 
-            </td>
-            <td class="nhsuk-table__cell">Mr Howard Jones</td>
-            <td class="nhsuk-table__cell">Routine</td>
-            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
-            <td class="nhsuk-table__cell">Noor Altaf</td>
-            <td class="nhsuk-table__cell">Rejected</td>
-            <td class="nhsuk-table__cell">Outpatient</td>
+              <!-- -->
+              <tr class="nhsuk-table__row">
 
 
-          </tr>
-          <tr class="nhsuk-table__row">
-
-
-            <td class="nhsuk-table__cell">
-              <a href="#">0003 0866 0007</a>
+                <td class="nhsuk-table__cell">
+                  <a href="#">0003 0866 0007</a>
 
 
 
 
 
 
-            </td>
-            <td class="nhsuk-table__cell">Mr Howard Jones</td>
-            <td class="nhsuk-table__cell">Routine</td>
-            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
-            <td class="nhsuk-table__cell">Noor Altaf</td>
-            <td class="nhsuk-table__cell">Rejected</td>
-            <td class="nhsuk-table__cell">Outpatient</td>
+                </td>
+                <td class="nhsuk-table__cell">Mr Howard Jones</td>
+                <td class="nhsuk-table__cell">Routine</td>
+                <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+                <td class="nhsuk-table__cell">Noor Altaf</td>
+                <td class="nhsuk-table__cell">Rejected</td>
+                <td class="nhsuk-table__cell">Outpatient</td>
 
 
-          </tr>
-          <tr class="nhsuk-table__row">
+              </tr>
+              <tr class="nhsuk-table__row">
 
 
-            <td class="nhsuk-table__cell">
-              <a href="#">0003 0866 0007</a>
-            </td>
-            <td class="nhsuk-table__cell">Mr Howard Jones</td>
-            <td class="nhsuk-table__cell">Routine</td>
-            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
-            <td class="nhsuk-table__cell">Noor Altaf</td>
-            <td class="nhsuk-table__cell">Rejected</td>
-            <td class="nhsuk-table__cell">Outpatient</td>
-          </tr>
-          <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">
-              <a href="#">0003 0866 0007</a>
-            </td>
-            <td class="nhsuk-table__cell">Mr Howard Jones</td>
-            <td class="nhsuk-table__cell">Routine</td>
-            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
-            <td class="nhsuk-table__cell">Noor Altaf</td>
-            <td class="nhsuk-table__cell">Rejected</td>
-            <td class="nhsuk-table__cell">Outpatient</td>
-          </tr>
-          <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">
-              <a href="#">0003 0866 0007</a>
-            </td>
-            <td class="nhsuk-table__cell">Mr Howard Jones</td>
-            <td class="nhsuk-table__cell">Routine</td>
-            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
-            <td class="nhsuk-table__cell">Noor Altaf</td>
-            <td class="nhsuk-table__cell">Rejected</td>
-            <td class="nhsuk-table__cell">Outpatient</td>
-          </tr>
-          <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">
-              <a href="#">0003 0866 0007</a>
-            </td>
-            <td class="nhsuk-table__cell">Mr Howard Jones</td>
-            <td class="nhsuk-table__cell">Routine</td>
-            <td class="nhsuk-table__cell">Cardiology/heart failure</td>
-            <td class="nhsuk-table__cell">Noor Altaf</td>
-            <td class="nhsuk-table__cell">Rejected</td>
-            <td class="nhsuk-table__cell">Outpatient</td>
-          </tr>
-        </tbody>
-      </table>
+                <td class="nhsuk-table__cell">
+                  <a href="#">0003 0866 0007</a>
 
-    </div>
-    </div>
+
+
+
+
+
+                </td>
+                <td class="nhsuk-table__cell">Mr Howard Jones</td>
+                <td class="nhsuk-table__cell">Routine</td>
+                <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+                <td class="nhsuk-table__cell">Noor Altaf</td>
+                <td class="nhsuk-table__cell">Rejected</td>
+                <td class="nhsuk-table__cell">Outpatient</td>
+
+
+              </tr>
+              <tr class="nhsuk-table__row">
+
+
+                <td class="nhsuk-table__cell">
+                  <a href="#">0003 0866 0007</a>
+                </td>
+                <td class="nhsuk-table__cell">Mr Howard Jones</td>
+                <td class="nhsuk-table__cell">Routine</td>
+                <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+                <td class="nhsuk-table__cell">Noor Altaf</td>
+                <td class="nhsuk-table__cell">Rejected</td>
+                <td class="nhsuk-table__cell">Outpatient</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <a href="#">0003 0866 0007</a>
+                </td>
+                <td class="nhsuk-table__cell">Mr Howard Jones</td>
+                <td class="nhsuk-table__cell">Routine</td>
+                <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+                <td class="nhsuk-table__cell">Noor Altaf</td>
+                <td class="nhsuk-table__cell">Rejected</td>
+                <td class="nhsuk-table__cell">Outpatient</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <a href="#">0003 0866 0007</a>
+                </td>
+                <td class="nhsuk-table__cell">Mr Howard Jones</td>
+                <td class="nhsuk-table__cell">Routine</td>
+                <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+                <td class="nhsuk-table__cell">Noor Altaf</td>
+                <td class="nhsuk-table__cell">Rejected</td>
+                <td class="nhsuk-table__cell">Outpatient</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <a href="#">0003 0866 0007</a>
+                </td>
+                <td class="nhsuk-table__cell">Mr Howard Jones</td>
+                <td class="nhsuk-table__cell">Routine</td>
+                <td class="nhsuk-table__cell">Cardiology/heart failure</td>
+                <td class="nhsuk-table__cell">Noor Altaf</td>
+                <td class="nhsuk-table__cell">Rejected</td>
+                <td class="nhsuk-table__cell">Outpatient</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
     </div>
   </div>
 </div>

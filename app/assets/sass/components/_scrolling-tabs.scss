@@ -1,0 +1,27 @@
+
+// ==========================================================================
+// COMPONENTS / ALERTS
+// ==========================================================================
+
+
+
+.scroller {
+  text-align:center;
+  cursor:pointer;
+  display:none;
+  padding:7px;
+  padding-top:11px;
+  white-space:no-wrap;
+  vertical-align:middle;
+  background-color:#fff;
+}
+
+.scroller-right{
+  float:right;
+  content: "&#8227;";
+  background-color: grey;
+}
+
+.scroller-left {
+  float:left;
+}

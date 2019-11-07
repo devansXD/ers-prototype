@@ -33,12 +33,12 @@ $(document).ready(function() {
     });
 
    });
-   
+
 // Sidebar  reveal
 
    $(document).ready(function() {
       $(".sidebarbttn").click(function () {
-      $(".sidebar").toggle();
+      $(".nhsuk-filter-layout__filter").toggle('slow');
      });
 
     });
