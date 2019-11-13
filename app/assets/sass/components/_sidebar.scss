@@ -1,7 +1,23 @@
 // ==========================================================================
 // COMPONENTS / SIDEBAR
 // ==========================================================================
+.nhsuk-filter-layout{
+  content: "";
+  display: block;
+  clear: both;
 
+}
+.nhsuk-filter-layout__filter{
+  float: left;
+  max-width: 385px;
+  min-width: 260px;
+  width: 100%;
+}
+.nhsuk-filter-layout__content{
+overflow: hidden;
+overflow-x: auto;
+
+}
 .nhsuk-sidebar {
 
   position: relative;

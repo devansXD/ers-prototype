@@ -4,24 +4,248 @@
 // ==========================================================================
 
 
+// ========================
+// TABLE TABS
+// ========================
+.nhsuk-tabs-container{
+  position:relative;
+   margin:0 auto;
+   overflow-x:auto;
+   height:150px;
+   overflow-y: visible;
 
-.scroller {
-  text-align:center;
-  cursor:pointer;
-  display:none;
-  padding:7px;
-  padding-top:11px;
-  white-space:no-wrap;
-  vertical-align:middle;
-  background-color:#fff;
+}
+.list{
+  position:relative;
+    left:0px;
+    top:0px;
+  	min-width:2000px;
+    margin-top:0px;
+}
+nav.nhsuk-tabs--l{
+  position: absolute;
+
+  ul{
+    margin: 0;
+    padding: 0;
+
+  }
+  li{
+    display: inline-grid;
+    position:relative;
+    box-sizing: border-box;
+    cursor:grab;
+    cursor:-webkit-grab;
+    color:#efefef;
+    vertical-align:middle;
+    margin-right: 16px;
+    flex-basis:auto;
+    max-width: 215px;
+    min-width: 215px;
+    min-height: 115px;
+    background: $color_nhsuk-grey-5;
+    text-align:left;
+    font-size: 16px;
+    line-height: 16px;
+    flex-direction: column;
+
+
+    a{
+      display: inline-block;
+      color: $color_nhsuk-black;
+      padding: 8px 8px 0 8px;
+    }
+
+  .nhsuk-list-number{
+    display: inline-block;
+
+  }
+  .nhsuk-list-name{
+    display: inline-block;
+  }
+  }
+}
+li.active{
+  border-bottom: 6px solid $color_nhsuk-blue !important;
+
+}
+nav.nhsuk-tabs{
+  display: flex;
+  height: 48px;
+  flex-wrap: nowrap;
+  background: #F0F4F5;
+  border-bottom: 1px solid $color_nhsuk-grey-2;
+
+ul{
+  max-width: 75%;
+  display:flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+li{
+  margin-bottom: 0;
+  font-size: 16px;
+  border-right:1px solid $color_nhsuk-grey-2;
+
+  a:link, a:visited,a:hover, a:active{
+    margin-bottom: 0;
+    color:$color_nhsuk-blue;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1.5em;
+    padding: 12px 16px;
+    text-decoration: none;
+
+
+  }
 }
 
-.scroller-right{
-  float:right;
-  content: "&#8227;";
-  background-color: grey;
 }
 
-.scroller-left {
-  float:left;
+.tab-arrow{
+  background: transparent;
+  height: 48px;
+  width: 48px;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.tab-arrow_left {
+  position: absolute;
+  left: 0;
+  top: 25%;
+
+
+}
+
+.tab-arrow_right {
+  position: absolute;
+  right:0;
+  top: 1em;
+  bottom: 0;
+
+}
+
+
+// ====================
+
+* {
+	box-sizing: inherit;
+}
+
+.pn-ProductNav_Wrapper {
+	position: relative;
+	padding: 0 11px;
+	box-sizing: border-box;
+}
+
+.pn-ProductNav {
+    /* Make this scrollable when needed */
+    overflow-x: auto;
+    /* We don't want vertical scrolling */
+    overflow-y: hidden;
+    /* For WebKit implementations, provide inertia scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* We don't want internal inline elements to wrap */
+    white-space: nowrap;
+    /* If JS present, let's hide the default scrollbar */
+    .js & {
+        /* Make an auto-hiding scroller for the 3 people using a IE */
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        /* Remove the default scrollbar for WebKit implementations */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+	/* positioning context for advancers */
+	position: relative;
+	// Crush the whitespace here
+	font-size: 0;
+}
+
+.pn-ProductNav_Contents {
+	float: left;
+	transition: transform .2s ease-in-out;
+}
+
+.pn-ProductNav_Contents-no-transition {
+	transition: none;
+}
+
+.pn-ProductNav_Link {
+	text-decoration: none;
+	color: #888;
+	// Reset the font size
+	font-size: 1.2rem;
+	font-family: -apple-system, sans-serif;
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	border: 1px solid transparent;
+	padding: 0 11px;
+	& + & {
+		border-left-color: #eee;
+	}
+	&[aria-selected="true"] {
+		color: #111;
+	}
+}
+
+.pn-Advancer {
+	/* Reset the button */
+	appearance: none;
+	background: transparent;
+	padding: 0;
+	border: 0;
+	&:focus {
+		outline: 0;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	/* Now style it as needed */
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	/* Set the buttons invisible by default */
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.pn-Advancer_Left {
+	left: 0;
+	[data-overflowing="both"] ~ &,
+	[data-overflowing="left"] ~ & {
+		opacity: 1;
+	}
+}
+
+.pn-Advancer_Right {
+	right: 0;
+	[data-overflowing="both"]  ~ &,
+	[data-overflowing="right"] ~ & {
+		opacity: 1;
+	}
+}
+
+.pn-Advancer_Icon {
+	width: 20px;
+	height: 44px;
+	fill: #bbb;
+}
+
+.pn-ProductNav_Indicator {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 4px;
+	width: 100px;
+	background-color: transparent;
+	transform-origin: 0 0;
+	transition: transform .2s ease-in-out, background-color .2s ease-in-out;
 }

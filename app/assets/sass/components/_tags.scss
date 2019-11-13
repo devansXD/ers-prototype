@@ -1,12 +1,16 @@
+// ==============================================================
 // TAGS / BADGES
+// ==============================================================
+
 .nhsuk-tag {
 
-  background-color: $color_nhsuk-white;
+  background-color: transparent;
   display: inline-block;
   font-family: Frutiger, sans-serif;
   font-size: 14px;
+  margin-left: 8px;
 
-  padding: 4px;
+  padding: 4px 8px;
   font-weight: 400;
   border-width: 1px;
   border-style: solid;
@@ -39,4 +43,29 @@
   @extend .nhsuk-tag;
 color: $color_nhsuk-blue;
 border-color: $color_nhsuk-blue;
+}
+.nhsuk-badge{
+  background-color: $color_nhsuk-white;
+  display: inline-block;
+  margin-bottom: 0;
+  position: relative;
+  vertical-align: baseline;
+  font-family: Frutiger, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-left:8px;
+  text-align: center;
+  padding:  4px 8px !important;
+  font-weight: 400;
+  border-radius: 25px;
+}
+.nhsuk-badge__red{
+  @extend .nhsuk-badge;
+  background-color: $color_nhsuk-red;
+  color: $color_nhsuk-white;
+}
+.nhsuk-badge__blue{
+  @extend .nhsuk-badge;
+  background-color: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
 }

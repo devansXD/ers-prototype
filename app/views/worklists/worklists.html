@@ -7,6 +7,7 @@
 <script type="text/javascript" src="/js/action-menu.js"></script>
 <script type="text/javascript" src="/js/sort.js"></script>
 <script type="text/javascript" src="/js/reveal.js"></script>
+<script type="text/javascript" src="/js/scrolling-tabs.js"></script>
 
 
 {% endblock %}
@@ -149,14 +150,17 @@ NHS e-referral Service
     <nav class="side-navigation" role="navigation" aria-label="Secondary navigation">
     </nav>
   </div>
-  <div class="nhsuk-grid-column-three-quarters nhsuk-u-border-left">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
+
+  <div class="nhsuk-filter-layout__content nhsuk-u-border-left nhsuk-u-padding-left-4 nhsuk-u-padding-right-4">
+
+
+
+
         <div class="nhsuk-form-group">
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
               <h1 class="nhsuk-fieldset__heading">
-                Show referrals for
+                Showing referrals for
               </h1>
             </legend>
             <div class="nhsuk-radios nhsuk-radios--s nhsuk-radios--inline">
@@ -177,26 +181,17 @@ NHS e-referral Service
 
         </div>
 
-      </div>
-      <div class="nhsuk-grid-column-one-third">
-        <div class="nhsuk-panel--s">
-          <p class="nhsuk-u-margin-bottom-0 right-aligned">Last updated 30 mins ago <a href="#">Refresh</a></p>
 
-        </div>
-
-
-      </div>
-
-    </div>
 
 
     <div class="nhsuk-table-nav-panel">
+      <div class="nhsuk-table-actions">
       <button onclick="myFunction()" class="nhsuk-button--ers_secondary sidebarbttn" href="#" type="submit">
         Show filters
       </button>
 
-      <div class="nhsuk-table-actions">
-        <button class="nhsuk-button nhsuk-button--ers_secondary" href="#">Export to Excel</button>
+
+        <button class="nhsuk-button nhsuk-button--ers_secondary nhsuk-u-margin-left-3" href="#">Export to Excel</button>
         <div class="nhsuk-heading-menu__actions nhsuk-u-margin-left-3">
           <button onclick="myFunction()" class="nhsuk-button nhsuk-button--ers_secondary action-button">Add /remove columns
             <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
@@ -268,32 +263,46 @@ NHS e-referral Service
                 </div>
               </fieldset>
             </div>
+            <button id="pnAdvancerRight" class="pn-Advancer pn-Advancer_Right" type="button">
+          		<svg class="pn-Advancer_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M105.56 985.817L553.53 512 105.56 38.183l-85.857 81.173 409.6 433.23v-81.172l-409.6 433.23 85.856 81.174z"/></svg>
+          	</button>
 
           </div>
 
 
+
         </div>
+        <div class="nhsuk-table-actions__last-child">
+          <p class="right-aligned">Last updated 30 mins ago <a href="#">Refresh</a></p>
+
+        </div>
+
 
       </div>
 
+
     </div>
 
+
+
     <div class="nhsuk-scrollable-pane">
-      <div class="scroller scroller-left"><i class="glyphicon glyphicon-chevron-left"></i></div>
-  <div class="scroller scroller-right"><i class="glyphicon glyphicon-chevron-right"></i></div>
+
+
+
       <div class="nhsuk-scrollable-pane__wrapper">
         <div class="nhsuk-tabs-container">
           <nav class="nhsuk-tabs--l list">
             <ul>
-              <li class="active"><a href="#"><span class="nhsuk-body-l">6</span>Rejected/triage response</a></li>
-              <li><a href="#"><span class="nhsuk-body-l">6</span>Letters outstanding<span class="tag">2 overdue</span></a></li>
-              <li><a href="#"><span class="nhsuk-body-l">6</span>Incomplete</a></li>
-              <li><a href="#"><span class="nhsuk-body-l">6</span>Advice and guidance<span class="tag">1 new</span></a></li>
-              <li><a href="#"><span class="nhsuk-body-l">6</span>Assessment returned / cancelled / DNA<span class="tag">2 new</span></a></li>
-              <li><a href="#"><span class="nhsuk-body-l">6</span>Awaiting booking </a></li>
+              <li class="active"><a href="#"><span class="nhsuk-list-number nhsuk-body-l">6</span><span class="nhsuk-badge__blue nhsuk-u-margin-bottom-3">2 new</span><span class="nhsuk-list-name">Rejected/triage response</span></a></li>
+              <li><a href="#"><span class="nhsuk-list-number nhsuk-body-l">6</span><span class="nhsuk-badge__red nhsuk-u-margin-bottom-3">2 overdue</span><span class="nhsuk-list-name">Letters outstanding</span></a></li>
+              <li><a href="#"><span class="list-number nhsuk-body-l">6</span>Incomplete</a></li>
+              <li><a href="#"><span class="list-number nhsuk-body-l">6</span>Advice and guidance</a></li>
+              <li><a href="#"><span class="list-number nhsuk-body-l">6</span>Assessment returned / cancelled / DNA</a></li>
+              <li><a href="#"><span class="list-number nhsuk-body-l">6</span>Awaiting booking </a></li>
             </ul>
 
           </nav>
+
 
         </div>
 
@@ -321,15 +330,16 @@ NHS e-referral Service
 
                 </th>
                 <th class="nhsuk-table__header" aria-sort="none" scope="col">
-                  <button onclick="sortTable()" type="button" data-index="0">Referrer</button>
-
-
-                </th>
-                <th class="nhsuk-table__header" aria-sort="none" scope="col">
                   <button onclick="sortTable()" type="button" data-index="0">Clinical context</button>
 
 
                 </th>
+                <th class="nhsuk-table__header" aria-sort="none" scope="col">
+                  <button onclick="sortTable()" type="button" data-index="0">Referrer</button>
+
+
+                </th>
+
                 <th class="nhsuk-table__header" aria-sort="none" scope="col">
                   <button onclick="sortTable()" type="button" data-index="0">Status</button>
 
@@ -358,7 +368,7 @@ NHS e-referral Service
 
 
                 <td class="nhsuk-table__cell">
-                  <a href="#">0003 0866 0007</a>
+                  <a href="#">0003 0866 0007</a><span class="nhsuk-tag nhsuk-tag__highlight">New</span>
 
 
 
@@ -369,8 +379,10 @@ NHS e-referral Service
                 <td class="nhsuk-table__cell">Mr Howard Jones</td>
                 <td class="nhsuk-table__cell">Routine</td>
                 <td class="nhsuk-table__cell">Cardiology/heart failure</td>
-                <td class="nhsuk-table__cell">Noor Altaf</td>
-                <td class="nhsuk-table__cell">Rejected</td>
+                  <td class="nhsuk-table__cell">Noor Altaf</td>
+
+                  <td class="nhsuk-table__cell">Rejected</td>
+
                 <td class="nhsuk-table__cell">Outpatient</td>
 
 
@@ -379,7 +391,7 @@ NHS e-referral Service
 
 
                 <td class="nhsuk-table__cell">
-                  <a href="#">0003 0866 0007</a>
+                  <a href="#">0003 0866 0007</a><span class="nhsuk-tag nhsuk-tag__highlight">New</span>
 
 
 

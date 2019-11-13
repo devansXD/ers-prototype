@@ -5,16 +5,29 @@
   }
 }
 .nhsuk-table-nav-panel{
-  display: inline;
+  display: inline-flex;
+  position: relative;
   vertical-align: bottom;
-  margin-right: 32px;
+  justify-content: space-between;
+  width: 100%;
   font-size: 0;
   .sidebarbttn{
     float: left;
     display: inline-block;
   }
   .nhsuk-table-actions{
+    float:left;
+    display: inline-block;
+  }
+  .nhsuk-table-actions__last-child{
     float: right;
+    margin-left: 16px;
+    padding:8px;
+    display: inline-block;
+    background-color: $color_nhsuk-grey-5;
+    height: 42px;
+    flex-grow: 2;
+
   }
 }
 
