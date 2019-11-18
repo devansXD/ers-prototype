@@ -5,20 +5,17 @@
   }
 }
 .nhsuk-table-nav-panel{
-  display: inline-flex;
-  position: relative;
-  vertical-align: bottom;
-  justify-content: space-between;
+  //display: inline-flex;
+  //position: relative;
+  //vertical-align: bottom;
+  //justify-content: space-between;
   width: 100%;
   font-size: 0;
   .sidebarbttn{
     float: left;
     display: inline-block;
   }
-  .nhsuk-table-actions{
-    float:left;
-    display: inline-block;
-  }
+
   .nhsuk-table-actions__last-child{
     float: right;
     margin-left: 16px;
@@ -229,5 +226,29 @@ padding-top: 16px;
   .nhsuk-scrollable-pane > div::-webkit-scrollbar-thumb {
     background: $color_nhsuk-grey-4;
     border-radius: nhsuk-spacing(1);
+  }
+}
+.table-summary__meta{
+  color: $color_nhsuk-grey-3;
+  font-size: 16px;
+  display: block;
+
+}
+
+//===================================
+// STICKY TABLE COLUMN\
+//===================================
+@media only screen and (max-width: 960px){
+
+  table th:first-child, table tr td:first-child{
+    position: absolute;
+    min-width:240px;
+    max-width:240px;
+    left: 0;
+    top: auto;
+    background-color: white;
+    border-right: 2px solid $color_nhsuk-grey-3;
+    z-index: 1;
+
   }
 }
