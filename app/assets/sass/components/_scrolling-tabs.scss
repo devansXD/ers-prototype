@@ -19,11 +19,7 @@
   position:relative;
     left:0px;
     top:0px;
-      @media (max-width: 642px) {
-        min-width:2000px;
-        max-width: 2000px;
-
-      }
+    width: 2000px;
     margin-top:0px;
 }
 nav.nhsuk-tabs--l{
